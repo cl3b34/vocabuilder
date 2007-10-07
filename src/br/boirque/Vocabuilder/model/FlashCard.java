@@ -1,4 +1,4 @@
-package br.boirque.Vocabuilder.model;
+package br.boirque.vocabuilder.model;
 
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
