@@ -1,0 +1,7 @@
+MIDlet-1: FlashCard,,br.boirque.Vocabuilder.model.FlashCard
+MIDlet-Jar-URL: Vocabuilder.jar
+MIDlet-Name: Vocabuilder Midlet Suite
+MIDlet-Vendor: Midlet Suite Vendor
+MIDlet-Version: 1.0.0
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.1
