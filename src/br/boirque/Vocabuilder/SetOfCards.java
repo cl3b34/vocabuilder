@@ -12,7 +12,7 @@ public class SetOfCards {
 	private String title;
 	private boolean done;
 	//total amount of time spent studying this set
-	private Long totalStudiedTimeInMiliseconds;
+	private long totalStudiedTimeInMiliseconds;
 	//Titles of the sides of the cards on this series
 	private String sideOneTitle;
 	private String sideTwoTitle;
@@ -45,13 +45,13 @@ public class SetOfCards {
 	/**
 	 * @return the totalStudiedTimeInMiliseconds
 	 */
-	public Long getTotalStudiedTimeInMiliseconds() {
+	public long getTotalStudiedTimeInMiliseconds() {
 		return totalStudiedTimeInMiliseconds;
 	}
 	/**
 	 * @param totalStudiedTimeInMiliseconds the totalStudiedTimeInMiliseconds to set
 	 */
-	public void setTotalStudiedTimeInMiliseconds(Long totalStudiedTimeInMiliseconds) {
+	public void setTotalStudiedTimeInMiliseconds(long totalStudiedTimeInMiliseconds) {
 		this.totalStudiedTimeInMiliseconds = totalStudiedTimeInMiliseconds;
 	}
 	/**
