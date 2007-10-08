@@ -3,6 +3,7 @@ package br.boirque.vocabuilder;
 import java.io.IOException;
 import java.util.Vector;
 
+import javax.microedition.rms.InvalidRecordIDException;
 import javax.microedition.rms.RecordStoreException;
 import javax.microedition.rms.RecordStoreFullException;
 import javax.microedition.rms.RecordStoreNotOpenException;
@@ -45,7 +46,7 @@ public class SetOfCardsDAOTest extends TestCase {
 		super.tearDown();
 	}
 
-	public void testLoadSet() {
+	public void testLoadSet() throws InvalidRecordIDException, IOException, RecordStoreException {
 		SetOfCards soc = socdao.LoadSet();
 		assertNotNull(soc);
 	}
