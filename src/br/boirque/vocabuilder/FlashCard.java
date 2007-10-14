@@ -14,37 +14,37 @@ public class FlashCard {
 	private String tip;
 	
 	/**
-	 * @return the sideOne
+	 * @return the word on sideOne
 	 */
 	public String getSideOne() {
 		return sideOne;
 	}
 	/**
-	 * @param sideOne the sideOne to set
+	 * @param sideOne the word to set
 	 */
 	public void setSideOne(String sideOne) {
 		this.sideOne = sideOne;
 	}
 	/**
-	 * @return the sideTwo
+	 * @return the word on sideTwo
 	 */
 	public String getSideTwo() {
 		return sideTwo;
 	}
 	/**
-	 * @param sideTwo the sideTwo to set
+	 * @param sideTwo the word to set
 	 */
 	public void setSideTwo(String sideTwo) {
 		this.sideTwo = sideTwo;
 	}
 	/**
-	 * @return the done
+	 * @return true if the card is marked done
 	 */
 	public boolean isDone() {
 		return done;
 	}
 	/**
-	 * @param done the done to set
+	 * @param done - true if the card is done
 	 */
 	public void setDone(boolean done) {
 		this.done = done;
