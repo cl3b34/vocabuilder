@@ -14,6 +14,8 @@ import javax.microedition.rms.RecordStoreFullException;
 import javax.microedition.rms.RecordStoreNotFoundException;
 import javax.microedition.rms.RecordStoreNotOpenException;
 
+import br.boirque.vocabuilder.dao.RecordStoreFactory;
+
 /**
  * 
  * @author cleber.goncalves
@@ -33,9 +35,21 @@ public class SetOfCardsDAO {
 	 */
 	public SetOfCardsDAO() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException {
 		super();
-		this.recordStore = RecordStore.openRecordStore("currentSet", true);
+		this.recordStore = RecordStoreFactory.getFactory().getStoreInstance();
 	}
 
+	/**
+	 * Removes the current record store and creates a new
+	 * @throws RecordStoreException 
+	 * @throws RecordStoreNotFoundException 
+	 */
+//	public void resetState() throws RecordStoreNotFoundException, RecordStoreException{
+//		this.recordStore.closeRecordStore();
+//		RecordStore.deleteRecordStore(recordStore.getName());
+//		this.recordStore = RecordStoreFactory.getFactory().getStoreInstance();
+//	}
+		
+	
 	/**
 	 * Read back the data from the record store in the format:
 	 * title;setIsDone;totalTime;side1title;side1text;side2title;side2text;cardIsDone;tip
@@ -106,7 +120,8 @@ public class SetOfCardsDAO {
 		//get each card information and save to the record
 		//in the order:
 		//title;setIsDone;totalTime;side1title;side1text;side2title;side2text;cardIsDone;tip
-		for(int i =0; i<cards.size(); i++) {
+		int size = cards.size();
+		for(int i =0; i<size; i++) {
 			FlashCard card = (FlashCard)cards.elementAt(i);
 			String side1text = card.getSideOne();
 			String side2text = card.getSideTwo();
@@ -125,7 +140,9 @@ public class SetOfCardsDAO {
 			// Extract the byte array
 			byte[] b = baos.toByteArray();
 			//write a record to the record store
-		    recId = recordStore.addRecord(b, recordStore.getSize(), b.length);
+		  //  int storeSize = recordStore.getSize();
+			int recordLength = b.length;
+			recId = recordStore.addRecord(b, 0, recordLength);
 		}   
 	}
 }
