@@ -13,11 +13,33 @@ public class SetOfCards {
 	private boolean done;
 	//total amount of time spent studying this set
 	private long totalStudiedTimeInMiliseconds;
-	//Titles of the sides of the cards on this series
-	private String sideOneTitle;
-	private String sideTwoTitle;
 	//Flash cards included in this series
 	private Vector flashCards;
+	
+	/**
+	 * Default constructor 
+	 */
+	public SetOfCards() {
+	}
+	
+	
+	/**
+	 * @param title
+	 * @param done
+	 * @param totalStudiedTimeInMiliseconds
+	 * @param flashCards
+	 * 
+	 * Convenience constructor
+	 */
+	public SetOfCards(String title, boolean done,
+			long totalStudiedTimeInMiliseconds, Vector flashCards) {
+		super();
+		this.title = title;
+		this.done = done;
+		this.totalStudiedTimeInMiliseconds = totalStudiedTimeInMiliseconds;
+		this.flashCards = flashCards;
+	}
+
 	/**
 	 * @return the title
 	 */
@@ -54,30 +76,7 @@ public class SetOfCards {
 	public void setTotalStudiedTimeInMiliseconds(long totalStudiedTimeInMiliseconds) {
 		this.totalStudiedTimeInMiliseconds = totalStudiedTimeInMiliseconds;
 	}
-	/**
-	 * @return the sideOneTitle
-	 */
-	public String getSideOneTitle() {
-		return sideOneTitle;
-	}
-	/**
-	 * @param sideOneTitle the sideOneTitle to set
-	 */
-	public void setSideOneTitle(String sideOneTitle) {
-		this.sideOneTitle = sideOneTitle;
-	}
-	/**
-	 * @return the sideTwoTitle
-	 */
-	public String getSideTwoTitle() {
-		return sideTwoTitle;
-	}
-	/**
-	 * @param sideTwoTitle the sideTwoTitle to set
-	 */
-	public void setSideTwoTitle(String sideTwoTitle) {
-		this.sideTwoTitle = sideTwoTitle;
-	}
+	
 	/**
 	 * @return the flashCards
 	 */

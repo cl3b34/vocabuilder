@@ -34,7 +34,8 @@ public class SetOfCardsDAO {
 	 */
 	public SetOfCardsDAO() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException {
 		super();
-		this.recordStore = RecordStoreFactory.getFactory().getStoreInstance();
+		RecordStoreFactory factory = RecordStoreFactory.getFactory();
+		this.recordStore = factory.getStoreInstance();
 	}
 
 	/**
@@ -44,8 +45,10 @@ public class SetOfCardsDAO {
 	 */
 	public void resetState() throws RecordStoreNotFoundException, RecordStoreException{
 		this.recordStore.closeRecordStore();
-		RecordStore.deleteRecordStore(recordStore.getName());
-		this.recordStore = RecordStoreFactory.getFactory().getStoreInstance();
+		String recordStoreName = recordStore.getName();
+		RecordStore.deleteRecordStore(recordStoreName);
+		RecordStoreFactory factory = RecordStoreFactory.getFactory();
+		this.recordStore = factory.getStoreInstance();
 	}
 		
 	
@@ -66,32 +69,44 @@ public class SetOfCardsDAO {
 			SetOfCards setToReturn = new SetOfCards();
 			Vector cards = new Vector();
 		    for(int i = 1; i<=numRecords;i++){
-		    	//read the cards one record at a time
+		    	//Create a input stream for the cards
 		    	ByteArrayInputStream bais = new ByteArrayInputStream(recordStore.getRecord(i));
 				DataInputStream inputStream = new DataInputStream(bais);
-				setToReturn.setTitle(inputStream.readUTF());
-				setToReturn.setDone(inputStream.readBoolean());
-				setToReturn.setTotalStudiedTimeInMiliseconds(inputStream.readLong());
-				setToReturn.setSideOneTitle(inputStream.readUTF());
+				
+				//Recover data from the set
+				String setOfCardsTitle = inputStream.readUTF();
+				boolean setOfCardsIsDone = inputStream.readBoolean();
+				long setOfCardsStudyTime = inputStream.readLong();
 				//recover the card
+				String cardSideOneTitle = inputStream.readUTF();
+				String cardSideOneText = inputStream.readUTF();
+				String cardSideTwoTitle = inputStream.readUTF();
+				String cardSideTwoText = inputStream.readUTF();
+				boolean cardIsDone = inputStream.readBoolean();
+				String cardTip = inputStream.readUTF();
+
+				//populate the set
+				setToReturn.setTitle(setOfCardsTitle);				
+				setToReturn.setDone(setOfCardsIsDone);				
+				setToReturn.setTotalStudiedTimeInMiliseconds(setOfCardsStudyTime);
+				
+				//create a card to the set				
 				FlashCard card = new FlashCard();
-				//side one text
-				card.setSideOne(inputStream.readUTF());
-				//the title for side 2
-				setToReturn.setSideTwoTitle(inputStream.readUTF());
-				//the text for side two
-				card.setSideTwo(inputStream.readUTF());
-				//card state
-				card.setDone(inputStream.readBoolean());
-				//card tip
-				card.setTip(inputStream.readUTF());
+				card.setSideOneTitle(cardSideOneTitle);
+				card.setSideOne(cardSideOneText);
+				card.setSideTwoTitle(cardSideTwoTitle);
+				card.setSideTwo(cardSideTwoText);
+				card.setDone(cardIsDone);
+				card.setTip(cardTip);
+				
+				//Add the card to the Vector
 				cards.addElement(card);
 		    }
 		    //add the vector of cards to the set
 		    setToReturn.setFlashCards(cards);
-		
 			return setToReturn;
 	}
+	
 	/**
 	 * 
 	 * @param setOfCards
@@ -106,12 +121,11 @@ public class SetOfCardsDAO {
 	public void saveState(SetOfCards setOfCards) throws IOException, RecordStoreNotOpenException, RecordStoreFullException, RecordStoreException {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		DataOutputStream outputStream = new DataOutputStream(baos);
-		int recId; //holds the key for the record. Not used.
+//		int recId; //holds the key for the record. Not used.
 		
 		//get the data from the SetOfCards into an byte array
-		//Generic data shared between all the cards
-		String side1title = setOfCards.getSideOneTitle();
-		String side2title = setOfCards.getSideTwoTitle();
+		//Generic data shared between all the cards 
+		// (belongs to the setOfCards)		
 		String title = setOfCards.getTitle();
 		long totalTime = setOfCards.getTotalStudiedTimeInMiliseconds();
 		boolean setIsDone = setOfCards.isDone();
@@ -123,7 +137,9 @@ public class SetOfCardsDAO {
 		for(int i =0; i<size; i++) {
 			FlashCard card = (FlashCard)cards.elementAt(i);
 			String side1text = card.getSideOne();
+			String side1title = card.getSideOneTitle();
 			String side2text = card.getSideTwo();
+			String side2title = card.getSideTwoTitle();
 			String tip = card.getTip();
 			boolean cardIsDone = card.isDone();
 			outputStream.writeUTF(title);
@@ -139,9 +155,10 @@ public class SetOfCardsDAO {
 			// Extract the byte array
 			byte[] b = baos.toByteArray();
 			//write a record to the record store
-		  //  int storeSize = recordStore.getSize();
+//		    int storeSize = recordStore.getSize(); //this didn't work
 			int recordLength = b.length;
-			recId = recordStore.addRecord(b, 0, recordLength);
+//			recId = recordStore.addRecord(b, 0, recordLength);
+			recordStore.addRecord(b, 0, recordLength);
 		}   
 	}
 }

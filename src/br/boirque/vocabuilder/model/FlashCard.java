@@ -2,17 +2,47 @@ package br.boirque.vocabuilder.model;
 
 /**
  * @author cleber.goncalves
- * A FlashCard tipically has a question in 
+ * A FlashCard typically has a question in 
  * one side and an answer in the other.
  * It might also contain a tip about the answer.
  */
 public class FlashCard {
 
 	private String sideOne;
+	private String sideOneTitle;
 	private String sideTwo;
+	private String sideTwoTitle;
 	private boolean done;
 	private String tip;
 	
+		
+	/**
+	 * Default constructor 
+	 */
+	public FlashCard() {
+	}
+	
+	/**
+	 * @param sideOne
+	 * @param sideOneTitle
+	 * @param sideTwo
+	 * @param sideTwoTitle
+	 * @param done
+	 * @param tip
+	 * 
+	 * Convenience constructor
+	 */
+	public FlashCard(String sideOne, String sideOneTitle, String sideTwo,
+			String sideTwoTitle, boolean done, String tip) {
+		super();
+		this.sideOne = sideOne;
+		this.sideOneTitle = sideOneTitle;
+		this.sideTwo = sideTwo;
+		this.sideTwoTitle = sideTwoTitle;
+		this.done = done;
+		this.tip = tip;
+	}
+
 	/**
 	 * @return the word on sideOne
 	 */
@@ -60,6 +90,30 @@ public class FlashCard {
 	 */
 	public void setTip(String tip) {
 		this.tip = tip;
+	}
+	/**
+	 * @return the sideOneTitle
+	 */
+	public String getSideOneTitle() {
+		return sideOneTitle;
+	}
+	/**
+	 * @param sideOneTitle the sideOneTitle to set
+	 */
+	public void setSideOneTitle(String sideOneTitle) {
+		this.sideOneTitle = sideOneTitle;
+	}
+	/**
+	 * @return the sideTwoTitle
+	 */
+	public String getSideTwoTitle() {
+		return sideTwoTitle;
+	}
+	/**
+	 * @param sideTwoTitle the sideTwoTitle to set
+	 */
+	public void setSideTwoTitle(String sideTwoTitle) {
+		this.sideTwoTitle = sideTwoTitle;
 	}
 	
 }
