@@ -1,4 +1,4 @@
-package br.boirque.vocabuilder;
+package br.boirque.vocabuilder.model;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -14,7 +14,6 @@ import javax.microedition.rms.RecordStoreFullException;
 import javax.microedition.rms.RecordStoreNotFoundException;
 import javax.microedition.rms.RecordStoreNotOpenException;
 
-import br.boirque.vocabuilder.dao.RecordStoreFactory;
 
 /**
  * 
@@ -43,11 +42,11 @@ public class SetOfCardsDAO {
 	 * @throws RecordStoreException 
 	 * @throws RecordStoreNotFoundException 
 	 */
-//	public void resetState() throws RecordStoreNotFoundException, RecordStoreException{
-//		this.recordStore.closeRecordStore();
-//		RecordStore.deleteRecordStore(recordStore.getName());
-//		this.recordStore = RecordStoreFactory.getFactory().getStoreInstance();
-//	}
+	public void resetState() throws RecordStoreNotFoundException, RecordStoreException{
+		this.recordStore.closeRecordStore();
+		RecordStore.deleteRecordStore(recordStore.getName());
+		this.recordStore = RecordStoreFactory.getFactory().getStoreInstance();
+	}
 		
 	
 	/**
@@ -62,7 +61,7 @@ public class SetOfCardsDAO {
 	 * @throws InvalidRecordIDException 
 	 * TODO: Try to recover from some of the exceptions
 	 */
-	public SetOfCards LoadSet() throws IOException, InvalidRecordIDException, RecordStoreException {
+	public SetOfCards loadState() throws IOException, InvalidRecordIDException, RecordStoreException {
 			int numRecords = recordStore.getNumRecords();
 			SetOfCards setToReturn = new SetOfCards();
 			Vector cards = new Vector();
@@ -104,7 +103,7 @@ public class SetOfCardsDAO {
 	 * TODO: Try to recover from some of the exceptions
 	 * (like record is full)
 	 */
-	public void SaveState(SetOfCards setOfCards) throws IOException, RecordStoreNotOpenException, RecordStoreFullException, RecordStoreException {
+	public void saveState(SetOfCards setOfCards) throws IOException, RecordStoreNotOpenException, RecordStoreFullException, RecordStoreException {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		DataOutputStream outputStream = new DataOutputStream(baos);
 		int recId; //holds the key for the record. Not used.

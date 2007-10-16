@@ -3,6 +3,6 @@ MIDlet-Vendor: Midlet Suite Vendor
 MIDlet-Jar-URL: Vocabuilder.jar
 MicroEdition-Configuration: CLDC-1.1
 MIDlet-2: TestMidlet,,br.boirque.vocabuilder.TestMidlet
-MIDlet-1: FlashCard,,br.boirque.vocabuilder.model.Vocabuilder
 MicroEdition-Profile: MIDP-2.1
+MIDlet-1: FlashCard,,br.boirque.vocabuilder.model.Vocabuilder
 MIDlet-Name: Vocabuilder Midlet Suite

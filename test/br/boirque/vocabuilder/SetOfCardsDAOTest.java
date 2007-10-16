@@ -8,6 +8,10 @@ import javax.microedition.rms.RecordStoreException;
 import javax.microedition.rms.RecordStoreFullException;
 import javax.microedition.rms.RecordStoreNotOpenException;
 
+import br.boirque.vocabuilder.model.FlashCard;
+import br.boirque.vocabuilder.model.SetOfCards;
+import br.boirque.vocabuilder.model.SetOfCardsDAO;
+
 import j2meunit.framework.*;
 
 public class SetOfCardsDAOTest extends TestCase {
@@ -67,15 +71,15 @@ public class SetOfCardsDAOTest extends TestCase {
 
 	public void testLoadSet() throws InvalidRecordIDException, IOException, RecordStoreException {
 		SetOfCardsDAO socdao = new SetOfCardsDAO();
-		SetOfCards soc = socdao.LoadSet();
+		SetOfCards soc = socdao.loadState();
 		assertNotNull(soc);
 	}
 
 	public void testSaveState() throws RecordStoreNotOpenException, RecordStoreFullException, IOException, RecordStoreException {
 		SetOfCardsDAO socdao = new SetOfCardsDAO();
 //		socdao.resetState();
-		socdao.SaveState(setOfCards);
-		SetOfCards soc = socdao.LoadSet();
+		socdao.saveState(setOfCards);
+		SetOfCards soc = socdao.loadState();
 		assertNotNull("set null", soc);
 		//check if the recovered data from the set is correct
 		assertTrue("set should not be done", !soc.isDone());

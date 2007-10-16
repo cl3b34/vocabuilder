@@ -1,4 +1,4 @@
-package br.boirque.vocabuilder.dao;
+package br.boirque.vocabuilder.model;
 
 import javax.microedition.rms.RecordStore;
 import javax.microedition.rms.RecordStoreException;

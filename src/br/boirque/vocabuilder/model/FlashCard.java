@@ -1,4 +1,4 @@
-package br.boirque.vocabuilder;
+package br.boirque.vocabuilder.model;
 
 /**
  * @author cleber.goncalves

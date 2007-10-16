@@ -1,4 +1,4 @@
-package br.boirque.vocabuilder;
+/*package br.boirque.vocabuilder;
 
 import junit.framework.TestCase;
 
@@ -33,3 +33,4 @@ public class VocabuilderTest extends TestCase {
 	}
 
 }
+*/
