@@ -19,6 +19,10 @@ public class RecordStoreFactory {
 		
 	}
 	
+	/**
+	 * Generates a RecordStore factory by calling the private constructor
+	 * @return a factory for the record store
+	 */
 	public static RecordStoreFactory getFactory() {
 		if(factory == null) {
 			factory = new RecordStoreFactory();			
@@ -26,6 +30,13 @@ public class RecordStoreFactory {
 		return factory;
 	}
 	
+	/**
+	 * Gets the current open instance of the recordStore or opens one
+	 * @return The RecordStore currently being used
+	 * @throws RecordStoreFullException
+	 * @throws RecordStoreNotFoundException
+	 * @throws RecordStoreException
+	 */
 	public RecordStore getStoreInstance() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException {
 		if(recordStore == null) {
 			recordStore = RecordStore.openRecordStore(storeName , true);
