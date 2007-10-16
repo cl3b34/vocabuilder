@@ -119,8 +119,7 @@ public class SetOfCardsDAO {
 	 * (like record is full)
 	 */
 	public void saveState(SetOfCards setOfCards) throws IOException, RecordStoreNotOpenException, RecordStoreFullException, RecordStoreException {
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		DataOutputStream outputStream = new DataOutputStream(baos);
+
 //		int recId; //holds the key for the record. Not used.
 		
 		//get the data from the SetOfCards into an byte array
@@ -135,6 +134,8 @@ public class SetOfCardsDAO {
 		//title;setIsDone;totalTime;side1title;side1text;side2title;side2text;cardIsDone;tip
 		int size = cards.size();
 		for(int i =0; i<size; i++) {
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			DataOutputStream outputStream = new DataOutputStream(baos);
 			FlashCard card = (FlashCard)cards.elementAt(i);
 			String side1text = card.getSideOne();
 			String side1title = card.getSideOneTitle();
