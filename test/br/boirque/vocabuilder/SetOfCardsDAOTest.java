@@ -37,36 +37,22 @@ public class SetOfCardsDAOTest extends TestCase {
 	}
 
 
-	protected void setUp() throws Exception {
-		
-		setOfCards = new SetOfCards();
-		setOfCards.setDone(false);
-		setOfCards.setSideOneTitle("finnish");
-		setOfCards.setSideTwoTitle("english");
-		setOfCards.setTitle("Semantic primitives");
-		setOfCards.setTotalStudiedTimeInMiliseconds(10000L);
-
+	protected void setUp() throws Exception {	
 		//Create a vector with flash cards
 		Vector v = new Vector();
-		FlashCard c1 = new FlashCard();
-		c1.setDone(true);
-		c1.setSideOne("Auto");
-		c1.setSideTwo("car");
-		c1.setTip("goes on the street");
+		FlashCard c1 = new FlashCard("Auto","Suomi","Car","English",true,"runs on the street");
 		v.addElement(c1);
 
-		FlashCard c2 = new FlashCard();
-		c2.setDone(false);
-		c2.setSideOne("muna");
-		c2.setSideTwo("egg");
-		c2.setTip("Did it came before the chicken?");
+		FlashCard c2 = new FlashCard("Muna","Fin","Egg","Eng",false,"who came first?");
 		v.addElement(c2);
 
-		setOfCards.setFlashCards(v);
+		//Create a set and assign the vector of cards to it
+		setOfCards = new SetOfCards("Semantic primitives",false, 10000L, v );
 	}
 
 	protected void tearDown() throws Exception {
 		super.tearDown();
+		setOfCards = null;
 	}
 
 	public void testLoadSet() throws InvalidRecordIDException, IOException, RecordStoreException {
@@ -83,18 +69,27 @@ public class SetOfCardsDAOTest extends TestCase {
 		assertNotNull("set null", soc);
 		//check if the recovered data from the set is correct
 		assertTrue("set should not be done", !soc.isDone());
-		assertEquals("value is not equal","finnish", soc.getSideOneTitle());
 		assertEquals("value is not equal","Semantic primitives", soc.getTitle());
 		assertEquals("value is not equal",10000L, soc.getTotalStudiedTimeInMiliseconds());
-		//recover the flash cards from the set and check if the data is 
-		//correct
+		//recover the flash cards from the set and check
+		// if the data is matches the original
 		Vector flashCards = soc.getFlashCards();
+		//Card 1
 		FlashCard flashCard1 = ((FlashCard)(flashCards.elementAt(0)));
 		assertEquals("value is not equal","Auto", flashCard1.getSideOne());
+		assertEquals("value is not equal","Suomi", flashCard1.getSideOneTitle());
+		assertEquals("value is not equal","Car", flashCard1.getSideTwo());
+		assertEquals("value is not equal","English", flashCard1.getSideTwoTitle());
+		assertEquals("value is not equal","runs on the street", flashCard1.getTip());
 		assertTrue("should be done", flashCard1.isDone());
+		
+		// Card 2
 		FlashCard flashCard2 = ((FlashCard)(flashCards.elementAt(1)));
-		assertEquals("value is not equal","egg", flashCard2.getSideTwo());
-		//assert that this card is NOT done
+		assertEquals("value is not equal","Muna", flashCard2.getSideOne());
+		assertEquals("value is not equal","Fin", flashCard2.getSideOneTitle());
+		assertEquals("value is not equal","Egg", flashCard2.getSideTwo());
+		assertEquals("value is not equal","Eng", flashCard2.getSideTwoTitle());
+		assertEquals("value is not equal","who came first?", flashCard2.getTip());
 		assertTrue("should not be done", !flashCard2.isDone());
 	}
 
