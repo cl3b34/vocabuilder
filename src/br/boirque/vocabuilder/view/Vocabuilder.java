@@ -20,12 +20,17 @@ import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.model.SetOfCardsDAO;
 
 public class Vocabuilder extends MIDlet implements CommandListener {
-    private Command exitCommand;
+    private Command exitCommand = new Command("Exit", Command.EXIT, 3);
+    private Command turnCommand = new Command("Turn", Command.SCREEN, 1);
+    private Command doneCommand = new Command("Done", Command.SCREEN, 1);
+    private Command wrongCommand = new Command("Wrong", Command.SCREEN, 1);
+    private Command restartCommand = new Command("Restart", Command.SCREEN, 1);
+    private Command againCommand = new Command("Again", Command.SCREEN, 1);
+    private Command reviewCommand = new Command("Review", Command.SCREEN, 1);
+    private Command backCommand = new Command("Back", Command.BACK, 1);
     private TextBox tbox;
     
-    
     public Vocabuilder() {
-        exitCommand = new Command("Exit", Command.EXIT, 1);
         tbox = new TextBox("Hello world MIDlet", "Hello World!", 150, 0);
         tbox.addCommand(exitCommand);
         tbox.setCommandListener(this);
