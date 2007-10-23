@@ -17,13 +17,16 @@ import br.boirque.vocabuilder.model.SetOfCardsLoader;
  */
 public class Initializer {
 	
-	public void initializeApp() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException{
+	//In the future, this guy should check if there is any partially saved state available
+	// (record stores in the hand set)
+	public SetOfCards initializeApp() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException{
 		//Load the set from any available media (defined in the loader)
 		SetOfCardsLoader socl = new SetOfCardsLoader();
 		SetOfCards soc = socl.loadSet();
 		
 		//save the loaded set into a local recordStore
 		SetOfCardsDAO socdao = new SetOfCardsDAO();
-		socdao.saveState(soc);			
+		socdao.saveState(soc);	
+		return soc;
 	}
 }
