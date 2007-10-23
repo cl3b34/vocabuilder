@@ -25,7 +25,7 @@ import br.boirque.vocabuilder.model.SetOfCardsDAO;
 public class Vocabuilder extends MIDlet implements CommandListener {
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
 	private Command turnCommand = new Command("Turn", Command.SCREEN, 1);
-	private Command doneCommand = new Command("Done", Command.SCREEN, 2);
+	private Command doneCommand = new Command("Done", Command.SCREEN, 1);
 	private Command wrongCommand = new Command("Wrong", Command.SCREEN, 1);
 	private Command restartCommand = new Command("Restart", Command.SCREEN, 2);
 	private Command againCommand = new Command("Again", Command.SCREEN, 2);
@@ -118,8 +118,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				//show the commands for side one
 				tbox.addCommand(turnCommand);
 				tbox.addCommand(exitCommand);
-//				tbox.setTitle(c.getSideOneTitle());
-//				tbox.setString(c.getSideOne());
+				tbox.setTitle(c.getSideOneTitle());
+				tbox.setString(c.getSideOne());
 				
 				sideOne = true;
 			} else {
@@ -130,8 +130,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				tbox.addCommand(doneCommand);
 				tbox.addCommand(wrongCommand);
 				
-//				tbox.setTitle(c.getSideTwoTitle());
-//				tbox.setString(c.getSideTwo());
+				tbox.setTitle(c.getSideTwoTitle());
+				tbox.setString(c.getSideTwo());
 				
 				sideOne = false;
 			}
@@ -144,8 +144,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			if (currentCardIndex < cards.size()) {
 				c = (FlashCard) cards.elementAt(currentCardIndex);
 
-//				tbox.setTitle(c.getSideOneTitle());
-//				tbox.setString(c.getSideOne());
+				tbox.setTitle(c.getSideOneTitle());
+				tbox.setString(c.getSideOne());
 				//remove the commands for side two
 				tbox.removeCommand(doneCommand);
 				tbox.removeCommand(wrongCommand);
@@ -162,8 +162,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			if (currentCardIndex < cards.size()) {
 				c = (FlashCard) cards.elementAt(currentCardIndex);
 
-//				tbox.setTitle(c.getSideOneTitle());
-//				tbox.setString(c.getSideOne());
+				tbox.setTitle(c.getSideOneTitle());
+				tbox.setString(c.getSideOne());
 				//remove the commands for side two
 				tbox.removeCommand(doneCommand);
 				tbox.removeCommand(wrongCommand);
