@@ -24,11 +24,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
 	private Command turnCommand = new Command("Turn", Command.SCREEN, 1);
 	private Command doneCommand = new Command("Done", Command.SCREEN, 1);
-	private Command wrongCommand = new Command("Wrong", Command.SCREEN, 1);
+	private Command wrongCommand = new Command("Wrong", Command.SCREEN, 2);
 	private Command restartCommand = new Command("Restart", Command.SCREEN, 2);
-	private Command againCommand = new Command("Again", Command.SCREEN, 2);
-	private Command reviewCommand = new Command("Review", Command.SCREEN, 2);
-	private Command backCommand = new Command("Back", Command.BACK, 1);
+	private Command reviewCommand = new Command("Review", Command.SCREEN, 1);
+	private Command nextSet = new Command("Next set", Command.SCREEN, 1);
 
 	private Form mainForm;
 	private StringItem cardText;
@@ -36,30 +35,21 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private SetOfCards soc;
 	private Vector cards;
 	FlashCard c;
-	
+
 	private int currentCardIndex = -1;
 	boolean sideOne;
-
+	
 	public Vocabuilder() {
-		
+
 		mainForm = new Form("Vocabuilder");
 		cardText = new StringItem("", "Card Text");
 		cardText.setLayout(Item.LAYOUT_CENTER);
 		cardText.setLayout(Item.LAYOUT_EXPAND);
-//		cardText.setPreferredSize(-1, cardText.getPreferredHeight()+3);
-		cardText.setText("height " + cardText.getPreferredHeight() + " " + cardText.getMinimumHeight());
-				
+		// cardText.setPreferredSize(-1, cardText.getPreferredHeight()+3);
+//		cardText.setText("height " + cardText.getPreferredHeight() + " "
+//		+ cardText.getMinimumHeight());
+
 		mainForm.append(cardText);
-		
-		
-		mainForm.addCommand(exitCommand);
-		mainForm.addCommand(turnCommand);
-//		 mainForm.addCommand(doneCommand);
-//		 mainForm.addCommand(wrongCommand);
-//		 mainForm.addCommand(restartCommand);
-//		 mainForm.addCommand(againCommand);
-//		 mainForm.addCommand(reviewCommand);
-//		mainForm.addCommand(backCommand);
 		mainForm.setCommandListener(this);
 	}
 
@@ -72,21 +62,16 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 		try {
 			soc = initializer.initializeApp();
-			String setTitle = soc.getTitle(); 
-			cards = soc.getFlashCards();
-			// for (int i = 0; i < cards.size(); i++) {
-			c = (FlashCard) cards.elementAt(0);
-			// if the card is not done yet, we show it
-			if (!c.isDone()) {
-				mainForm.setTitle(setTitle);
-				
-				cardText.setLabel(c.getSideOneTitle() + ": \n");
-				cardText.setText(c.getSideOne());
-				// set the index of the current showing card
-				currentCardIndex = 0;
-				// mark what is the currently displayed side
-				sideOne = true;
+			//TODO - transfer this initialization 
+			//code to a controller class
+			//Look for a set of cards that is not done yet
+			while(soc.isDone()) {
+				soc = initializer.initializeApp();
 			}
+			String titleOfThisSet = soc.getTitle();
+			mainForm.setTitle(titleOfThisSet);
+			cards = soc.getFlashCards();
+			displayFirstNotDoneCard();
 			Display.getDisplay(this).setCurrent(mainForm);
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block
@@ -104,10 +89,124 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 	}
 
+	private void displayFirstNotDoneCard() {
+		// Look for a card that is not done yet and display it
+		int i = 0;
+		c = (FlashCard) cards.elementAt(i);
+		boolean notFound = true;
+		while(notFound) {
+			if(c.isDone()) {
+				//get the next card
+				i++;
+				c = (FlashCard) cards.elementAt(i);
+			}else {
+				//display the card and leave the loop
+				displaySide(1);
+				// set the index of the current showing card
+				currentCardIndex = i;
+				notFound = false;					
+			}								
+		}
+	}
+
+/*	private void displayNextNotDoneCard() {
+		c = (FlashCard) cards.elementAt(currentCardIndex);
+		boolean notFound = true;
+		while(notFound) {
+			if(c.isDone()) {
+				//get the next card
+				currentCardIndex++;
+				c = (FlashCard) cards.elementAt(currentCardIndex);
+			}else {
+				//display the card and leave the loop
+				displaySide(1);
+				notFound = false;					
+			}								
+		}
+	}*/
+	
+	
 	protected void pauseApp() {
 	}
 
 	protected void destroyApp(boolean bool) {
+	}
+	
+	private void setCommands(Command[] commands) {
+		//remove all commands
+		mainForm.removeCommand(doneCommand);
+		mainForm.removeCommand(wrongCommand);
+		mainForm.removeCommand(exitCommand);
+		mainForm.removeCommand(turnCommand);
+		mainForm.removeCommand(restartCommand);
+		mainForm.removeCommand(reviewCommand);
+		mainForm.removeCommand(nextSet);
+		
+		//add the desired commands
+		for(int i=0; i< commands.length; i++) {
+			Command c = commands[i];
+			mainForm.addCommand(c);
+		}
+	}
+
+	private void displaySide(int side) {
+		switch (side) {
+		case 1:
+			Command[] commands = {turnCommand, exitCommand};
+			setCommands(commands);
+			cardText.setLabel(c.getSideOneTitle() + ": \n");
+			cardText.setText(c.getSideOne());
+			sideOne = true;
+			break;
+		case 2:
+			Command[] cmds = {doneCommand, wrongCommand};
+			setCommands(cmds);
+			cardText.setLabel(c.getSideTwoTitle() + ": \n");
+			cardText.setText(c.getSideTwo());
+			sideOne = false;
+			break;
+		default:
+			break;
+		}
+	}
+	
+	private int getDoneAmount() {
+		int doneAmount = 0;
+		for(int i=0; i<cards.size(); i++) {
+			c = (FlashCard) cards.elementAt(i);
+			if(c.isDone()) {
+				doneAmount++;
+			}
+		}
+		return doneAmount;
+	}
+	
+	private void displayStatistics() {
+		int totalOfCards = cards.size();
+		int done = getDoneAmount();
+		int incorrectAmount = totalOfCards - done;
+		// TODO - fix this floating point calculation.
+		// MIDP doesnt have float or double
+//		int donePercent = (done/totalOfCards)*100;
+//		int wrongPercent = 100 - donePercent;
+		
+		// show the commands for statistics
+		if(incorrectAmount > 0) {
+			Command[] commands = {reviewCommand, exitCommand};
+			setCommands(commands);		
+		}else {
+			Command[] commands = {restartCommand, exitCommand};
+			setCommands(commands);		
+		}
+		cardText.setLabel("STATISTICS" + "\n");	
+	
+//		cardText.setText("Total of cards: " + totalOfCards + "\n" +
+//				"Correct: " + done + " (" + done/totalOfCards + "%)" + "\n" +
+//				"Incorrect: " + incorrectAmount + " (" + wrongPercent + "%)");	
+
+		cardText.setText("Total of cards: " + totalOfCards + "\n" +
+				"Correct: " + done + "\n" +
+				"Incorrect: " + incorrectAmount );	
 	}
 
 	public void commandAction(Command cmd, Displayable disp) {
@@ -116,70 +215,59 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			destroyApp(false);
 			notifyDestroyed();
 		}
-
+		
+		if (cmd == reviewCommand) {
+			// show again the cards in the set not marked as 'done'
+			displayFirstNotDoneCard();
+		}
+		
+		if (cmd == nextSet) {
+			// Load a new set of cards
+		}
+		
+		if (cmd == restartCommand) {
+			// remove the 'done' mark from the set and all the cards
+			// and start over the set
+			// TODO: SHOULD ask for confirmation
+			for(int i=0; i< cards.size(); i++) {
+				c = (FlashCard) cards.elementAt(i);
+				c.setDone(false);
+			}
+			displayFirstNotDoneCard();			
+		}
+		
 		if (cmd == turnCommand) {
 			// turn the card
 			if (!sideOne) {
-				//remove the commands for side two
-				mainForm.removeCommand(doneCommand);
-				mainForm.removeCommand(wrongCommand);
-				//show the commands for side one
-				mainForm.addCommand(turnCommand);
-				mainForm.addCommand(exitCommand);
-				cardText.setText(c.getSideOne());
-				
-				sideOne = true;
+				displaySide(1);
 			} else {
-				//remove the commands for side one
-				mainForm.removeCommand(turnCommand);
-				mainForm.removeCommand(exitCommand);
-				//show the commands for side two
-				mainForm.addCommand(doneCommand);
-				mainForm.addCommand(wrongCommand);
-				
-				mainForm.setTitle(c.getSideTwoTitle());
-				cardText.setText(c.getSideTwo());
-				
-				sideOne = false;
+				displaySide(2);
 			}
 		}
 
 		if (cmd == doneCommand) {
-			//mark card as done and show next card, side one
+			// mark card as done and show next card, side one
 			c.setDone(true);
 			currentCardIndex = currentCardIndex + 1;
 			if (currentCardIndex < cards.size()) {
 				c = (FlashCard) cards.elementAt(currentCardIndex);
-
-				mainForm.setTitle(c.getSideOneTitle());
-				cardText.setText(c.getSideOne());
-				//remove the commands for side two
-				mainForm.removeCommand(doneCommand);
-				mainForm.removeCommand(wrongCommand);
-				//show the commands for side one
-				mainForm.addCommand(turnCommand);
-				mainForm.addCommand(exitCommand);
-				sideOne = true;
+				displaySide(1);
+			} else {
+				// got to the end of the set.
+				displayStatistics();
 			}
 		}
 
 		if (cmd == wrongCommand) {
-			//Just show next card, side one
+			// Just show next card, side one
 			currentCardIndex = currentCardIndex + 1;
 			if (currentCardIndex < cards.size()) {
 				c = (FlashCard) cards.elementAt(currentCardIndex);
-
-				mainForm.setTitle(c.getSideOneTitle());
-				cardText.setText(c.getSideOne());
-				//remove the commands for side two
-				mainForm.removeCommand(doneCommand);
-				mainForm.removeCommand(wrongCommand);
-				//show the commands for side one
-				mainForm.addCommand(turnCommand);
-				mainForm.addCommand(exitCommand);
-				sideOne = true;
+				displaySide(1);
+			}else {
+				// got to the end of the set.
+				displayStatistics();
 			}
 		}
-
 	}
 }
