@@ -109,7 +109,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 	}
 
-/*	private void displayNextNotDoneCard() {
+	private void displayNextNotDoneCard() {
 		c = (FlashCard) cards.elementAt(currentCardIndex);
 		boolean notFound = true;
 		while(notFound) {
@@ -123,7 +123,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				notFound = false;					
 			}								
 		}
-	}*/
+	}
 	
 	
 	protected void pauseApp() {
@@ -249,9 +249,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			// mark card as done and show next card, side one
 			c.setDone(true);
 			currentCardIndex = currentCardIndex + 1;
-			if (currentCardIndex < cards.size()) {
-				c = (FlashCard) cards.elementAt(currentCardIndex);
-				displaySide(1);
+			// TODO - keep the done amount in a class variable to
+			// save processing
+			if (getDoneAmount() < cards.size()) {
+				displayNextNotDoneCard();
 			} else {
 				// got to the end of the set.
 				displayStatistics();
@@ -261,9 +262,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		if (cmd == wrongCommand) {
 			// Just show next card, side one
 			currentCardIndex = currentCardIndex + 1;
-			if (currentCardIndex < cards.size()) {
-				c = (FlashCard) cards.elementAt(currentCardIndex);
-				displaySide(1);
+			// TODO - keep the done amount in a class variable to
+			// save processing
+			if (getDoneAmount() < cards.size()) {
+				displayNextNotDoneCard();
 			}else {
 				// got to the end of the set.
 				displayStatistics();
