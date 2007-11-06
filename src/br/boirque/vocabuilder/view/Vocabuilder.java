@@ -39,7 +39,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private int totalOfCards = -1;
 	private int totalReviewed = -1;
 	boolean sideOne;
-	
+
 	public Vocabuilder() {
 
 		mainForm = new Form("Vocabuilder");
@@ -47,8 +47,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		cardText.setLayout(Item.LAYOUT_CENTER);
 		cardText.setLayout(Item.LAYOUT_EXPAND);
 		// cardText.setPreferredSize(-1, cardText.getPreferredHeight()+3);
-//		cardText.setText("height " + cardText.getPreferredHeight() + " "
-//		+ cardText.getMinimumHeight());
+		//		cardText.setText("height " + cardText.getPreferredHeight() + " "
+		//		+ cardText.getMinimumHeight());
 
 		mainForm.append(cardText);
 		mainForm.setCommandListener(this);
@@ -60,37 +60,24 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	protected void startApp() {
 		// initialize the application. Load the list
 		Initializer initializer = new Initializer();
-
-		try {
+		// TODO: the initialization might return a null set of cards
+		// if so, display an error message
+		soc = initializer.initializeApp();
+		
+		//TODO - transfer this initialization of the set of cards
+		//code to a controller class
+		//Look for a set of cards that is not done yet
+		while (soc.isDone()) {
 			soc = initializer.initializeApp();
-			//TODO - transfer this initialization of the set of cards
-			//code to a controller class
-			//Look for a set of cards that is not done yet
-			while(soc.isDone()) {
-				soc = initializer.initializeApp();
-			}
-			String titleOfThisSet = soc.getTitle();
-			mainForm.setTitle(titleOfThisSet);
-			cards = soc.getFlashCards();
-			amountToReview = cards.size()- getDoneAmount();
-			totalOfCards = cards.size();
-			totalReviewed = 0;
-			displayNextNotDoneCard();
-			Display.getDisplay(this).setCurrent(mainForm);
-		} catch (RecordStoreFullException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (RecordStoreNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (RecordStoreException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
-
+		String titleOfThisSet = soc.getTitle();
+		mainForm.setTitle(titleOfThisSet);
+		cards = soc.getFlashCards();
+		amountToReview = cards.size() - getDoneAmount();
+		totalOfCards = cards.size();
+		totalReviewed = 0;
+		displayNextNotDoneCard();
+		Display.getDisplay(this).setCurrent(mainForm);
 	}
 
 	private void displayNextNotDoneCard() {
@@ -98,25 +85,29 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		int i = totalReviewed;
 		c = (FlashCard) cards.elementAt(i);
 		boolean notFound = true;
-		while(notFound) {
-			if(c.isDone()) {
+		while (notFound) {
+			if (c.isDone()) {
 				//get the next card
 				i++;
 				c = (FlashCard) cards.elementAt(i);
-			}else {
+			} else {
 				//display the card and leave the loop
 				displayCardSide(1);
-				notFound = false;					
-			}								
+				notFound = false;
+			}
 		}
 	}
-	
+
 	protected void pauseApp() {
+		Initializer initializer = new Initializer();
+		initializer.saveState(soc);
 	}
 
 	protected void destroyApp(boolean bool) {
+		Initializer initializer = new Initializer();
+		initializer.saveState(soc);
 	}
-	
+
 	private void setCommands(Command[] commands) {
 		//remove all commands
 		mainForm.removeCommand(doneCommand);
@@ -126,9 +117,9 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		mainForm.removeCommand(restartCommand);
 		mainForm.removeCommand(reviewCommand);
 		mainForm.removeCommand(nextSet);
-		
+
 		//add the desired commands
-		for(int i=0; i< commands.length; i++) {
+		for (int i = 0; i < commands.length; i++) {
 			Command c = commands[i];
 			mainForm.addCommand(c);
 		}
@@ -137,14 +128,14 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private void displayCardSide(int side) {
 		switch (side) {
 		case 1:
-			Command[] commands = {turnCommand, exitCommand};
+			Command[] commands = { turnCommand, exitCommand };
 			setCommands(commands);
 			cardText.setLabel(c.getSideOneTitle() + ": \n");
 			cardText.setText(c.getSideOne());
 			sideOne = true;
 			break;
 		case 2:
-			Command[] cmds = {doneCommand, wrongCommand};
+			Command[] cmds = { doneCommand, wrongCommand };
 			setCommands(cmds);
 			cardText.setLabel(c.getSideTwoTitle() + ": \n");
 			cardText.setText(c.getSideTwo());
@@ -154,43 +145,42 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			break;
 		}
 	}
-	
+
 	private int getDoneAmount() {
 		int doneAmount = 0;
-		for(int i=0; i<cards.size(); i++) {
+		for (int i = 0; i < cards.size(); i++) {
 			c = (FlashCard) cards.elementAt(i);
-			if(c.isDone()) {
+			if (c.isDone()) {
 				doneAmount++;
 			}
 		}
 		return doneAmount;
 	}
-	
+
 	private void displayStatistics() {
 		int done = getDoneAmount();
 		int incorrectAmount = totalOfCards - done;
 		// TODO - fix this floating point calculation.
 		// MIDP doesnt have float or double
-//		int donePercent = (done/totalOfCards)*100;
-//		int wrongPercent = 100 - donePercent;
-		
-		// show the commands for statistics
-		if(incorrectAmount > 0) {
-			Command[] commands = {reviewCommand, exitCommand};
-			setCommands(commands);		
-		}else {
-			Command[] commands = {restartCommand, exitCommand};
-			setCommands(commands);		
-		}
-		cardText.setLabel("STATISTICS" + "\n");	
-	
-//		cardText.setText("Total of cards: " + totalOfCards + "\n" +
-//				"Correct: " + done + " (" + done/totalOfCards + "%)" + "\n" +
-//				"Incorrect: " + incorrectAmount + " (" + wrongPercent + "%)");	
+		//		int donePercent = (done/totalOfCards)*100;
+		//		int wrongPercent = 100 - donePercent;
 
-		cardText.setText("Total of cards: " + totalOfCards + "\n" +
-				"Correct: " + done + "\n" +
-				"Incorrect: " + incorrectAmount );	
+		// show the commands for statistics
+		if (incorrectAmount > 0) {
+			Command[] commands = { reviewCommand, exitCommand };
+			setCommands(commands);
+		} else {
+			Command[] commands = { restartCommand, exitCommand };
+			setCommands(commands);
+		}
+		cardText.setLabel("STATISTICS" + "\n");
+
+		//		cardText.setText("Total of cards: " + totalOfCards + "\n" +
+		//				"Correct: " + done + " (" + done/totalOfCards + "%)" + "\n" +
+		//				"Incorrect: " + incorrectAmount + " (" + wrongPercent + "%)");	
+
+		cardText.setText("Total of cards: " + totalOfCards + "\n" + "Correct: "
+				+ done + "\n" + "Incorrect: " + incorrectAmount);
 	}
 
 	public void commandAction(Command cmd, Displayable disp) {
@@ -199,31 +189,31 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			destroyApp(false);
 			notifyDestroyed();
 		}
-		
+
 		if (cmd == reviewCommand) {
 			// show again the cards in the set not marked as 'done'
 			amountToReview = totalOfCards - getDoneAmount();
 			totalReviewed = 0;
 			displayNextNotDoneCard();
 		}
-		
+
 		if (cmd == nextSet) {
 			// Load a new set of cards
 		}
-		
+
 		if (cmd == restartCommand) {
 			// remove the 'done' mark from the set and all the cards
 			// and start over the set
 			// TODO: SHOULD ask for confirmation
-			for(int i=0; i< cards.size(); i++) {
+			for (int i = 0; i < cards.size(); i++) {
 				c = (FlashCard) cards.elementAt(i);
 				c.setDone(false);
 			}
 			amountToReview = totalOfCards;
 			totalReviewed = 0;
-			displayNextNotDoneCard();			
+			displayNextNotDoneCard();
 		}
-		
+
 		if (cmd == turnCommand) {
 			// turn the card
 			if (!sideOne) {

@@ -44,9 +44,11 @@ public class SetOfCardsDAO {
 	 * @throws RecordStoreNotFoundException 
 	 */
 	public void resetState() throws RecordStoreNotFoundException, RecordStoreException{
-		this.recordStore.closeRecordStore();
 		String recordStoreName = recordStore.getName();
-		RecordStore.deleteRecordStore(recordStoreName);
+		this.recordStore.closeRecordStore();
+		RecordStore.deleteRecordStore(recordStoreName); //aparently this call is not working
+		// try also loosing the reference to the store.
+		this.recordStore = null; //looks like I cannot do it either. Might be because the Store is static
 		RecordStoreFactory factory = RecordStoreFactory.getFactory();
 		this.recordStore = factory.getStoreInstance();
 	}
@@ -58,7 +60,7 @@ public class SetOfCardsDAO {
 	 * This is the format written by the SaveState method. 
 	 * Both methods have to be changed at the same time
 	 * if the record format changes
-	 * @return a SetOfCards read from the store
+	 * @return a SetOfCards read from the store or null if the store was empty
 	 * @throws IOException 
 	 * @throws RecordStoreException 
 	 * @throws InvalidRecordIDException 
@@ -66,9 +68,10 @@ public class SetOfCardsDAO {
 	 */
 	public SetOfCards loadState() throws IOException, InvalidRecordIDException, RecordStoreException {
 			int numRecords = recordStore.getNumRecords();
-			SetOfCards setToReturn = new SetOfCards();
+			SetOfCards setToReturn = null;
 			Vector cards = new Vector();
 		    for(int i = 1; i<=numRecords;i++){
+		    	setToReturn = new SetOfCards();
 		    	//Create a input stream for the cards
 		    	ByteArrayInputStream bais = new ByteArrayInputStream(recordStore.getRecord(i));
 				DataInputStream inputStream = new DataInputStream(bais);
@@ -103,7 +106,9 @@ public class SetOfCardsDAO {
 				cards.addElement(card);
 		    }
 		    //add the vector of cards to the set
-		    setToReturn.setFlashCards(cards);
+		    if(setToReturn != null) {
+		    	setToReturn.setFlashCards(cards);	
+		    }		    
 			return setToReturn;
 	}
 	
