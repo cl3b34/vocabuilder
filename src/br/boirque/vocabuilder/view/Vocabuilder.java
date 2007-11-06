@@ -10,7 +10,6 @@ import javax.microedition.lcdui.Displayable;
 import javax.microedition.lcdui.Form;
 import javax.microedition.lcdui.Item;
 import javax.microedition.lcdui.StringItem;
-import javax.microedition.lcdui.TextBox;
 import javax.microedition.midlet.MIDlet;
 import javax.microedition.rms.RecordStoreException;
 import javax.microedition.rms.RecordStoreFullException;
@@ -36,7 +35,9 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private Vector cards;
 	FlashCard c;
 
-	private int currentCardIndex = -1;
+	private int amountToReview = -1;
+	private int totalOfCards = -1;
+	private int totalReviewed = -1;
 	boolean sideOne;
 	
 	public Vocabuilder() {
@@ -62,7 +63,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 		try {
 			soc = initializer.initializeApp();
-			//TODO - transfer this initialization 
+			//TODO - transfer this initialization of the set of cards
 			//code to a controller class
 			//Look for a set of cards that is not done yet
 			while(soc.isDone()) {
@@ -71,7 +72,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			String titleOfThisSet = soc.getTitle();
 			mainForm.setTitle(titleOfThisSet);
 			cards = soc.getFlashCards();
-			displayFirstNotDoneCard();
+			amountToReview = cards.size()- getDoneAmount();
+			totalOfCards = cards.size();
+			totalReviewed = 0;
+			displayNextNotDoneCard();
 			Display.getDisplay(this).setCurrent(mainForm);
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block
@@ -89,9 +93,9 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 	}
 
-	private void displayFirstNotDoneCard() {
+	private void displayNextNotDoneCard() {
 		// Look for a card that is not done yet and display it
-		int i = 0;
+		int i = totalReviewed;
 		c = (FlashCard) cards.elementAt(i);
 		boolean notFound = true;
 		while(notFound) {
@@ -101,30 +105,11 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				c = (FlashCard) cards.elementAt(i);
 			}else {
 				//display the card and leave the loop
-				displaySide(1);
-				// set the index of the current showing card
-				currentCardIndex = i;
+				displayCardSide(1);
 				notFound = false;					
 			}								
 		}
 	}
-
-	private void displayNextNotDoneCard() {
-		c = (FlashCard) cards.elementAt(currentCardIndex);
-		boolean notFound = true;
-		while(notFound) {
-			if(c.isDone()) {
-				//get the next card
-				currentCardIndex++;
-				c = (FlashCard) cards.elementAt(currentCardIndex);
-			}else {
-				//display the card and leave the loop
-				displaySide(1);
-				notFound = false;					
-			}								
-		}
-	}
-	
 	
 	protected void pauseApp() {
 	}
@@ -149,7 +134,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 	}
 
-	private void displaySide(int side) {
+	private void displayCardSide(int side) {
 		switch (side) {
 		case 1:
 			Command[] commands = {turnCommand, exitCommand};
@@ -182,7 +167,6 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 	
 	private void displayStatistics() {
-		int totalOfCards = cards.size();
 		int done = getDoneAmount();
 		int incorrectAmount = totalOfCards - done;
 		// TODO - fix this floating point calculation.
@@ -218,7 +202,9 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		
 		if (cmd == reviewCommand) {
 			// show again the cards in the set not marked as 'done'
-			displayFirstNotDoneCard();
+			amountToReview = totalOfCards - getDoneAmount();
+			totalReviewed = 0;
+			displayNextNotDoneCard();
 		}
 		
 		if (cmd == nextSet) {
@@ -233,43 +219,40 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				c = (FlashCard) cards.elementAt(i);
 				c.setDone(false);
 			}
-			displayFirstNotDoneCard();			
+			amountToReview = totalOfCards;
+			totalReviewed = 0;
+			displayNextNotDoneCard();			
 		}
 		
 		if (cmd == turnCommand) {
 			// turn the card
 			if (!sideOne) {
-				displaySide(1);
+				displayCardSide(1);
 			} else {
-				displaySide(2);
+				displayCardSide(2);
 			}
 		}
 
 		if (cmd == doneCommand) {
 			// mark card as done and show next card, side one
 			c.setDone(true);
-			currentCardIndex = currentCardIndex + 1;
-			// TODO - keep the done amount in a class variable to
-			// save processing
-			if (getDoneAmount() < cards.size()) {
-				displayNextNotDoneCard();
-			} else {
-				// got to the end of the set.
-				displayStatistics();
-			}
+			totalReviewed++;
+			callDisplayNextCard();
 		}
 
 		if (cmd == wrongCommand) {
 			// Just show next card, side one
-			currentCardIndex = currentCardIndex + 1;
-			// TODO - keep the done amount in a class variable to
-			// save processing
-			if (getDoneAmount() < cards.size()) {
-				displayNextNotDoneCard();
-			}else {
-				// got to the end of the set.
-				displayStatistics();
-			}
+			totalReviewed++;
+			callDisplayNextCard();
+		}
+	}
+
+	private void callDisplayNextCard() {
+		if (totalReviewed < amountToReview) {
+			displayNextNotDoneCard();
+		} else {
+			// got to the end of the set.
+			displayStatistics();
 		}
 	}
 }
