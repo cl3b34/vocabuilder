@@ -6,6 +6,7 @@ import java.util.Vector;
 import javax.microedition.rms.InvalidRecordIDException;
 import javax.microedition.rms.RecordStoreException;
 import javax.microedition.rms.RecordStoreFullException;
+import javax.microedition.rms.RecordStoreNotFoundException;
 import javax.microedition.rms.RecordStoreNotOpenException;
 
 import br.boirque.vocabuilder.model.FlashCard;
@@ -58,12 +59,12 @@ public class SetOfCardsDAOTest extends TestCase {
 	public void testLoadSet() throws InvalidRecordIDException, IOException, RecordStoreException {
 		SetOfCardsDAO socdao = new SetOfCardsDAO();
 		SetOfCards soc = socdao.loadState();
-		assertNotNull(soc);
+		assertNull(soc); //there is nothing in the set
 	}
 
 	public void testSaveState() throws RecordStoreNotOpenException, RecordStoreFullException, IOException, RecordStoreException {
 		SetOfCardsDAO socdao = new SetOfCardsDAO();
-//		socdao.resetState();
+		socdao.resetState();
 		socdao.saveState(setOfCards);
 		SetOfCards soc = socdao.loadState();
 		assertNotNull("set null", soc);
@@ -92,6 +93,13 @@ public class SetOfCardsDAOTest extends TestCase {
 		assertEquals("value is not equal","who came first?", flashCard2.getTip());
 		assertTrue("should not be done", !flashCard2.isDone());
 	}
+	
+	public void testResetState() throws RecordStoreNotFoundException, RecordStoreException{
+		SetOfCardsDAO socdao = new SetOfCardsDAO();
+		socdao.resetState();
+		assertEquals(0, socdao.getRecordCount()); //assert that the recordstore is empty		
+	}
+
 
 	public void testDummy() {
 		assertTrue(true);
@@ -112,6 +120,12 @@ public class SetOfCardsDAOTest extends TestCase {
 			} 
 		}));
 
+		testsuite.addTest(new SetOfCardsDAOTest("testResetState", new TestMethod(){ 
+			public void run(TestCase tc) throws RecordStoreNotOpenException, RecordStoreFullException, IOException, RecordStoreException {
+				((SetOfCardsDAOTest) tc).testResetState(); 
+			} 
+		}));
+		
 		testsuite.addTest(new SetOfCardsDAOTest("testDummy", new TestMethod(){ 
 			public void run(TestCase tc){
 				((SetOfCardsDAOTest) tc).testDummy(); 

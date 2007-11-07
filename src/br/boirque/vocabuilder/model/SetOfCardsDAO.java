@@ -46,13 +46,24 @@ public class SetOfCardsDAO {
 	public void resetState() throws RecordStoreNotFoundException, RecordStoreException{
 		String recordStoreName = recordStore.getName();
 		this.recordStore.closeRecordStore();
+		//TODO - This reference to the opencount variable must be removed
+		//opencount should be private
+		RecordStoreFactory.openCount--;
 		RecordStore.deleteRecordStore(recordStoreName); //aparently this call is not working
 		// try also loosing the reference to the store.
 		this.recordStore = null; //looks like I cannot do it either. Might be because the Store is static
 		RecordStoreFactory factory = RecordStoreFactory.getFactory();
 		this.recordStore = factory.getStoreInstance();
 	}
-		
+	
+	/**
+	 * Returns the amount of records currently in the store
+	 * @return amount of records in the store
+	 * @throws RecordStoreNotOpenException 
+	 */
+	public int getRecordCount() throws RecordStoreNotOpenException {
+		return recordStore.getNumRecords();
+	}
 	
 	/**
 	 * Read back the data from the record store in the format:

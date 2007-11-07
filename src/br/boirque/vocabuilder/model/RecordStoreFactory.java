@@ -12,6 +12,7 @@ import javax.microedition.rms.RecordStoreNotFoundException;
  */
 public class RecordStoreFactory {
 	private static RecordStore recordStore;
+	public static int openCount = 0;
 	private String storeName = "currentSet";
 	private static RecordStoreFactory factory = null;
 	
@@ -38,8 +39,9 @@ public class RecordStoreFactory {
 	 * @throws RecordStoreException
 	 */
 	public RecordStore getStoreInstance() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException {
-		if(recordStore == null) {
+		if(recordStore == null || openCount == 0) {
 			recordStore = RecordStore.openRecordStore(storeName , true);
+			openCount++;
 		}
 		return recordStore;
 	}
