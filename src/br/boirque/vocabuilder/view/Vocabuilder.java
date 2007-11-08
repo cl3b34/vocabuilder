@@ -14,10 +14,12 @@ import javax.microedition.midlet.MIDlet;
 import javax.microedition.rms.RecordStoreException;
 import javax.microedition.rms.RecordStoreFullException;
 import javax.microedition.rms.RecordStoreNotFoundException;
+import javax.microedition.rms.RecordStoreNotOpenException;
 
 import br.boirque.vocabuilder.controller.Initializer;
 import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
+import br.boirque.vocabuilder.model.SetOfCardsDAO;
 
 public class Vocabuilder extends MIDlet implements CommandListener {
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
@@ -38,6 +40,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private int amountToReview = -1;
 	private int totalOfCards = -1;
 	private int totalReviewed = -1;
+	private int lastViewedCardIndex = -1;
 	boolean sideOne;
 
 	public Vocabuilder() {
@@ -47,8 +50,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		cardText.setLayout(Item.LAYOUT_CENTER);
 		cardText.setLayout(Item.LAYOUT_EXPAND);
 		// cardText.setPreferredSize(-1, cardText.getPreferredHeight()+3);
-		//		cardText.setText("height " + cardText.getPreferredHeight() + " "
-		//		+ cardText.getMinimumHeight());
+		// cardText.setText("height " + cardText.getPreferredHeight() + " "
+		// + cardText.getMinimumHeight());
 
 		mainForm.append(cardText);
 		mainForm.setCommandListener(this);
@@ -58,15 +61,34 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	 * Takes care of initializing the app
 	 */
 	protected void startApp() {
+//		//TODO - Remove this. It is just developing hack
+//		//to have a new set everytime the app is started
+//		try {
+//			SetOfCardsDAO socDao = new SetOfCardsDAO();
+//			if(socDao.getRecordCount() > 10) {
+//				socDao.resetState();
+//			}
+//		} catch (RecordStoreNotOpenException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (RecordStoreNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (RecordStoreException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//				
+		
 		// initialize the application. Load the list
 		Initializer initializer = new Initializer();
 		// TODO: the initialization might return a null set of cards
 		// if so, display an error message
 		soc = initializer.initializeApp();
-		
-		//TODO - transfer this initialization of the set of cards
-		//code to a controller class
-		//Look for a set of cards that is not done yet
+
+		// TODO - transfer this initialization of the set of cards
+		// code to a controller class
+		// Look for a set of cards that is not done yet
 		while (soc.isDone()) {
 			soc = initializer.initializeApp();
 		}
@@ -76,25 +98,35 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		amountToReview = cards.size() - getDoneAmount();
 		totalOfCards = cards.size();
 		totalReviewed = 0;
+		//lastViewedCardIndex = 0;
 		displayNextNotDoneCard();
 		Display.getDisplay(this).setCurrent(mainForm);
 	}
 
 	private void displayNextNotDoneCard() {
-		// Look for a card that is not done yet and display it
-		int i = totalReviewed;
-		c = (FlashCard) cards.elementAt(i);
-		boolean notFound = true;
-		while (notFound) {
-			if (c.isDone()) {
-				//get the next card
-				i++;
-				c = (FlashCard) cards.elementAt(i);
-			} else {
-				//display the card and leave the loop
-				displayCardSide(1);
-				notFound = false;
+		if (totalReviewed < amountToReview) {
+			// Look for a card that is not done yet and display it
+			int i = lastViewedCardIndex +1;
+			c = (FlashCard) cards.elementAt(i);
+			boolean notFound = true;
+			while (notFound) {
+				if (c.isDone()) {
+					// get the next card
+					i++;
+					c = (FlashCard) cards.elementAt(i);
+				} else {
+					// display the card and leave the loop
+					displayCardSide(1);
+					notFound = false;
+					// update the index of the last viewed card
+					lastViewedCardIndex = i;
+				}
 			}
+		} else {
+			// Reached the end of the set.
+			// Mark the set as done and display the statistics
+			soc.setDone(true);
+			displayStatistics();
 		}
 	}
 
@@ -109,7 +141,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 
 	private void setCommands(Command[] commands) {
-		//remove all commands
+		// remove all commands
 		mainForm.removeCommand(doneCommand);
 		mainForm.removeCommand(wrongCommand);
 		mainForm.removeCommand(exitCommand);
@@ -118,7 +150,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		mainForm.removeCommand(reviewCommand);
 		mainForm.removeCommand(nextSet);
 
-		//add the desired commands
+		// add the desired commands
 		for (int i = 0; i < commands.length; i++) {
 			Command c = commands[i];
 			mainForm.addCommand(c);
@@ -162,8 +194,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		int incorrectAmount = totalOfCards - done;
 		// TODO - fix this floating point calculation.
 		// MIDP doesnt have float or double
-		//		int donePercent = (done/totalOfCards)*100;
-		//		int wrongPercent = 100 - donePercent;
+		// int donePercent = (done/totalOfCards)*100;
+		// int wrongPercent = 100 - donePercent;
 
 		// show the commands for statistics
 		if (incorrectAmount > 0) {
@@ -175,9 +207,9 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 		cardText.setLabel("STATISTICS" + "\n");
 
-		//		cardText.setText("Total of cards: " + totalOfCards + "\n" +
-		//				"Correct: " + done + " (" + done/totalOfCards + "%)" + "\n" +
-		//				"Incorrect: " + incorrectAmount + " (" + wrongPercent + "%)");	
+		// cardText.setText("Total of cards: " + totalOfCards + "\n" +
+		// "Correct: " + done + " (" + done/totalOfCards + "%)" + "\n" +
+		// "Incorrect: " + incorrectAmount + " (" + wrongPercent + "%)");
 
 		cardText.setText("Total of cards: " + totalOfCards + "\n" + "Correct: "
 				+ done + "\n" + "Incorrect: " + incorrectAmount);
@@ -194,6 +226,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			// show again the cards in the set not marked as 'done'
 			amountToReview = totalOfCards - getDoneAmount();
 			totalReviewed = 0;
+			lastViewedCardIndex = -1;
 			displayNextNotDoneCard();
 		}
 
@@ -211,6 +244,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			}
 			amountToReview = totalOfCards;
 			totalReviewed = 0;
+			lastViewedCardIndex = -1;
 			displayNextNotDoneCard();
 		}
 
@@ -227,22 +261,13 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			// mark card as done and show next card, side one
 			c.setDone(true);
 			totalReviewed++;
-			callDisplayNextCard();
+			displayNextNotDoneCard();
 		}
 
 		if (cmd == wrongCommand) {
 			// Just show next card, side one
 			totalReviewed++;
-			callDisplayNextCard();
-		}
-	}
-
-	private void callDisplayNextCard() {
-		if (totalReviewed < amountToReview) {
 			displayNextNotDoneCard();
-		} else {
-			// got to the end of the set.
-			displayStatistics();
 		}
 	}
 }
