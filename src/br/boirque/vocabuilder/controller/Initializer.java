@@ -24,7 +24,13 @@ public class Initializer {
 	public SetOfCards initializeApp(){
 		//first try to load a partially studied set from a recordStore
 		SetOfCards soc = this.loadState();
-		if(soc == null) {
+		//TODO: the returned set might be marked as 'done'
+		// we should ask the user what to do...
+		// either try to load another set from other media and 
+		// replace this or start studying the set again
+		// for now I just load another set. This code should reside in 
+		// the UI, not here (soc.isDone check)
+		if(soc == null || soc.isDone()) {
 			//Load the set from any available media (defined in the loader)
 			SetOfCardsLoader socl = new SetOfCardsLoader();
 			soc = socl.loadSet();
