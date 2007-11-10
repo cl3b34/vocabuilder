@@ -124,8 +124,11 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			}
 		} else {
 			// Reached the end of the set.
-			// Mark the set as done and display the statistics
-			soc.setDone(true);
+			// Mark the set as done if all cards are marked done
+			if(getDoneAmount() == totalOfCards) {
+				soc.setDone(true);
+			}
+//			display the statistics
 			displayStatistics();
 		}
 	}
@@ -242,6 +245,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				c = (FlashCard) cards.elementAt(i);
 				c.setDone(false);
 			}
+			soc.setDone(false);
 			amountToReview = totalOfCards;
 			totalReviewed = 0;
 			lastViewedCardIndex = -1;
