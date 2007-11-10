@@ -30,7 +30,7 @@ public class TestAll extends TestCase
 		TestSuite suite = new TestSuite();
 
 		suite.addTest(new SetOfCardsDAOTest().suite());
-		//suite.addTest(new TestTwo().suite());
+		suite.addTest(new SetOfCardsLoaderTest().suite());
 
 		return suite;
 	}
