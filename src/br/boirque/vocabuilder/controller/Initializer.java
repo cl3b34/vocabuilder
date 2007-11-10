@@ -33,7 +33,12 @@ public class Initializer {
 		if(soc == null || soc.isDone()) {
 			//Load the set from any available media (defined in the loader)
 			SetOfCardsLoader socl = new SetOfCardsLoader();
-			soc = socl.loadSet();
+			try {
+				soc = socl.loadSet();
+			} catch (IOException e) {
+				// TODO should send a message to the UI
+				e.printStackTrace();
+			}
 			//save the set to a local recordstore
 			//the return value of this method is ignored
 			//since it is only used for performance at this point
