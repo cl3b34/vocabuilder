@@ -42,7 +42,7 @@ public class Initializer {
 			//save the set to a local recordstore
 			//the return value of this method is ignored
 			//since it is only used for performance at this point
-			this.saveState(soc);			
+			//this.saveState(soc);	//removed so the startup is faster		
 		}
 		return soc;
 	}
