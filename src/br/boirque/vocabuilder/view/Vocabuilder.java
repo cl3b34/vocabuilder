@@ -24,8 +24,8 @@ import br.boirque.vocabuilder.model.SetOfCardsDAO;
 public class Vocabuilder extends MIDlet implements CommandListener {
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
 	private Command turnCommand = new Command("Turn", Command.SCREEN, 1);
-	private Command doneCommand = new Command("Done", Command.SCREEN, 1);
-	private Command wrongCommand = new Command("Wrong", Command.SCREEN, 2);
+	private Command doneCommand = new Command("Done", Command.SCREEN, 2);
+	private Command wrongCommand = new Command("Wrong", Command.SCREEN, 1);
 	private Command restartCommand = new Command("Restart", Command.SCREEN, 2);
 	private Command reviewCommand = new Command("Review", Command.SCREEN, 1);
 	private Command nextSet = new Command("Next set", Command.SCREEN, 1);
