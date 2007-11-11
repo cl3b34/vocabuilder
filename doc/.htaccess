@@ -1,0 +1,29 @@
+# Index options
+IndexOptions +DescriptionWidth=* +SuppressDescription +SuppressIcon
+
+# Symbian
+AddType application/vnd.symbian.install .sis .sisx
+
+# Basic WML
+AddType text/vnd.wap.wml .wml
+AddType application/vnd.wap.wmlc .wmlc
+AddType text/vnd.wap.wmlscript .wmls
+AddType application/vnd.wap.wmlscriptc .wmlsc
+AddType image/vnd.wap.wbmp .wbmp
+
+# J2ME
+AddType application/java-archive .jar
+AddType text/vnd.sun.j2me.app-descriptor .jad
+
+# BlackBerry
+AddType application/vnd.rim.cod .cod
+
+# Certs
+AddType application/x-pkcs12 .p12
+AddType application/x-x509-ca-cert .crt
+AddType application/x-x509-ca-cert .der
+AddType application/x-x509-ca-cert .cer
+
+# PRC files (eBook)
+#AddType application/x-mobipocket-ebook .prc
+AddType application/octet-stream .prc
