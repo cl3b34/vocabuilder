@@ -1,8 +1,7 @@
 package br.boirque.vocabuilder.view;
 
-import java.io.IOException;
-import java.util.Vector;
 
+import java.util.Vector;
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
 import javax.microedition.lcdui.Display;
@@ -11,15 +10,10 @@ import javax.microedition.lcdui.Form;
 import javax.microedition.lcdui.Item;
 import javax.microedition.lcdui.StringItem;
 import javax.microedition.midlet.MIDlet;
-import javax.microedition.rms.RecordStoreException;
-import javax.microedition.rms.RecordStoreFullException;
-import javax.microedition.rms.RecordStoreNotFoundException;
-import javax.microedition.rms.RecordStoreNotOpenException;
-
 import br.boirque.vocabuilder.controller.Initializer;
 import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
-import br.boirque.vocabuilder.model.SetOfCardsDAO;
+
 
 public class Vocabuilder extends MIDlet implements CommandListener {
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
