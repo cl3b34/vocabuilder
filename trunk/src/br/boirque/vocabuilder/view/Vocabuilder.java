@@ -1,6 +1,5 @@
 package br.boirque.vocabuilder.view;
 
-
 import java.util.Vector;
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
@@ -13,7 +12,6 @@ import javax.microedition.midlet.MIDlet;
 import br.boirque.vocabuilder.controller.Initializer;
 import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
-
 
 public class Vocabuilder extends MIDlet implements CommandListener {
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
@@ -55,25 +53,25 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	 * Takes care of initializing the app
 	 */
 	protected void startApp() {
-//		//TODO - Remove this. It is just developing hack
-//		//to have a new set everytime the app is started
-//		try {
-//			SetOfCardsDAO socDao = new SetOfCardsDAO();
-//			if(socDao.getRecordCount() > 10) {
-//				socDao.resetState();
-//			}
-//		} catch (RecordStoreNotOpenException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (RecordStoreNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (RecordStoreException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//				
-		
+		// //TODO - Remove this. It is just developing hack
+		// //to have a new set everytime the app is started
+		// try {
+		// SetOfCardsDAO socDao = new SetOfCardsDAO();
+		// if(socDao.getRecordCount() > 10) {
+		// socDao.resetState();
+		// }
+		// } catch (RecordStoreNotOpenException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// } catch (RecordStoreNotFoundException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// } catch (RecordStoreException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
+		//				
+
 		// initialize the application. Load the list
 		Initializer initializer = new Initializer();
 		// TODO: the initialization might return a null set of cards
@@ -92,7 +90,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		amountToReview = cards.size() - getDoneAmount();
 		totalOfCards = cards.size();
 		totalReviewed = 0;
-		//lastViewedCardIndex = 0;
+		// lastViewedCardIndex = 0;
 		displayNextNotDoneCard();
 		Display.getDisplay(this).setCurrent(mainForm);
 	}
@@ -100,7 +98,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private void displayNextNotDoneCard() {
 		if (totalReviewed < amountToReview) {
 			// Look for a card that is not done yet and display it
-			int i = lastViewedCardIndex +1;
+			int i = lastViewedCardIndex + 1;
 			c = (FlashCard) cards.elementAt(i);
 			boolean notFound = true;
 			while (notFound) {
@@ -119,20 +117,22 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		} else {
 			// Reached the end of the set.
 			// Mark the set as done if all cards are marked done
-			if(getDoneAmount() == totalOfCards) {
+			if (getDoneAmount() == totalOfCards) {
 				soc.setDone(true);
 			}
-//			display the statistics
-			displayStatistics();
+			// display the statistics
+			displayStatistics(true);
 		}
 	}
 
 	protected void pauseApp() {
+		displayStatistics(false);
 		Initializer initializer = new Initializer();
 		initializer.saveState(soc);
 	}
 
 	protected void destroyApp(boolean bool) {
+		displayStatistics(false);
 		Initializer initializer = new Initializer();
 		initializer.saveState(soc);
 	}
@@ -186,7 +186,12 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		return doneAmount;
 	}
 
-	private void displayStatistics() {
+	/*
+	 * Display the statistics.
+	 * If showCommands is set to true, also show
+	 * commands specific for this screen
+	 */
+	private void displayStatistics(boolean showCommands) {
 		int done = getDoneAmount();
 		int incorrectAmount = totalOfCards - done;
 		// TODO - fix this floating point calculation.
@@ -194,13 +199,15 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		// int donePercent = (done/totalOfCards)*100;
 		// int wrongPercent = 100 - donePercent;
 
-		// show the commands for statistics
-		if (incorrectAmount > 0) {
-			Command[] commands = { reviewCommand, exitCommand };
-			setCommands(commands);
-		} else {
-			Command[] commands = { restartCommand, exitCommand };
-			setCommands(commands);
+		if (showCommands) {
+			// show the commands for statistics
+			if (incorrectAmount > 0) {
+				Command[] commands = { reviewCommand, exitCommand };
+				setCommands(commands);
+			} else {
+				Command[] commands = { restartCommand, exitCommand };
+				setCommands(commands);
+			}
 		}
 		cardText.setLabel("STATISTICS" + "\n");
 
