@@ -83,7 +83,7 @@ public class SetOfCardsDAO {
 			Vector cards = new Vector();
 		    for(int i = 1; i<=numRecords;i++){
 		    	setToReturn = new SetOfCards();
-		    	//Create a input stream for the cards
+		    	//Create a input stream for the cards, one record at a time
 		    	ByteArrayInputStream bais = new ByteArrayInputStream(recordStore.getRecord(i));
 				DataInputStream inputStream = new DataInputStream(bais);
 				
@@ -146,7 +146,7 @@ public class SetOfCardsDAO {
 		boolean setIsDone = setOfCards.isDone();
 		Vector cards = setOfCards.getFlashCards();
 		//get each card information and save to the record
-		//in the order:
+		//in the order: (ignore the ; they are represented in the actual store)
 		//title;setIsDone;totalTime;side1title;side1text;side2title;side2text;cardIsDone;tip
 		int size = cards.size();
 		for(int i =0; i<size; i++) {
