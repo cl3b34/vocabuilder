@@ -186,8 +186,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 
 	/*
-	 * Set the currently displayed commands.
-	 * If the argument is null, no command 
+	 * Set the currently displayed commands. If the argument is null, no command
 	 * is show.
 	 */
 	private void setCommands(Command[] commands) {
@@ -277,6 +276,14 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			amountToReview = totalOfCards - getDoneAmount();
 			totalReviewed = 0;
 			lastViewedCardIndex = -1;
+			// TODO: this is not very efficient
+			// all the cards are going to be tested 
+			// for 'done' mark. should return only 
+			// the marked as wrong...
+			if (useRandom) {
+				cardsIndexes = initializeRandomCardIndex(cards);
+				viewedIndexes = new Vector();
+			}
 			displayNextNotDoneCard();
 		}
 
@@ -296,6 +303,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			amountToReview = totalOfCards;
 			totalReviewed = 0;
 			lastViewedCardIndex = -1;
+			if (useRandom) {
+				cardsIndexes = initializeRandomCardIndex(cards);
+				viewedIndexes = new Vector();
+			}
 			displayNextNotDoneCard();
 		}
 
