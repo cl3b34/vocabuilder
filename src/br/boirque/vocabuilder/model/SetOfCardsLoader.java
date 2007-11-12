@@ -86,7 +86,7 @@ public class SetOfCardsLoader {
 	private SetOfCards extractSetOfCards(ByteArrayInputStream bais) {
 		boolean done = false;
 		// process the file into a set of cards
-		SetOfCards soc = new SetOfCards("default", false, 0L, null);
+		SetOfCards soc = new SetOfCards("large set", false, 0L, null);
 		FlashCard readCard = new FlashCard();
 		Vector cards = new Vector();
 		StringBuffer sb = new StringBuffer();
@@ -112,6 +112,7 @@ public class SetOfCardsLoader {
 					// continue to the next Flashcard
 					if (sb.length() > 0) {
 						String sideTwoText = sb.toString();
+						sideTwoText = sideTwoText.trim();
 						readCard.setSideTwo(sideTwoText);
 						readCard.setSideTwoTitle("ENG");
 						readCard.setDone(false);
@@ -130,10 +131,10 @@ public class SetOfCardsLoader {
 					sb = new StringBuffer();
 					continue;
 				}
-				if (c == space) {
-					// just skip space
-					continue;
-				}
+//				if (c == space) {
+//					// just skip space
+//					continue;
+//				}
 				// if none of the conditions above apply, it is a valid char
 				// just add it to our string
 				sb.append(c);
