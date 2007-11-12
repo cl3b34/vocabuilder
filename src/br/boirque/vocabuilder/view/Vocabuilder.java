@@ -1,5 +1,6 @@
 package br.boirque.vocabuilder.view;
 
+import java.util.Random;
 import java.util.Vector;
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
@@ -14,6 +15,7 @@ import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
 
 public class Vocabuilder extends MIDlet implements CommandListener {
+	// Commands
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
 	private Command turnCommand = new Command("Turn", Command.SCREEN, 1);
 	private Command doneCommand = new Command("Done", Command.SCREEN, 2);
@@ -22,18 +24,33 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private Command reviewCommand = new Command("Review", Command.SCREEN, 1);
 	private Command nextSet = new Command("Next set", Command.SCREEN, 1);
 
+	// UI elements
 	private Form mainForm;
 	private StringItem cardText;
 
+	// Beans
 	private SetOfCards soc;
 	private Vector cards;
 	FlashCard c;
 
+	// Sequential list index management
 	private int amountToReview = -1;
 	private int totalOfCards = -1;
 	private int totalReviewed = -1;
 	private int lastViewedCardIndex = -1;
+
+	// Random list management
+	private Vector cardsIndexes;
+	private Vector viewedIndexes;
+
+	// Which side is being displayed
 	boolean sideOne;
+
+	// Is the app running?
+	boolean isRunning = false;
+
+	// Shall we use a sequential or random list?
+	boolean useRandom = true;
 
 	public Vocabuilder() {
 
@@ -53,65 +70,95 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	 * Takes care of initializing the app
 	 */
 	protected void startApp() {
-		// //TODO - Remove this. It is just developing hack
-		// //to have a new set everytime the app is started
-		// try {
-		// SetOfCardsDAO socDao = new SetOfCardsDAO();
-		// if(socDao.getRecordCount() > 10) {
-		// socDao.resetState();
-		// }
-		// } catch (RecordStoreNotOpenException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// } catch (RecordStoreNotFoundException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// } catch (RecordStoreException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// }
-		//				
-
-		// initialize the application. Load the list
-		Initializer initializer = new Initializer();
-		// TODO: the initialization might return a null set of cards
-		// if so, display an error message
-		soc = initializer.initializeApp();
-
-		// TODO - transfer this initialization of the set of cards
-		// code to a controller class
-		// Look for a set of cards that is not done yet
-		while (soc.isDone()) {
+		// check if the application is resuming from paused state
+		if (!isRunning) {
+			// initialize the application. Load the list
+			Initializer initializer = new Initializer();
+			// TODO: the initialization might return a null set of cards
+			// if so, display an error message
 			soc = initializer.initializeApp();
+
+			// TODO - transfer this initialization of the set of cards
+			// code to a controller class
+			// Look for a set of cards that is not done yet
+			while (soc.isDone()) {
+				soc = initializer.initializeApp();
+			}
+			String titleOfThisSet = soc.getTitle();
+			mainForm.setTitle(titleOfThisSet);
+			cards = soc.getFlashCards();
+			amountToReview = cards.size() - getDoneAmount();
+			totalOfCards = cards.size();
+			totalReviewed = 0;
+			if (useRandom) {
+				cardsIndexes = initializeRandomCardIndex(cards);
+				viewedIndexes = new Vector();
+			}
+			displayNextNotDoneCard();
+			Display.getDisplay(this).setCurrent(mainForm);
+
+			isRunning = true;
 		}
-		String titleOfThisSet = soc.getTitle();
-		mainForm.setTitle(titleOfThisSet);
-		cards = soc.getFlashCards();
-		amountToReview = cards.size() - getDoneAmount();
-		totalOfCards = cards.size();
-		totalReviewed = 0;
-		// lastViewedCardIndex = 0;
-		displayNextNotDoneCard();
-		Display.getDisplay(this).setCurrent(mainForm);
 	}
 
+	/*
+	 * Utility class to initialize the vector of indexes with the index of each
+	 * element in 'cards' vector
+	 */
+	private Vector initializeRandomCardIndex(Vector toBeIndexed) {
+		Vector indexes = new Vector();
+		for (int i = 0; i < toBeIndexed.size(); i++) {
+			Integer index = new Integer(i);
+			indexes.addElement(index);
+		}
+		return indexes;
+	}
+
+	/*
+	 * Returns a random integer corresponding to the index of the next card to
+	 * be displayed
+	 */
+	private int getNextRandomCardIndex(Vector listOfIndexes) {
+		Random r = new Random();
+		int indexOfTheIndex = r.nextInt(listOfIndexes.size());
+		Integer index = (Integer) listOfIndexes.elementAt(indexOfTheIndex);
+		// remove this index from the list of indexes to be viewed
+		listOfIndexes.removeElementAt(indexOfTheIndex);
+		// add it to the list of already viewed indexes
+		viewedIndexes.addElement(index);
+		return index.intValue();
+	}
+
+	// TODO - Move all this 'use random' or
+	// and sequential list stuff to a method
+	// that simply returns the next index to be displayed
 	private void displayNextNotDoneCard() {
 		if (totalReviewed < amountToReview) {
 			// Look for a card that is not done yet and display it
-			int i = lastViewedCardIndex + 1;
-			c = (FlashCard) cards.elementAt(i);
+			int index;
+			if (useRandom) {
+				index = getNextRandomCardIndex(cardsIndexes);
+			} else {
+				// sequential list
+				index = lastViewedCardIndex + 1;
+			}
+			c = (FlashCard) cards.elementAt(index);
 			boolean notFound = true;
 			while (notFound) {
 				if (c.isDone()) {
 					// get the next card
-					i++;
-					c = (FlashCard) cards.elementAt(i);
+					if (useRandom) {
+						index = getNextRandomCardIndex(cardsIndexes);
+					} else {
+						index++;
+					}
+					c = (FlashCard) cards.elementAt(index);
 				} else {
 					// display the card and leave the loop
 					displayCardSide(1);
 					notFound = false;
 					// update the index of the last viewed card
-					lastViewedCardIndex = i;
+					lastViewedCardIndex = index;
 				}
 			}
 		} else {
@@ -126,9 +173,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 
 	protected void pauseApp() {
-		displayStatistics(false);
-		Initializer initializer = new Initializer();
-		initializer.saveState(soc);
+		cardText.setLabel("APPLICATION PAUSED" + "\n");
+		// displayStatistics(false);
+		// Initializer initializer = new Initializer();
+		// initializer.saveState(soc);
 	}
 
 	protected void destroyApp(boolean bool) {
@@ -137,6 +185,11 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		initializer.saveState(soc);
 	}
 
+	/*
+	 * Set the currently displayed commands.
+	 * If the argument is null, no command 
+	 * is show.
+	 */
 	private void setCommands(Command[] commands) {
 		// remove all commands
 		mainForm.removeCommand(doneCommand);
@@ -147,10 +200,12 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		mainForm.removeCommand(reviewCommand);
 		mainForm.removeCommand(nextSet);
 
-		// add the desired commands
-		for (int i = 0; i < commands.length; i++) {
-			Command c = commands[i];
-			mainForm.addCommand(c);
+		if (commands != null) {
+			// add the desired commands
+			for (int i = 0; i < commands.length; i++) {
+				Command c = commands[i];
+				mainForm.addCommand(c);
+			}
 		}
 	}
 
@@ -187,18 +242,12 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 
 	/*
-	 * Display the statistics.
-	 * If showCommands is set to true, also show
+	 * Display the statistics. If showCommands is set to true, also show
 	 * commands specific for this screen
 	 */
 	private void displayStatistics(boolean showCommands) {
 		int done = getDoneAmount();
 		int incorrectAmount = totalOfCards - done;
-		// TODO - fix this floating point calculation.
-		// MIDP doesnt have float or double
-		// int donePercent = (done/totalOfCards)*100;
-		// int wrongPercent = 100 - donePercent;
-
 		if (showCommands) {
 			// show the commands for statistics
 			if (incorrectAmount > 0) {
@@ -208,13 +257,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				Command[] commands = { restartCommand, exitCommand };
 				setCommands(commands);
 			}
+		} else {
+			setCommands(null);
 		}
 		cardText.setLabel("STATISTICS" + "\n");
-
-		// cardText.setText("Total of cards: " + totalOfCards + "\n" +
-		// "Correct: " + done + " (" + done/totalOfCards + "%)" + "\n" +
-		// "Incorrect: " + incorrectAmount + " (" + wrongPercent + "%)");
-
 		cardText.setText("Total of cards: " + totalOfCards + "\n" + "Correct: "
 				+ done + "\n" + "Incorrect: " + incorrectAmount);
 	}
