@@ -2,7 +2,6 @@ package br.boirque.vocabuilder.model;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Vector;
@@ -86,11 +85,11 @@ public class SetOfCardsLoader {
 	private SetOfCards extractSetOfCards(ByteArrayInputStream bais) {
 		boolean done = false;
 		// process the file into a set of cards
-		SetOfCards soc = new SetOfCards("large set", false, 0L, null);
+		SetOfCards soc = new SetOfCards("default set", false, 0L, null);
 		FlashCard readCard = new FlashCard();
 		Vector cards = new Vector();
 		StringBuffer sb = new StringBuffer();
-		char space = ' ';
+//		char space = ' ';
 		char lineFeed = '\n';
 		char chariageReturn = '\r';
 		char equalSign = '=';
