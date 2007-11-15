@@ -13,6 +13,7 @@ public class SetOfCards {
 	private boolean done;
 	//total amount of time spent studying this set
 	private long totalStudiedTimeInMiliseconds;
+	private int totalNumberOfDisplayedCards;
 	//Flash cards included in this series
 	private Vector flashCards;
 	
@@ -88,5 +89,15 @@ public class SetOfCards {
 	 */
 	public void setFlashCards(Vector flashCards) {
 		this.flashCards = flashCards;
+	}
+
+
+	public int getTotalNumberOfDisplayedCards() {
+		return totalNumberOfDisplayedCards;
+	}
+
+
+	public void setTotalNumberOfDisplayedCards(int totalNumberOfDisplayedCards) {
+		this.totalNumberOfDisplayedCards = totalNumberOfDisplayedCards;
 	}
 }

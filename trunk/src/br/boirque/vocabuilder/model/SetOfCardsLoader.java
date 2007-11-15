@@ -18,7 +18,7 @@ public class SetOfCardsLoader {
 	// from whatever medium it can
 	public SetOfCards loadSet() throws IOException {
 		SetOfCards setToReturn = null;
-		setToReturn = textFileLoader("/wordlist.txt");
+		setToReturn = textFileLoader("/wordlist_long.txt");
 		return setToReturn;
 	}
 
@@ -98,6 +98,7 @@ public class SetOfCardsLoader {
 			if (readChar == -1) {
 				// Save the last Flashcard to the vector before exiting
 				String sideTwoText = sb.toString();
+				sideTwoText = sideTwoText.trim();
 				readCard.setSideTwo(sideTwoText);
 				readCard.setSideTwoTitle("ENG");
 				readCard.setDone(false);
@@ -125,6 +126,7 @@ public class SetOfCardsLoader {
 				if (c == equalSign) {
 					// end of the first word, start of the translation word
 					String sideOneText = sb.toString();
+					sideOneText = sideOneText.trim();
 					readCard.setSideOne(sideOneText);
 					readCard.setSideOneTitle("FIN");
 					sb = new StringBuffer();
