@@ -260,8 +260,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			setCommands(null);
 		}
 		cardText.setLabel("STATISTICS" + "\n");
-		cardText.setText("Total of cards: " + totalOfCards + "\n" + "Correct: "
-				+ done + "\n" + "Incorrect: " + incorrectAmount);
+		cardText.setText("Total of cards: " + totalOfCards + 
+				"\n" + "Correct: "	+ done + 
+				"\n" + "Incorrect: " + incorrectAmount +
+				"\n" + "Viewed in this session: " + totalReviewed);
 	}
 
 	public void commandAction(Command cmd, Displayable disp) {
