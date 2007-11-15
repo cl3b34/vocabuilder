@@ -13,6 +13,7 @@ import javax.microedition.midlet.MIDlet;
 import br.boirque.vocabuilder.controller.Initializer;
 import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
+import br.boirque.vocabuilder.util.VocaUtil;
 
 public class Vocabuilder extends MIDlet implements CommandListener {
 	// Commands
@@ -33,6 +34,13 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private Vector cards;
 	FlashCard c;
 
+	// Statistics
+	private int totalDoneSession = 0;
+	private long sessionStudyTime = 0;
+	private long lastActivityTime = 0; // Last time the user interacted with
+	// the app
+	private long maxIdleTime = 30000L; // thirty Seconds
+
 	// Sequential list index management
 	private int amountToReview = -1;
 	private int totalOfCards = -1;
@@ -51,6 +59,9 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 	// Shall we use a sequential or random list?
 	boolean useRandom = true;
+	
+	// Utility class
+	VocaUtil vocaUtil = new VocaUtil();
 
 	public Vocabuilder() {
 
@@ -90,6 +101,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			amountToReview = cards.size() - getDoneAmount();
 			totalOfCards = cards.size();
 			totalReviewed = 0;
+			lastActivityTime = System.currentTimeMillis();
+			// totalDoneSession = 0;
 			if (useRandom) {
 				cardsIndexes = initializeRandomCardIndex(cards);
 				viewedIndexes = new Vector();
@@ -180,6 +193,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 
 	protected void destroyApp(boolean bool) {
+		// update the total study time for the set
+		long previousTotalStudiedTime = soc.getTotalStudiedTimeInMiliseconds();
+		long newTotalStudiedTime = previousTotalStudiedTime + sessionStudyTime;
+		soc.setTotalStudiedTimeInMiliseconds(newTotalStudiedTime);
 		displayStatistics(false);
 		Initializer initializer = new Initializer();
 		initializer.saveState(soc);
@@ -260,13 +277,36 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			setCommands(null);
 		}
 		cardText.setLabel("STATISTICS" + "\n");
-		cardText.setText("Total of cards: " + totalOfCards + 
-				"\n" + "Correct: "	+ done + 
-				"\n" + "Incorrect: " + incorrectAmount +
-				"\n" + "Viewed in this session: " + totalReviewed);
+		cardText.setText("Total of cards: " + totalOfCards + "\n" + "Correct: "
+				+ done + "\n" + "Incorrect: " + incorrectAmount + "\n"
+				+ "Viewed this session: " + totalReviewed + "\n"
+				+ "Correct this session: " + totalDoneSession + "\n"
+				+ "Total viewed: " + " " + "\n" 
+				+ "Session duration: " + vocaUtil.getStudyTimeAsString(sessionStudyTime) + "\n" 
+				+ "Total Study time: " + vocaUtil.getStudyTimeAsString(soc.getTotalStudiedTimeInMiliseconds())
+			);
+	}
+
+	
+
+	private long updateSessionStudyTime(long sessionStudyTime,
+			long lastActivityTime, long maxIdleTime) {
+		// this is not rocket science! if the user is
+		// idle more than 30s we ignore the update the user
+		// was chatting with someone :)
+		long currentTime = System.currentTimeMillis();
+		long idleTime = currentTime - lastActivityTime;
+		if (idleTime < maxIdleTime) {
+			long aditionalStudyTime = currentTime - lastActivityTime;
+			sessionStudyTime = sessionStudyTime + aditionalStudyTime;
+		}
+		return sessionStudyTime;
 	}
 
 	public void commandAction(Command cmd, Displayable disp) {
+		updateSessionStudyTime(sessionStudyTime, lastActivityTime, maxIdleTime);
+		lastActivityTime = System.currentTimeMillis();
+
 		if (cmd == exitCommand) {
 			// should save the state and exit
 			destroyApp(false);
@@ -279,8 +319,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			totalReviewed = 0;
 			lastViewedCardIndex = -1;
 			// TODO: this is not very efficient
-			// all the cards are going to be tested 
-			// for 'done' mark. should return only 
+			// all the cards are going to be tested
+			// for 'done' mark. should return only
 			// the marked as wrong...
 			if (useRandom) {
 				cardsIndexes = initializeRandomCardIndex(cards);
@@ -304,6 +344,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			soc.setDone(false);
 			amountToReview = totalOfCards;
 			totalReviewed = 0;
+			totalDoneSession = 0;
 			lastViewedCardIndex = -1;
 			if (useRandom) {
 				cardsIndexes = initializeRandomCardIndex(cards);
@@ -325,6 +366,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			// mark card as done and show next card, side one
 			c.setDone(true);
 			totalReviewed++;
+			totalDoneSession++;
 			displayNextNotDoneCard();
 		}
 
