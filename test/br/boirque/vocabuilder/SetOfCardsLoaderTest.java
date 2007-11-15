@@ -52,7 +52,7 @@ public class SetOfCardsLoaderTest extends TestCase {
 		String firstWordFirstCard = firstCard.getSideOne();
 		assertEquals("aalto", firstWordFirstCard);
 		String secondWordFirstCard = firstCard.getSideTwo();
-		assertEquals("fluid,liquid,wave", secondWordFirstCard);
+		assertEquals("fluid, liquid, wave", secondWordFirstCard);
 		assertTrue(false == firstCard.isDone());
 		
 		//check the second card
