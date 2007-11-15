@@ -28,9 +28,9 @@ public class Initializer {
 
 		// TODO: remove this. Hack to remove the RS so we can
 		// start afresh. Should do better RS management
-		if(this.getRecordCount() > 150) {
-			this.resetState();
-		}
+//		if(this.getRecordCount() > 150) {
+//			this.resetState();
+//		}
 
 		SetOfCards soc = this.loadState();
 		// TODO: the returned set might be marked as 'done'
