@@ -304,7 +304,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 
 	public void commandAction(Command cmd, Displayable disp) {
-		updateSessionStudyTime(sessionStudyTime, lastActivityTime, maxIdleTime);
+		this.sessionStudyTime = updateSessionStudyTime(sessionStudyTime, lastActivityTime, maxIdleTime);
 		lastActivityTime = System.currentTimeMillis();
 
 		if (cmd == exitCommand) {
