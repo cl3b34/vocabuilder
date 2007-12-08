@@ -1,8 +1,10 @@
 package br.boirque.vocabuilder.view;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 import java.util.Vector;
+
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
 import javax.microedition.lcdui.Display;
@@ -11,8 +13,6 @@ import javax.microedition.lcdui.Form;
 import javax.microedition.lcdui.Item;
 import javax.microedition.lcdui.StringItem;
 import javax.microedition.midlet.MIDlet;
-
-import com.sun.j2me.global.DateTimeFormat;
 
 import br.boirque.vocabuilder.controller.Initializer;
 import br.boirque.vocabuilder.model.FlashCard;
@@ -32,6 +32,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	// UI elements
 	private Form mainForm;
 	private StringItem cardText;
+	private StringItem cardStatistics;
 
 	// Beans
 	private SetOfCards soc;
@@ -70,6 +71,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 		mainForm = new Form("Vocabuilder");
 		cardText = new StringItem("", "Card Text");
+		cardStatistics = new StringItem("","");
 		cardText.setLayout(Item.LAYOUT_CENTER);
 		cardText.setLayout(Item.LAYOUT_EXPAND);
 		// cardText.setPreferredSize(-1, cardText.getPreferredHeight()+3);
@@ -77,6 +79,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		// + cardText.getMinimumHeight());
 
 		mainForm.append(cardText);
+		mainForm.append(cardStatistics);
 		mainForm.setCommandListener(this);
 	}
 
@@ -231,17 +234,26 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 	}
 
+
 	private void displayCardSide(int side) {
 		switch (side) {
 		case 1:
 			Command[] commands = { turnCommand, exitCommand };
 			setCommands(commands);
-			Date lastTimeViewed = new Date(c.getLastTimeViewed());
-		//	DateTimeFormat dtf = new DateTimeFormat();
-			cardText.setLabel(c.getSideOneTitle() + ": \n");
-			cardText.setText(c.getSideOne()+ "\n\n" + "tip: " + c.getTip() + "\n" 
+			Calendar calendar = Calendar.getInstance();
+			calendar.setTime(new Date(c.getLastTimeViewed()));
+			int year = calendar.get(Calendar.YEAR);
+			int month = calendar.get(Calendar.MONTH)+1;
+			int date = calendar.get(Calendar.DATE);
+			String lastTimeViewed = date + "/" + month + "/" + year;
+			String cardStats = "\n\n\n"
+//					"tip: " + c.getTip() + "\n" 
 					+ "viewed " + c.getViewedCounter() + " times \n"
-					+ "last: " + lastTimeViewed);
+					+ "last: " + lastTimeViewed;
+			
+			cardText.setLabel(c.getSideOneTitle() + ": \n");
+			cardText.setText(c.getSideOne());
+			cardStatistics.setLabel(cardStats);
 			sideOne = true;
 			break;
 		case 2:
@@ -249,6 +261,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			setCommands(cmds);
 			cardText.setLabel(c.getSideTwoTitle() + ": \n");
 			cardText.setText(c.getSideTwo());
+			cardStatistics.setLabel("");
 			sideOne = false;
 			break;
 		default:
@@ -367,7 +380,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			//Update the total of cards viewed
 			soc.setTotalNumberOfDisplayedCards(soc.getTotalNumberOfDisplayedCards()+1);
 			//update the number of times this card has been viewed
-			c.setMarkedDoneCounter(c.getMarkedDoneCounter()+1);
+			c.setViewedCounter(c.getViewedCounter()+1);
 			//update the last time this card was viewed
 			c.setLastTimeViewed(System.currentTimeMillis());
 			// turn the card
