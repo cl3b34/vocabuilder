@@ -14,13 +14,19 @@ import java.util.Vector;
  */
 public class SetOfCardsLoader {
 
+	//load the default set
+	public SetOfCards loadSet() throws IOException {
+		return loadSet("/primitives.txt");
+	}
+	
 	// this method tries to load a set
 	// from whatever medium it can
-	public SetOfCards loadSet() throws IOException {
+	public SetOfCards loadSet(String setName) throws IOException {
 		SetOfCards setToReturn = null;
-		setToReturn = textFileLoader("/wordlist_long.txt");
+		setToReturn = textFileLoader(setName);
 		return setToReturn;
 	}
+	
 
 	/*
 	 * Only generates a fake set of cards and returns it
