@@ -1,5 +1,6 @@
 package br.boirque.vocabuilder.view;
 
+import java.util.Date;
 import java.util.Random;
 import java.util.Vector;
 import javax.microedition.lcdui.Command;
@@ -10,6 +11,9 @@ import javax.microedition.lcdui.Form;
 import javax.microedition.lcdui.Item;
 import javax.microedition.lcdui.StringItem;
 import javax.microedition.midlet.MIDlet;
+
+import com.sun.j2me.global.DateTimeFormat;
+
 import br.boirque.vocabuilder.controller.Initializer;
 import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
@@ -37,9 +41,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	// Statistics
 	private int totalDoneSession = 0;
 	private long sessionStudyTime = 0;
-	private long lastActivityTime = 0; // Last time the user interacted with
-	// the app
-	private long maxIdleTime = 30000L; // thirty Seconds
+	private long lastActivityTime = 0; // Last time the user interacted with the app
+	private final long maxIdleTime = 30000L; // thirty Seconds
 
 	// Sequential list index management
 	private int amountToReview = -1;
@@ -98,6 +101,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			String titleOfThisSet = soc.getTitle();
 			mainForm.setTitle(titleOfThisSet);
 			cards = soc.getFlashCards();
+			soc.setLastTimeViewed(System.currentTimeMillis());
 			amountToReview = cards.size() - getDoneAmount();
 			totalOfCards = cards.size();
 			totalReviewed = 0;
@@ -179,6 +183,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			// Mark the set as done if all cards are marked done
 			if (getDoneAmount() == totalOfCards) {
 				soc.setDone(true);
+				soc.setLastTimeMarkedDone(System.currentTimeMillis());
+				soc.setMarkedDoneCounter(soc.getMarkedDoneCounter()+1);
 			}
 			// display the statistics
 			displayStatistics(true);
@@ -230,8 +236,12 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		case 1:
 			Command[] commands = { turnCommand, exitCommand };
 			setCommands(commands);
+			Date lastTimeViewed = new Date(c.getLastTimeViewed());
+		//	DateTimeFormat dtf = new DateTimeFormat();
 			cardText.setLabel(c.getSideOneTitle() + ": \n");
-			cardText.setText(c.getSideOne());
+			cardText.setText(c.getSideOne()+ "\n\n" + "tip: " + c.getTip() + "\n" 
+					+ "viewed " + c.getViewedCounter() + " times \n"
+					+ "last: " + lastTimeViewed);
 			sideOne = true;
 			break;
 		case 2:
@@ -281,7 +291,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				+ done + "\n" + "Incorrect: " + incorrectAmount + "\n"
 				+ "Viewed this session: " + totalReviewed + "\n"
 				+ "Correct this session: " + totalDoneSession + "\n"
-				+ "Total viewed: " + " " + "\n" 
+				+ "Total viewed: " + soc.getTotalNumberOfDisplayedCards() + "\n" 
 				+ "Session duration: " + vocaUtil.getStudyTimeAsString(sessionStudyTime) + "\n" 
 				+ "Total Study time: " + vocaUtil.getStudyTimeAsString(soc.getTotalStudiedTimeInMiliseconds())
 			);
@@ -354,6 +364,12 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 
 		if (cmd == turnCommand) {
+			//Update the total of cards viewed
+			soc.setTotalNumberOfDisplayedCards(soc.getTotalNumberOfDisplayedCards()+1);
+			//update the number of times this card has been viewed
+			c.setMarkedDoneCounter(c.getMarkedDoneCounter()+1);
+			//update the last time this card was viewed
+			c.setLastTimeViewed(System.currentTimeMillis());
 			// turn the card
 			if (!sideOne) {
 				displayCardSide(1);
@@ -365,6 +381,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		if (cmd == doneCommand) {
 			// mark card as done and show next card, side one
 			c.setDone(true);
+			c.setMarkedDoneCounter(c.getMarkedDoneCounter()+1);
+			c.setLastTimeMarkedDone(System.currentTimeMillis());
 			totalReviewed++;
 			totalDoneSession++;
 			displayNextNotDoneCard();

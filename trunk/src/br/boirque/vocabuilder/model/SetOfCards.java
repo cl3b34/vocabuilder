@@ -13,9 +13,15 @@ public class SetOfCards {
 	private boolean done;
 	//total amount of time spent studying this set
 	private long totalStudiedTimeInMiliseconds;
-	private int totalNumberOfDisplayedCards;
 	//Flash cards included in this series
 	private Vector flashCards;
+	//how many times the cards on this set were displayed
+	private int totalNumberOfDisplayedCards;
+	private long lastTimeViewed;
+	private long lastTimeMarkedDone;
+	private int markedDoneCounter;
+	
+	
 	
 	/**
 	 * Default constructor 
@@ -99,5 +105,35 @@ public class SetOfCards {
 
 	public void setTotalNumberOfDisplayedCards(int totalNumberOfDisplayedCards) {
 		this.totalNumberOfDisplayedCards = totalNumberOfDisplayedCards;
+	}
+
+
+	public long getLastTimeViewed() {
+		return lastTimeViewed;
+	}
+
+
+	public void setLastTimeViewed(long lastTimeViewed) {
+		this.lastTimeViewed = lastTimeViewed;
+	}
+
+
+	public long getLastTimeMarkedDone() {
+		return lastTimeMarkedDone;
+	}
+
+
+	public void setLastTimeMarkedDone(long lastTimeMarkedDone) {
+		this.lastTimeMarkedDone = lastTimeMarkedDone;
+	}
+
+
+	public int getMarkedDoneCounter() {
+		return markedDoneCounter;
+	}
+
+
+	public void setMarkedDoneCounter(int markedDoneCounter) {
+		this.markedDoneCounter = markedDoneCounter;
 	}
 }

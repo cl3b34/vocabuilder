@@ -14,6 +14,10 @@ public class FlashCard {
 	private String sideTwoTitle;
 	private boolean done;
 	private String tip;
+	private int viewedCounter;
+	private int markedDoneCounter;
+	private long lastTimeViewed;
+	private long lastTimeMarkedDone;
 	
 		
 	/**
@@ -114,6 +118,38 @@ public class FlashCard {
 	 */
 	public void setSideTwoTitle(String sideTwoTitle) {
 		this.sideTwoTitle = sideTwoTitle;
+	}
+
+	public int getViewedCounter() {
+		return viewedCounter;
+	}
+
+	public void setViewedCounter(int viewedCounter) {
+		this.viewedCounter = viewedCounter;
+	}
+
+	public int getMarkedDoneCounter() {
+		return markedDoneCounter;
+	}
+
+	public void setMarkedDoneCounter(int markedDoneCounter) {
+		this.markedDoneCounter = markedDoneCounter;
+	}
+
+	public long getLastTimeMarkedDone() {
+		return lastTimeMarkedDone;
+	}
+
+	public void setLastTimeMarkedDone(long lastTimeMarkedDone) {
+		this.lastTimeMarkedDone = lastTimeMarkedDone;
+	}
+
+	public long getLastTimeViewed() {
+		return lastTimeViewed;
+	}
+
+	public void setLastTimeViewed(long lastTimeViewed) {
+		this.lastTimeViewed = lastTimeViewed;
 	}
 	
 }

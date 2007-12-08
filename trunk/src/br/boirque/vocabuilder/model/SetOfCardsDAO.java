@@ -64,9 +64,8 @@ public class SetOfCardsDAO {
 	}
 	
 	/**
-	 * Read back the data from the record store in the format:
-	 * title;setIsDone;totalTime;side1title;side1text;side2title;side2text;cardIsDone;tip
-	 * This is the format written by the SaveState method. 
+	 * Read back the data from the record store
+	 * In the format written by the SaveState method. 
 	 * Both methods have to be changed at the same time
 	 * if the record format changes
 	 * @return a SetOfCards read from the store or null if the store was empty
@@ -96,11 +95,26 @@ public class SetOfCardsDAO {
 				String cardSideTwoText = inputStream.readUTF();
 				boolean cardIsDone = inputStream.readBoolean();
 				String cardTip = inputStream.readUTF();
-
+				// new set data 20071208
+				int totalCardsDisplayed = inputStream.readInt();
+				long lastTimeSetViewed = inputStream.readLong();
+				long lastTimeSetMarkedDone = inputStream.readLong();
+				int markedDoneSetCounter = inputStream.readInt();
+				// new card data 20071208
+				int cardViewedCounter = inputStream.readInt();
+				int cardMarkedDoneCounter = inputStream.readInt();
+				long cardLastTimeViewed = inputStream.readLong();
+				long cardLastTimeMarkedDone = inputStream.readLong();
+				
 				//populate the set
 				setToReturn.setTitle(setOfCardsTitle);				
 				setToReturn.setDone(setOfCardsIsDone);				
 				setToReturn.setTotalStudiedTimeInMiliseconds(setOfCardsStudyTime);
+				// new set data 20071208
+				setToReturn.setTotalNumberOfDisplayedCards(totalCardsDisplayed);
+				setToReturn.setLastTimeViewed(lastTimeSetViewed);
+				setToReturn.setLastTimeMarkedDone(lastTimeSetMarkedDone);
+				setToReturn.setMarkedDoneCounter(markedDoneSetCounter);
 				
 				//create a card to the set				
 				FlashCard card = new FlashCard();
@@ -110,6 +124,11 @@ public class SetOfCardsDAO {
 				card.setSideTwo(cardSideTwoText);
 				card.setDone(cardIsDone);
 				card.setTip(cardTip);
+				// new card data 20071208
+				card.setViewedCounter(cardViewedCounter);
+				card.setMarkedDoneCounter(cardMarkedDoneCounter);
+				card.setLastTimeViewed(cardLastTimeViewed);
+				card.setLastTimeMarkedDone(cardLastTimeMarkedDone);				
 				
 				//Add the card to the Vector
 				cards.addElement(card);
@@ -140,12 +159,14 @@ public class SetOfCardsDAO {
 		//Generic data shared between all the cards 
 		// (belongs to the setOfCards)		
 		String title = setOfCards.getTitle();
-		long totalTime = setOfCards.getTotalStudiedTimeInMiliseconds();
 		boolean setIsDone = setOfCards.isDone();
+		long totalTime = setOfCards.getTotalStudiedTimeInMiliseconds();
+		int totalOfDisplayedCards = setOfCards.getTotalNumberOfDisplayedCards();
+		long setLastTimeViewed = setOfCards.getLastTimeViewed();
+		long setLastTimeMarkedDone = setOfCards.getLastTimeMarkedDone();
+		int setMarkedDoneCounter = setOfCards.getMarkedDoneCounter();
 		Vector cards = setOfCards.getFlashCards();
 		//get each card information and save to the record
-		//in the order: (ignore the ; they are represented in the actual store)
-		//title;setIsDone;totalTime;side1title;side1text;side2title;side2text;cardIsDone;tip
 		int size = cards.size();
 		for(int i =0; i<size; i++) {
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -157,6 +178,10 @@ public class SetOfCardsDAO {
 			String side2title = card.getSideTwoTitle();
 			String tip = card.getTip();
 			boolean cardIsDone = card.isDone();
+			int cardViewedCounter = card.getViewedCounter();
+			int cardMarkedDoneCounter = card.getMarkedDoneCounter();
+			long cardLastTimeViewed = card.getLastTimeViewed();
+			long cardLastTimeMarkedDone = card.getLastTimeMarkedDone();
 			outputStream.writeUTF(title);
 			outputStream.writeBoolean(setIsDone);
 			outputStream.writeLong(totalTime);
@@ -166,13 +191,21 @@ public class SetOfCardsDAO {
 			outputStream.writeUTF(side2text);
 			outputStream.writeBoolean(cardIsDone);
 			outputStream.writeUTF(tip);
+			// new set data
+			outputStream.writeInt(totalOfDisplayedCards);
+			outputStream.writeLong(setLastTimeViewed);
+			outputStream.writeLong(setLastTimeMarkedDone);
+			outputStream.writeInt(setMarkedDoneCounter);
+			// new card data
+			outputStream.writeInt(cardViewedCounter);
+			outputStream.writeInt(cardMarkedDoneCounter);
+			outputStream.writeLong(cardLastTimeViewed);
+			outputStream.writeLong(cardLastTimeMarkedDone);
 			
 			// Extract the byte array
 			byte[] b = baos.toByteArray();
 			//write a record to the record store
-//		    int storeSize = recordStore.getSize(); //this didn't work
 			int recordLength = b.length;
-//			recId = recordStore.addRecord(b, 0, recordLength);
 			recordStore.addRecord(b, 0, recordLength);
 		}   
 	}
