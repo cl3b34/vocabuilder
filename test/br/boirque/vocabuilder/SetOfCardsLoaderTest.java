@@ -41,7 +41,7 @@ public class SetOfCardsLoaderTest extends TestCase {
 	
 	public void testTextFileLoader() throws IOException{
 		SetOfCardsLoader socl = new SetOfCardsLoader();
-		SetOfCards soc = socl.loadSet();
+		SetOfCards soc = socl.loadSet("/wordlist_long.txt");
 		assertNotNull(soc);
 		Vector cards = soc.getFlashCards();
 		System.out.println("Number of Cards: " + cards.size());
