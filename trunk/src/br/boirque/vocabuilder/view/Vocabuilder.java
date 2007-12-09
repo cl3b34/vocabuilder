@@ -234,34 +234,50 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 	}
 
-
+	Calendar calendar = Calendar.getInstance();
 	private void displayCardSide(int side) {
 		switch (side) {
 		case 1:
 			Command[] commands = { turnCommand, exitCommand };
 			setCommands(commands);
-			Calendar calendar = Calendar.getInstance();
-			calendar.setTime(new Date(c.getLastTimeViewed()));
-			int year = calendar.get(Calendar.YEAR);
-			int month = calendar.get(Calendar.MONTH)+1;
-			int date = calendar.get(Calendar.DATE);
-			String lastTimeViewed = date + "/" + month + "/" + year;
-			String cardStats = "\n\n\n"
-//					"tip: " + c.getTip() + "\n" 
-					+ "viewed " + c.getViewedCounter() + " times \n"
-					+ "last: " + lastTimeViewed;
-			
 			cardText.setLabel(c.getSideOneTitle() + ": \n");
 			cardText.setText(c.getSideOne());
-			cardStatistics.setLabel(cardStats);
 			sideOne = true;
+			//show statistics for the card
+			String lastTimeViewed = "";
+			String tip = "";
+			String viewCounter = "";
+			//only show if there are meaningful values
+			if(c.getLastTimeViewed()>0) {
+				calendar.setTime(new Date(c.getLastTimeViewed()));
+				int year = calendar.get(Calendar.YEAR);
+				int month = calendar.get(Calendar.MONTH)+1;
+				int date = calendar.get(Calendar.DATE);
+				int hour = calendar.get(Calendar.HOUR_OF_DAY);
+				int minute = calendar.get(Calendar.MINUTE);
+				lastTimeViewed = "last: " + date + "/" + month + "/" + year 
+					+ " " + hour + ":" + minute;
+			}
+			if(c.getTip() != null && !(c.getTip().equals(""))) {
+				tip = "tip: " + c.getTip() + "\n" ;
+			}
+			if(c.getViewedCounter() > 0) {
+				viewCounter =  "viewed " + c.getViewedCounter() + " times \n";
+			}
+			String cardStats = "\n\n\n\n"
+					+ viewCounter
+					+ tip
+					+ lastTimeViewed;
+			cardStatistics.setLabel(cardStats);
 			break;
 		case 2:
 			Command[] cmds = { doneCommand, wrongCommand };
 			setCommands(cmds);
+			//remove statistics
+			cardStatistics.setLabel("");
+			//show the side
 			cardText.setLabel(c.getSideTwoTitle() + ": \n");
 			cardText.setText(c.getSideTwo());
-			cardStatistics.setLabel("");
 			sideOne = false;
 			break;
 		default:
@@ -299,9 +315,12 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		} else {
 			setCommands(null);
 		}
-		cardText.setLabel("STATISTICS" + "\n");
-		cardText.setText("Total of cards: " + totalOfCards + "\n" + "Correct: "
-				+ done + "\n" + "Incorrect: " + incorrectAmount + "\n"
+		cardText.setLabel("");
+		cardText.setText("");
+		cardStatistics.setLabel("STATISTICS" + "\n\n"
+				+ "Total of cards: " + totalOfCards + "\n" 
+				+ "Correct: " + done + "\n" 
+				+ "Incorrect: " + incorrectAmount + "\n"
 				+ "Viewed this session: " + totalReviewed + "\n"
 				+ "Correct this session: " + totalDoneSession + "\n"
 				+ "Total viewed: " + soc.getTotalNumberOfDisplayedCards() + "\n" 
