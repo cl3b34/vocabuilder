@@ -1,10 +1,10 @@
 package br.boirque.vocabuilder.view;
 
-import java.util.Calendar;
-import java.util.Date;
 import java.util.Random;
 import java.util.Vector;
 
+import javax.microedition.lcdui.Alert;
+import javax.microedition.lcdui.AlertType;
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
 import javax.microedition.lcdui.Display;
@@ -33,6 +33,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private Form mainForm;
 	private StringItem cardText;
 	private StringItem cardStatistics;
+	private Alert alertStats;
 
 	// Beans
 	private SetOfCards soc;
@@ -72,6 +73,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		mainForm = new Form("Vocabuilder");
 		cardText = new StringItem("", "Card Text");
 		cardStatistics = new StringItem("","");
+		alertStats = new Alert("","",null,AlertType.INFO);
 		cardText.setLayout(Item.LAYOUT_CENTER);
 		cardText.setLayout(Item.LAYOUT_EXPAND);
 		// cardText.setPreferredSize(-1, cardText.getPreferredHeight()+3);
@@ -202,13 +204,13 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 
 	protected void destroyApp(boolean bool) {
-		// update the total study time for the set
-		long previousTotalStudiedTime = soc.getTotalStudiedTimeInMiliseconds();
-		long newTotalStudiedTime = previousTotalStudiedTime + sessionStudyTime;
-		soc.setTotalStudiedTimeInMiliseconds(newTotalStudiedTime);
-		displayStatistics(false);
-		Initializer initializer = new Initializer();
-		initializer.saveState(soc);
+//		// update the total study time for the set
+//		long previousTotalStudiedTime = soc.getTotalStudiedTimeInMiliseconds();
+//		long newTotalStudiedTime = previousTotalStudiedTime + sessionStudyTime;
+//		soc.setTotalStudiedTimeInMiliseconds(newTotalStudiedTime);
+//		displayStatistics(false);
+//		Initializer initializer = new Initializer();
+//		initializer.saveState(soc);
 	}
 
 	/*
@@ -234,7 +236,6 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 	}
 
-	Calendar calendar = Calendar.getInstance();
 	private void displayCardSide(int side) {
 		switch (side) {
 		case 1:
@@ -249,14 +250,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			String viewCounter = "";
 			//only show if there are meaningful values
 			if(c.getLastTimeViewed()>0) {
-				calendar.setTime(new Date(c.getLastTimeViewed()));
-				int year = calendar.get(Calendar.YEAR);
-				int month = calendar.get(Calendar.MONTH)+1;
-				int date = calendar.get(Calendar.DATE);
-				int hour = calendar.get(Calendar.HOUR_OF_DAY);
-				int minute = calendar.get(Calendar.MINUTE);
-				lastTimeViewed = "last: " + date + "/" + month + "/" + year 
-					+ " " + hour + ":" + minute;
+				lastTimeViewed = "last: " + vocaUtil.getLastTimeViewedAsString(c.getLastTimeViewed());
 			}
 			if(c.getTip() != null && !(c.getTip().equals(""))) {
 				tip = "tip: " + c.getTip() + "\n" ;
@@ -327,6 +321,20 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				+ "Session duration: " + vocaUtil.getStudyTimeAsString(sessionStudyTime) + "\n" 
 				+ "Total Study time: " + vocaUtil.getStudyTimeAsString(soc.getTotalStudiedTimeInMiliseconds())
 			);
+//		alertStats.setString("STATISTICS" + "\n\n"
+//				+ "Total of cards: " + totalOfCards + "\n" 
+//				+ "Correct: " + done + "\n" 
+//				+ "Incorrect: " + incorrectAmount + "\n"
+//				+ "Viewed this session: " + totalReviewed + "\n"
+//				+ "Correct this session: " + totalDoneSession + "\n"
+//				+ "Total viewed: " + soc.getTotalNumberOfDisplayedCards() + "\n" 
+//				+ "Session duration: " + vocaUtil.getStudyTimeAsString(sessionStudyTime) + "\n" 
+//				+ "Total Study time: " + vocaUtil.getStudyTimeAsString(soc.getTotalStudiedTimeInMiliseconds())
+//			);
+//		
+//		alertStats.setTimeout(30000);
+//		Display display = Display.getDisplay(this);
+//		display.setCurrent(alertStats);
 	}
 
 	
@@ -334,8 +342,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private long updateSessionStudyTime(long sessionStudyTime,
 			long lastActivityTime, long maxIdleTime) {
 		// this is not rocket science! if the user is
-		// idle more than 30s we ignore the update the user
-		// was chatting with someone :)
+		// idle more than 30s we ignore the update as the user
+		// was talking to someone :)
 		long currentTime = System.currentTimeMillis();
 		long idleTime = currentTime - lastActivityTime;
 		if (idleTime < maxIdleTime) {
@@ -351,6 +359,14 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 		if (cmd == exitCommand) {
 			// should save the state and exit
+			// update the total study time for the set
+			long previousTotalStudiedTime = soc.getTotalStudiedTimeInMiliseconds();
+			long newTotalStudiedTime = previousTotalStudiedTime + sessionStudyTime;
+			soc.setTotalStudiedTimeInMiliseconds(newTotalStudiedTime);
+			displayStatistics(false);
+			Initializer initializer = new Initializer();
+			initializer.saveState(soc);
+			//exit
 			destroyApp(false);
 			notifyDestroyed();
 		}
