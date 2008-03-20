@@ -1,0 +1,19 @@
+#The inspiration to create vocabuilder came from these sources
+
+= Similar applications =
+
+I used those while trying to learn the Finnish language:
+
+http://www.flashcardexchange.com/tag/Finnish
+
+http://www.studystack.com/
+
+= Rationale = 
+
+Flash cards history:
+
+http://en.wikipedia.org/wiki/Flashcards
+
+Learning a foreign language
+
+http://en.wikibooks.org/wiki/How_to_learn_a_language#Learning_or_teaching_specific_languages
