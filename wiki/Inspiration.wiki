@@ -12,10 +12,10 @@ While they where very useful, they are web applications and I needed something m
 
 = Rationale = 
 
-Flash cards history:
+What are Flash cards and a little bit of history:
 
 http://en.wikipedia.org/wiki/Flashcards
 
-Learning a foreign language
+Wikibook on learning a foreign language
 
 http://en.wikibooks.org/wiki/How_to_learn_a_language#Learning_or_teaching_specific_languages
