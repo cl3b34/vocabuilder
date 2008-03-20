@@ -1,4 +1,4 @@
-#The inspiration to create vocabuilder came from these sources
+#summary Inspiration for creating vocabuilder
 
 = Similar applications =
 
@@ -7,6 +7,8 @@ I used those while trying to learn the Finnish language:
 http://www.flashcardexchange.com/tag/Finnish
 
 http://www.studystack.com/
+
+While they where very useful, they are web applications and I needed something more portable and readily accessible.
 
 = Rationale = 
 
