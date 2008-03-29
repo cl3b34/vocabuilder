@@ -37,7 +37,7 @@ public class VocaUtilTest extends TestCase {
 		assertEquals("7min 0sec", vu.getStudyTimeAsString(420000L)); 
 		assertEquals("59min 0sec", vu.getStudyTimeAsString(3540000L)); 
 		assertEquals("1hr 13min", vu.getStudyTimeAsString(4380000L)); // 1h 13min
-		assertEquals("1 day 0hr 0min", vu.getStudyTimeAsString(86400000L));
+		assertEquals("1 day 0hr 00min", vu.getStudyTimeAsString(86400000L));
 		assertEquals("1 day 1hr 13min", vu.getStudyTimeAsString(90780000L)); // 1 day 1hr 13min
 	}
 	
