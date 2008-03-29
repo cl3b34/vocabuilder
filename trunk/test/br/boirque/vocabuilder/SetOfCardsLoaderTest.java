@@ -41,7 +41,7 @@ public class SetOfCardsLoaderTest extends TestCase {
 	
 	public void testTextFileLoader() throws IOException{
 		SetOfCardsLoader socl = new SetOfCardsLoader();
-		SetOfCards soc = socl.loadSet("/wordlist_long.txt");
+		SetOfCards soc = socl.loadSet("/Finnish/longlist_fin_eng.txt");
 		assertNotNull(soc);
 		Vector cards = soc.getFlashCards();
 		System.out.println("Number of Cards: " + cards.size());
@@ -68,7 +68,7 @@ public class SetOfCardsLoaderTest extends TestCase {
 		FlashCard lastCard = (FlashCard) cards.lastElement();
 		assertNotNull(lastCard);
 		String firstWordLastCard = lastCard.getSideOne();
-		assertEquals("öljy", firstWordLastCard);
+		assertEquals("Ã¶ljy", firstWordLastCard);
 		String secondWordLastCard = lastCard.getSideTwo();
 		assertEquals("oil", secondWordLastCard);
 		assertTrue(false == lastCard.isDone());
