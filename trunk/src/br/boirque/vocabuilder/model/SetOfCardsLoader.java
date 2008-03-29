@@ -16,7 +16,7 @@ public class SetOfCardsLoader {
 
 	//load the default set
 	public SetOfCards loadSet() throws IOException {
-		return loadSet("/primitives.txt");
+		return loadSet("/Finnish/longlist_eng_fin.txt");
 	}
 	
 	// this method tries to load a set
@@ -30,6 +30,7 @@ public class SetOfCardsLoader {
 
 	/*
 	 * Only generates a fake set of cards and returns it
+	 * Early development purposes only...
 	 */
 	private SetOfCards mockLoader() {
 		// just return a fake SetOfCards
