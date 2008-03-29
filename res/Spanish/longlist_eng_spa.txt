@@ -1,0 +1,11789 @@
+a = a, dentro de, en, por, alguien, alguno, cierto, por, un, una
+
+abandon = abandonar
+
+abandonment = cesión
+
+abate = calmarse, sosegarse, amainar, disminuir, decrecer, menguar
+
+abatement = baja, descuento, rebaja, reducción
+
+abbess = abadesa
+
+abbey = abadía
+
+abbot = abad
+
+abbreviate = abreviar, acortar
+
+abbreviation = abreviación, abreviatura
+
+ABC = abecé, alfabeto
+
+abdicate = abdicar
+
+abdomen = vientre
+
+aberrance = desvío
+
+aberration = desvío, equivocación, error, yerro
+
+abet = instigar, sostener
+
+abhor = detestar
+
+abhorrence = aversión, horror
+
+abhorrent = abominable, horrible, horroroso
+
+abide = esperar, aguardar
+
+abiding = continuo
+
+ability = capacidad, habilidad, poder, virtud, disposición
+
+abject = menesteroso, miserable, necesitado, pobre
+
+abjure = abjurar, anular, contramandar
+
+able = capaz, hábil
+
+abnormal = anormal, irregular
+
+aboard = a bordo
+
+abode = domicilio
+
+abolish = abolir, abrogar, anular, contramandar
+
+abolition = abolición
+
+abominable = abominable, horrible, horroroso
+
+abominate = detestar
+
+abomination = aversión, horror
+
+aboriginal = indígena, original
+
+abort = provocar un aborto
+
+abortion = aborto
+
+about = en cuanto a, por lo tocante a, respecto de, a eso de, apróximadamente, cerca de, alrededor de, en torno de
+
+above = al norte de, encima de, arriba
+
+above all = sobre todo, sobretodo, principalmente
+
+above-board = honrado, sincero
+
+abrasive = afilado, agudo
+
+abreact = descargar
+
+abridge = limitar, abreviar, acortar
+
+abridgement = resumen
+
+abroad = en el extranjero, fuera
+
+abrogate = abolir, abrogar, anular, contramandar
+
+abrogation = abolición
+
+abrupt = bronco, brusco, escarpado
+
+abscess = absceso
+
+absence = ausencia, falta
+
+absent = ausente
+
+absent-minded = distraído
+
+absent onself = quitarse, salir
+
+absolute = absoluto, cabal, completo
+
+absolutely = de veras, en efecto, en realidad, verdaderamente
+
+absolute ruler = autócrata
+
+absorb = absorber
+
+abstract = decudir, arrancar, descolgar, quitar, resumen
+
+abstracted = distraído
+
+abstraction = robo
+
+abundance = riqueza
+
+abuse = injuriar, injuria, insulto, ofensa
+
+abyss = abismo, despeñadero, precipicio
+
+academic = estudiante
+
+academy = academia
+
+academy of music = conservatorio
+
+accede = acordar, declarar
+
+accelerator = acelerador
+
+accelerator pedal = acelerador
+
+accent = acentuar, acento, dejo
+
+accent mark = acento
+
+accentuate = acentuar
+
+accept = aceptar, admitir, tomar
+
+acceptable = aceptable, admisible, razonable
+
+acceptance = aceptación
+
+access = acometida, agresión, ataque, entrada, instinto
+
+accessible = alcanzable
+
+accession = adquisición, compra, ganancia, presentación
+
+accessory = apéndice
+
+accidence = acaso
+
+accident = accidente, desgracia
+
+acclaim = aplaudir, aplauso
+
+acclamation = aplauso
+
+acclivity = cuesta
+
+accommodate = acomodar, adaptar
+
+accommodating = oficioso, servicial
+
+accommodation = acuerdo, arreglo, construcción, convenio, compromiso, alojamiento
+
+accomodate = acomodar, adaptar, servir, acabar, concluir, terminar, ayudar
+
+accompaniment = acompañamiento
+
+accompany = acompañar
+
+accomplish = alcanzar, realizar, cometer, hacer, perpetrar
+
+accomplished = dotado, talentoso
+
+accomplishment = acción
+
+accord = acorde, acuerdo, concordación, convenio, arreglo, convenio, permitir
+
+accordance = acorde, acuerdo, concordación, convenio
+
+accordion = acordeón
+
+accost = dirigir la palabra a, dirigirse a
+
+account = explicación, cuenta, información, communicación, noticia, considerar, contemplar, tomar en consideración, creer, lugar, motivo, descripción
+
+accountable = responsable
+
+accountant = contador público, perito de contabilidad
+
+account book = registro
+
+account for = desarrollar, explicar
+
+accredit = creer
+
+accretion = aumento, incremento
+
+accrue = descender, aumentar, crecer
+
+accumulator = acumulador
+
+accurate = preciso, escrupuloso, meticuloso
+
+accusal = acusación, cargo
+
+accusation = acusación, cargo, denuncia
+
+accuse = acusar, delatar, denunciar
+
+accused = acusado
+
+accustom oneself = acostumbrarse, habituarse
+
+ace = as
+
+acerbic = afilado, agudo, amargo
+
+acetous = agrio
+
+ache = desear, doler, dolor
+
+achieve = alcanzar, consequir, obtener, procurarse, realizar, cometer, fabricar, hacer, perpetrar
+
+achievement = acción
+
+acid = agrio, afilado, agudo
+
+acknowledge = confesar, declarar, confirmar
+
+acknowledgement = confesión, declaración, recibo, talón
+
+acolyte = partidario
+
+acquaint = informar, divulgar, publicar
+
+acquaintance = notoriedad, conocido, conocimiento
+
+acquiescence = resignación
+
+acquire = alcanzar, consequir, obtener, procurarse, comprar
+
+acquisition = adquisición, compra, ganancia
+
+acquisitive = ávido, codicioso
+
+acrid = afilado, agudo
+
+acrimonious = afilado, agudo
+
+across = a través de
+
+across from = contra
+
+act = acción, acta, certificado, cometer, fabricar, hacer, perpetrar, influir en, ofrecer, presentar, reproducir, retratar
+
+act for = representar
+
+action = acción, batalla, proceso
+
+activate = causar, instigar, maquinar, ocasionar, producir
+
+active = activo, laborioso
+
+activity = acción
+
+act of grace = amnistía
+
+actor = actor
+
+act out = realizar
+
+actress = actriz
+
+actually = en efecto
+
+acuity = atención
+
+acute = afilado, agudo, agudo, fulminante, violento
+
+ad = anuncio
+
+Adam = Adán
+
+adapt = acomodar, adaptar
+
+a day = al día
+
+add = sumar
+
+adder = áspid, víbora
+
+addition = apéndice
+
+additional = extra
+
+addled = podrido, zote
+
+address = dirigir, dirección, señas, dirigir la palabra a, dirigirse a
+
+address list = directorio
+
+add up = sumar
+
+adept = partidario
+
+adherence = afectuosidad
+
+adherent = partidario
+
+adherents = partido
+
+adhere to = ser partidario de
+
+adhesive plaster = parche
+
+adhesive tape = cinta pegante
+
+adieu = adiós
+
+adjacent = adyacente, contiguo, vecino
+
+adjective = adjetivo
+
+adjoining = adyacente, contiguo, vecino
+
+adjournment = retraso
+
+adjunct = apéndice
+
+adjust = acomodar, adaptar, ajustar
+
+adjustable wrench = llave
+
+adjustment = acuerdo, arreglo, construcción
+
+adjutant = ayudante, edecán
+
+administer = administrar
+
+administer the last sacraments = viaticar
+
+administration = administración, gobierno
+
+administration of the last sacraments = administración del Sacramento
+
+administrator = administrador, gerente
+
+admiral = almirante
+
+admire = admirar
+
+admission = aceptación, entrada, precio de entrada, confesión, declaración
+
+admission fee = precio de entrada
+
+admission ticket = billete de entrada
+
+admit = confesar, declarar, permitir
+
+admittance = entrada
+
+admixture = mezcla
+
+admonish = exhortar, requerir
+
+admonition = exhortación
+
+ado = ruido
+
+adopt = adoptar, prohijar
+
+adopted = adoptivo
+
+adoration = adoración
+
+adore = adorar
+
+adorn = decorar
+
+adorned = adornado
+
+adornment = alhaja
+
+adroit = ágil, experto, diestro, hábil
+
+adstringent = astrigente antidiárrico
+
+advance = acercarse, aproximarse
+
+advancement = progreso
+
+advantage = provecho, ventaja
+
+advantageous = favorable
+
+adventure = aventura
+
+adventurer = aventurero
+
+adventurous = aventurero, arriesgado
+
+adverb = adverbio
+
+adversary = enemigo
+
+advert = atender, atender a, tener cuidado
+
+advertence = atención
+
+advertency = atención
+
+advertise = anunciar, publicar
+
+advertisement = anuncio
+
+advice = consejo, noticia, noticias, publicación
+
+advise = anunciar, aconsejar
+
+advise against = desaconsejar
+
+advocate = abogado
+
+aerate = ventilar
+
+aerial = antena
+
+aerodrome = aeropuerto
+
+aerogramme = carta aérea
+
+aeronautics = aviación
+
+aeroplane = aeroplano, avión
+
+afar = lejos
+
+a few = unas, unos
+
+a few minutes = un momento
+
+affable = amable, bonito, gracioso
+
+affair = asunto, particular, caso
+
+affect = afectar, influir en, conmover
+
+affectation = afectación
+
+affecting = conmovedor
+
+affection = amor, afectuosidad
+
+affectionate = mimoso, zalamero, afectuoso
+
+affiliate = adaptar, prohijar
+
+affirm = asegurar, asentir, confirmar
+
+affirmation = promesa
+
+affix = fijar
+
+afflict = afligir, entristecer
+
+affluence = riqueza
+
+afford = permitir, producir
+
+afraid = medroso, miedo, miedoso, temeroso, encogido, tímido, angustioso
+
+afresh = de nuevo, otra vez
+
+Africa = África
+
+African = africano
+
+African woman = africana
+
+after = detrás de, tras, después
+
+afternoon = tarde
+
+afterwards = después, luego, más adelante
+
+again = de nuevo, otra vez
+
+against = contra
+
+agate = ágata
+
+age = edad
+
+agency = agencia
+
+agenda = agenda, dietario, orden del día
+
+agent = agente, representante, herramienta, instrumento, medio
+
+aggrandizement = ampliación
+
+aggravating = escandaloso
+
+aggression = acometida, agresión, ataque
+
+aggressor = agresor, atacador
+
+agitate = conmover, preocupar
+
+agitated = inquieto
+
+agitation = ruido
+
+... ago = hace ...
+
+agog = curioso
+
+agonizing = horrible, horroroso
+
+agony = angustia, miedo
+
+agrarian = agrario
+
+agree = convenir, acordar, declarar
+
+agreeable = agradable
+
+agreed = de acuerdo, en orden, vale, conforme, convenido
+
+agreement = acorde, acuerdo, concordación, convenio, declaración
+
+agree to = estar de acuerdo con
+
+agricultural = agrario
+
+ague = fiebre
+
+ah = ay, ah
+
+aha = ah
+
+ahead = anteriormente, delante, adelante
+
+aid = asistente, ayudante, ayuda, ayudar
+
+aide-de-camp = ayudante, edecán
+
+ailment = enfermedad
+
+aim = querer decir, fin, objeto, esforzarse por, tratar de
+
+air = aire
+
+air-balloon = aeróstato
+
+airbed = hinchable
+
+air conditioned = de aire acondicionado
+
+air conditioning = aire acondicionado
+
+aircraft = avión
+
+airdrome = aeropuerto
+
+airfield = aeropuerto
+
+airless = oprimido
+
+air letter = carta aérea
+
+airmail = correo aéreo
+
+air mattress = hinchable
+
+air out = ventilar
+
+airplane = aeroplano, avión
+
+airport = aeropuerto
+
+airsick = mareado en avión
+
+airy-fairy = hueco
+
+Aix-la-Chapelle = Aquisgrán
+
+alarm = alarma, preocupar
+
+alarmbell = timbre de alarma
+
+alarming = crítico, grave
+
+alas = es una lástima
+
+album = álbum
+
+alcohol = alcohol
+
+ale = cerveza
+
+Alexander = Alejandro
+
+algebra = álgebra
+
+Algerian = argelino
+
+Algerian woman = argelina
+
+Algiers = Argel
+
+alibi = coartada
+
+alien = abominable, horrible, horroroso, extranjero
+
+alike = semejante
+
+alimony = asistencias
+
+a little = bastante, poco, poquito, tantico
+
+alive = vivo
+
+all = toda clase de, todo, todos
+
+all about = en todas partes
+
+alley = calleja
+
+All Hallows = Todos los Santos
+
+all-knowing = omnisciente
+
+all of a sudden = de golpe, de repente, de sopetón
+
+all over again = de nuevo, otra vez
+
+allow = dejar, permitir
+
+all-powerful = omnipotente, todopoderoso
+
+All Saints' Day = Todos los Santos
+
+all sorts = toda clase de
+
+all sorts of = toda clase de
+
+All Souls' Day = Todos los Santos, el día de Todos los Santos
+
+all the = cada, cada uno, todo
+
+all the time = continuamente
+
+almanac = almanaque, calendario
+
+almighty = omnipotente, todopoderoso
+
+almond = almendra
+
+almond paste = pasta de almendras
+
+almost = casi
+
+almound pastry = pastel de almendra
+
+alms = limosna
+
+alone = solo, único, no ... mas que, solamente, sólo
+
+along = a lo largo de
+
+a lot of = mucho
+
+alphabet = abecé, alfabeto
+
+Alpine hut = refugio
+
+Alps = Alpes
+
+already = ya
+
+Alsace = Alsacia
+
+also = también
+
+altar = altar
+
+alternate = alternar
+
+alternation = alternativa
+
+although = aunque
+
+altitude = altitud, elevación
+
+altogether = todo
+
+alum = alumbre
+
+aluminium = aluminio
+
+aluminum = aluminio
+
+always = siempre
+
+amateur = aficionado
+
+amaze = asombrar
+
+Amazon = río Amazonas, amazona
+
+ambassador = embajador
+
+amber = ámbar amarillo
+
+ambulance = ambulancia
+
+amen = amén
+
+America = América
+
+American = americano
+
+American Indian = amerindio, indio americano
+
+American ostrich = ñandu
+
+American woman = americana
+
+ammonia = amoníaco
+
+amnesty = amnistía
+
+a moment = un momento
+
+among = entre
+
+amortize = amortizar
+
+amount = número, cantidad, importe, suma
+
+amount to = ascender a, importar
+
+amputate = amputar
+
+Amsterdam = Amsterdam
+
+amuse = divertir, entretener
+
+amusement = diversión, divertimento
+
+amusing = cómico, divertido
+
+an = un, una
+
+anathema = anatema
+
+a native of = procedente de
+
+anchor = ancla, anclar, fondear
+
+anchovy = anchoa
+
+ancient = antiguo
+
+and = y
+
+and also = así como, y también
+
+Andalusia = Andalucía
+
+and ... as well = así como, y también
+
+Andorra = Andorra
+
+anecdote = anécdota
+
+anew = de nuevo, otra vez
+
+anger = cólera
+
+angle = ángulo
+
+anguish = angustia, miedo
+
+animal = animal, bestia
+
+anise = anís
+
+ankle = tobillo
+
+annals = anales
+
+annex = anexar, anexionar
+
+annexation = anexión, edificio anexo
+
+annotation = anotación, apunte
+
+announce = anunciar, publicar
+
+announcement = anuncio, noticia, noticias, publicación
+
+annual = anualmente
+
+annul = anular, contramandar
+
+Annunciation = Anunciación
+
+anonymous = anónimo
+
+another = otro
+
+answer = corresponder al, contestar, responder, contestar a, responder a, contestación, respuesta
+
+answer to = corresponder al
+
+ant = hormiga
+
+antecedent = antecedente, antecedente
+
+antenna = antena
+
+antifreeze = anticongelante
+
+Antilles = Antillas
+
+antique = antiguo
+
+antiquity = antigüedad
+
+antiseptic = antiséptico
+
+Antwerp = Amberes
+
+anus = ano
+
+anvil = yunque
+
+anxious = inquieto
+
+any = alguien, alguno, cierto, unas, unos
+
+anybody = alguien, alguno, cierto
+
+anything = algo
+
+apart = aparte, particular, separado, por separado
+
+apart from = excepto, menos, además de, amén de
+
+apartment = apartamento, cuarto, piso
+
+ape = mono
+
+apocryphal = apócrifo
+
+apologize = disculparse
+
+apology = disculpa
+
+apoplectic fit = apoplejía
+
+apostasy = deserción
+
+apostate = apóstata
+
+apostatize = apostatar, desertar
+
+apostle = apóstol
+
+apparatus = aparato
+
+apparent = demostrable
+
+apparently = evidentemente
+
+appeal = apelación, llamada, oración, ruego
+
+appeal to = llamar
+
+appear = aparecer, parecer
+
+appearance = aspecto, vista, apariencia
+
+appear to be = parecer
+
+appease = calmar, sosegar
+
+appellation = nombre
+
+appendix = apéndice
+
+appetite = apetito
+
+applaud = aplaudir
+
+apple = manzana
+
+apple juice = jugo de manzana
+
+apple-sauce = mermelada de manzanas, salsa de malzanas
+
+apple-tart = tarta de manzana
+
+apple-tree = manzano
+
+apply = emplear
+
+appoint = nombrar
+
+appointment = nombramiento, cita
+
+appointment book = agenda, dietario
+
+appointment to office = nombramiento
+
+appraise = estimar
+
+appreciate = gustar
+
+apprehension = arresto, detención
+
+appropriate = conveniente
+
+approval = aplauso
+
+approximately = a eso de, apróximadamente, cerca de
+
+apricot = albaricoque
+
+apricot-tree = albaricoquero
+
+April = abril
+
+aptitude = capacidad, disposición, talento
+
+aquarium = acuario
+
+Arab = árabe
+
+arabesque = arabesco
+
+Arabia = Arabia
+
+Arabian = árabe
+
+Arabic = árabe
+
+arch- = archi-, arzo-
+
+archbishop = arzobispo
+
+archbishopric = arzobispado
+
+archduke = archiduque
+
+archimandrite = abad
+
+archipelago = archipiélago
+
+architect = arquitecto
+
+archive = archivo
+
+archives = archivo
+
+archivist = archivista, archivero
+
+are = grupo
+
+arena = arena, redondel
+
+Argentina = Argentina
+
+Argentine = argentino
+
+Argentinean = argentino
+
+Argentinian woman = argentina
+
+argument = argumento
+
+arise = subir, nacer
+
+aristocrat = aristócrata
+
+Arizona = Arizona
+
+ark = arca
+
+arm = armar, brazo
+
+armchair = butaca, sillón
+
+army = ejército
+
+aroma = olor
+
+around = alrededor de, en torno de
+
+arrange = arreglar
+
+arrangement = acuerdo, arreglo, construcción
+
+arrears = atrasos
+
+arrest = arresto, detención, arrestar, detener
+
+arrested person = detenido
+
+arrival = aprovisionamiento, llegada
+
+arrivals = aprovisionamiento
+
+arrive = llegar
+
+arrive afterwards = venir después
+
+arrogant = arrogante
+
+arrow = flecha
+
+arse = ano
+
+art = arte
+
+artery = arteria
+
+arthritis = gota
+
+artichoke = alcachofa
+
+article = artículo, objecto
+
+artificial = artificial
+
+artillery = artillería
+
+artilleryman = artillero
+
+artist = artista
+
+artistic = artístico
+
+Aruba = Aruba
+
+as = cuando, cuándo, a título de, como, si, así, porque, puesto que, ya que
+
+asbestos = amianto
+
+ascend = subir, ascender, escalar, subir a
+
+Ascension Day = Ascensión
+
+ash = ceniza, fresno
+
+ashamed = vergonzoso
+
+ashen = ceniciento
+
+ashtray = cenicero
+
+Asia = Asia
+
+Asia Minor = Asia Menor
+
+Asian = asiático
+
+Asiatic = asiático
+
+as if = como si
+
+ask = preguntar, demandar, pedir, solicitar
+
+ask for = demandar, pedir, solicitar
+
+ask oneself = preguntarse
+
+asparagus = espárrago
+
+aspect = aspecto, vista
+
+asphalt = asfalto
+
+aspirin = aspirina
+
+as regards = en cuanto a, por lo tocante a, respecto de
+
+ass = burro
+
+assailant = agresor, atacador
+
+assault = acometer, atacar, agresión, ataque, atentado, salteo
+
+assent = asentir, confirmar
+
+assessment = tasa
+
+asset = adquisición, compra, ganancia
+
+assets = activo
+
+assist = ayudar
+
+assistant = asistente, ayudante
+
+associate = juntarse, unirse
+
+assortment = surtido
+
+assure = asegurar
+
+aster = aster
+
+asthma = asma
+
+as though = como si
+
+as to = en cuanto a, por lo tocante a, respecto de
+
+astrologer = astrólogo
+
+astronaut = astronauta
+
+Asturias = Asturias
+
+as well as = así como, y también
+
+asylum = asilo, refugio
+
+at = a, cerca de
+
+at all = enteramente
+
+at first = en un principio
+
+Athena = Atenas
+
+Athene = Atenas
+
+Athens = Atenas
+
+athlete = atleta
+
+athletic = atlético
+
+athletics = atletismo
+
+at home = en casa
+
+Atlantic = atlántico
+
+atlas = atlas
+
+at last = al fin, finalmente, por fin
+
+at least = a lo menos, al menos
+
+atmosphere = atmósfera
+
+atmospheric = atmosférico
+
+at most = por lo más
+
+atom = átomo
+
+atom bomb = bomba atómica
+
+at once = directamente, en seguida, ahora mismo, en el acto, inmediatamente
+
+at present = actualmente, ahora
+
+attach = fijar
+
+attachement = afectuosidad
+
+attachment = afectuosidad
+
+attack = acometer, atacar, acometida, agresión, ataque
+
+attacker = agresor, atacador
+
+attain = alcanzar, consequir, obtener, procurarse
+
+attempt = esforzarse por, tratar de, afán, intentar, probar, carné, carnet
+
+attend = cuidar, visitar
+
+attendance = servicio
+
+attention = atención
+
+attentive = atento
+
+at that place = ahí, allí
+
+at the back = al dorso, atrás, detrás, en pos
+
+at the instance of = a instancias de
+
+at the outset = en un principio
+
+at the right time = a tiempo
+
+at the same time = al mismo tiempo, juntamente
+
+attic = desván
+
+attitudinize = darse tono, ponerse, ser presuntuoso
+
+attitudinizer = farsante, presumido
+
+attract = atraer, encantar, seducir
+
+attractive = atractivo, atrayente
+
+attune = acomodar, adaptar
+
+aubergine = berenjena
+
+audience = audiencia
+
+audit = controlar, registrar, revisar
+
+auditorium = aula magna, paraninfo
+
+August = agosto
+
+aunt = tía
+
+Australia = Australia
+
+Australian = australiano
+
+Austria = Austria
+
+Austrian = austriaco
+
+author = autor
+
+authority = autoridad
+
+authorization = autorización
+
+autobus = autobús
+
+autocrat = autócrata
+
+automatic = automático
+
+automobile = automóvil, coche
+
+automoton = automático
+
+autonomic = autónomo
+
+autonomous = autónomo
+
+autumn = otoño
+
+avail = aprovechar
+
+available = disponible
+
+avalanche = avalancha
+
+avenge = vengar
+
+avenge oneself = vengar
+
+avenue = avenida
+
+average = centro, medio
+
+aversion = aversión, repugnancia
+
+aviation = aviación
+
+avidity = deseo
+
+avoid = evitar
+
+await = esperar, aguardar
+
+award a prize = premiar
+
+away = lejos
+
+awful = abominable, horrible, horroroso
+
+axe = hacha
+
+axiom = axioma
+
+axis = eje
+
+axle = eje
+
+Aztec = azteca
+
+baby = bebé, nene
+
+bachelor = solterón
+
+back = reverso, revés, espalda, parte trasera, atrás
+
+back-door = puerta trasera
+
+background = fondo
+
+back of the head = occipucio
+
+backpack = mochila
+
+back street = barrio bajo
+
+backward = boca arriba, de espaldas, atrás, hacia atrás, atrasado, retrógrado
+
+backwards = atrás, hacia atrás, boca arriba, de espaldas
+
+back wheel = rueda posterior
+
+bacon = tocino
+
+bacterium = bacteria
+
+bad = malo, podrido
+
+bad luck = mala suerte
+
+bag = bolso
+
+bagasse = bagazo
+
+baggage = equipaje, equipajes
+
+bairn = niño
+
+bait = carnada, cebo
+
+baize = bayeta
+
+bake = cocer
+
+baked goods = hornada, pastel
+
+baker = panadero
+
+bakery = panadería
+
+balance = balancear
+
+balance sheet = balance
+
+balcony = balcón
+
+bale = bala, fardo
+
+Balearic Islands = Islas Baleares
+
+baleen = ballena
+
+Balkans = Balkanes
+
+ball = baile, pelota
+
+ballast = lastre
+
+ballet = ballet
+
+ballet dancer = bailarín de ballet
+
+balloon = aeróstato
+
+ballot = balotaje
+
+balloting = balotaje
+
+ballpoint pen = bolígrafo
+
+balm = bálsamo
+
+balsam = bálsamo
+
+Baltic = báltico
+
+Baltic Sea = Báltico, mar Báltico
+
+balustrade = balaustrada
+
+bamboo = bambú
+
+ban = anatema
+
+banana = plátano
+
+bandage = vendaje
+
+bandit = bandido
+
+banisters = balaustrada
+
+bank = banco, escaño, orilla
+
+bank account = cuenta bancaria
+
+banker = banquero
+
+banking account = cuenta bancaria
+
+bank manager = banquero
+
+banknote = billete de banco
+
+bank-note = billete de banco
+
+bank note = billete de banco
+
+bankruptcy = bancarrota quiebra
+
+banner = bandera
+
+banquet = banquete
+
+bar = cercar, obstrucción, taberna, salvo, estorbar, impedir, bar
+
+barbarian = bárbaro
+
+barbaric = bárbaro
+
+barber = barbero, peluquero
+
+bare = desnudo
+
+barefoot = descalzo
+
+barely = apenas
+
+baritone = barítono
+
+bark = corteza, barco, ladrar, cáscara
+
+barley = cebada
+
+barman = barman
+
+barn = barraca, cobertizo, cabina, granero, puesto
+
+bar of chocolate = barra de chocolate
+
+barometer = barómetro
+
+barometer reading = altura barométrica
+
+baron = barón
+
+baroness = baronesa
+
+barque = barco
+
+barrack = barraca, cobertizo
+
+barracks = cuartel
+
+barren = árido
+
+barricade = barricada
+
+barrier = obstrucción, reja
+
+barring = salvo
+
+barrister = abogado
+
+barrister-at-law = abogado
+
+bar stool = taburete
+
+bartender = barman
+
+basalt = basalto
+
+base = basar, fundar, base
+
+basement = sótano
+
+basic = bázico
+
+basin = recipiente de agua, fuente, pelvis
+
+basis = base
+
+basket = cesto
+
+basketball = baloncesto
+
+Basque = vasco, vascuence
+
+Basque Country = País Vasco
+
+Basque language = vasco, vascuence
+
+bas-relief = bajorrelieve
+
+bass = bajo, perca
+
+bass voice = bajo
+
+bast = corteza
+
+bastard = bastardo
+
+bath = baño
+
+bathe = bañar, bañarse
+
+bathing box = cabina
+
+bathing-suit = traje de baño
+
+bathing suit = traje de baño
+
+bathroom = cuarto de baño, establecimiento de baños, estación balnearia
+
+baths superintendant = bañero
+
+bath superintendant = bañero
+
+batiste = batista
+
+baton = palo
+
+battalion = batallón
+
+battery = acumulador, batería, pila
+
+battle = batalla
+
+battlefront = frontón
+
+bay = bahía
+
+Bay of Biscay = Mar Cantábrico
+
+bazaar = bazar
+
+be able to = poder
+
+beach = playa
+
+beacon = baliza
+
+be adrift = derivar del rumbo
+
+be afraid of = temer
+
+be a guest of = alojarse
+
+beak = pico
+
+be alive = vivir
+
+beam = rayo, viga
+
+bean = haba
+
+be appropriate = convenir
+
+bear = dar a luz, parir, producir, oso
+
+beard = barba
+
+bearing = abolas
+
+bear the cost of = costear
+
+be ashamed = avergonzarse
+
+be asleep = dormir
+
+beast = animal, bestia
+
+beastly = bestial
+
+beat = golpear
+
+beautiful = bonito
+
+beauty = belleza
+
+beaver = castor
+
+be bold = atreverse
+
+be born = nacer
+
+be burnt down = quemar
+
+be called = llamarse
+
+because = porque, puesto que, ya que
+
+because of = con motivo de
+
+become = acontecer, hacerse
+
+becoming = conveniente
+
+be considered = entrar en cuenta
+
+bed = cuadro, cauce, madre, cama, lecho
+
+bed-clothes = ropa de la cama
+
+bedding = ropa de la cama
+
+be dependent on = depender de
+
+be detained = quedarse atrás, tardar
+
+be detrimental to = dañar a
+
+be different = diferir
+
+bedridden = encamado
+
+bedspread = colcha de cama
+
+bedstead = camita
+
+bee = abeja
+
+beech = haya
+
+beef = carne de vaca
+
+beefsteak = bife, biftec, bisté, bistec
+
+be encamped = acampar
+
+beer = cerveza
+
+beet = remolacha
+
+befit = convenir
+
+be fitting = convenir
+
+before = antes, delante de, antes de que
+
+be found = estar, encontrarse, hallarse
+
+beg = mendigar, pedir limosna, demandar, pedir, solicitar
+
+beggar = mendigo
+
+begging = mendicidad
+
+begin = comenzar, decentar, empezar, enteblar, principiar
+
+beginner = debutante, principiante
+
+beginning = comienzo, origen, principio
+
+begrudge = deplorar
+
+behave = conducirse
+
+behead = cortar
+
+behind = atrás, detrás, en pos, detrás de, tras, al dorso, después
+
+behold = tenga
+
+beige = beige
+
+be in command = capitanear
+
+be kept in = quedarse atrás, tardar
+
+be lacking = faltar
+
+be late = atrasarse
+
+Belgian = belga
+
+Belgian woman = belga
+
+Belgium = Bélgica
+
+believe = creer
+
+bell = campanilla, timbre
+
+bellow = rebuznar
+
+belly = vientre
+
+be located = estar, encontrarse, hallarse
+
+belong to = pertenecer a, ser de
+
+beloved = querido, novio
+
+below = abajo, en el fondo, debajo de
+
+belt = cinto, cinturón, pretina
+
+be married = casarse
+
+be missing = faltar
+
+bench = banco
+
+bend = curvar, doblar, curva
+
+beneath = debajo de
+
+benefit = ventaja, provecho
+
+Bengal = Bengala
+
+bengal-lights = luz de Bengala
+
+be on a visit = alojarse
+
+be one of = pertenecer a
+
+be on the decline = envejecer
+
+be painful = doler
+
+be quiet = callarse
+
+beret = birrete, boina
+
+Berlin = Berlín
+
+berry = baya
+
+beside = cerca de
+
+besides = además de, amén de, además, demás
+
+besiege = asediar, sitiar
+
+be similar = parecerse
+
+be situated = quedar
+
+be sorry about = deplorar, sentir
+
+best = querido
+
+bestial = bestial
+
+be suitable = convenir
+
+bet = apostar
+
+be taken ill = caer enfermo
+
+better = mejor
+
+between = entre
+
+beverage = bebida
+
+bevy = grupo
+
+be washed ashore = ser arrojado a la playa
+
+be worth = valer
+
+be worthy of = merecer
+
+be wrong = no tener razón
+
+beyond = después, luego, a través de
+
+bib = babero
+
+bicarbonate of soda = bicarbonato
+
+bicuit = bizcocho
+
+bicycle = bicicleta
+
+bid = ofrecer, demandar, pedir, solicitar
+
+bide = aguardar, esperar
+
+big = grande
+
+bike = bicicleta
+
+bikini = biquini
+
+bile = bilis
+
+bill = pico, billete, podadera, cuenta
+
+billow = oleaje
+
+bind = liar, ligar
+
+binding = encuadernación
+
+birch = abedul
+
+bird = ave, pájaro
+
+birds = aves
+
+birth = nacimiento
+
+birthday = cumpleaños
+
+Biscay = Vizcaya
+
+biscuit = bizcocho, galleta
+
+bishop = obispo
+
+bit = tela, pedazo
+
+bite = morder, mordisco
+
+bitter = amargo
+
+black = negro
+
+blackberry = zarzamora, zarza
+
+blackberry bush = zarza
+
+blackbird = mirlo
+
+black radish = rábano
+
+bladder = vejiga
+
+blame = valorar en, culpa, reprender, reprobar
+
+blameworthy = censurable, reprobable
+
+blank = blanco, formulario, hoja
+
+blanket = manta
+
+blaspheme = jurar
+
+bleak = horrible, lúgubre, afligido, triste, frío
+
+bleat = rebuznar
+
+bleed = sangrar
+
+bleeding = sangría
+
+blind = ciego
+
+blind alley = camino sin salida
+
+blister = ampolla, campanilla
+
+block = bloque
+
+blond = rubio
+
+blood = sangre
+
+blood-letting = sangría
+
+blood-stained = ensangrentado
+
+bloom = flor
+
+blot = mancha
+
+blotter = papel secante
+
+blotting paper = papel secante
+
+blouse = blusa
+
+blow = golpe, soplar
+
+blue = azul
+
+blueberry = mantequilla
+
+blunt = embotado, obtuso, arromar, despuntar
+
+blushing = rojo
+
+boar = cerdo
+
+board = tabla
+
+boarding house = casa de huéspedes, pensión
+
+boarding school = casa de huéspedes, pensión
+
+boat = barco
+
+body = carrocería, cuerpo
+
+boil = hervir
+
+boiled egg = huevo frito
+
+bold = grueso
+
+Bolivia = Bolivia
+
+bomb = bomba
+
+bonbon = bombón
+
+bon-bon = bombón
+
+bond = cinta, lazo
+
+bone = hueso
+
+bonnet = capot
+
+book = libro, pedir, reservar
+
+bookcase = armario para libros, libréria
+
+book-keeper = contable, tenedor de libros
+
+bookseller = librero
+
+bookshop = librería
+
+bookstore = librería
+
+boot = bota
+
+booze = alcohol
+
+Bordeaux = Burdeos
+
+border = orilla, baranda, borde
+
+bore = barrena, aburrir
+
+boring = aburrido
+
+borrow = prestar
+
+bosom = pecho
+
+boss = amo, capitán, caudillo, comandante, dueño, jefe, patrón
+
+both = ambos, los dos
+
+bother = incomodar, molestar
+
+bottle = botella, vaciar
+
+bottle opener = abridor de tapones
+
+bottom = suelo, lado inferior
+
+bough = rama
+
+bouillon = caldo
+
+boundary = frontera
+
+boutique = tienda
+
+bowl = fuente, pelvis
+
+box = arca, caja, estuche, jarro, olla
+
+boxer = boxeador
+
+boy = chico, muchacho, criado
+
+bra = sostén, sujetador
+
+bracelet = brazalete, pulsera
+
+braces = tirantes
+
+brain = cerebro
+
+brake = enfrenar, freno
+
+brakedown = averia, pana, panne
+
+bramble = zarza
+
+branch = rama
+
+brandy = coñac
+
+brass = latón
+
+brave = bravo
+
+bray = rebuznar
+
+Brazil = Brasil
+
+Brazilian = brasileño
+
+Brazilian woman = brasileña
+
+bread = pan
+
+bread and butter = rebanada
+
+break = adiestrar, descanso, quebrar, romper
+
+break down = demoler, derribar
+
+breakfast = desayuno
+
+break of a habit = desacostumbrar
+
+bream = brema
+
+breast = pecho
+
+breath = aliento, respiración
+
+breathe = respirar
+
+breathless = jadeante, sin aliento
+
+breed = raza
+
+brevity = concisión
+
+brick = ladrillo
+
+bride = prometida
+
+bridge = puente
+
+bridle = contener, reprimir
+
+brief = corto
+
+briefcase = cartera
+
+briefness = concisión
+
+briefs = braguitas
+
+bright = magnífico, claro
+
+brilliant = magnífico
+
+brim = baranda, borde
+
+bring = llevar, traer
+
+bring along = llevar
+
+brinjal = berenjena
+
+brink = baranda, borde
+
+Britain = Gran Bretaña
+
+British = británico
+
+Briton = britano
+
+broad = ancho
+
+broken = estropeado, entrecortado, roto
+
+broken stones = cascajo
+
+brook = arroyo
+
+brothel = burdel, mancebía
+
+brother = hermano
+
+brothers and sisters = hermanos
+
+brow = ceja
+
+brown = marrón, moreno, pardo
+
+brush = cepillar, cepillo
+
+Brussels = Bruselas
+
+Brussels-sprouts = coles de Bruselas
+
+brutal = bronco, brusko
+
+bubble = vejiga
+
+buck = conejo macho, liebre macho
+
+bucket = cubo
+
+buck-hare = liebre macho
+
+buckle = hebilla
+
+buck-rabbit = conejo macho
+
+budget = presupuesto
+
+buffalo = búfalo
+
+buffer = parachoques
+
+buffet = bar
+
+bug = insecto
+
+build = construir, edificar
+
+builder = destajista, labrador
+
+building = construcción, edificio
+
+building contractor = destajista
+
+bulb = ampolla
+
+Bulgar = búlgaro
+
+Bulgaria = Bulgaria
+
+Bulgarian = búlgaro
+
+Bulgarian woman = búlgara
+
+bull = toro
+
+bullet = bola
+
+bullring = plaza de toros
+
+bumper = parachoques
+
+bumpy = desigual
+
+buoy = baliza, boya
+
+burden = cargar, carga
+
+burdensome = pesado
+
+bureau = oficina
+
+burgomaster = alcade
+
+burial = enterramiento, entierro
+
+burn = arder, encender, quemar
+
+burn down = quemar
+
+burnt = quemado
+
+burst = henderse, resquebrajarse, grieta, hendedura, quebraja
+
+bury = enterrar
+
+bus = autobús
+
+bush = arbusto
+
+business = asunto, particular, comercio
+
+business deal = asunto, particular
+
+businessman = comerciante
+
+busk = ballena
+
+busstop = parada del autobús
+
+bus stop = parada del autobús
+
+busy = ocupado
+
+busy oneself = estar ...ando
+
+but = excepto, menos, mas, pero
+
+butcher = matar, carnicero
+
+butcher's shop = carnicería
+
+butter = mantequilla
+
+butterfly = mariposa
+
+button = botón
+
+buy = comprar, procurarse, adquisición, compra
+
+buyer = cliente, comprador
+
+by = cerca de, de, desde, por medio de
+
+by accident = por suerte
+
+by chance = por suerte
+
+by day = de dia
+
+bye = adiós, hasta luego, hasta la vista
+
+by heart = de memoria
+
+by means of = por medio de
+
+by no means = de ninguna manera
+
+by now = ya
+
+by the way = a propósito, de paso
+
+by-way = carretera secundaria
+
+cabaret = cabarét
+
+cabbage = col
+
+cabin = cabana, camarote
+
+cabinet = armario
+
+cable = cable
+
+cab-stand = aparcamiento de taxis
+
+cactus = cacto
+
+café = café
+
+cafetaria = cafetería
+
+cake = queque
+
+calabash = calabaza
+
+calculate = calcular, computar
+
+calf = ternero, pantorrilla
+
+call = llamar
+
+call box = cabina telefónica
+
+call on = visitar
+
+calm = quieto, silencio, sosegado, tranquilo, calmar, sosegar
+
+calm down = calmarse, sosegarse
+
+calorie = caloría
+
+cambric = batista
+
+camel = camello
+
+camera = cámara, cámara de películas
+
+camp = acampar
+
+camping ground = campamento, camping, terreno del camping
+
+camping site = campamento, camping, terreno del camping
+
+camp of tents = campamento
+
+camp out = acampar
+
+can = lata
+
+Canada = Canadá
+
+canal = canal
+
+Canary Islands = Islas Canarias
+
+cancel = anular, contramandar
+
+Candlemas = Candelaria, Purificación
+
+candlestick = candelero
+
+cane = palo, junco
+
+can opener = abrelatas
+
+Cantabrian = cantábrico
+
+cap = gorro, birrete
+
+capability = capacidad, disposición
+
+capable = capaz, hábil
+
+capital = capital
+
+capital city = capital
+
+capitulate = capitular
+
+capsule = cápsula
+
+capture = asir, coger
+
+car = automóvil, coche
+
+carafe = garrafa
+
+carburettor = carburador
+
+card = tarjeta
+
+care = cuidar, cuidado
+
+care about = cuidarse de
+
+career = carrera
+
+care for = curar
+
+careful = circunspecto, precavido, prudente
+
+careless = descuidado
+
+caress = acariciar , caricia
+
+caressing = mimoso, zalamero
+
+carnation = clavel
+
+carnival = carnaval, carnestolendas
+
+car park = aparcamiento
+
+carpet = alfombra
+
+carriage = coche
+
+carrier cycle = tricar
+
+carrier tricycle = tricar
+
+carrion = carroña
+
+carrot = zanahoria
+
+carry = llevar
+
+cart = carro
+
+case = asunto, particular, caso
+
+cash = contante
+
+cashier's stand = caja
+
+casserole = cacerola
+
+Castile = Castilla
+
+Castillian = castellano
+
+castle = castillo, torre
+
+cat = gato
+
+catalogue = catálogo
+
+catch = asir, coger, acertar
+
+catching = contagioso
+
+catechism = catecismo
+
+catering = abastacimiento
+
+caterpillar = oruga
+
+cathedral = catedral
+
+cathode tube = tubo receptor
+
+catholic = católico
+
+Caucasus = Cáucaso
+
+cauliflower = coliflor
+
+cause = causar, instigar, maquinar, ocasionar, producir, causa, dar lugar a
+
+cause pain = afligir, entristecer
+
+cause pain to = afligir, entristecer
+
+cause to take place = dar lugar a, ocasionar
+
+caution = avisar
+
+cautious = circunspecto, precavido, prudente
+
+cavalier = caballero
+
+cavalry = caballería
+
+cave = cueva, bache, hueco
+
+cavern = cueva
+
+cavity = bache, hueco
+
+ceaselessly = continuamente
+
+cede = abandonar, ceder
+
+celebrate = celebrar, celebrar una fiesta
+
+celebrating one's birthday = celebrar su cumpleaños
+
+celebration = fiesta
+
+celery = apio
+
+cell = célula
+
+cellar = sótano
+
+cello = violoncelo
+
+cemetery = campo santo, cementerio
+
+censor = censurar, censura
+
+censurable = censurable, reprobable
+
+censure = censurar, criticar, desaprobación, reprobación
+
+centennial = siglo
+
+centimetre = centímetro
+
+central = central
+
+central heating = calefacción central
+
+centre = centro
+
+century = siglo
+
+ceremony = ceremonia
+
+certain = cierto
+
+certainly = ciertamente
+
+certificate = acta, certificado, certificación
+
+chain = cadena
+
+chain of mountains = cordillera, sierra
+
+chair = silla
+
+chalk = greda
+
+chamber = cuarto, habitación
+
+chamber pot = orinal
+
+champagne = champaña
+
+chance = acaso, acontecimiento, suerte
+
+change = monedas, cambiar, mudar, combiar, cambio
+
+channel = canal
+
+chaos = caos
+
+chaotic = caótico
+
+character = indole, naturaleza, seña
+
+charcoal = carbón
+
+charge = gastos, acusación, cargo, carga
+
+chariot = carro
+
+charitable = misericordioso
+
+charity = limosna, misericordia
+
+charm = embelesar, encantar, encanto, gracia
+
+charming = bonito, encantador, lindo
+
+chase = perseguir, cazar
+
+chasm = abismo, despeñadero, precipicio
+
+chastity = virtud
+
+chat = charlar
+
+chatter = charlar
+
+chauffeur = chauffeur, chófer, mecánico
+
+cheap = barato
+
+cheat = embustero, engañar
+
+check = contener, reprimir, controlar, registrar, revisar, cheque
+
+checked = a cuadros
+
+checker = inspector
+
+checkers = damas, juego de damas
+
+check up on = controlar, registrar, revisar
+
+cheek = mejilla
+
+cheer = animar, incitar
+
+cheers = a su salud
+
+cheese = queso
+
+chef = jefe
+
+chemist = boticario, farmacéutico, químico
+
+chemistry = química
+
+chemist's shop = botica, farmacia
+
+cheque = cheque
+
+cheque-book = talonario
+
+chequered = a cuadros
+
+cherry = cereza
+
+cherry-tree = cereso
+
+chest = pecho, arca, caja, aparador
+
+chestnut = castaña
+
+chestnut-tree = castaño
+
+chew = masticar
+
+chewing-gum = chicle
+
+chic = elegante
+
+chick = pollo
+
+chicken = pollo, gallina
+
+chicory = achicoria
+
+chief = amo, capitán, caudillo, comandante, dueño, jefe, patrón, principal
+
+chief- = archi-, arzo-
+
+chiefly = sobretodo, principalmente
+
+child = niño
+
+child's bed = camita de niño
+
+Chile = Chile
+
+Chilean = chileno
+
+Chilean woman = chilena
+
+chilli = ají
+
+chilly = frío
+
+chimerical = hueco
+
+chin = barba
+
+China = China
+
+Chinaman = chino
+
+Chinese = chino
+
+chippings = cascajo
+
+chisel = cincel
+
+chive = cebollana
+
+chlorine = cloro
+
+chocolate = chocolate
+
+choice = elección
+
+choke = sofocar
+
+cholera = cólera
+
+choose = elegir, escoger
+
+chord = acorde, acuerdo, concordación, convenio
+
+Christ = Cristo
+
+Christian = cristiano
+
+Christianity = cristianismo
+
+Christmas = Navidad
+
+chuck = acariciar, caricia
+
+chunk = bola
+
+church = iglesia
+
+church-building = iglesia
+
+cider = sidra
+
+cigar = cigarro
+
+cigarette = cigarillo
+
+cinder = ceniza
+
+Cinderella = Cenicienta
+
+cinema = cine
+
+cipher = cifra
+
+circle = círculo
+
+circuit = circuito
+
+circular = circular
+
+circumcision = circuncisión
+
+circumference = perímetro
+
+circumstance = condición
+
+circus = circo
+
+cistern = tanque
+
+citadel = ciudadela
+
+citation = cita, citación
+
+cite = citar, mencionar
+
+city = ciudad, población
+
+city hall = ayuntamiento
+
+civil = civil
+
+civilian = civil
+
+civilization = civilización
+
+claim = derecho, pretensión
+
+clap = aplaudir
+
+clapper = badajo
+
+clarify = desarrollar, explicar
+
+class = clase, cursillo, curso
+
+classify = clasificar
+
+clause = cláusula
+
+claw = garra
+
+clay = arcilla
+
+clean = limpio, puro, limpiar
+
+cleanliness = limpieza
+
+cleanse = limpiar
+
+clear = claro, evidente
+
+clear away = recoger la mesa
+
+clergyman = cura
+
+clerk = dependiente, empleado
+
+clever = ágil, experto, diestro, hábil
+
+client = cliente, comprador, parroquiano
+
+clientèle = clientela
+
+climate = clima
+
+climb = trepar, subir, ascender, escalar, subir a
+
+climber's hut = refugio
+
+clip = cortar
+
+clippings = desechos, detrito
+
+clique = trinquete
+
+cloak = abrigo
+
+cloakroom = guardarropa
+
+clock = reloj
+
+clod = bola
+
+close = cerrar, cómodo, estrecho, entrante, próximo, cerca
+
+closed = cerrado
+
+closet = armario
+
+cloth = tela
+
+clothe = vestir
+
+clothes = ropa
+
+clothes-press = armario ropero
+
+clothing = ropa
+
+cloud = nube
+
+club = club
+
+clutch = agarrar, asir, coger
+
+coach = coche
+
+coach-work = carrocería
+
+coarse = áspero, desigual
+
+coast = costa
+
+coat = abrigo
+
+cocaine = cocaína
+
+cock = gallo
+
+cockroach = cucaracha
+
+cocoa = cacao
+
+cod = bacalao
+
+code = código
+
+codfish = bacalao
+
+coffee-house = café
+
+coffee-pot = cafetera
+
+cognac = coñac
+
+coin = moneda
+
+cold = frío, resfriado
+
+collar = cuello
+
+colleague = colega, compañero
+
+collect = recoger
+
+collection = grupo, colecta
+
+college = colegio
+
+collide = atropellar
+
+collide with = abordar, chocar kun
+
+collision = abordaje, atropallamiento, choque, colisión
+
+Cologne = Colonia
+
+Colombia = Colombia
+
+colony = colonia
+
+colossus = monstruo
+
+colour = color
+
+Columbus = Colón
+
+column = columna
+
+comb = peinar, peine
+
+combination = combinación
+
+come = descender, venir
+
+come about = acontecer, hacerse, realizarse, tener lugar
+
+come across = hallar, encontrar
+
+come afterwards = venir después
+
+come back = volver
+
+come close = acercarse, aproximarse
+
+come closer = acercarse, aproximarse
+
+come later = venir después
+
+come on = acercarse, aproximarse
+
+come to a halt = parar
+
+come to an end = expirar, terminarse
+
+come together = juntarse
+
+come up to = corresponder al
+
+comfort = anchas, consolar
+
+comfortable = agradable
+
+coming = natural, originario, proveniente
+
+coming from = procedente de
+
+command = capitanear, mandato, mando
+
+commander = comandante
+
+commence = comenzar, decentar, empezar, enteblar, principiar
+
+commencement = comienzo, origen, principio
+
+commend = alabar, certificar, encarecer, ensalzar, recomender
+
+commerce = comercio
+
+commission = comisión
+
+commit aggression = acometer, atacar
+
+committee = comité
+
+commodity = artículo
+
+common = común
+
+commonplace = común, trivial
+
+commotion = escandálo
+
+communicate = comunicar, informar, contagiar, inficionar
+
+communication = communicación, noticia, noticias, publicación
+
+communication-cord = freno de emergencia
+
+communion = comunión
+
+communist = comunista
+
+community = municipio
+
+company = firma, compañía
+
+compare = comparar
+
+compartment = departamento
+
+compass = brújula
+
+compel = forzar, obligar
+
+compensate = compensar, indemnizar, recompensar
+
+compensation = recompensa
+
+compete = competir
+
+competition = competencia, concurso
+
+complain = quejarse
+
+complaint = acusación, cargo, pleito, queja
+
+complete = cabal, completo, completar, llenar, lleno
+
+completed = acabado, terminado
+
+completely = completamente
+
+complex = complekso
+
+compliment = cumplimiento
+
+component = ingrediente
+
+composed = dueño de sí mismo
+
+composer = compositor
+
+comprise = contener
+
+compulsory = obligatorio
+
+computer = computador, ordenador
+
+concave = hueco
+
+conceal = ocultar
+
+conceited = hueco
+
+concept = idea, noción
+
+concern = importancia, concernir, cuidado
+
+concerned = dicho, en cuestón
+
+concerning = en cuanto a, por lo tocante a, respecto de
+
+concert = concierto
+
+concise = conciso, sucinto
+
+conciseness = concisión
+
+conclude = despachar
+
+conclusion = conclusión
+
+concord = acorde
+
+concrete = hormigón
+
+concurrence = acorde, acuerdo, concordación, convenio
+
+condemn = condenar, desaprobar, reprobar
+
+condemnable = censurable, reprobable
+
+condemnation = desaprobación, reprobación
+
+condition = condición
+
+condom = condom, preservativo
+
+conduct = guiar, conducir, dirigir
+
+conduct oneself = conducirse
+
+conductor = chófer
+
+confectioner = pastelero
+
+confectionery = pastelería
+
+conference = conferencia
+
+confess = confesar, declarar
+
+confession = confesión, declaración
+
+confidence = confianza
+
+confine = limitar
+
+confined = limitado
+
+confined to one's bed = encamado
+
+confirm = confirmar
+
+confirmation = confirmación
+
+confiscate = confiscar, embargar
+
+conflagration = incendio
+
+conflict = conflicto
+
+confront = oponerse
+
+congenital = innato
+
+congentital = innato
+
+congratulate = felicitar
+
+congress = congreso
+
+connect = comunicar, liar, ligar
+
+connection = comunicación, enlace, empalme, cinta, lazo
+
+connect up = comunicar
+
+conquer = conquistar
+
+consecutively = sucesivamente
+
+consent = acordar, declarar, declaración
+
+consequence = consecuencia
+
+conservation = conservación
+
+conservative = conservador
+
+conserve = conservar, guardar
+
+consider = considerar, contemplar, tomar en consideración, mirar, observar, ver
+
+considerable = considerable, notable
+
+consideration = consideración, contemplación
+
+consignee = destinatario
+
+consistency = consecuencia
+
+consistent = consecuente
+
+consist of = componerse
+
+console = consolar
+
+constant = continuo
+
+constantly = continuamente, siempre
+
+constipation = constipado
+
+constitution = constitución
+
+construct = construir, edificar
+
+consul = cónsul
+
+consulate = consulado
+
+consultation = reflexión, consulta
+
+consume = consumir
+
+consumer = consumidor
+
+contact = contacto
+
+contagious = contagioso
+
+contain = contener
+
+container = caja, estuche, jarro, olla
+
+contaminated = contagiado
+
+contempt = desprecio
+
+contented = contento
+
+contest = concurso
+
+continual = continuo
+
+continually = continuamente, siempre
+
+continue = continuar, durar
+
+continuous = continuo
+
+continuously = continuamente, siempre
+
+contract = contrato, destajo
+
+contractor = destajista
+
+contradict = contradecir
+
+contralto = alto
+
+contralto voice = alto
+
+contrast = contraste
+
+control = contener, gobernar, subyugar, refrenar, reprimir
+
+controller = inspector
+
+convention = congreso
+
+conversance = notoriedad
+
+converse = conversar
+
+conversion = conversión
+
+convert = convertir
+
+convey = alargar, entregar
+
+convince = convencer
+
+cook = cocinar, cocinera, cocinero
+
+cookie = bizcocho, galleta
+
+cool = enfriar, fresco
+
+cool down = enfriar
+
+copper = cobre
+
+copy = copiar, trasladar, copia, traslado
+
+cord = cuerda
+
+cork = corcho
+
+corkscrew = sacacorchos
+
+corn = callo, maíz
+
+corner = esquina
+
+corpulent = grueso
+
+Corpus Christi = día del Corpus
+
+correct = correcto, corregir, preciso
+
+correspond = cartearse, empalmar
+
+correspond to = corresponder al
+
+corridor = pasillo
+
+corridor train = tren corrido
+
+corroborate = confirmar
+
+corruption = corrupción, deterioración, putrefacción
+
+Corsica = Córcega
+
+cosmetic powder = polvos
+
+cost = costar, gastos
+
+Costa Brava = Costa Brava
+
+Costa Rica = Costa Rica
+
+costly = caro
+
+costume = traje
+
+cot = camita de niño
+
+coterie = trinquete
+
+cotton = algodón
+
+couch = dyschatell, canapé
+
+cough = toser
+
+counsel = abogado, anunciar, aconsejar, consejo
+
+counsellor = consejero
+
+count = entrar en cuenta, calcular, computar, contar
+
+count down = deducir
+
+counter = mostrador
+
+countermand = anular, contramandar
+
+counterpane = colcha de cama
+
+count in = sumar
+
+country = campo, país
+
+countryside = campo
+
+coupé = departamento
+
+couple = embragar
+
+coupon = cupón
+
+courage = valor, virtud
+
+courageous = bravo
+
+courgette = calabacín
+
+course = cursillo, curso, plato
+
+court = grave, patio
+
+courteous = cortés
+
+courtyard = grave, patio
+
+cousin = prima, primo
+
+cover = encuadernación, cubrir, tápa, neumático, forrar, vestir, recorrer
+
+covered = cubierto de verdor
+
+covered with blood = ensangrentado
+
+coverlet = colcha de cama
+
+covet = codiciar
+
+covetousness = deseo
+
+cow = vaca
+
+crab = cangrejo
+
+crack = grieta, hendedura, quebraja
+
+cradle = cuna, patria
+
+craft = astucia
+
+craftiness = astucia
+
+cramped = estrecho
+
+crash into = abordar, chocar kun
+
+crayfish = cangrejo
+
+ccream = fla, crema, desnatar
+
+create = creer
+
+credit = haber
+
+credit card = tarjeta de crédito
+
+Crete = Creta
+
+crevice = grieta, hendedura, quebraja
+
+crew = tripulación
+
+crime = crimen
+
+crisis = crisis
+
+criticism = censura, crítica, reparo
+
+criticize = censurar, criticar
+
+crockery = cerámica, loza
+
+crocodile = cocodrilo
+
+cross = cruz, atravesar
+
+cross roads = cruce
+
+crown = coronar
+
+crude = crudo
+
+crude oil = petróleo
+
+crumble = derruirse, desmoronarse
+
+crumble away = derruirse, desmoronarse
+
+crumble off = derruirse, desmoronarse
+
+cry = grito, llorar
+
+cry out = gritar
+
+Cuba = Cuba
+
+Cuban = cubano
+
+cubic = cubano
+
+cucumber = pepino
+
+cuddlesome = mimoso, zalamero
+
+cuddly = mimoso, zalamero
+
+cul-de-sac = camino sin salida
+
+cultivate = cultivar
+
+culture = cultura
+
+cunning = astucia
+
+cup = taza
+
+cupboard = armario
+
+Curaçao = Curazao
+
+cure = curar
+
+curious = curioso
+
+currant = grosella
+
+currant juice = jugo de grosellas
+
+currency = valuta
+
+current = actual, corriente, contemporáneo
+
+currently = ahora, al presente, hoy día
+
+curry = arrurruz
+
+curse = jurar
+
+curtain = cortina
+
+curve = curva
+
+cushion = almohada
+
+cuss = jurar
+
+custom = costumbre
+
+customer = cliente, comprador, parroquiano
+
+customs = aduana
+
+cut = cortar
+
+cut into = decentar, encentar
+
+cutlet = chuleta
+
+cut off = cortar
+
+cuttings = desechos, detrito
+
+cycle = bicicleta, ciclo
+
+cycle-bag = bolsa para bicicletas
+
+cyclone = ciclón
+
+cylinder = cilindro
+
+cymbal = címbalo, platillo
+
+cynical = cínico
+
+cypres = ciprés
+
+Czech = checo
+
+Czechoslovakia = Checoeslovaquia
+
+dabbler = aficionado
+
+daily = de todos los días, diario, diariamente
+
+dainty = amable, fino
+
+dairy = lechería
+
+dam = obstrucción, presa
+
+damage = avería, daño, deteriorar, defecto, deterioro
+
+damaged = estropeado
+
+damp = humedo
+
+dance = baile, bailar
+
+dandruff = caspa
+
+Dane = danés, dinamarqués
+
+danger = peligro
+
+danger of skidding = carretera resbaladiza
+
+dangerous = peligroso
+
+Danish = danés, dinamarqués
+
+dare = atreverse
+
+dark = oscuro
+
+darkness = tinieblas
+
+data = material
+
+date = dátil, fecha, cita
+
+daughter = hija
+
+dawn = amanecer
+
+day = día
+
+daybreak = amanecer
+
+day-ticket = billete por un día
+
+dazzle = deslumbar
+
+dead = muerto
+
+deaden = amortizar
+
+deaf = sordo
+
+deal with = tratar
+
+dear = caro
+
+death = muerte
+
+debris = desechos, detrito
+
+debt = deuda
+
+decanter = garrafa
+
+decapitate = cortar
+
+decay = deterioración, putrefacción, baja, decadencia
+
+decayed = decrépito
+
+deceitful = engañoso, falaz
+
+deceive = engañar
+
+deceiver = embustero
+
+December = diciembre
+
+decent = conveniente
+
+decently = como es debido
+
+deceptive = engañoso, falaz
+
+decide = decidirse, resolver
+
+decimetre = decímetro
+
+decision = decisión, sentencia
+
+decisive = decisivo
+
+deck = cubierta
+
+declaration = declaración
+
+declaration of policy = programa
+
+declare = declarar
+
+decline = desmejorarse, retroceso
+
+decorate = decorar
+
+decoration = alhaja
+
+decrease = disminuir, bajar, amainar, decrecer, disminuir, menguar
+
+decrepit = decrépito
+
+deduce = decudir
+
+deem = creer, contemplar, mirar, observar, ver
+
+deep = profundo
+
+defeat = derrota
+
+defection = deserción
+
+defence = defensa, retaguardia
+
+defendant = acusado
+
+defense = defensa
+
+define = definir
+
+definite article = artículo determinado
+
+deflect = desviarse
+
+defray the cost of = costear
+
+degree = grado
+
+dejected = abatido, desanimado
+
+delay = retraso
+
+delegate = delegar, diputar, diputado
+
+delete = enjugar, limpiar
+
+deliberately = de propósito
+
+deliberation = reflexión, consideración, contemplación
+
+delicacy = dulce
+
+delicate = fino
+
+delightful = bonito, lindo
+
+delight in = disfrutar
+
+deliver = entregar
+
+delivery = entrega
+
+delusive = engañoso, falaz
+
+demand = consumo, despacho, salida, deducción, exigir
+
+demolish = demoler, derribar
+
+demolition = demolición
+
+demonstrative = pronombre demonstrativo
+
+demonstrative pronoun = pronombre demonstrativo
+
+den = cueva
+
+Denmark = Dinamarca
+
+denounce = acusar, delatar, denunciar
+
+dentist = dentista
+
+deny = negar
+
+depart = quitarse, salir
+
+departure = salida
+
+depend = depender
+
+dependence = dependencia
+
+dependent = dependiente
+
+depend onldepend upon = depender de
+
+depict = reproducir, retratar
+
+depose = destituir
+
+deposit = depositar, poner en depósito
+
+depository = depósito
+
+depravation = deterioración, putrefacción
+
+depressed = abatido, desanimado
+
+depression = crisis
+
+depth = profundidad
+
+depute = delegar, diputar
+
+deputy = diputado
+
+derivation = derivación
+
+derive = derivar, descender
+
+descend = bajar, descender
+
+describe = describir
+
+description = descripción
+
+desert = desierto, abandonar, desertar
+
+deserve = merecer
+
+design = dibujar, plano, propósito
+
+desire = desear, querer, tener, deseo
+
+despise = despreciar
+
+dessert = postre
+
+destiny = destino, suerte
+
+destitution = indigencia
+
+destroy = destruir
+
+detail = detalle
+
+detain = retener
+
+detective = detective
+
+detention = arresto, detención
+
+deter = espantar
+
+determine = determinar, definir, fijar
+
+detract from = dañar a
+
+develop = revelar
+
+deviate = desviarse
+
+device = aparato
+
+devoted = afectuoso
+
+dew = rocío
+
+dexterous = ágil, experto, diestro, hábil
+
+diabetes = diabetes
+
+diagram = reproducción, retrato, plano, propósito
+
+dial = marcar
+
+diameter = diámetro
+
+diamond = diamante
+
+diarrhoea = diarrea
+
+dictionary = diccionario
+
+die = morir
+
+diet = dieta
+
+differ = diferir
+
+difference = diferencia
+
+different = diferente, disferente, distinto, divergente, desigual
+
+differently = de otra manera
+
+difficult = dificil
+
+difficulty = inconveniente
+
+dig = cavar
+
+digestion = digestión
+
+digit = cifra
+
+dilapidated = decrépito
+
+dilettante = aficionado
+
+dim = oscuro
+
+dimension = dimensión, tamaño
+
+diminish = disminuir, amainar, decrecer, disminuir, menguar
+
+diminutive = chico, pequeño
+
+din = ruido
+
+dining-room = comedor
+
+dinner = cena, comida
+
+diploma = acta, certificado
+
+direct = mandar, guiar, derecho
+
+direction = dirección
+
+directly = seguido
+
+director = director
+
+directory = catálogo
+
+dirty = sucio
+
+disabled = inválido
+
+disabled person = inválido
+
+disapprobation = desaprobación, reprobación
+
+disapproval = desaprobación, reprobación
+
+disapprove = desaprobar, reprobar
+
+disapprove of = desaprobar, reprobar
+
+discard = despedir
+
+discharge = despedir
+
+disciples = partido
+
+discount = bajar, descuento, rebaja, reducción
+
+discourage = espantar
+
+discover = descubrir
+
+discovery = descubrimiento
+
+discrete = discreto
+
+discrimination = discriminación
+
+disease = enfermedad
+
+disgust = aversión, repugnancia
+
+dish = plato
+
+dishwasher = lavaplatos
+
+disinterested = desinteresado
+
+dislike = aversión, repugnancia
+
+dismal = común, trivial, deplorable, horrible, lúgubre, horroroso, afligido, triste, menesteroso, miserable, necesitado, pobre
+
+dismiss = despachar, despedir, enviar, expedir
+
+dispatch = despachar, enviar, expedir
+
+disposal = tentación
+
+dispose of = vender
+
+disposition = talento, capacidad, disposición, talento
+
+disquiet = molestia
+
+dissolve = resolver
+
+dissuade from = desaconsejar
+
+distance = distancia
+
+distant = lejano
+
+distinct = claro, evidente
+
+distinguish = distinguir
+
+distract = distraer
+
+distracted = distraído
+
+distraction = distracción
+
+distress = afligir, entristecer, indigencia
+
+distribute = distribuir
+
+district = distrito, barrio
+
+disturb = incomodar, molestar
+
+disturbance = molestia
+
+ditch = zanja
+
+divan = dyschatell
+
+dive = bucear, zambullirse
+
+diverge = desviarse
+
+diversion = distracción
+
+divert = distraer, desviar
+
+divide = apartar, segregar, separar, compartir, dividir
+
+divorce = divorcio
+
+dizzy = mareado
+
+do = cometer, fabricar, hacer, perpetrar
+
+do away with = abolir, abrogar
+
+doctor = doctor, médico
+
+document = acta, certificado, documento
+
+dog = perro
+
+do harm to = dañar a
+
+doll = muñeca
+
+dollar = dólar
+
+domestic = indígena
+
+done = acabado, terminado
+
+donkey = burro
+
+door = puerta
+
+dose = dosis
+
+dot = punto
+
+double = doble
+
+double bed = cama de matrimonio
+
+doubt = dudar
+
+dough = masa
+
+dove = pichón
+
+downhill = cuesta abajo
+
+downstairs = abajo, en el fondo
+
+down the slope = cuesta abajo
+
+doze = echar la siesta
+
+drag = tirar, remolcar
+
+draining = desagüe
+
+dram = aperitivo
+
+draw = atraer, encantar, seducir, dibujar, igualdad, tirar
+
+drawers = calzoncillos
+
+dream = soñar, sueño
+
+dreary = horrible, lúgubre, horroroso, afligido, triste, árido
+
+dress = vendar, vestido, vestir, ponerse, vestirse
+
+dresser = aparador, aparador de cocina, fregadero
+
+dressing = abono
+
+dressing-gown = camarera
+
+drift = derivar del rumbo
+
+drink = bebida, beber
+
+drinking-water = agua potable
+
+drip = gota
+
+drive = propulsión
+
+drive away = salir
+
+drivel = desatinar
+
+drive off = salir
+
+driver = chófer, chauffeur, mecánico
+
+driving-licence = carnet de conducir
+
+driving mirror = retrovisor
+
+dromedary = dromedario
+
+droop = colgar
+
+drop = caer, gota, amainar, decrecer, disminuir, menguar
+
+drown = ahogarse
+
+drug = medicamento, medicina, aturdir
+
+drugstore = botica, farmacia
+
+drum = tambor
+
+drunk = borracho, ebrio
+
+drunkenness = embriaguez
+
+dry = seco, enjugar, secar
+
+dry-nurse = comadrona
+
+dual = doble
+
+duck = pato
+
+dues = cuota
+
+dull = embotado, obtuso
+
+dumb = mudo
+
+dump = basurero
+
+duplicate = multiplicar
+
+during the day = de dia
+
+dusk = anonchecer
+
+dust = polvo, quitar el polvo, quitar el polvo a
+
+Dutch = holandés, neerlandés
+
+Dutch language = neerlandés
+
+Dutchman = holandés, neerlandés
+
+Dutch woman = neerlandesa
+
+duty = deber
+
+dwell = habitar, morar
+
+dwelling-place = domicilio
+
+dwelling-place-residence = domicilio
+
+dye = pintura, color, teñir
+
+each = cada, cada uno, todo
+
+each time = cada vez
+
+eager = ávido, codicioso
+
+eagerness = deseo
+
+eagle = águila
+
+ear = oreja, espiga
+
+ear-drop = pendiente
+
+early = temprano
+
+earn = ganar
+
+earnest = serio
+
+earring = pendiente
+
+earth = tierra
+
+earthen = terrestre, terrenal
+
+earthenware = cerámica, loza
+
+earthly = terrestre, terrenal
+
+earthquake = terremoto
+
+earth satellite = satélite de la tierra
+
+easily = fácilmente
+
+east = este
+
+Easter = Pascua
+
+easy = fácil
+
+eat = comer
+
+eat up = comerse
+
+Ecuador = Ecuador
+
+edge = orilla, baranda, borde
+
+edging = baranda, borde
+
+edible = comestible
+
+eel = anguila
+
+effective = eficaz, terminante
+
+effectual = eficaz, terminante
+
+efficacious = eficaz, terminante
+
+effigy = efigie
+
+effort = afán
+
+efforts = afán
+
+egg = huevo
+
+eggfruit = berenjena
+
+eggplant = berenjena
+
+Egypt = Egipto
+
+Egyptian = egipcíaco, egipcio
+
+eight = ocho
+
+eighteen = dieciocho, diez y ocho
+
+eighth = octavo
+
+eight hundred = ochocientos
+
+eighty = ochenta
+
+elbow = codo
+
+elder brother = ñaño
+
+elder sister = ñaña
+
+elect = elegir, escoger
+
+election = elección
+
+electric = eléctrico
+
+electric fan = ventilador
+
+electricity = electricidad
+
+elegant = elegante
+
+element = ingrediente
+
+elements = abecé, alfabeto
+
+elephant = elefante
+
+elevator = ascensor
+
+eleven = once
+
+elm = olmo
+
+El Salvador = El Salvador
+
+Elsass = Alsacia
+
+else = otro, de otra manera
+
+elsewhere = en otra parte
+
+embalm = embalsamar
+
+embark = embarcarse
+
+embassy = embajada
+
+embrace = abrazar
+
+emerge = aparecer
+
+emergency = crisis
+
+emigrate = emigrar, emigrarse
+
+eminent = excelente
+
+emissary = embajador
+
+emmet = hormiga
+
+emotion = emoción
+
+empire = imperio
+
+employ = hacer uso de, usar
+
+employee = empleado
+
+employment exchange = bolsa de trabajo
+
+empty = vacío, vaciar
+
+encounter = hallar, encontrar, encuentro
+
+encourage = animar, espolear, incitar, inpulsar, alentar
+
+encouragement = animación
+
+encyclopaedia = enciclopedia
+
+end = acabar, concluir, terminar, expirar, terminarse, expiración, vencimiento, fin, final, término
+
+endeavour = esforzarse por, tratar de
+
+ending = fin, final, término
+
+endive = escarola
+
+endorse = girar
+
+endow = dotar
+
+end up = llegar, expirar, terminarse, recalar
+
+endure = continuar, durar, tolerar
+
+enemy = enemigo
+
+energy = virtud
+
+engine = máquina, motor
+
+engineer = ingeniero
+
+England = Inglaterra
+
+English = inglés, inglesa
+
+English language = inglés
+
+Englishman = inglés
+
+Englishwoman = inglesa
+
+engulf = tomar, tragar
+
+enjoy = disfrutar
+
+enjoyable = agradable
+
+enjoy oneself = divertirse
+
+enlargement = ampliación
+
+enormous = enorme
+
+enough = bastante
+
+enter = entrar, montar, inscribir
+
+enterprise = negocio
+
+entertain = distraer
+
+entertaining = cómico, divertido
+
+entertainment = recreación
+
+entire = cabal, completo, entero, todo
+
+entirely = completamente, enteramente
+
+entomb = enterrar
+
+entrance = entrada
+
+entreaty = oración, ruego
+
+envelop = enrollar
+
+envelope = sobre
+
+envious = envidioso
+
+environment = alrededores
+
+environs = alrededores
+
+envoy = embajador
+
+envy = envidiar, envidia
+
+equal = igual
+
+equality = igualdad
+
+equally = idem
+
+Equatorial Guinea = Guinea Ecuatorial
+
+erect = edificar, fundar
+
+err = equivocarse
+
+errand = mensaje, recado
+
+erroneous = malo
+
+error = equivocación, error, yerro
+
+escort = acompañamiento
+
+Eskimo = esquimal
+
+especially = sobre todo, sobretodo, principalmente
+
+Esperanto = esperanto
+
+establish = edificar, fundar
+
+estate = finca, granja
+
+esteem = estimar, respectar, estima, estimación, considerar, contemplar, tomar en consideración, estima
+
+estimate = presupuesto, estimar
+
+estimates = presupuesto
+
+Estonia = Estonia
+
+Etna = Etna
+
+Europa = Europa
+
+Europe = Europa
+
+European = europeo
+
+European Union = Union Europea
+
+evade = evitar
+
+even = liso, plano, igual, mismo, par
+
+evening = noche, tarde
+
+evening meal = cena
+
+event = acontecimiento
+
+ever = siempre
+
+every = cada, cada uno, todo
+
+everybody = cada, cada uno, todo
+
+every kind of = toda clase de
+
+every one = cada, cada uno, todo
+
+everything = todo
+
+every time = cada vez
+
+everywhere = en todas partes
+
+exact = exacto, preciso
+
+exaction = exacción, extorsión
+
+exactly = justamente
+
+exaggerate = exagerar
+
+examination = examen, contemplación, vista
+
+examine = examinar, registrar, revisar
+
+example = ejemplo
+
+exceed = aventajar
+
+except = excepto, menos, además de, amén de
+
+except for = además de, amén de, salvo
+
+exchange rate = curso
+
+excise = derechos de consumo
+
+excise-duty = derechos de consumo
+
+excite = instigar
+
+exclude = excluir
+
+exclusively = no ... mas que, sólo
+
+excommunication = anatema
+
+excursion = excursión
+
+excuse me = dispénseme, pardone usted
+
+exercise = ejercicio
+
+exhale = respirar
+
+exhausted = agotado
+
+exhibition = exposición
+
+exhortation = exhortación
+
+exile = desterrado, destierro
+
+exist = existir
+
+existence = existencia
+
+exit = salida, salir
+
+expect = esperar
+
+expedite = despachar
+
+expense = gastos
+
+expensive = caro
+
+experience = experiencia
+
+experienced = experto, hábil
+
+expert = experto, hábil
+
+expertness = agilidad, destreza
+
+expire = expirar, terminarse, morir
+
+explain = desarrollar, explicar
+
+explanation = explicación
+
+exploit = explotar
+
+exposition = exposición
+
+express condolences = dar el pésame a
+
+extend = alargar
+
+exterior = aspecto, vista
+
+external = exterior, externo
+
+extinguish = apagar
+
+extort = arrancar
+
+extortion = exacción, extorsión
+
+extra = extra
+
+extract = extracto
+
+extremely = extremamente
+
+eye = ojo
+
+eyebrow = ceja
+
+eyelid = párpado
+
+fabricate = fabricar
+
+façade = frontón
+
+face = cara, faz, fisonomía, rostro
+
+facile = fácil
+
+fact = hecho
+
+faction = partido
+
+factory = fábrica
+
+fag out = cansar, fatigar
+
+failure = aborto, bancarrota quiebra
+
+faint = débil, desmayarse, desmayo
+
+fair = bazar, rubio, mercado, verbena
+
+faithful = fiel
+
+falcon = halcón
+
+fall = caer, amainar, decrecer, disminuir, menguar
+
+fallacious = engañoso, falaz
+
+fall away = adelgazar
+
+fall ill = caer enfermo
+
+fall in love with = enamorarse de
+
+fall off = desmejorarse
+
+fame = conocimientos, hambre
+
+familiarity = notoriedad
+
+family = familia
+
+famous = conocido, famoso
+
+fan = animar, incitar
+
+fancier = aficionado
+
+fancy = figurarse
+
+fantastic = hueco
+
+far = lejano, lejos
+
+far away = lejos
+
+Far East = Extremo Oriente
+
+farewell = adiós, despedida
+
+farm = finca, granja
+
+farm- = agrario
+
+farmer = campesino
+
+fashion = moda
+
+fast = ayunar, fijo, rápido, de prisa, pronto
+
+fasten = fijar, apretar
+
+fast train = rápido
+
+fat = gordo, grueso, grasa
+
+fate = destino, suerte
+
+fateful = fatal
+
+father = padre
+
+fatherland = patria
+
+fatty = gordo, grueso
+
+faucet = grifo
+
+fault = culpa
+
+favour = favorecer, favor
+
+favourable = favorable
+
+fear = angustia, miedo, temer, temor
+
+fearful = angustioso, medroso
+
+feast = banquete
+
+Feast of Tabernacles = Cenopegias, Fiesta de los Tabernáculos
+
+feather = pluma
+
+February = febrero
+
+federal = federal
+
+feed = comer, dar de comer, alimentar
+
+feel = sentir, sentirse, sentimiento
+
+feeling = sentimiento
+
+feign = fingir
+
+felloe = llanta
+
+fellow = hombre
+
+felly = llanta
+
+female = feminino
+
+female cat = gata
+
+female cook = cocinera
+
+female hairdresser = peluquera
+
+female journalist = periodista
+
+female laborer = obrera
+
+female relative = pariente
+
+female singer = cantora
+
+female stenotypist = mecanógrafa
+
+female tailor = costurera
+
+female teacher = maestra
+
+femal labourer = obrera
+
+femal worker = obrera
+
+feminine = feminino
+
+fence = obstrucción, reja
+
+ferry = transbordador
+
+fertile = fértil
+
+fertilization = abono
+
+fertilize = abonar
+
+fervor = celo
+
+fervour = celo
+
+festival = fiesta
+
+fetch = llevar, traer, buscar, coger, ir por
+
+fever = fiebre
+
+fewer = menos
+
+fiancé = prometido
+
+fiancée = prometida
+
+field = campo
+
+fifteen = quince
+
+fifth = quinto
+
+fig = higo
+
+fig-tree = higuera
+
+figurative = figurado
+
+figure = cifra, reproducción, retrato, calcular, computar
+
+file = lima, cartera, turno
+
+files = archivo
+
+fill = llenar
+
+fill in = llenar
+
+filling station = estación de servicio
+
+fill up = llenar
+
+film = película, carrete
+
+filter = filtro
+
+filthy = sucio
+
+fin = aleta
+
+finally = al fin, finalmente, por fin
+
+find = hallar, encontrar
+
+find oneself = estar, encontrarse, hallarse, encontrarse
+
+fine = bonito, excelente, fino, multar, multa
+
+finger = dedo
+
+finish = acabar, concluir, terminar
+
+finished = acabado, terminado, listo
+
+finishing off = acabado
+
+Finland = Finlandia
+
+Finn = finés, finlandés
+
+finnish = despachar
+
+Finnish language = finés, finlandés
+
+Finnish woman = finesa, finlandesa
+
+fir = abeto
+
+fire = fuego, incendio, despedir, tirar, animar, incitar
+
+fire-alarm = advertidor de incendios
+
+firebrand = instigador
+
+firecall = advertidor de incendios
+
+firing-cap = cápsula
+
+firm = fijo, firma, fuerte, sólido
+
+first = al principio, antes, en primer lugar, primeramente, primero
+
+first aid = primeros socorros
+
+first-aid station = puesto de Primeros Auxilios
+
+firstly = al principio, antes, en primer lugar, primeramente, primero
+
+first name = nombre de pila
+
+first of all = al principio, antes, en primer lugar, primeramente, primero
+
+fish = pescar, pez
+
+fisherman = pescador
+
+fishing rod = caña, caña de pescar
+
+fission = atomización
+
+fist = puño
+
+fit = acomodar, adaptar, apoplejía
+
+fitness = capacidad, disposición
+
+fitting = conveniente
+
+five = cinco
+
+fix = acomodar, adaptar, determinar, fijar, reparar
+
+fixed = fijo
+
+flag = bandera, estandarte
+
+flake off = desconcharse
+
+flame = llama
+
+Flanders = Flandes
+
+flannel = franela
+
+flat = apartamento, cuarto, piso, liso, plano, bastidor, llano
+
+flat-iron = plancha
+
+flatter = adular
+
+flavour = olor
+
+flaw = grieta, hendedura, quebraja
+
+flea = pulga
+
+flee = huir
+
+fleece = estafar
+
+Flemming = flamenco
+
+Flemmish = flamenco
+
+flesh = carne
+
+flight = vuelo
+
+float = nadar
+
+flood = pleamar, enterrar
+
+floor = piso, suelo
+
+Florence = Florencia
+
+flour = harina
+
+flow = correr, corriente
+
+flower = flor
+
+flu = gripe
+
+fluid = líquido
+
+flute = flauta
+
+fly = volar, mosca
+
+foam = espuma
+
+fog = niebla
+
+fold = doblar
+
+folk = población, pueblo
+
+follow = seguir, venir después
+
+followers = partido
+
+following = partido, consecutivo, siguiente, sucesivo, próximo, entrante
+
+fondle = acariciar
+
+food = comestibles, plato, alimento
+
+fool = engañar
+
+foolish = zote
+
+foot = pie
+
+for = porque, puesto que, ya que
+
+forbid = prohibir
+
+force = forzar, obligar, fuerza, virtud
+
+forehead = frente
+
+foreign = extranjero
+
+foreigner = extranjero
+
+foresee = esperar, prever
+
+forest = bosque
+
+foreward = adelante
+
+for example = por ejemplo
+
+forget = olvidar
+
+for instance = por ejemplo
+
+forks, knives and spoons = cubierto
+
+form = formulario, hoja
+
+former = pasada, pasado
+
+formerly = anteriormente, delante
+
+forsake = abandonar
+
+forswear = abjurar
+
+for the greater part = en su mayor parte
+
+for the most part = en su mayor parte
+
+for the reason that = porque, puesto que, ya que
+
+for the time being = provisionalmente
+
+fortification = alcázar
+
+fortress = forta leza
+
+fortunately = por fortuna
+
+fortune = suerte
+
+found = edificar, fundar
+
+foundation = suelo
+
+fountain = fuente
+
+four = cuatro
+
+fourteen = catorce
+
+fourth = cuarto
+
+fowl = aves, gallina
+
+fox = zorro
+
+fragment = pieza
+
+France = Francia
+
+free = libre, gratuito
+
+freezing cold = helada
+
+French = francés
+
+French language = francés
+
+Frenchman = francés
+
+Frenchwoman = francesa
+
+frequently = a menudo
+
+fresh = fresco
+
+freshen = aumentar
+
+fresh water = agua dulce
+
+Friday = viernes
+
+friend = amiga, amigo
+
+friendly = amable, bonito, gracioso
+
+friendship = amistad
+
+Friesland = Frisia
+
+frieze = frisio, frisón
+
+fright = angustia, espanto, miedo
+
+fringe = baranda, borde
+
+Frisian = frisio, frisón, frisona
+
+Frisian woman = frisona
+
+frivolous = hueco
+
+frog = rana
+
+frog's legs = ancas de rana
+
+from = de, desde
+
+front = frontón
+
+frontage = frontón
+
+frontier = frontera
+
+frost = helada
+
+froth = espuma
+
+fruit = fruta
+
+fruit-tree = frutal
+
+fry = freir
+
+frying-pan = sartén
+
+frying pan = sartén
+
+fuel tank = depósito de gasolina
+
+full = lleno
+
+fully = completamente
+
+fun = diversión, divertimento, placer
+
+function = funcionar, cargo, función, oficio
+
+fund = caja
+
+funeral = enterramiento, entierro
+
+fungus = seta
+
+funnel = embudo
+
+funny = cómico, divertido
+
+fur = incrustación, piel
+
+fur coat = piel
+
+furious = torcido
+
+furnace = estufa
+
+furnish = entregar
+
+furniture = ajuar, mobilario, mueblaje
+
+fur piece = piel
+
+future = entrante, próximo, porvenir
+
+fuzzy = brumoso
+
+gag = broma, burla, chanza
+
+gain = adquisición, ganancia, ganar, provecho
+
+gaiter = polaina
+
+Galicia = Galicia
+
+Galician = gallego
+
+gall = bilis
+
+game = juego
+
+gangway = paso
+
+gaol = prisión
+
+garage = garaje
+
+gardener = jardinero
+
+garlic = ajo
+
+gas = gas
+
+gas cannister = botella de gas
+
+gas cylinder = botella de gas
+
+gasolene = bencina, gasolina
+
+gasoline = bencina, gasolina
+
+gas tank = depósito de gasolina
+
+gate = paso, puerta
+
+gateway = puerta
+
+gather = decudir, recoger
+
+gaunt = fino, afligido, triste,
+
+gazette = periódico
+
+gear-box = caja de cambios
+
+gear-case = caja de cambios
+
+gem = joya
+
+general = general, universal
+
+generally = generalmente
+
+generative = sexual
+
+Geneva = Ginebra
+
+Genoa = Génova
+
+gentle = dulce
+
+gentleman = caballero, señor
+
+genuinly = de veras, en efecto, en realidad, verdaderamente
+
+geographer = geógrafo
+
+geographic = geografía
+
+geographical = geografía
+
+geography = geografía
+
+German = alemán, alemana
+
+German language = alemán
+
+German woman = alemana
+
+Germany = Alemania
+
+get = alcanzar, consequir, obtener, procurarse, llegar, alcanzar, procurarse, buscar, coger, ir por, hacerse, recoger, tomar, recibir
+
+get cold = enfriar
+
+get dressed = ponerse, vestirse
+
+get married = casarse
+
+get mouldy = enmohecerse
+
+get off = bajar, descender
+
+get out = bajar
+
+get rid of = abolir, abrogar
+
+get up = levantarse, subir
+
+get used = acostumbrarse, habituarse
+
+ghastly = horrible, lúgubre, horroroso
+
+Ghent = Gante
+
+gherkin = pepino
+
+Gibraltar = Gibraltar
+
+gift = regalo
+
+gifted = dotado, talentoso
+
+gill = branquia
+
+gin = ginebra
+
+ginger = jengibre
+
+giraffe = jirafa
+
+girder = viga
+
+girdle = cinto, cinturón, pretina
+
+girl = muchacha
+
+give = alargar, dar, ofrecer, presentar, reproducir, retratar
+
+give an airing = ventilar
+
+give a ring = llamar, tocar la campanilla
+
+give as an excuse = fingir
+
+give a ticket = multar
+
+give back = devolver
+
+give birth to = dar a luz, parir
+
+give in = abandonar, ceder
+
+give notice = anunciar, publicar
+
+give off an odour = oler
+
+give pain to = afligir, entristecer
+
+give rise to = causar, instigar, maquinar, ocasionar, producir
+
+give tongue = ladrar
+
+give up = abandonar, ceder
+
+give way = abandonar, ceder
+
+glad = alegre
+
+gladness = alegría
+
+glass = vaso, vidrio
+
+glasses = gafas
+
+globe = globo terráqueo
+
+glorious = famoso
+
+glove = guante
+
+glue = cola, pegar
+
+go = ir, dirigirse, irse, conducir
+
+goal = fin, objeto
+
+go astray = extraviarse
+
+goat = cabra
+
+go away = quitarse, salir
+
+go back = desmejorarse, retroceder, volver
+
+go backwards = retroceder
+
+go beyond = atravesar
+
+goblet = cáliz, copa
+
+go down = bajar, descender
+
+go downhill = envejecer
+
+God's acre = campo santo, cementerio
+
+go fast = apresurarse
+
+go in = entrar, montar
+
+going down = retroceso
+
+gold = oro
+
+goldfish = pez de colores, pez dorado
+
+good = bueno
+
+goodbye = adiós, despedida, hasta luego, hasta la vista
+
+good-bye = despedida
+
+good day = buenos días
+
+good evening = buenas tardes
+
+Good Friday = Viernes Santo
+
+good health = a su salud
+
+good morning = buenos días
+
+good-natured = amable, bonito, gracioso
+
+goodness = bondad
+
+good night = buenas noches
+
+go off = envejecer
+
+go on = continuar
+
+goose = ganso, oca
+
+gooseberry = grosella
+
+go out = salir
+
+Goth = godo
+
+Gothic = gótico
+
+go through = recorrer
+
+go to bed = acostarse
+
+goulash = estofado de carne húngaro
+
+go up = subir
+
+gourd = calabaza
+
+gout = gota
+
+govern = capitanear, subyugar, contener, gobernar, refrenar, reprimir
+
+government = gobierno
+
+gown = vestido
+
+grab = asir, coger
+
+grade = grado, apunte, fila
+
+gradually = poco a poco
+
+gram = gram
+
+grammar = gramática
+
+gramme = gram
+
+grammophone disc = disco
+
+grandfather = abuelo
+
+grandmother = abuela
+
+grandson = nieto
+
+granite = granito
+
+grape = uva
+
+grapefruit = pomelo
+
+grapevine = parra
+
+grapple = agarrar, asir, coger
+
+grasp = asir, coger, agarrar
+
+grass = hierba, yerba
+
+grasshopper = saltamontes
+
+gratitude = gratitud, gracias
+
+grave = crítico, grave, tumba
+
+graveyard = campo santo, cementerio
+
+gravy = salsa
+
+grease = grasa
+
+greasy = gordo, grueso
+
+great = excelente, grande
+
+Great Britain = Gran Bretaña
+
+greatgranddaughter = bisnieta
+
+greatgrandson = bisnieto
+
+Greece = Grecia
+
+greediness = deseo
+
+greedy = ávido, codicioso
+
+Greek = griego
+
+Greek woman = griega
+
+green = verde
+
+Greenland = Groenlandia
+
+greet = acoger, saludar
+
+greeting = acogida, saludo
+
+grey = gris, pardo
+
+grieve = afligir, entristecer
+
+grind = moler
+
+grip = asir, coger, gripe
+
+grisly = horrible, lúgubre
+
+groan = gemir
+
+grotto = cueva
+
+ground = suelo, terreno
+
+ground-floor = piso bajo
+
+grounds = terreno
+
+group = grupo
+
+grow = acontecer, hacerse, aumentar, crecer, cultivar
+
+grown over = cubierto de verdor
+
+growth = aumento, incremento
+
+grub = cavar
+
+gruesome = abominable, horrible, horroroso
+
+gruff = bronco, brusko
+
+guarantee = garantía
+
+guard = guardar, vigilar, guardia, cobrador, revisor
+
+Guatemala = Guatemala
+
+Guelderland = Güeldres
+
+Guelders = Güeldres
+
+guess = adivinar, asumir, suponer
+
+guest = huésped
+
+guide = mandar, guiar, guía, conducir, dirigir
+
+guidebook = guía
+
+guilder = florin
+
+guile = astucia
+
+guileless = cándido, ingenuo
+
+guilt = culpa
+
+guiltless = inocente
+
+guilty = culpable
+
+gulden = florin
+
+gulf = abismo, despeñadero, precipicio
+
+gum = encía
+
+gumbo = ñajú
+
+gun = escopeta
+
+gunner = artillero
+
+habit = mala costumbre, resabio, costumbre
+
+hackneyed = redicho, trillado
+
+haddock = merluza
+
+haemorhoids = almorranas, hemorroides
+
+hail = granizo
+
+hair = pelo
+
+hairdresser = peluquera
+
+hairy = peludo, velludo
+
+half = medio
+
+hall = vestíbulo
+
+halt = parar
+
+ham = jamón
+
+hamlet = pueblecito
+
+hammer = martillo
+
+hamper = dificultar
+
+hand = alargar, entregar, obrero, trabajador, mano
+
+hand-bag = bolsa
+
+handbook = guía
+
+handicap = impedimento
+
+handicraft = oficio
+
+handiwork = artesanía
+
+handle = tratar
+
+handlebars = timón, volante
+
+hand over = alargar, entregar
+
+handsome = bonito
+
+hang = colgar
+
+hangings = papel pintado
+
+hang onto = sujetar, tener
+
+happen = acontecer, hacerse, realizarse, tener lugar
+
+happy = alegre
+
+harbor = puerto
+
+harbour = puerto
+
+hard = duro, dificil
+
+hardly = apenas
+
+hard-worked = redicho, trillado
+
+hardworking = activo, laborioso
+
+hare = liebre
+
+haricot = judía, judía verde
+
+harm = dañar a, perjudicar a, daño, detrimento
+
+harsh = bronco, brusko
+
+harvest = cosecha
+
+haste = prisa
+
+hastily = precipitadamente
+
+hat = sombrero
+
+hate = odiar, odio
+
+haul = tirar
+
+Havana = Havana
+
+have = tener, obtener, recibir
+
+have a bath = bañarse
+
+have a good time = divertirse
+
+have compassion on = compadecer a, dolerse por
+
+have got = tener
+
+have to = tener que
+
+hay = heno
+
+hazard = acaso, arriesgar, riesgo
+
+hazardous = arriesgado
+
+hazelnut = avellana
+
+he = él
+
+head = guiar, cabeza, efigie
+
+headlight = faro
+
+head up = capitanear, subyugar
+
+heal = curar
+
+health = salud
+
+heap = grupo
+
+hear = oír
+
+hearing aid = aparato para sordos
+
+hearsay = hambre
+
+heart = corazón
+
+heartburn = acidez de estómago
+
+heat = calentar, calor
+
+heath = brezal
+
+heating = calefacción
+
+heaven = cielo
+
+heavy = pesado
+
+Hebrew = hebraico, hebreo
+
+hectolitre = hectolitro
+
+hedge clippers = cizalla para setos, tijera para setos
+
+hedge shears = cizalla para setos, tijera para setos
+
+heel = talón
+
+he-goat = cabrón
+
+height = altura, altitud, elevación
+
+height of the barometer = altura barométrica
+
+helm = timón, volante
+
+help = ayuda, ayudar
+
+helper = asistente, ayudante
+
+helpful = oficioso, servicial
+
+her = su, ella
+
+herb = hierba, yerba
+
+herd = grupo
+
+here = aquí, en ésta
+
+here are = tenga
+
+here is = tenga
+
+herring = arenque
+
+hesitate = titubear, vacilar
+
+hesitation = duda, vacilación
+
+hidden = oculto, secreto
+
+hide = piel, ocultar, ocultarse
+
+hide oneself = ocultarse
+
+hideous = abominable, horrible, horroroso
+
+high = alto
+
+high tide = pleamar, plemear
+
+hill = colina, loma
+
+hillside = cuesta
+
+him = él
+
+hinder = dificultar, estorbar, impedir, incomodar, molestar
+
+hindrance = molestia
+
+Hindu = hindú
+
+hind wheel = rueda posterior
+
+hip = cadera
+
+hippo = hipopótamo
+
+hippopotamus = hipopótamo
+
+hire = alquilar, arrendar
+
+hired out = alquilado
+
+hirsute = peludo, velludo
+
+his = su
+
+history = historia
+
+hit = golpear, llamar, acertar
+
+hoax = engañar
+
+hoe = azada
+
+hog = cerdo
+
+hold = continuar, sujetar, tener
+
+hold against = valorar en
+
+hold back = retener
+
+hole = zanja, agujero
+
+Holland = Holanda, Los Países Bajos
+
+Hollander = holandés
+
+hollow = hueco
+
+homy = cómodo
+
+Honduras = Honduras
+
+honest = honrado, sincero
+
+honey = miel
+
+honor = homenaje, honor
+
+honour = homenaje, honor
+
+hood = campana, capot, tápa
+
+hoof = pezuña
+
+hook = anzuelo, gancho
+
+hooker = puta
+
+hooter = bocina
+
+hope = esperar, esperanza
+
+horizon = horizonte
+
+horn = cuerno, bocina
+
+horrible = abominable, horrible, horroroso, lúgubre, temeroso
+
+horror = aversión, horror
+
+horse = caballo
+
+horse-chestnut = castaña
+
+horsepower = caballos, fuerza de caballos
+
+horseradish = rábano picante
+
+horse-radish = rábano picante
+
+hospital = hospital
+
+hospitality = hospitalidad
+
+hostel = albergue
+
+hot = caliente
+
+hotel = hotel
+
+hour = hora
+
+house = casa
+
+house charge = servicio
+
+housefly = mosca
+
+house of worship = iglesia
+
+how = a título de, como, cómo
+
+how many = cuánto
+
+how much = cuánto
+
+hub = carrete de rueda
+
+hub-cap = tapacubo, tapon
+
+hug = abrazar
+
+human being = hombre
+
+humid = humedo
+
+humiliating = humillante, vergonzoso
+
+humour = humor
+
+hundred = ciento
+
+Hungarian = húngaro, húngara
+
+Hungarian woman = húngara
+
+Hungary = Hungría
+
+hunger = hambre
+
+hunt = cazar
+
+hurriedly = precipitadamente
+
+hurry = apresurarse
+
+hurt = doler, herir
+
+husband = esposo, marido
+
+husk = cáscara
+
+hut = cabana
+
+hyaena = hiena
+
+Iberian = ibérico
+
+ice = hielo
+
+Iceland = Islandia
+
+idea = idea, noción
+
+ideal = ideal
+
+identify = identificar
+
+idol = ídolo
+
+idolatry = idolatría
+
+idol worship = idolatría
+
+if = si
+
+ignition = ignición
+
+ignore = desentenderse de
+
+iguana = iguana
+
+ill-fated = fatal
+
+illiterate = analfabeto
+
+illness = enfermedad
+
+illuminate = alumbrar, encender
+
+image = grabado, imagen, reproducción, retrato, reproducción, retrato
+
+imagine = figurarse
+
+imitate = imitar
+
+imitation = imitación
+
+immediately = directamente, en seguida, ahora mismo, en el acto, en seguida, inmediatamente
+
+impediment = impedimento
+
+impel = animar, espolear, incitar, inpulsar
+
+impetus = instinto
+
+implore = implorar, suplicar
+
+imply = significar
+
+important = grave, importante
+
+impossible = imposible
+
+imposter = embustero
+
+impulse = instinto
+
+in = a, dentro de, en, por
+
+in action = activo
+
+in addition = demás, además
+
+in a hurry = precipitadamente
+
+in all respects = en todos conceptos
+
+in a way = como si
+
+inborn = innato
+
+inbred = innato
+
+in cash = contante
+
+incendiary bomb = bomba incendiaria
+
+incite = instigar, espolear
+
+inclination = tentación
+
+include = contener
+
+including = incluído
+
+inclusively = incluído
+
+inconvenient = dificil
+
+increase = aumentar, ampliación, aumentar
+
+increasingly = más y más
+
+incredible = increíble
+
+incus = yunque
+
+indecisive = indeciso
+
+indeed = de veras, en efecto, en realidad, verdaderamente
+
+index = indicación, indicio
+
+India = India
+
+Indian = indico, indio, amerindio, indio americano
+
+Indian corn = maíz
+
+indicate = designar, enseñar, indicar, mostrar
+
+indication = agüero, indicación, indicio
+
+indictment = acusación, cargo
+
+indigence = indigencia
+
+individual = individuo
+
+Indonesia = Indonesia
+
+Indonesian = indonésico, indonesio
+
+induce = decudir
+
+inducement = lugar, motivo
+
+indulgence = bula, indulgencia
+
+industry = empresa
+
+in easy circumstances = acomodado
+
+inebriety = embriaguez
+
+in every respect = en todos conceptos
+
+in every way = en todos conceptos
+
+in exchange for = contra
+
+inexpensive = barato
+
+in fact = en efecto
+
+infant = niño
+
+infect = contagiar, infectar, inficionar
+
+infected = contagiado
+
+infection = infección
+
+infectious = contagioso
+
+infer = decudir
+
+inference = conclusión
+
+inferior = inferior
+
+inflammation = inflamación
+
+inflate = inflar
+
+influence = influir en
+
+influenza = gripe
+
+inform = informar, divulgar, publicar
+
+information = información
+
+in front of = antes, delante de
+
+infusion = extracto
+
+ingredient = ingrediente
+
+inhabitant = habitante
+
+inherit = heredar
+
+inhibit = estorbar, impedir
+
+initial = inicial, primitivo
+
+initial velocity = velocidad inicial
+
+initiate = instigar, maquinar
+
+injection = inyección
+
+injure = deteriorar
+
+injured = herido
+
+injury = herida
+
+ink = tinta
+
+inn = albergue
+
+innate = innato
+
+inner = interior, interna
+
+inner tube = cámara de aire
+
+innocent = inocente
+
+in no way = de ninguna manera
+
+inoffensive = cándido, ingenuo
+
+in principle = en principio
+
+in question = dicho, en cuestón
+
+inquiry = encuesta
+
+inquiry-office = oficina de informaciones
+
+inquisitive = curioso
+
+insect = insecto
+
+inside = a, dentro de, en, por, interior, interna, dentro
+
+insidious = astuto
+
+insist = insistir, instar
+
+insistence = insistencia, instancia
+
+inspection = visitación
+
+inspire = animar, incitar
+
+instalment = anualidad
+
+instant = momentito, momento
+
+instantly = directamente, en seguida
+
+instigate = animar, espolear, incitar, inpulsar
+
+instigator = instigador
+
+instinct = instinto
+
+instruct = notificar
+
+instructor = maestro
+
+insulation = aislamiento
+
+insult = injuriar, injuria, insulto, ofensa, insultar, ofender, ultrajar
+
+insurance = seguro
+
+insurance policy = póliza
+
+insure = asegurar
+
+insurer = asegurador
+
+intend = querer decir, tener el propósito
+
+intense = violento
+
+intensive = violento
+
+intention = intención
+
+inter = enterrar
+
+intercessor = abogado
+
+interchange = cambiar
+
+interest = interesar, interés
+
+interesting = interesante
+
+interference = molestia
+
+interment = enterramiento, entierro
+
+intermission = descanso
+
+internal = interior, interna
+
+interpreter = interprete
+
+interrupt = interrumpir
+
+intestines = intestinos
+
+in the beginning = en un principio
+
+in the Cuban way = a la cubana
+
+in the daytime = de dia
+
+in the evening = por la noche, por la tarde
+
+in the morning = por la mañana
+
+in the rear = atrás, detrás, en pos
+
+intimate = cómodo
+
+in time = a tiempo
+
+into = a, dentro de, en, por
+
+intone = entonar
+
+intoxicate = aturdir
+
+intoxicated = borracho, ebrio
+
+introduce = ofrecer, presentar, reproducir, retratar
+
+in vain = en vano
+
+invent = inventar
+
+inverted comma = conulla
+
+inverted commas = conullas
+
+invest = colocar
+
+investigation = examen, encuesta
+
+invite = invitar
+
+invite tenders for = contratar, dar a destajo
+
+invoice = cuenta
+
+invoke = invocar, llamar, implorar, suplicar
+
+in what way = cómo
+
+iodine = yodo
+
+Ireland = Irlanda
+
+Irish = irlandés
+
+Irishman = irlandés
+
+iron = de hierro, hierro, planchar, plancha
+
+iron clothes = planchar
+
+ironing board = tabla de planchar
+
+iron wire = alambre
+
+irrigate = regar
+
+island = isla
+
+isolation = aislamiento, retiro, separación
+
+Israelian = israelí
+
+Israelite = hebreo, israelita, judío
+
+issue = dar parte de, proclamar, promulgar
+
+Italian = italiano
+
+Italian language = italiano
+
+Italian woman = italiana
+
+Italy = Italia
+
+itch = picazón
+
+its = su
+
+ivory = marfil
+
+ivy = hiedra, yedra
+
+jack = gato
+
+jacket = americana, chaqueta
+
+jade = cansar, fatigar
+
+jail = prisión
+
+jam = mermelada
+
+January = enero
+
+Japan = Japón
+
+Japanese = japonés
+
+Japanese language = japonés
+
+Japanese woman = japonesa
+
+Java = Java
+
+Javan = javanés
+
+Javanese = javanés
+
+Javanese woman = javanesa
+
+jaw = mandíbula
+
+jawbone = mandíbula
+
+jeer = injuriar, insultar
+
+jeer at = injuriar, insultar
+
+jelly-fish = medusa
+
+jest = bromear
+
+Jesus Christ = Jesucristo
+
+Jew = hebraico, hebreo
+
+jewel = joya
+
+jeweller = joyero
+
+Jewish = hebraico, hebreo
+
+job = trabajo, cargo, función, oficio
+
+join = reunirse, juntar, reunir, juntarse, liar, ligar, reunir, unirse
+
+joining = unión, reunión
+
+joint = común
+
+joke = bromear, broma, burla, chanza
+
+journalist = periodista
+
+journey = viaje
+
+joy = alegría
+
+joystick = volante
+
+judge = juzgar, juez, criticar, juzgar
+
+judgement = sentencia
+
+judgment = juicio
+
+jug = jarra, jarro, olla, caja, estuche
+
+juice = jugo, zumo
+
+July = julio
+
+jump = saltar, salto
+
+junction = unión, reunión
+
+June = junio
+
+junto = trinquete
+
+just = no ... mas que, sólo, solamente, ahora mismo, en el acto, en seguida, inmediatamente, hace poco
+
+just now = hace poco
+
+keep = vigilar, conservar, guardar, observar, cometer, hacer, perpetrar, salvar
+
+keeper of the records = archivista, archivero
+
+keep on = continuar, durar
+
+keep one's hands off = no tocar
+
+keepsake = recuerdo
+
+key = llave
+
+kick = patada
+
+kick-off = saque de comienzo
+
+kidney = riñón
+
+kill = matar
+
+kiln = estufa
+
+kilo = kilo
+
+kilometre = kilómetro
+
+kind = amable, bonito, gracioso, clase, especie, suerte
+
+kindle = encender
+
+king = rey
+
+kingdom = reino
+
+kiss = besar, beso
+
+kitchen = cocina
+
+klaxon = bocina
+
+knapsack = mochila
+
+knee = rodilla
+
+kneel = arrodillarse
+
+knife = cuchillo
+
+knight = caballero
+
+knock = llamar
+
+knock at the door = llamar a la puerta
+
+knock-kneed legs = piernas torcidas hacia afuera
+
+knot = nudo
+
+know = saber
+
+know how = saber
+
+knowledge = conocimiento
+
+Koran = Alcorán
+
+laborer = obrero, trabajador
+
+labor exchange = bolsa de trabajo
+
+labourer = obrero, trabajador
+
+labour exchange = bolsa de trabajo
+
+lace = encaje
+
+lack = falta
+
+lad = chico, muchacho
+
+ladder = escala
+
+laddie = chico, muchacho
+
+lady = dama
+
+Lady Day = Anunciación
+
+lady's bag = bolsa para señoras
+
+laggard = rezagado
+
+laid up = encamado
+
+lake = lago
+
+Lake of Geneva = lago Lemán
+
+lamb = carne de cordero, cordero
+
+lame = cojo
+
+lamp = lámpara
+
+land = abordar, atracar, país, aterrizar, tierra
+
+landing = aterrizaje
+
+landing-stage = amarradero, desembarcadero
+
+landscape = paisaje
+
+landslide = desprendimiento de tierras
+
+lane = calleja
+
+language = lengua
+
+lantern = farol
+
+Lapland = Laponia
+
+lapsed = decrépito
+
+large = grande
+
+lark = alondra
+
+lass = muchacha
+
+last = pasada, continuar, durar, postrero, último
+
+lasting = continuo
+
+last night = anoche
+
+late = tardío
+
+lath = tabla
+
+Latin = latino, latín
+
+Latvia = Latvia, Letonia
+
+Latvian = letón
+
+laud = alabar
+
+laugh = reír
+
+laugh at = mofarse de, reírse de
+
+laughter = risa
+
+laundry = lavadero
+
+laurel = laurel
+
+lava = lava
+
+law = ley
+
+lawless = desenfrenado, libertino
+
+lawn = batista
+
+lawsuit = proceso
+
+lawyer = abogado
+
+laxative = purgante
+
+lay = colocar, poner
+
+lay-by = aparcamiento
+
+lay down = colocar, meter, poner
+
+lay hold of = buscar, coger, recoger, tomar
+
+lazy = holgazán
+
+lead = guiar, conducir, dirigir, plombo
+
+leader = amo, capitán, caudillo, comandante, dueño, jefe, patrón, guía
+
+leaf = hoja
+
+leaflet = folleto
+
+league = cinta, lazo
+
+lean = apoyarse, fino
+
+leap = saltar, salto
+
+leap-year = año bisiesto
+
+learn = aprender, estudiar
+
+leather = duro, cuero
+
+leather goods = artículos de cuero
+
+leave = quitarse, salir, abandonar, dejar
+
+leave behind = dejar, dejar en pos
+
+leave out of account = desentenderse de
+
+leek = ajo
+
+left = por la izquierda
+
+leg = pierna
+
+legging = polaina
+
+lemon = limón
+
+lend = prestar
+
+length = largura
+
+lengthen = alargar
+
+lens = lente
+
+lentil = lenteja
+
+less = menos
+
+less and less = menos y menos
+
+lesson = lección
+
+let = dejar, alquilar
+
+let know = informar, divulgar, publicar
+
+Lett = letón
+
+letter = carta
+
+letterbox = buzón
+
+lettuce = lechuga
+
+level = liso, plano, igual, nivel
+
+level-crossing = paso a nivel
+
+lever = levantar
+
+library = biblioteca
+
+licentious = desenfrenado, libertino
+
+lick = lamer
+
+lid = tápa
+
+lie = estar tendido, mentir, mentira
+
+lie encamped = acampar
+
+Liège = Lieja
+
+life = vida
+
+lift = levantar, subir, ascensor
+
+light = encender, claro, ligero, alumbrar, encender, luz, débil
+
+lighten = relampaguear
+
+lighter = encendedor, mechero
+
+lighting = alumbrado
+
+lightning = relámpago
+
+like = a título de, como, si, semejante, gustar
+
+likewise = también, idem
+
+lilac = lila
+
+limb = miembro
+
+lime = cal
+
+lime-tree = tilo
+
+limit = limitar, frontera
+
+limited = limitado
+
+limp = cojear
+
+linden-tree = tilo
+
+line = cordel, línea, turno
+
+lineage = descendencia, origen
+
+lining = forro
+
+lion = león
+
+lip = labio
+
+liqueur = licor
+
+liquid = líquido
+
+liquidate = saldar, matar
+
+liquor = alcohol
+
+Lisbon = Lisboa
+
+list = lista
+
+listen = escuchar
+
+liter = litro
+
+Lithuania = Lituania
+
+litre = litro
+
+litter = andas, camilla
+
+little = chico, pequeño, poco
+
+little by little = poco a poco
+
+Little Snow White = Blanca-Nieve
+
+live = habitar, morar, vivir
+
+liver = hígado
+
+liver sausage = butifarra de hígado
+
+livestock = ganado
+
+Livonia = Livonia
+
+load = cargar, carga
+
+loaf = pan
+
+loan = prestar
+
+loathe = detestar
+
+lobster = langosta
+
+location = sitio
+
+loch = lago
+
+lock = esclusa, cerradura, cerrar
+
+locust = saltamontes
+
+lofty = alto
+
+loin = lumbar
+
+London = Londres
+
+Londoner = londinense
+
+long = largo
+
+look = parecer, aspecto, vista, tenga, contemplar, mirar, observar, ver, mirada
+
+look after = vigilar, atender a, cuidar de
+
+look at = contemplar, mirar, observar, ver
+
+look for = buscar
+
+looking-glass = espejo
+
+loose = suelto
+
+lord = caballero, señor
+
+Lorraine = Lorena
+
+lorry = camión
+
+lose = adelgazar, perder
+
+lose flesh = adelgazar
+
+lose in weight = adelgazar
+
+lose one's way = perderse
+
+loss = perdida
+
+lost = perdido
+
+Lothringen = Lorena
+
+loud = alto
+
+loudly = en alta voz
+
+lounge suite = tresillo
+
+louse = piojo
+
+Louvain = Lovaina
+
+lovable = afable, amable
+
+love = amar, querer, amor
+
+loved one = querido, novio
+
+lovely = agradable, bonito, hermoso, magnífico, caro, lindo, encantador
+
+lover = querido, novio
+
+low = bajo
+
+lower = bajar
+
+lower-arm = antebrazo
+
+low relief = bajorrelieve
+
+low tide = bajamar, reflujo
+
+Lucifer = Satán, Satanás
+
+luck = suerte
+
+luggage = equipaje, equipajes
+
+luggage ticket = billete de equipaje
+
+luggage-van = furgón
+
+lukewarm = tibio
+
+lump = bola, pieza, masa, tela, pedazo
+
+lunch = almuerzo, almorzar, comer
+
+lung = pulmón
+
+lupine = loba
+
+lurid = afilado, agudo
+
+Luxemburg = Luxemburgo, luxemburgués
+
+Luxemburger = luxemburgués
+
+lynx = lince
+
+lyric = texto
+
+macaroni = macarrones
+
+machine = máquina
+
+mackerel = escombro
+
+madam = señorita
+
+Madrid = Madrid
+
+magazine = periódico, revista
+
+magnet = imán
+
+magpie = urraca
+
+maid = criada
+
+mail = correo
+
+mailbox = buzón
+
+main = principal
+
+mainly = sobretodo, principalmente
+
+maintain = conservar, guardar
+
+maintenance = conservación
+
+maize = maíz
+
+major = principal
+
+Majorca = Mallorca
+
+majority = mayoría
+
+major road = carretera principal
+
+make = cometer, fabricar, hacer, perpetrar
+
+make a contract = ajustar, contratar, destajar
+
+make a mistake = equivocarse
+
+make an offer of = ofrecer
+
+make a note = apuntar, notar, anotar
+
+make a project of = proyectar
+
+make clean = limpiar
+
+make fast = fijar
+
+make use of = aprovechar, hacer uso de, usar
+
+making = confección, fabricación, producción
+
+Malay = malayo
+
+male = masculino
+
+male cook = cocinero
+
+malicious = astuto
+
+Malines = Malinas
+
+man = hombre
+
+manage = administrar, mandar
+
+management = administración
+
+manager = administrador, gerente, director
+
+manicure = hacer la manicura
+
+manifacture = confección, fabricación, producción
+
+mantle = abrigo
+
+manufacture = fabricar, confección, fabricación, producción
+
+manuring = abono
+
+map = mapa, tarjeta, plano
+
+marble = mármol
+
+march = andar
+
+margarine = margarina
+
+mark = señal, seña, sellar, timbrar
+
+market = bazar, mercado, mercado de consumo
+
+marketplace = mercado
+
+mark out = amojonar
+
+marmelade = mermelada
+
+marriage = matrimonio
+
+married = casada, casado
+
+marry = casarse
+
+marsh = terreno pantanoso
+
+marvel = asombrarse
+
+marvel at = asombrarse
+
+mashed potatoes = puré de patatas
+
+mass = masa, misa
+
+massage = masajear, amasadura, masaje
+
+massive = maciso
+
+mast = mástil
+
+master = dueño
+
+master builder = destajista
+
+match = fósforo
+
+material = material, tela
+
+matrimony = matrimonio
+
+matter = asunto, particular, caso, materia
+
+mattress = colchón
+
+mature = maduro
+
+Mauretanian = morisco, moro
+
+maximum = máximo, máximum
+
+maybe = quizás, tal vez
+
+mayhap = quizás, tal vez
+
+mayor = alcade
+
+meager = menesteroso, miserable, necesitado, pobre
+
+meal = harina, comida
+
+mealies = maíz
+
+mean = tener el propósito, centro, medio, significar, querer decir
+
+meaning = intención
+
+means = herramienta, instrumento, medio
+
+measure = medir, medida
+
+measurement = dimensión, tamaño, medida
+
+meat = carne
+
+mechanic = mecánico
+
+Mechlin = Malinas
+
+medicine = medicamento, medicina
+
+Mediterranean = Mediterráneo
+
+meet = quedar, hallar, encontrar, ir a buscar a
+
+meet with = complacer
+
+melon = melón
+
+melt = derretir, derretirse
+
+melting = deshielo
+
+member = partidario, miembro
+
+memento = recuerdo
+
+memory = recuerdo
+
+menace = amenazar, conminar, amenaza, conminación
+
+mend = remendar
+
+mentally deficient = atrasado
+
+mention = mencionar
+
+menu = tarjeta, lista, menú, plato
+
+merchant = comerciante
+
+merciful = misericordioso
+
+mercifulness = misericordia
+
+mercy = misericordia
+
+merit = merecer
+
+message = mensaje, recado, noticia, noticias, publicación
+
+messenger = embajador
+
+metal = metal
+
+metaphor = lenguaje figurado
+
+method = método
+
+methylated spirit = alcohol de quemar
+
+metre = metro
+
+metropolis = capital
+
+Meuse = Mosa
+
+Mexican = mejikano
+
+Mexican woman = mejicana
+
+Mexico = Méjico, México
+
+Mexico City = México
+
+midday = mediodía
+
+midday meal = cena, comida
+
+middle = centro, medio
+
+Middle Ages = edad media
+
+middy = guardiamarina
+
+midnight = media noche
+
+midshipsman = guardiamarina
+
+mile = legúa
+
+milk = leche
+
+millimetre = milímetro
+
+milliner = modista
+
+million = millón
+
+minced meat = carne picada
+
+mind = observar
+
+mineral = mineral
+
+ministry = ministerio
+
+mint = menta
+
+minute = minuto
+
+minutes = multa, proceso verbal
+
+mirror = espejo
+
+miscarriage = aborto
+
+miscellaneous = toda clase de
+
+mischievous = astuto
+
+miserable = deplorable, malo, afligido, triste, indigente, miserable, pobre, menesteroso, necesitado
+
+misery = indigencia, pobrezo
+
+miss = perder
+
+mist = niebla
+
+mistake = equivocación, error, yerro
+
+mistaken = malo
+
+Mister = caballero, señor
+
+mistletoe = muérdago
+
+misty = brumoso
+
+misunderstanding = malentendido
+
+miter = mitra
+
+mitre = mitra
+
+mitten = guante
+
+mixture = mezcla
+
+moan = gemir
+
+mode = moda
+
+modern = moderno
+
+modest = modesto
+
+Mohammed = Mahoma
+
+moist = humedo
+
+moment = momentito, momento
+
+monastery = convento
+
+Monday = lunes
+
+money = dinero
+
+money-box = caja
+
+money box = caja
+
+money order = giro postal
+
+monk = monje
+
+monkey = mono
+
+monkey-wrench = llave inglesa
+
+monologue = monólogo
+
+monopoly = monopolio
+
+month = mes
+
+monthly = mensualmente
+
+monthly nurse = comadrona
+
+monumental = monumental
+
+mood = humor
+
+moon = luna
+
+Moorish = morisco, moro
+
+moped = ciclomotor, motocicleta
+
+morality = virtud
+
+more = más
+
+more and more = más y más
+
+moreover = demás, además
+
+Moresque = morisco, moro
+
+morning = mañana
+
+Moroccan = marroquí, marroquín
+
+Moroccan woman = marroquía, marroquína
+
+Morocco = Marruecos
+
+mosaic = mosaico
+
+mosaic work = mosaico
+
+Moscow = Moscú
+
+Moses = Moisés
+
+mosque = mezquita
+
+mosquito = mosquito
+
+most = extremamente
+
+most important = principal
+
+motel = motel
+
+mother = madre
+
+motionless = inmóvil
+
+motion picture = película
+
+motive = lugar, motivo
+
+motor = motor
+
+motor-boat = lanchamotora
+
+motor car = automóvil, coche
+
+motorcycle = moto
+
+motor-launch = lanchamotora
+
+motor road = autoestrada, autopista, carretera
+
+motorway = autoestrada, autopista, carretera, autovía
+
+mouldy = mohoso
+
+mount = acomodar, adaptar
+
+mountain = montaña, monte
+
+mountain chain = sierra, cordillera
+
+mountaineering boot = bota de montaña
+
+mountain hut = refugio
+
+mountain peak = pico
+
+mountain range = cordillera, sierra
+
+mountain top = pico
+
+mourn = deplorar
+
+mouse = ratón
+
+moustache = bigoti, bigote
+
+mouth = boca, desembocadura
+
+5. desembocadura
+
+move = conmover, moverse
+
+movie = película
+
+movie theatre = cine
+
+moving = conmovedor
+
+Mr. = caballero, señor
+
+Mrs. = señorita
+
+much = mucho
+
+mucus = esputo, flema
+
+mud = barro
+
+mudguard = guardabarros
+
+Muhammad = Mahoma
+
+mulberry-tree = morera
+
+mule = mulo
+
+multiply = multiplicar
+
+murk = tinieblas
+
+muscle = músculo
+
+museum = museo
+
+mushroom = champiñon, hongo, seta
+
+music = música
+
+musician = músico
+
+mussel = almeja
+
+must = tener que
+
+mustard = mostaza
+
+mute = mudo
+
+mutton = carnero
+
+my = mi
+
+mystify = engañar
+
+myth = mito
+
+mythology = mitología
+
+nail = clavo, taco, uña
+
+nail-scissors = lima para uñas
+
+nail-varnish = laca para las uñas
+
+naked = desnudo
+
+name = nombre
+
+nameless = anónimo
+
+nandu = ñandu
+
+nap = echar la siesta
+
+napkin = servilleta
+
+Naples = Nápoles
+
+narrate = contar
+
+narrow = estrecho
+
+nasty = horrible, lúgubre, feo, horroroso, malo, deshonesto, astuto
+
+nation = población, pueblo
+
+national = nacional
+
+nationality = nacionalidad
+
+native = innato, indígena
+
+natural gas = gas natural
+
+naturally = naturalmente
+
+nature = indole, naturaleza
+
+naughty boy = muchacho travieso
+
+nausea = aversión, repugnancia
+
+naval cadet = guardiamarina
+
+nave = carrete de rueda
+
+navigate = navegar
+
+navy = marina
+
+near = cerca de, entrante, próximo, cerca
+
+nearby = cerca de, adyacente, contiguo, vecino, entrante, próximo, cerca
+
+nearly = casi
+
+near-sighted = miope
+
+near to = cerca de
+
+necessary = necesario
+
+necessity = necesidad
+
+neck = cuello
+
+necktie = corbata
+
+need = necesitar, necesidad, indigencia
+
+needle = aguja, alfiler
+
+needy = indigente, menesteroso, necesitado, pobre
+
+negative = negativo
+
+neglect = descuidar
+
+négligé = bata
+
+negligent = descuidado
+
+Negro = negro
+
+neigh = rebuznar
+
+neighbour = vecino
+
+neighbourhood = barrio
+
+neighbouring = adyacente, contiguo, vecino
+
+neither = tampoco, nadie, ninguno
+
+nephew = sobrino
+
+nerve = nervio
+
+net = red
+
+nettle = ortiga
+
+network = red
+
+never = jamás, nunca, no ... nunca
+
+new = nuevo
+
+New Amsterdam = Nueva York
+
+news = noticias
+
+New South Wales = Nueva Gales del Sur
+
+newspaper = periódico
+
+New Year's Day = año nuevo
+
+New York = Nueva York
+
+New York City = Nueva York
+
+next = después, luego, más adelante, después, luego, entrante, próximo, consecutivo, siguiente, sucesivo, próximo
+
+next to = cerca de
+
+Nicaragua = Nicaragua
+
+nice = agradable, amable, bueno, bonito, rico
+
+nickel = níquel
+
+night = noche
+
+nightingale = ruiseñor
+
+night-shirt = camisón
+
+Nile = Nilo
+
+Nimwegen = Nimega
+
+nine = nueve
+
+nineteen = diez y nueve
+
+nip = aperitivo
+
+no = no
+
+Noah = Noé
+
+nobility = nobleza
+
+nobody = nadie, ninguno
+
+node = nudo
+
+no doubt = sin duda
+
+noise = ruido
+
+no longer = no ... mas, ya ... no
+
+none = nadie, ninguno
+
+non-military = civil
+
+non-skid = antideslizante
+
+non-skid chain = cadena antideslizante
+
+noon = mediodía
+
+no-one = nadie, ninguno
+
+nor = tampoco
+
+normal = normal
+
+north = norte
+
+North America = América septentrional, Norteamérica
+
+North Holland = Holanda septentrional
+
+North Sea = mar del Norte
+
+Norway = Noruega
+
+Norwegian = noruego
+
+Norwegian woman = noruega
+
+nose = nariz
+
+nostalgia = nostalgia
+
+not = no
+
+notary = notario
+
+not at all = de ninguna manera, de ningún modo, ni mucho menos, no ... del todo
+
+note = billete, anotación, apuntar, notar, anotar, apunte
+
+notebook = carnet, libritode memoria
+
+notepad = bloc de notas
+
+nothing = nada
+
+notice = cartel, anuncio, aviso, noticia, noticias, publicación
+
+notification = anuncio, aviso
+
+notify = anunciar, notificar
+
+notion = inteligencia
+
+not on any account = de ninguna manera
+
+not well = indispuesta
+
+nought = cero
+
+noun = substantivo
+
+nourish = alimentar
+
+nourishment = alimento
+
+novel = nuevo, novela
+
+novelty = noticias
+
+November = noviembre
+
+now = actualmente, ahora
+
+nowadays = ahora, al presente, hoy día
+
+now and then = de cuando en cuando
+
+nowhere = en ninguna parte
+
+nude = desnudo
+
+number = número
+
+numberplate = matrícula
+
+numeral = cifra, número
+
+nurse = cuidar, enfermera, comadrona
+
+nut = tuerca, nuez
+
+nylon = de nilón, nilón
+
+oak = roble
+
+oar = remo
+
+oasis = oasis
+
+oats = avena
+
+obey = obedecer
+
+object = objecto
+
+objection = objeción
+
+objectionable = censurable, reprobable
+
+obligation = deber
+
+oblique = inclinado
+
+observation = censura, reparo
+
+observe = observar, cometer, hacer, perpetrar
+
+obstacle = impedimento
+
+obstruct = cercar
+
+obtain = alcanzar, consequir, obtener, procurarse
+
+obtuse = embotado, obtuso
+
+obviously = evidentemente
+
+occasion = lugar, motivo
+
+occiput = occipucio
+
+occupation = oficio
+
+occupy = desempeñar, ocupar
+
+occur = acontecer, realizarse, tener lugar
+
+occurence = acontecimiento
+
+ocean = océano
+
+Oceania = Oceanía
+
+Oceanica = Oceanía
+
+o'clock = hora
+
+October = octubre
+
+oculist = oculista
+
+odor = olor
+
+odour = olor
+
+of = de, desde
+
+of all sorts = toda clase de
+
+of fantasy = hueco
+
+offence = escandálo
+
+offend = injuriar, insultar, ofender, ultrajar
+
+offer = pretensión, ofrecer, presentar, oferta, ofrecimiento, reproducir, retratar, proposición, proponer
+
+offer of marriage = pretensión
+
+offer of parriage = pretensión
+
+offer up = ofrecer, presentar
+
+office = oficina, cargo, función, oficio
+
+officer = empleado, funcionario
+
+oofficial = oficia, empleado, funcionario
+
+officially = por razón de oficio
+
+offset = distancia
+
+offspring = descendiente
+
+of ill repute = de mala fama, mal reputado
+
+of noble birth = noble
+
+often = a menudo
+
+oh = ay, ah
+
+oil = aceite
+
+oil of olives = aceite de oliva
+
+okay = bueno, bien, de acuerdo, en orden, vale, conforme, convenido
+
+okra = ñajú
+
+okra plant = ñajú
+
+old = anciano, viejo
+
+old materials = derribos
+
+olive = aceituna
+
+olive-oil = aceite de oliva
+
+olive-tree = olivo
+
+omelette = tortilla
+
+omen = agüero
+
+omnibus = autobús
+
+omnipotence = omnipotencia
+
+omnipotent = omnipotente, todopoderoso
+
+omniscient = omnisciente
+
+on = adelante, de, desde, a, dentro de, en, por, por medio de, en cuanto a, por lo tocante a, respecto de, sobre
+
+on account of = con motivo de
+
+once = una vez
+
+once more = de nuevo, otra vez
+
+one = alguien, alguno, cierto, un, una, uno
+
+one and a half = uno y medio
+
+one hundred = ciento
+
+one person = para una persona
+
+onerous = pesado
+
+one thousand = mil
+
+one time = una vez
+
+one-way traffic = tráfico de dirección única
+
+onion = cebolla
+
+only = no ... mas que, sólo, único, no ... mas que, solamente
+
+only just = apenas
+
+on one's back = boca arriba, de espaldas
+
+on purpose = de propósito
+
+on that account = por eso
+
+on the left = a la izquierda
+
+on the other side of = a través de
+
+on the right = al la derecha
+
+on top = arriba
+
+open = abrir, abierto
+
+open up = abrir
+
+opera = ópera
+
+operate = funcionar
+
+operative = obrero, trabajador
+
+ophtalmologist = oculista
+
+opinion = opinión
+
+opium = opio
+
+opportunity = acontecimiento
+
+opposed to = contra
+
+opposite = enfrente de, contra
+
+opposite side = otro lado
+
+oppress = apretar
+
+oppressive = oprimido
+
+optician = óptico
+
+or = o
+
+orange = naranja
+
+orange juice = zumo de naranja
+
+orange-tree = naranjo
+
+orbit = órbita
+
+order = capitanear, pedir, pedido, encadenación, encadenamiento, orden
+
+ordinary = común
+
+origin = descendencia, origen
+
+original = original
+
+originate = descender
+
+ornament = alhaja, decorar
+
+orthography = ortografía
+
+ostrich = avestruz
+
+other = otro
+
+other than = excepto, menos
+
+ought to = tener que
+
+Our Lady = Nuestra Señora
+
+out = fuera
+
+outer = exterior, externo
+
+outer cover = neumático
+
+outfit = traje
+
+outing = excursión
+
+out of = de
+
+outside = fuera de, exterior, externo, fuera
+
+outside of = fuera de
+
+outskirts = perímetro
+
+oven = estufa
+
+over = acabado, terminado, encima de
+
+overall = cabal, completo, entero, todo
+
+overalls = mono
+
+overcoat = abrigo
+
+overdrive = cansar, fatigar
+
+overgrown = cubierto de verdor
+
+overhaul = adelantar
+
+overhead = arriba
+
+overlay = forrar, vestir
+
+override = cansar, fatigar
+
+overtake = adelantar
+
+over there = ahí, allí
+
+overthrow = trastornar
+
+overwhelm = enterrar
+
+ow = ay
+
+owe = deber
+
+owl = buho
+
+own = poseer, tener, propio
+
+owner = dueño, propietario
+
+ownership = propiedad
+
+ox = buey
+
+oyster = ostra
+
+pace = paso
+
+Pacific = Pacífico, Océano Pacífico
+
+Pacific Ocean = Pacífico, Océano Pacífico
+
+pack = empacar, envolver
+
+package = empacar, envolver
+
+packet = paquete
+
+pad = bloque
+
+pail = cubo
+
+pain = dolor
+
+paint = pintura, pintar
+
+painter = pintor
+
+painting = cuadro, pintura
+
+pair = par
+
+pair of pincers = tenazas
+
+palace = palacio
+
+pale = pálido
+
+palm = palmera
+
+palm off on = encajar
+
+Palm Sunday = dominga de Ramos
+
+palmtree = palmera
+
+pamphlet = folleto
+
+Panama = Panamá
+
+pancake = crepe
+
+panties = calzoncillos
+
+pants = pantalón
+
+paper = documento, papel pintado, papel, tapizar
+
+paperback = folleto
+
+paperer = tapicero
+
+paper-hanger = tapicero
+
+paper-hangings = papel pintado
+
+paprika = pimiento
+
+parade = llamada
+
+paraffin-oil = petroleo
+
+paragraph = apartado, párrafo
+
+Paraguay = Paraguay
+
+parallel = paralelo
+
+parapet = balaustrada
+
+parcel = paquete
+
+parents = padres, padre y madre
+
+parings = desechos, detrito
+
+Paris = París
+
+Parisian = parisiense
+
+park = parque
+
+parking bay = aparcamiento
+
+parking garage = aparcamiento
+
+parking place = aparcamiento
+
+parrot = loro
+
+parsley = perejil
+
+part = ingrediente, parte, pieza
+
+Parthian = parte
+
+partially = en parte
+
+particular = aparte, particular, separado, especial
+
+partition = separación
+
+partly = en parte
+
+partridge = perdiz
+
+party = partido, fiesta
+
+party members = partido
+
+pass = adelantar, desfiladero, paso, paso de montaña, alargar, entregar, llegar, pasar
+
+passable = practicable, transitable
+
+passage = pasillo, paso
+
+passageway = paso
+
+pass away = morir
+
+passport = pasaporte
+
+pass through = recorrer
+
+past = pasado
+
+paste = masa
+
+pastor = cura, dómine, pastor protestante
+
+Patagonia = Patagonia
+
+patch = remendar
+
+patch up = remendar
+
+pate = cabeza
+
+path = camino, vía, sendero
+
+patience = paciencia
+
+patriarch = patriarca
+
+patron = patrono, protector
+
+pause = descanso
+
+pavement = acera
+
+paw = pierna, pie
+
+pay = pagar, saldar
+
+pay attention = atender, atender a, tener cuidado
+
+pay attention to = atender, atender a, tener cuidado
+
+payment = pago
+
+pay off = amortizar
+
+pay on account = pagar a plazos
+
+pay out = gastar
+
+pay the expenses of = costear
+
+pea = guisante
+
+peace = paz
+
+peach = melocotón
+
+peak = punta
+
+peanut = cacahué, cacahuete
+
+pear = pera
+
+pearl = perla
+
+pear-tree = peral
+
+pedal = pedal
+
+pedestrian = peatón
+
+peel = cáscara
+
+peel off = desconcharse
+
+peg = aperitivo
+
+pelvis = fuente, pelvis
+
+pen = pluma
+
+pencil = lápiz
+
+pending = pendiente
+
+peninsula = península
+
+Pentecost = Pentecostés
+
+penthouse = cobertizo
+
+penury = indigencia
+
+people = gente, población, pueblo
+
+pepper = pimienta
+
+per = a, dentro de, en, por
+
+percent = porciento
+
+percentage = porciento
+
+perchance = quizás, tal vez
+
+perform = aparecer, entrar, montar, cometer, fabricar, hacer, perpetrar, presentar, reproducir, retratar
+
+perfume = perfume
+
+perhaps = quizás, tal vez
+
+peril = peligro
+
+period = punto
+
+periodical = periódico, revista
+
+periphery = perímetro
+
+permanent = continuo
+
+permission = declaración, permiso
+
+permit = permitir
+
+persecute = perseguir
+
+Persia = Persia
+
+Persian = persa
+
+person = persona
+
+personal = personal, propio
+
+personality = indole, naturaleza
+
+perspiration = sudor
+
+persuade = convencer
+
+Peru = Perú
+
+Peruvian = peruano
+
+Peruvian woman = peruana
+
+petrol = bencina, gasolina
+
+petroleum = petroleo
+
+petrol tank = depósito de gasolina
+
+petty = mezquino
+
+pharmaceutical = medicamento, medicina
+
+pheasant = faisán
+
+phenomenal = fenomenal
+
+Philippine Islands = islas Filipinas
+
+Philippines = islas Filipinas
+
+phlegm = esputo, flema
+
+phone booth = cabina telefónica
+
+photograph = foto, fotografía
+
+photographer = fotógrafo
+
+physician = doctor, médico
+
+physics = física
+
+pick = arrancar, cortar, picar
+
+pickle = muchacho travieso
+
+pick out = elegir, escoger
+
+pick up = buscar, coger, ir por, recoger, tomar, ir a buscar a
+
+picnic = pic nic
+
+picture = grabado, imagen, reproducción, retrato, reproducción, retrato, cuadro, pintura
+
+picture postcard = postal, tarjeta postal, tarjeta postal ilustrada
+
+picturesque = pintoresco
+
+pie = pastel, torta
+
+piece = parte, pieza, tela, pedazo
+
+pier = amarradero, desembarcadero
+
+pig = cerdo
+
+pigeon = pichón, paloma
+
+piglet = cochinillo, lechón
+
+pike = lucio
+
+pilgrimage = peregrinación, romería
+
+pill = píldora
+
+pillar = columna
+
+pillow = almohada
+
+pin = alfiler
+
+pincers = tenazas
+
+pine = pino
+
+pineapple = ananás, piña
+
+pine-tree = pino
+
+pink = clavel, rosado
+
+pinnacle = pico
+
+pioneer = innovador, iniciador
+
+pipe = pipa
+
+piston = pistón
+
+pit = zanja
+
+pitcher = jarra
+
+pitiful = deplorable
+
+pity = compadecer a, dolerse por
+
+placard = cartel
+
+place = acomodar, adaptar, sitio, colocar, meter, poner
+
+place of birth = cuna, patria
+
+place of worship = iglesia
+
+plaice = platija
+
+plain = llano, llanura, claro, evidente
+
+plan = intención, plano, propósito, proyectar, propósito
+
+plane = aeroplano, avión, plano, propósito, cepillo
+
+plank = tabla
+
+plant = planta, cultivar, plantar
+
+planting = cultivo, plantío
+
+plaster = esparadrapo
+
+plastic = plástico
+
+plate = plato, lámina, libra
+
+platform = andén, programa, plataforma
+
+platter = plato
+
+plausible = fidedigno
+
+play = jugar, tocar
+
+plaza = plaza
+
+plea = argumento
+
+pleasant = agradable
+
+please = haz favor, haz el favor, por favor, agradar, gustar
+
+pleased = contento
+
+pleasing = agradable
+
+pleasure = agrado, placer
+
+pledge = dinero del embase
+
+plenty of = mucho
+
+plough = arado
+
+pluck = arrancar, cortar
+
+plug = bujía, tampón
+
+plug in = comunicar
+
+plum = ciruela
+
+plunge = bucear, zambullirse
+
+poetry = poesía
+
+point = punta, punto
+
+pointed = puntiagudo
+
+point out = designar, enseñar, indicar, mostrar
+
+point out to be = resultar
+
+poise = balancear
+
+poison = envenenar, veneno
+
+poisonous = tóxico
+
+Poland = Polonia
+
+pole = bache, poste
+
+police = policía
+
+policeman = guardia
+
+police-station = comisaría
+
+policy = póliza, política
+
+polish = crema para zapatos, limpiar
+
+Polish woman = polaca, polonesa
+
+polite = cortés
+
+politeness = cortesía
+
+politician = político, hombre político
+
+politics = política
+
+pond = estanque
+
+pony = poney
+
+pool = charco, juntarse, piscina, unirse
+
+poop = popa
+
+poopdeck = popa
+
+poor = deplorable, malo, indigente, miserable, pobre
+
+poplar = álamo
+
+population = población
+
+pork = carne de cerdo
+
+port = puerto
+
+portable = portátil
+
+portal = entrada, puerta
+
+portent = agüero
+
+porter = conserje, portero, mozo
+
+port side = babor
+
+Portugal = Portugal
+
+Portuguese = portugués
+
+Portuguese language = portugués
+
+Portuguese woman = portuguesa
+
+pose = darse tono, ponerse, ser presuntuoso
+
+poseur = farsante, presumido
+
+possess = poseer, tener
+
+possible = posible
+
+possibly = quizás, tal vez
+
+post = poste, cargo, función, oficio, empleo, correo
+
+postage = franqueo
+
+postage stamp = sello, sello de correos
+
+postcard = postal, tarjeta, tarjeta postal
+
+poster = cartel
+
+postman = cartero
+
+post office = oficina de correos
+
+postulate = exigir
+
+pot = orinal, jarro, olla
+
+potato = patata
+
+potato flour = fécula, fécula de patata
+
+pottery = cerámica, loza
+
+poultry = aves
+
+pound = libra
+
+pour = derramar
+
+pour in = verter
+
+poverty = pobreza
+
+powder = polvos
+
+practicable = practicable, transitable
+
+practice = emplear, ejercicio
+
+practised = experto, hábil
+
+praise = alabar
+
+prawn = gámba
+
+pray = rezar
+
+precipice = abismo, despeñadero, precipicio
+
+precise = preciso
+
+precursor = agüero
+
+predominant = principal
+
+prefer = preferir
+
+preferably = más bien
+
+pregnant = en estado
+
+prejudice = prejuicio
+
+premium = prémio
+
+prepare = preparar
+
+presage = agüero
+
+prescription = receta
+
+presence = presencia
+
+present = actual, regalo, contemporáneo, ofrecer, presentar, reproducir, retratar, presente
+
+presentation = oferta, ofrecimiento, presentación, proposición
+
+present-day = actual
+
+present with = ofrecer, presentar, reproducir, retratar
+
+preservation = conservación
+
+preserve = conservar, guardar
+
+press = apretar
+
+pressing = urgente
+
+pressure = insistencia, instancia, instancia, presión
+
+presume = asumir, suponer
+
+presumption = derecho, pretensión
+
+pretence = derecho, pretensión
+
+pretend = fingir
+
+pretty = amable, majo
+
+prevent = estorbar, impedir
+
+previous = pasada
+
+previously = anteriormente, delante
+
+previous to = antes de que
+
+price = precio
+
+price-list = lista de precios
+
+pricey = caro
+
+priest = cura, preste, sacerdote
+
+prince = príncipe
+
+princess = princesa
+
+principal = principal
+
+principally = sobretodo, principalmente
+
+principle = principio
+
+print = imprimir, copiar
+
+prior = pasada
+
+prison = prisión
+
+prisoner = detenido
+
+prize = prémio
+
+probably = probablemente
+
+problem = prueba
+
+proceed with = continuar
+
+procession = comitiva
+
+proclaim = dar parte de, proclamar, promulgar
+
+proclamation = declaración, proclamación
+
+procure = procurarse
+
+produce = producir, realizar
+
+product = producto
+
+profess = confesar, declarar
+
+profession = profesión
+
+professional = profesional
+
+profit = provecho, aprovecharse
+
+profound = profundo
+
+programme = programa
+
+progress = progreso
+
+prohibit = prohibir
+
+project = propósito
+
+promise = prometer, promesa
+
+pronounce = pronunciar
+
+proof = prueba
+
+prop = respaldo
+
+proper = conveniente, preciso
+
+properly = como es debido
+
+property = finca, granja, calidad, ralea
+
+proposal = pretensión, oferta, ofrecimiento, proposición
+
+propose = proponer
+
+prosecute = perseguir
+
+prostitute = prostituta
+
+protect = defender, guardar, protectar, proteger
+
+protect from = repeler
+
+protection = defensa, protección
+
+protégé = protegido
+
+protest = protestar, protesta
+
+Protestant = protestante
+
+protocol = multa, proceso verbal
+
+proud = orgulloso
+
+prove = probar
+
+provided that = si
+
+provoke = instigar
+
+provost = alcade
+
+prudish = dengoso, melindroso
+
+pruning-knife = podadera
+
+Prussia = Prusia
+
+Prussian = prusiano
+
+psalm = salmo
+
+pseudonym = seudónimo
+
+psychiatrist = psiquiatra
+
+pub = taberna, bar
+
+public square = plaza
+
+publish = divulgar, publicar
+
+publisher = editor
+
+pudding = pudín
+
+pull = tirar
+
+pull down = demoler, derribar
+
+pulverize = moler
+
+pump = dar a la bomba, bomba
+
+punish = castigar
+
+punishment = castigo
+
+puppet = muñeca
+
+purchase = compra, comprar, procurarse, adquisición
+
+purchaser = cliente, comprador
+
+pure = limpio, puro
+
+purge = limpiar
+
+purity = limpieza, virtud
+
+purpose = fin, objeto
+
+purse = portamonedas
+
+pursue = perseguir
+
+pus = pus
+
+push = empujar
+
+push-button = botón de presión
+
+put = colocar, meter, poner
+
+put down = colocar, meter, poner
+
+put in order = arreglar
+
+put off = quitarse
+
+put on = arrancar, poner, ponerse
+
+put on airs = darse tono, ponerse, ser presuntuoso
+
+put on the stage = ofrecer, presentar, reproducir, retratar
+
+put out = apagar
+
+put out to tender = contratar, dar a destajo
+
+put to bed = acostar
+
+put up = acomodar, adaptar
+
+put up with = tolerar
+
+pyjamas = pijama
+
+Pyrenean = pirenaico
+
+Pyrenees = Pirineos
+
+quality = calidad, ralea
+
+quantity = cantidad
+
+quarrel = disputar, reñir
+
+quarter = barrio
+
+quash = provocar un aborto, destruir
+
+quay = andén
+
+queen = reina
+
+quell = sofocar
+
+question = pregunta
+
+quick = rápido
+
+quickly = de prisa, pronto
+
+quicksand = arenas movedizas
+
+quicksands = arenas movedizas
+
+quiet = quieto, silencio, calmar, sosegar
+
+quit = darse de baja, dimitir, hacer dimisión, abandonar
+
+quite = bastante, muy, enteramente
+
+quiver = tremblar
+
+quotation = cita, citación
+
+quotation mark = conulla
+
+quotation marks = conullas
+
+quote = citar, mencionar, conulla
+
+quotes = conullas
+
+rabbit = conejo
+
+race = correr, raza
+
+radiator = radiador
+
+radio = radio
+
+radish = rábano
+
+radius = radio, rayo, radio de acción
+
+railing = balaustrada
+
+railway carriage = coche
+
+railway ticket = billete del tren
+
+rain = llover, lluvia
+
+rainbow = arco iris
+
+raise = entonar, levantar
+
+ram = carnero
+
+ranch = finca, granja
+
+rand = cordillera, sierra, baranda
+
+rank = fila, turno
+
+rap at the door = llamar a la puerta
+
+rapid = rápido
+
+rare = raro
+
+raspberry = frambuesa
+
+rat = rata
+
+rate = fila, estimar
+
+rate of exchange = curso
+
+ratepayer = contribuyente
+
+rather = bastante, poco, poquito, tantico, más bien
+
+raven = cuervo
+
+ravine = hendidura
+
+raw = crudo
+
+ray = rayo, raya
+
+razor-blade = hoja de afeitar
+
+reach = alcanzar
+
+react = reaccionar
+
+read = leer
+
+ready = listo
+
+reality = verdad
+
+realization = inteligencia
+
+realize = comprender, entender
+
+really = de veras, en efecto, en realidad, verdaderamente
+
+rear = retaguardia, revés
+
+rearguard = retaguardia
+
+rear-lamp = luz posterior, luz trasera
+
+rear-light = luz posterior, luz trasera
+
+rear platform = plataforma posterior
+
+rear wheel = rueda posterior
+
+reason = causa, lugar, motivo
+
+rebate = bajar, descuento, rebaja, reducción
+
+rebuke = desaprobar, reprobar,. censurar, reprender
+
+receipt = recibo, talón
+
+receive = aceptar, admitir, tomar, obtener, recibir
+
+recent = fresco
+
+recently = recientemente
+
+recess = descanso
+
+recipe = receta
+
+recipient = destinatario
+
+recite = recitar
+
+recline = estar tendido
+
+recognize = reconocer
+
+recollection = recuerdo
+
+recommend = certificar, encarecer, ensalzar, recomender
+
+recommendable = recomendable
+
+recommendation = recomendación
+
+record = certificar, inscribir, registrar, registro, récord
+
+records = archivo
+
+recover = sanar
+
+recruit = alistar
+
+red = rojo
+
+Red Cross = Cruz Roja
+
+red currant = grosella
+
+redeem = amortizar
+
+Redeemer = Redentor, Salvador
+
+redemption = amortización, castigo
+
+red herring = arenque ahumado
+
+Red Indian = indio
+
+Red Sea = mar Rojo
+
+reduce the price = repulsar
+
+reed = junco
+
+reef = roca
+
+reek = apestar, oler mal, apestar, oler
+
+refined = fino
+
+reflect on = reflexionar
+
+refusal = negativa
+
+refuse = desechos, detrito, rechazar, rehusar
+
+refuse dump = basurero
+
+regard = estima, estimación, considerar, contemplar, tomar en consideración, mirar, observar, ver
+
+region = comarca, región
+
+register = hacer incribir, certificar, inscribir, registrar, registro, encarecer, ensalzar, recomender
+
+registered = certificado
+
+regret = deplorar, sentir
+
+regrettable = deplorable
+
+regrettably = es una lástima
+
+regularly = a menudo
+
+regulation = regla
+
+regulations = reglamento
+
+reject = rechazar, rehusar, suspender
+
+relate = contar
+
+relation = relación, conexión
+
+relative = deudo, familiar, pariente
+
+release = dejar
+
+reliable = de confianza
+
+religion = religión
+
+relinquish = abandonar, ceder, desistir de, renunciar a
+
+remain = quedarse atrás, tardar, quedarse, restar
+
+remainder = desechos, detrito
+
+remark = censura, reparo
+
+remedy = curar, medio
+
+remit = anular, contramandar
+
+remote = aislado, apartado, separado, lejano
+
+remote control = telemando
+
+remotely = lejos
+
+remove = abolir, abrogar
+
+remove the cloth = recoger la mesa
+
+rendezvous = cita
+
+renounce = abjurar, desistir de, renunciar a
+
+renown = conocimientos, hambre
+
+rent out = alquilar
+
+repair = reparar
+
+repayment = anualidad
+
+repeat = repetir
+
+repentance = arrepentimiento
+
+replace = substituir
+
+replacement = relevo, cumplimiento, relleno, suplemento
+
+replenishment = cumplimiento, relleno, suplemento
+
+reply = contestar, responder, contestación, respuesta
+
+report = comunicar, informar, noticia, noticias, publicación
+
+repose = descansar, descanso
+
+represent = reproducir, retratar, representar
+
+representation = reproducción, retrato
+
+representative = diputado
+
+reproach = censurar, desaprobar, reprender, reprobar
+
+reproof = censura, reparo
+
+reprove = censurar, desaprobar, reprender, reprobar
+
+republic = república
+
+repute = hambre
+
+request = demandar, pedir, solicitar, petición, solicitación, solicitud
+
+require = necesitar, exigir
+
+rescue = salvar
+
+resemble = parecerse
+
+reserve = reservar, pedir
+
+reservoir = recipiente de agua
+
+residence = domicilio
+
+resign = abdicar, dimitir, darse de baja, dimitir, hacer dimisión
+
+resist = oponerse, resistir
+
+resources = medio
+
+respect = respetar, estima, estimación
+
+respectable = honorable, respetable
+
+respiration = respiración
+
+respond = reaccionar, contestar, responder
+
+responsibility = responsabilidad
+
+responsible = responsable
+
+rest = desechos, detrito, descansar, descanso
+
+restaurant = restaurante
+
+restrain = contener, reprimir, capitanear, subyugar, gobernar, refrenar
+
+restrained = dueño de sí mismo
+
+restrict = limitar
+
+restricted = limitado
+
+result = descender, arrojar, resultado
+
+resumé = resumen
+
+retain = retener
+
+retardation = retraso
+
+retarded = atrasado
+
+retention = conservación
+
+retreat = retirarse
+
+retrograde = retrógrado
+
+return = devolver, volver
+
+return-ticket = billete de ida y vuelta
+
+reveal = divulgar, publicar, revelar
+
+revenge = venganza
+
+reverse = reverso, revés, al contrario, al revés, parte trasera
+
+reversed = al contrario, al revés
+
+reverse side = reverso, revés, parte trasera
+
+revise = revisar
+
+revive = reponerse
+
+revue = revista
+
+reward = recompensar, recompensa
+
+rezignation = resignación
+
+rheumatism = reumatismo
+
+Rhine = Rin
+
+rhino = rinceronte
+
+rhinoceros = rinceronte
+
+rhythm = ritmo
+
+rib = costilla
+
+ribbon = cinta
+
+rice = arroz
+
+rickety = decrépito
+
+ride = conducir
+
+ridicule = ridiculizar
+
+ridiculous = ridículo
+
+rifle = escopeta
+
+right = por la derecha, correcto, derecho, preciso
+
+right away = ahora mismo, en el acto, en seguida, inmediatamente
+
+right now = ahora mismo, en el acto, en seguida, inmediatamente
+
+rigid = rigido
+
+rim = llanta, baranda, borde
+
+ring = anillo, llamar, tocar la campanilla
+
+ring the bell = llamar, tocar la campanilla
+
+riot = ruido
+
+riotous = desenfrenado, libertino
+
+ripe = maduro
+
+rise = levantarse, subir
+
+risk = arriesgar, riesgo
+
+risky = arriesgado
+
+rival = competir, competidor
+
+river = río
+
+road = camino, vía
+
+road-metal = cascajo
+
+roast = asar
+
+roasted = asado
+
+rob = despojar, privar, hurtar, robar
+
+robe = vestido
+
+robust = fuerte, sólido
+
+rock = balancear, roca
+
+rocket = cohete
+
+roe = corzo
+
+roll = bocadillo, panecillo, rodar
+
+roll-call = llamada
+
+roller = cilindro
+
+Roman = romano
+
+Romanesque = románico
+
+Romania = Rumania
+
+Romanian = rumano
+
+Rome = Roma
+
+roof = tejado
+
+room = espacio, cuarto, habitación
+
+rooster = gallo
+
+rope = cuerda
+
+rose = rosa
+
+rotten = podrido
+
+rough = crudo, bronco, brusko, áspero, desigual
+
+round = redondo, redondear, alrededor de, en torno de
+
+round off = redondear
+
+rouse = instigar, espolear, animar, estimular, incitar
+
+route = ruta, camino, vía
+
+row = remar, turno
+
+row-boat = barco de remos
+
+rowing-boat = barco de remos
+
+rub = frotar
+
+rubber = caucho, goma, condom, preservativo, goma
+
+rubbish = desechos, detrito, derribos
+
+rubbish tip = basurero
+
+rubble = desechos, detrito, cascajo
+
+rucksack = mochila
+
+rudder = timón, volante
+
+rude = descortés, grosero, insolente
+
+rudiments = abecé, alfabeto
+
+ruin = arruinar, ruina
+
+rule = contener, gobernar, subyugar, refrenar, reprimir, regla
+
+rules = reglamento
+
+rum = ron
+
+Rumanian = rumano
+
+rumor = hambre
+
+rumour = hambre
+
+run = atropellar, arranque, funcionar, correr
+
+run across = acertar
+
+run away = huir
+
+rush = apresurarse
+
+Russia = Rusia
+
+Russian = ruso
+
+Russian woman = rusa
+
+rye = centeno
+
+sack = despedir, bolso
+
+sacrifice = ofrecer, presentar
+
+sad = afligido, triste
+
+sadness = tristeza
+
+safety = seguridad
+
+safety-pin = imperdible
+
+safety pin = imperdible
+
+sage = salvia
+
+Sahara = Sahara
+
+sailor = marinero
+
+saint = santa, santo
+
+salad = ensalada
+
+salary = salario
+
+sale = consumo, despacho, salida, deducción, venta
+
+sales activity = mercado, mercado de consumo
+
+salesman = vendedor
+
+saleswoman = dependienta, vendedora
+
+sallow = pálido
+
+salmon = salmón
+
+salted meat = carne salada
+
+salt meat = carne salada
+
+salutation = acogida, saludo
+
+salute = acoger, saludar
+
+sand = arena
+
+sandal = sandalia
+
+sandwich = bocadillo, sandwich
+
+sap = jugo, zumo
+
+Sardina = Cerdeña
+
+Sardinia = Cerdeña
+
+Sassenach = inglés
+
+Satan = Satán, Satanás
+
+satisfied = contento
+
+satisfy = complacer
+
+sauce = salsa
+
+saucepan = cacerola
+
+saucer = platillo
+
+savage = fiero
+
+save = guardar, salvar
+
+Saviour = Redentor, Salvador
+
+saw = sierra
+
+Saxe = Sajonia
+
+Saxon = sajón
+
+Saxony = Sajonia
+
+say = decir
+
+say goodbye = despedirse
+
+say goodbye to = despedirse
+
+say yes = asentir, confirmar
+
+scale = incrustación, escama, ascender, escalar, subir a
+
+scale off = desconcharse
+
+scales = balanza
+
+scandal = escandálo
+
+Scandinavia = Escandinavia
+
+scarcely = apenas
+
+scare = espantar
+
+scatter = derramar
+
+scenery = paisaje
+
+scent = olor
+
+schedule = horario
+
+Scheldt = Escalda
+
+scheme = propósito
+
+school = escuela
+
+science = ciencia
+
+scientist = hombre de ciencia
+
+scissors = tijeras
+
+scold = exhortar, requerir, censurar, desaprobar, reprender, reprobar
+
+scooter = patinete
+
+Scot = escocés
+
+Scotland = Escocia
+
+Scotsman = escocés
+
+Scottish = escocés
+
+scratch = rascar
+
+scream = gritar
+
+screw = atornillar, tornillo
+
+screwdriver = destornillador
+
+scrupulous = escrupuloso, meticuloso
+
+scuffle = batalla
+
+sculptor = escultor
+
+scythe = guadaña
+
+sea = mar
+
+sea-dog = foca
+
+seagull = gaviota
+
+seal = foca
+
+seam = costura
+
+seaside = costa
+
+season = estación, temporada
+
+seat = asiento, sitio
+
+secede = desertar
+
+second = segundo
+
+second cousin = primo segundo
+
+secondhand = de segunda mano
+
+second hand = de segunda mano
+
+secret = secreto
+
+secretion = secreción
+
+sect = secta
+
+section = departamento, sección
+
+secure = fijar
+
+security = dinero del embase, seguridad
+
+see = hallar, encontrar, ver, visitar, cuidar
+
+seek = buscar
+
+seem = parecer
+
+seemly = conveniente
+
+seize = asir, coger
+
+seized with emotion = conmovido
+
+seizure = apoplejía
+
+seldom = raramente
+
+self-interested = egoísta
+
+selfish = egoísta
+
+selfless = afectuoso
+
+self-possessed = dueño de sí mismo
+
+sell = vender
+
+send = despachar, difundir, enviar
+
+sender = remitente
+
+send off = despachar, enviar, expedir
+
+sensation = sentimiento
+
+sense = inteligencia, sentir
+
+sensitive = sensible
+
+sentence = frase, condenar
+
+separate = aparte, particular, separado, apartar, segregar, separar, compartir, dividir
+
+separately = aparte, por separado
+
+separation = separación, aislamiento, retiro
+
+sepia = calamar
+
+September = septiembre
+
+serene = sereno
+
+series = serie
+
+serious = grave, importante, crítico, serio
+
+serpent = serpiente
+
+servant = criada
+
+serve = servir
+
+service = culto, servicio
+
+service charge = servicio
+
+set = aparato, grupo, trinquete, serie
+
+set a trap = acechar
+
+set a trap for = acechar
+
+set conditions = estipular
+
+settle = despachar
+
+settlement = colonia
+
+seven = siete
+
+seventeen = diez y siete
+
+seventh = séptimo
+
+several = varios
+
+several times = a veces
+
+severe = áspero, inclemente, severo
+
+sew = pegar, coser
+
+sewer = cloaca
+
+sew on = pegar
+
+shack = barraca, cobertizo, cabana
+
+shade = sombra
+
+shadow = sombra
+
+shallow = de poca profundidad, somero
+
+shame = uf, vergüenza
+
+shampoo = champú
+
+shanty = barraca, cobertizo
+
+share = acción, compartir, dividir, parte, pieza, ración
+
+shareholder = accionista
+
+shark = tiburón
+
+sharp = afilado, agudo, justamente
+
+shave = afeitar
+
+shaving-brush = brocha de afeitar
+
+shawl = chal
+
+she = ella
+
+shear = cortar
+
+she-bear = osa
+
+shed = barraca, cobertizo, cabina, granero, puesto, derramar
+
+sheep = oveja
+
+sheet = hoja, sábana, lámina, libra
+
+sheet metal = hojalata
+
+shelf = tabla
+
+shell = concha, cáscara
+
+shelter = guardar
+
+she-wolf = loba
+
+shifting spanner = llave inglesa
+
+shine = brillar, lucir
+
+ship = despachar, enviar, expedir, barco, embarcación
+
+shirt = camisa, camiseta
+
+shiver = tremblar
+
+shock-absorber = amortiguador
+
+shoe = zapato
+
+shoe-horn = calzador
+
+shoe-lace = cordón
+
+shoe-lift = calzador
+
+shoemaker = zapatero
+
+shoot = tirar
+
+shoot dead = fusilar
+
+shop = tienda, hacer las compras
+
+shore = orilla, costa
+
+short = corto
+
+shortage = falta
+
+short circuit = cortacircuito
+
+shortcoming = falta
+
+shorten = abreviar, acortar
+
+shortness of breath = asma
+
+short pants = pantalón corto
+
+shorts = pantalón corto
+
+short-sighted = miope
+
+should = tener que
+
+shoulder = lisera, hombro
+
+shout = gritar, grito
+
+shovel = pala
+
+show = designar, enseñar, indicar, mostrar
+
+shower = ducha
+
+show window = escaparate
+
+Shrove-Tuesday = martes de carnestolendas
+
+shrub = arbusto
+
+shut = cerrar, cerrado
+
+shut off = parar
+
+Siberia = Siberia
+
+Siberian = siberiana, siberiano
+
+siblings = hermanos
+
+side = lado, partido
+
+sideboard = armario
+
+side-issue = apéndice
+
+sidewalk = acera
+
+side-way = carretera secundaria
+
+side-whiskers = patillas
+
+siege = asedio, sitio
+
+sigh = suspirar
+
+sight = aspecto, vista
+
+sightseeing trip = excursión
+
+sign = agüero, prueba, señal, seña, firmar
+
+signal = señal, seña
+
+signalman = guardavía
+
+signature = firma
+
+signify = significar
+
+silence = silencio
+
+silver = plata
+
+similar = semejante
+
+simple = sencillo, simple
+
+since = de, desde, porque, puesto que, ya que
+
+sincere = sincero
+
+sing = cantar
+
+singer = cantora, cantor
+
+single = soltero
+
+sink = bucear
+
+sir = caballero, señor
+
+sister = hermana
+
+sit = estar sentado
+
+sit down = sentarse
+
+six = seis
+
+sixteen = diez y seis
+
+sixth = sexto
+
+sixty = sesenta
+
+sizable = considerable, notable
+
+size = tamaño
+
+skate = patinar
+
+skeleton = esqueleto
+
+ski = esquiar, esquí
+
+skilful = experto, hábil
+
+skilfulness = agilidad, destreza
+
+skill = agilidad, destreza
+
+skilled = experto, hábil
+
+skillful = experto, hábil, ágil, diestro
+
+skillfulness = agilidad, destreza
+
+skim = desnatar
+
+skin = piel
+
+skirt = falda
+
+skull = cráneo
+
+sky = cielo
+
+sky blue = azul
+
+slab = lámina, libra
+
+slander = calumniar, infamar
+
+slanting = inclinado
+
+slat = tabla
+
+slaughter = matar
+
+Slav = eslavo
+
+Slavic = eslavo
+
+slay = matar
+
+sledge = endrino
+
+sleep = dormir, sueño
+
+sleeping-accomodation = cama
+
+sleeping-car = coche-cama
+
+sleeping-place = cama
+
+sleeve = manga
+
+sleigh = endrino
+
+slender = fino
+
+slice = filete, tajada, trozo, cortar
+
+slime = barro
+
+slipper = zapatilla
+
+slope = cuesta
+
+slow = lento
+
+slug = babosa
+
+sluice = esclusa
+
+slum = barrio bajo
+
+slumber = echar la siesta
+
+small = chico, pequeño
+
+small-minded = mezquino
+
+smell = apestar, oler mal, oler
+
+smell bad = apestar, oler mal
+
+smell of = oler a
+
+smile = sonreír, sonrisa
+
+smoke = fumar, humear
+
+smoked = ahumado
+
+smokers = departamento de fumar
+
+smooth = liso, plano
+
+snack = almuerzo
+
+snail = caracol, arroba
+
+snake = serpiente
+
+snap at = dar dentelladas a
+
+snare = astucia
+
+snarl at = dar dentelladas a
+
+sneeze = estornudar
+
+snifter = aperitivo
+
+snore = roncar
+
+snorter = aperitivo
+
+snow = nevar, nieve
+
+snowflake = copo de nieve
+
+snowy = nevado
+
+snub = dar dentelladas a
+
+so = para que, así
+
+society = club
+
+sock = calcetín
+
+sofa = canapé
+
+soft = dulce, tierno
+
+soil = tierra
+
+soiled = sucio
+
+sole = planta, suela, solo, único, lenguado
+
+sole agent = representante exclusivo
+
+solely = no ... mas que, solamente, sólo
+
+solicitor = abogado
+
+solid = fuerte, sólido
+
+soliloquy = monólogo
+
+solitary = solo, único
+
+so long = hasta luego, hasta la vista
+
+solve = resolver
+
+somber = afligido, triste
+
+some = bastante, poco, alguien, alguno, cierto, unas, unos
+
+somebody = alguien, alguno, cierto
+
+someone = alguien, alguno, cierto
+
+some one = alguien, alguno, cierto
+
+something = algo
+
+something new = noticias
+
+sometimes = a veces
+
+somewhat = bastante, poco
+
+son = hijo
+
+song = canción
+
+son-in-law = yerno
+
+soon = luego, pronto
+
+soothe = calmar, sosegar
+
+sore = úlcera
+
+sorrow = tristeza
+
+sort = clase, especie, suerte
+
+so so = así así
+
+so that = para que
+
+so to speak = por decirlo así
+
+soul = alma
+
+sound = tocar, ruido, sonido
+
+soup = sopa
+
+sour = agrio, bronco, brusko
+
+source = fuente
+
+south = sur
+
+South Africa = África del Sur
+
+South African = sudafricano
+
+South America = América del Sur, América meridional
+
+South American = sudamericano
+
+souvenir = recuerdo
+
+Soviet Union = Unión soviética
+
+sow = cerda, cochina, sembrar
+
+spa = aguas, balneario, estación balnearia
+
+space = espacio
+
+spaceman = astronauta
+
+spade = cavar
+
+Spain = España
+
+Spaniard = español
+
+Spanish = español
+
+Spanish language = español
+
+Spanish woman = española
+
+spanner = llave
+
+spark = chispa
+
+spark plug = bujía
+
+sparrow = gorrión
+
+spawn = huevas
+
+speak = hablar
+
+special = aparte, particular, separado, especial
+
+spectacles = gafas
+
+speechless = mudo
+
+speed = prisa, velocidad
+
+speedy = rápido
+
+spell = deletrear
+
+spend = gastar, alargar, entregar, llegar, pasar
+
+spice = especia
+
+spider = araña
+
+spiked = puntiagudo
+
+spinach = espinaca
+
+spine = espina dorsal
+
+spinster = solterona
+
+spirits = alcohol
+
+spit = escupir
+
+splinter = astilla
+
+split = fender, henderse, resquebrajarse
+
+spoil = deteriorar, corromper, echar a perder, consentir, mimar
+
+sponge = esponja
+
+spoon = cuchara
+
+sport = deporte
+
+sports ground = campo deportivo
+
+sports shirt = camisa de deporte
+
+spot = sitio, mancha, punto
+
+spring = fuente, primavera, muelle, saltar
+
+springtime = primavera
+
+spur = espolear
+
+spur on = animar, espolear, incitar, inpulsar
+
+square = cuadro, plaza
+
+square decametre = grupo
+
+squeeze = apretar
+
+squirrel = ardilla
+
+stab = picar
+
+stable = fijo, cuadra, establo
+
+staid = serio
+
+staircase = escalera
+
+stairs = escalera
+
+stake = poste
+
+stale = manido, oprimido, redicho, trillado
+
+stall = cuadra, establo
+
+stallion = caballo padre
+
+stamp = sello, sello de correos, sellar, timbrar
+
+stanchion = poste
+
+stand = cabina, granero, puesto, levantarse, estar de pie
+
+standard = bandera, estandarte
+
+stand up = levantarse
+
+stand up to = oponerse
+
+star = estrella
+
+start = arrancar, poner, instigar, maquinar, comenzar, decentar, empezar, enteblar, principiar, comienzo, origen, principio, arrancar
+
+starting point = punto de partida, punto inicial, enlace, punto de contacto
+
+start running = arrancar
+
+state = declarar, estado
+
+statement = declaración
+
+statement of policy = programa
+
+station = estación
+
+stationer's shop = papelería
+
+statue = estatua
+
+stay = alojarse, quedarse, restar
+
+stay for = aguardar, esperar
+
+stay on = quedarse atrás, tardar
+
+stay over = quedarse, restar
+
+stay with = alojarse
+
+steak = bife, biftec, bisté, bistec
+
+steal = robar
+
+steamship = barco de vapor
+
+steel = ballena, acero
+
+steep = escarpado
+
+steer = mandar
+
+steering-wheel = volante
+
+stem = tronco
+
+stench = mal olor
+
+stenotypist = mecanógrafa
+
+step = paso
+
+stern = popa
+
+stew = estofado de carne húngaro
+
+stewardess = azafata
+
+stick = palo, pegar
+
+stick to the pan = quemarse
+
+stiff = rigido
+
+stiffling = oprimido
+
+still = aún, todavia, calmar, sosegar
+
+stimulate = instigar, animar, espolear, incitar, inpulsar, estimular
+
+sting = picar, aguijón
+
+stink = apestar, oler mal, apestar
+
+stipulate = estipular
+
+stipulation = condición
+
+stir = conmover
+
+stir up = instigar, animar, incitar, espolear, estimular
+
+stocking = media
+
+stodgy = aburrido
+
+stoke = calentar
+
+stomach = estómago
+
+stone = piedra
+
+stone-chippings = cascajo
+
+stop = alojarse, parada, parar
+
+storage battery = acumulador
+
+store = tienda
+
+storey = piso
+
+storm = tempestad, tormenta
+
+story = piso, historia
+
+stove = estufa
+
+straggler = rezagado
+
+straigh ahead = seguido
+
+straight = derecho
+
+straight ahead = seguido
+
+straight along = seguido
+
+straightforward = sencillo, simple
+
+strait = estrecho
+
+Strait of Gibraltar = Estrecho de Gibraltar
+
+Strasbourg = Estrasburgo
+
+strawberry = fresa
+
+stray from one's subject = digresar
+
+stray off = extraviarse
+
+stream = corriente, arroyo
+
+strecher = andas, camilla
+
+strech out = alargar
+
+street = calle
+
+streetcar = tranvía
+
+strength = fuerza, virtud
+
+stress = acentuar, acento
+
+strict = áspero, inclemente, severo
+
+stride = paso
+
+strike = golpear, llamar, declararse en huelga, huelga, acertar
+
+string = mondar habas, cuerda
+
+strip = raya
+
+stripe = raya
+
+stroke = apoplejía, acariciar, caricia
+
+stroke of apoplexy = apoplejía
+
+strong = fuerte
+
+strong drink = alcohol
+
+struggle = batalla
+
+student = estudiante
+
+study = estudiar, estudio
+
+stun = aturdir
+
+stupefy = aturdir
+
+stupid = zote
+
+sturdy = fuerte, sólido
+
+sturgeon = sollo
+
+sty = cuadra, establo
+
+subject to = salvo
+
+subjunctive = modo subjuntivo
+
+subscribe = abonarse, suscribirse
+
+subscriber = abonado, subscriptor, suscriptor
+
+subscribe to = abonarse, suscribirse
+
+subscription = abono, subscripción, suscripción, cuota
+
+subsequently = después, luego, más adelante
+
+subside = calmarse, sosegarse
+
+substantive = substantivo
+
+substitute = substituir
+
+substitution = relevo
+
+subtract = sustraer
+
+subway = metro
+
+succeed = conseguir, tener éxito
+
+successor = descendiente
+
+such = tal, así
+
+such a = a título de, como, tal
+
+such as = a título de, como, si
+
+suck = chupar
+
+suction apparatus = campana
+
+suddenly = de golpe, de repente, de sopetón
+
+sue = poner pleito a
+
+suffice = bastar
+
+sufficient = bastante
+
+sufficiently = bastante
+
+suffocate = sofocar
+
+sugar = azúcar
+
+sugarbowl = azucarero
+
+sugar-bowl = azucarero
+
+suggest = designar, enseñar, indicar, proponer
+
+suit = convenir, traje
+
+suitability = capacidad, disposición
+
+suitable = conveniente
+
+suitcase = maleta, maleta de mano
+
+sultry = oprimido
+
+sum = cantidad, importe, suma
+
+summer = verano
+
+summery = resumen
+
+summit = punta, superficie
+
+summon = notificar, llamar
+
+sum up = sumar
+
+sun = sol
+
+Sunday = domingo
+
+sun-glasses = gafas oscuras
+
+sunrise = salida del sol
+
+sunset = puesta del sol
+
+superficial = de poca profundidad, somero
+
+super highway = autovía
+
+superior = jefe
+
+supermarket = supermercado
+
+superscription = título
+
+supersign = acento
+
+supervise = controlar, registrar, revisar
+
+supper = cena
+
+supplement = cumplimiento, relleno, suplemento
+
+supplication = oración, ruego
+
+supply = aprovisionamiento, entregar
+
+support = respaldo, sostener
+
+supporter = partidario
+
+supporters = partido
+
+suppose = asumir, suponer
+
+supposing that = dado que
+
+suppress = oprimir, sofocar
+
+sure = cierto
+
+surface = superficie
+
+surgeon = cirujano
+
+Surinam = Surinam
+
+surly = bronco, brusko
+
+surmise = asumir, suponer
+
+surname = apellido
+
+surpass = aventajar
+
+surprise = sorprender, sorpresa
+
+surrender = capitular
+
+surroundings = alrededores
+
+suspect = sospechar
+
+suspenders = tirantes
+
+suspicion = recelo, recelocaz, sospecha
+
+suspicious = receloso, suspicaz
+
+sustain = sostener
+
+sustained = continuo
+
+swaddling cloth = pañal
+
+swallow = tragar, golondrina
+
+swallow up = tomar, tragar
+
+swamp = terreno pantanoso
+
+swap = cambiar
+
+swear = jurar
+
+swear off = abjurar
+
+sweat = sudar, transpirar, sudor
+
+Swede = sueco
+
+Sweden = Suecia
+
+Swedish = sueco
+
+sweep = barrer
+
+sweeper = barrendero
+
+sweet = dulce
+
+sweet-and-sour = agridulce
+
+sweetheart = querido, novio
+
+sweet potato = batata, boniato, camote
+
+swift = rápido
+
+swiftly = de prisa, pronto
+
+swim = nadar
+
+swimming-bath = piscina
+
+swimming-pool = piscina
+
+swimming trunks = bañador
+
+swindle = embuste, engaño
+
+swine = cerdo
+
+swing = balancear
+
+Swiss = suizo
+
+switch = interruptor
+
+switch off = parar
+
+switch on = arrancar, poner
+
+Switzerland = Suiza
+
+swoon = desmayarse, desmayo
+
+syrup = almíbar
+
+system = sistema
+
+table = mesa
+
+table-cloth = mantel
+
+taco = taco
+
+Tagus = Tajo
+
+tail = cola
+
+tail-light = luz posterior, luz trasera
+
+tailor = costurera, sastre
+
+taint = deterioración, putrefacción
+
+take = aceptar, admitir, tomar, desempeñar, ocupar, buscar, coger, recoger
+
+take along = llevar, ir a buscar a
+
+take apart = demontar
+
+take a shower = ducharse
+
+take away = arrancar, descolgar, quitar
+
+take care = cuidar
+
+take care of = cuidarse de
+
+take down = demoler, derribar
+
+take in = aceptar, admitir, tomar, engañar
+
+take into account = considerar, contemplar, tomar en consideración
+
+take leave = despedirse
+
+take leave from = despedirse
+
+take off = quitarse
+
+take over = comprar, procurarse
+
+take somebody's name = multar
+
+take steps = esforzarse por, tratar de
+
+take the place of = relevar, substituir
+
+taking = adquisición, compra
+
+taking over = adquisición, compra
+
+talent = capacidad, disposición, talento
+
+talented = dotado, talentoso
+
+talk = hablar
+
+tall = alto
+
+tame = adiestrar, domesticado, manso
+
+tampon = tampón
+
+tangerine = mandarina
+
+tangle = caos
+
+tank = tanque
+
+tap = grifo
+
+tape-recorder = magnetófono
+
+tapestry = papel pintado
+
+tar = alquitrán
+
+tardy = tardío
+
+target = fin, objeto
+
+tart = agrio, pastel, torta
+
+taste = gusto, saborear
+
+tasty = rico
+
+taunt = injuriar, insultar
+
+tax = imponer, contribución, impuesto, tributo
+
+taxi = taxi
+
+taxpayer = contribuyente
+
+tea = té
+
+teach = desacostumbrar, enseñar, instruir, enseñar
+
+teacher = maestra
+
+teapot = tetera
+
+tear = lágrima
+
+tear off = arrancar, cortar
+
+technics = técnica
+
+technique = técnica
+
+teetotalism = abstinencia
+
+telegram = telegrama
+
+telephone = teléfono
+
+telephone booth = cabina telefónica
+
+telephone kiosk = cabina telefónica
+
+television = televisión
+
+tell = decir, contar
+
+tell a lie = mentir
+
+temper = humor
+
+temperature = temperatura
+
+tempest = tormenta
+
+temple = sien, templo
+
+temporarily = provisionalmente
+
+temptation = tentación
+
+ten = diez
+
+tendency = tentación
+
+tender = dulce, ofrecer, presentar, reproducir, retratar, destajo, subasta, proposición, proponer, oferta, ofrecimiento
+
+tend to = cuidar
+
+tennis = tenis
+
+tension = tensión, afán, voltaje
+
+tent = tienda de campaña
+
+tented camp = campamento
+
+terminate = acabar, concluir, terminar, expiración, vencimiento
+
+terms = condición
+
+terrace = terraza
+
+terrain = terreno
+
+terrestrial = terrenal, terrestre
+
+test = examen, intentar, probar, carné, carnet
+
+testimony = certificado, certificación
+
+text = texto
+
+Thames = Támesis
+
+than = que
+
+thank = agradecer, dar gracias a
+
+thanks = gracias
+
+thank you = gracias
+
+that = cuál, que, así
+
+that is = a saber, es decir
+
+that kind of = tal
+
+that much = tanto
+
+that over there = eso
+
+that's too bad = es una lástima
+
+that way = así
+
+thaw = deshielo
+
+the = el, la, las, lo, los
+
+theatre = teatro
+
+the day after tomorrow = mañana pasado, pasado mañana
+
+the day before yesterday = anteayer
+
+thee and thou = tutear
+
+the Far East = Extremo Oriente
+
+theft = robo
+
+The Hague = La Haya
+
+their = su
+
+then = después, luego, entonces
+
+the Netherlands = Holanda, Los Países Bajos
+
+there = tenga, ahí, allí
+
+thereafter = después, luego
+
+there are = hay
+
+therefore = por eso
+
+there is = hay
+
+thermometer = termómetro
+
+thermos = termos
+
+thermos bottle = termos
+
+thermos flask = termos
+
+these = esta
+
+these days = ahora, al presente, hoy día
+
+they = ellas, ellos
+
+thick = grueso
+
+thief = ladrón
+
+thigh = muslo
+
+thin = fino
+
+thing = cosa, objeto, objecto
+
+think = acordarse, creer, pensar, reflexionar
+
+think about = reflexionar
+
+think well of = estimar, respectar
+
+third = tercero, tercio
+
+thirst = sed
+
+thirteen = trece
+
+thirty = treinta
+
+this = esta
+
+this evening = esta tarde
+
+this here = esta
+
+thisle = cardo
+
+this morning = esta mañana
+
+those = eso
+
+thou = tú, usted, ustedes, vosotras, vosotros
+
+though = aunque
+
+thought = pensamiento
+
+thoughtful = circunspecto, prudente
+
+thousand = mil
+
+thrash = aporrear, pegar, zurrar
+
+thread = hilo
+
+threat = amenaza, conminación
+
+threaten = amenazar, conminar
+
+three = tres
+
+three-piece suite = tresillo
+
+three times = tres veces
+
+thrice = tres veces
+
+thrifty = económico
+
+throat = garganta
+
+throne = trono
+
+through = acabado, terminado, completamente, por medio de, listo, a lo largo de, por
+
+throw = echar, lanzar
+
+throw up = vomitar
+
+thrust = empujar
+
+thumb = pulgar
+
+thunder = tronar, trueno
+
+Thursday = jueves
+
+thus = así
+
+thwart = dificultar
+
+ticket = billete, billete de viaje
+
+ticket-window = taquilla
+
+tidbit = dulce
+
+tide = marea
+
+tidy = arreglar
+
+tie = corbata, liar, ligar, cinta, lazo
+
+tie on = anudar
+
+tie up = liar, ligar
+
+tiger = tigre
+
+tighten = apretar
+
+tile = azulejo
+
+till = caja, a que, hasta que
+
+timber = leño, madera
+
+time = hora, tiempo
+
+time-table = horario
+
+timid = encogido, tímido, miedo
+
+tin = hojalata, lata, estaño
+
+tin can = lata
+
+tin-opener = abrelatas
+
+tin plate = hojalata
+
+tint = teñir
+
+tip = basurero, punta, propina
+
+tire = neumático
+
+tired = cansado
+
+tired out = agotado
+
+tiresome = aburrido
+
+to = a
+
+toad = sapo
+
+toast = asar
+
+tobacco = tabaco
+
+today = hoy
+
+toe = dedo de pie
+
+together = juntamente
+
+together with = así como, y también
+
+toilet = excusado, retrete
+
+toilet-paper = papel higiénico
+
+token = prueba, señal, seña
+
+tolerate = tolerar
+
+tomato = tomate
+
+tomb = tumba
+
+tomorrow = mañana
+
+tomorrow evening = mañana por la tarde
+
+tomorrow morning = mañana por la mañana
+
+tongs = tenazas
+
+tongue = lengua
+
+too = también, demasiado
+
+tool = herramienta, instrumento, medio
+
+too much = demasiado
+
+toothache = dolor de muelas
+
+tooth-brush = cepillo de dientes
+
+tooth-paste = pasta dentrífica
+
+top = superficie
+
+topical = actual
+
+to some extent = bastante, poco
+
+total abstinence = abstinencia
+
+to the left = por la izquierda
+
+to the right = por la derecha
+
+touch = toque, tocar
+
+touching = conmovedor
+
+touch upon = tocar
+
+tourist = turista
+
+tourist agency = agencia de viaje
+
+tow = remolcar
+
+toward = a
+
+towards = a, alrededor de, en torno de
+
+towel = toalla
+
+tower = torre
+
+towing-line = cable de remolque
+
+town = ciudad, población
+
+town-hall = ayuntamiento
+
+town hall = ayuntamiento
+
+township = pueblecito
+
+toy = juguete
+
+trace = amojonar, impresión
+
+trace out = amojonar
+
+track = impresión
+
+trade = comercio, oficio
+
+traffic = tráfico
+
+trailer = remolque, coche remolque
+
+train = adiestrar, tren
+
+train ticket = billete del tren
+
+tram = tranvía
+
+tranquil = sosegado, tranquilo
+
+transfer = atravesar
+
+transitive = activo, transitivo
+
+translate = traducir
+
+transmit = despachar, difundir, enviar
+
+transport = transportar, transporte, trasporte
+
+travel = conducir, viajar
+
+travel agency = agencia de viaje
+
+traveller = viajero
+
+tray = bandeja
+
+treat = curar, tratar
+
+treatment = cura, tratamiento, trato
+
+treaty = tratado
+
+tree = árbol
+
+tree-trunk = tronco
+
+tremble = tremblar
+
+tribunal = juzgado
+
+tribute = tributo
+
+trick = mala costumbre, resabio, engañar
+
+trifle = bagatela, friolera
+
+Trinity = Trinidad
+
+trip = viaje
+
+trite = común, trivial, redicho, trillado
+
+trouble = inconveniente, prueba, incomodar, molestar, molestia
+
+trousers = pantalón
+
+trout = trucha
+
+truck = camión
+
+true = verdadero
+
+truly = de veras, en efecto, en realidad, verdaderamente
+
+trumpet = trombón
+
+trunk = tronco, baúl, maleta
+
+trustworthy = de confianza
+
+truth = verdad
+
+try = intentar, probar
+
+try on = probar
+
+tube = cámara de aire, válvula
+
+Tuesday = martes
+
+tug = tirar
+
+tummy = vientre
+
+tumor = tumor
+
+tumour = tumor
+
+tumult = ruido
+
+tuna = atún
+
+tuna-fish = atún
+
+tune = acomodar, adaptar
+
+Tunis = Túnez
+
+tunnel = túnel
+
+tunny = atún
+
+tup = carnero
+
+Turk = turco
+
+turkey = pavo
+
+Turkish = turco
+
+Turkish lady = turca
+
+Turkish woman = turca
+
+turn = desviarse, talento, trastornar, volver, girar, apretar, turno
+
+turn around = volver
+
+turn away = parar, despachar, despedir, enviar, expedir, apartar, volver
+
+turned-in legs = piernas torcidas hacia afuera
+
+turnip = nabo
+
+turnip-rooted celery = apio
+
+turn off = parar
+
+turn on = arrancar, poner, apretar
+
+turn over = trastornar
+
+turnpike = autovía
+
+turn round = volver
+
+turn to good account = aprovechar
+
+TV = televisión
+
+twaddle = desatinar
+
+twelve = doce
+
+twenty = veinte
+
+twenty-one = veinte y uno
+
+twice = dos veces
+
+twilight = anonchecer
+
+twin = gemelos
+
+twins = gemelos
+
+two = dos
+
+type = escribir a máquina
+
+typewriter = máquina de escribir
+
+tyre = neumático
+
+ugly = feo
+
+ulcer = úlcera
+
+ultimately = al fin, finalmente, por fin
+
+umbrella = paraguas
+
+uncle = tío
+
+unclean = sucio
+
+unconscious = desmayado
+
+uncooked = crudo
+
+uncover = descubrir
+
+under = debajo de
+
+undergarment = combinación
+
+underground = metro
+
+underneath = abajo, en el fondo, debajo de
+
+underpants = calzoncillos
+
+understand = comprender, entender
+
+understandable = comprensible, inteligible
+
+understanding = relación, inteligencia
+
+understood = comprendido
+
+undertake = encargarse de, emprender, esforzarse por, tratar de
+
+undoubtedly = sin duda
+
+undress = bata
+
+unfaithful = renegado
+
+unfortunately = es una lástima, por fortuna, desgraciadamente
+
+unhappy = infeliz
+
+unique = único
+
+unite = juntar, reunir
+
+United States of America = Estados Unidos
+
+university = universidad
+
+unkind = bronco, brusko
+
+unknown = desconocido
+
+unlearn = desaprender
+
+unload = descargar
+
+unmarried = soltero
+
+unmarried woman = solterona
+
+unpleasant = bronco, brusko
+
+unrest = molestia
+
+unroll = devanar
+
+until = a que, hasta que
+
+untroubled = sereno
+
+unwind = devanar
+
+upon = contra, en cuanto a, por lo tocante a, respecto de, en, sobre
+
+upset = indispuesta, trastornar
+
+upstairs = arriba
+
+up-to-date = actual
+
+urban = urbano
+
+urge = animar, espolear, incitar, inpulsar
+
+urgency = insistencia, instancia, prisa
+
+urgent = urgente
+
+urgently = urgentemente
+
+urge on = animar, incitar
+
+urinate = mear, orinar
+
+urine = orina
+
+Uruguay = Uruguay
+
+USA = Estados Unidos
+
+US citizen = americano
+
+use = hacer uso de, usar, uso
+
+used = usado
+
+use up = usar, acabar, consumir
+
+USSR = Unión soviética
+
+usual = común, general, universal
+
+uterus = útero
+
+utilize = explotar, aprovechar
+
+vacation = vacaciones
+
+vain = hueco
+
+Valencia = Valencia
+
+valiant = bravo
+
+valid = válido
+
+valise = maleta, maleta de mano
+
+valley = valle
+
+value = valor
+
+valve = válvula
+
+vampire = vampiro
+
+vanilla = vainilla
+
+vanity bag = bolsa para señoras
+
+variety = cambio, variedad
+
+variety entertainment = teatro de varietés
+
+vary = cambiar, variar
+
+vase = vaso
+
+veal = carne de ternera
+
+vegetable = verduras
+
+vegetarian = vegetariano
+
+vegetation = vegetación
+
+vein = vena
+
+velvet = terciopelo
+
+vend = vender
+
+venereal disease = enfermedad venérea
+
+Venezuela = Venezuela
+
+vengeance = venganza
+
+ventilate = ventilar
+
+ventilator = ventilador
+
+venture = arriesgar
+
+verge = lisera
+
+verge of a road = lisera
+
+verify = controlar, registrar, revisar
+
+vermin = insectos dañinos
+
+vermouth = vermut
+
+verse = copla, estrofa
+
+very = muy
+
+very much = muy
+
+vessel = caja, estuche, jarro, olla, vaso, barco, embarcación
+
+vest = chaleco
+
+veterinarian = veterinario
+
+vicar = cura
+
+vice = virtud
+
+vice-versa = al revés
+
+vicious = astuto
+
+victory = victoria
+
+Vienna = Viena
+
+view = aspecto, vista, contemplar, mirar, observar, ver
+
+vigour = fuerza, virtud
+
+village = aldea, pueblo
+
+vine = viña, parra
+
+vinegar = vinagre
+
+violate = acometer, asalter
+
+violet = morado
+
+viper = áspid, víbora
+
+visa = visado
+
+visé = visado
+
+visit = visitar, visita
+
+Vistula = Vístula
+
+vitamin = vitamina
+
+vocabulary = diccionario
+
+voice = voz
+
+void = vacío
+
+voltage = voltaje
+
+volume = tomo
+
+vomit = vomitar
+
+vote = balotar, votar
+
+voting by ballot = balotaje
+
+voyage = viaje
+
+wage = salario
+
+wager = apostar
+
+wages = salario
+
+waggon = coche
+
+waist = cintura
+
+waistcoat = chaleco
+
+waistline = cintura
+
+wait = aguardar, esperar
+
+waiter = camarero
+
+wait for = aguardar, esperar
+
+waiting = servicio
+
+waitress = camarera
+
+waive = desistir de, renunciar a
+
+Wales = Gales
+
+walk = andar
+
+wall = pared,. tabique
+
+wall covering = papel pintado
+
+wallet = cartera, portamonedas
+
+wall-paper = papel pintado
+
+walnut-tree = nogal
+
+wander = desviarse
+
+wander from one's subject = digresar
+
+want = necesidad, deseo
+
+wanton = petulante
+
+wantonness = petulancia
+
+war = guerra
+
+ward off = repeler
+
+wardrobe = armario ropero
+
+warehouse = almacén
+
+warm = caliente
+
+warn = avisar
+
+warning = aviso
+
+warrant = garantía, orden, orden por escrito
+
+wash = lavar
+
+wash up = fregar, lavar
+
+wasp = avispa
+
+waste = desechos, detrito, acabar
+
+watch = reloj de pulsera, reloj, contemplar, mirar, observar, ver
+
+watchmaker = relojero
+
+watch out for = atender, atender a, tener cuidado
+
+watch over = vigilar
+
+water = agua, regar
+
+water-colour = acuarela
+
+watercourse = cauce, madre
+
+waterfall = cascada
+
+wave = ola
+
+waver = titubear, vacilar
+
+wavering = duda, vacilación
+
+wax = crema para zapatos
+
+way = camino, vía, costumbre
+
+way out = salida
+
+weak = débil
+
+weaken = amainar
+
+wealth = riqueza
+
+weapon = arma
+
+wear = llevar, tener puesto
+
+wear away = desgastarse
+
+wear off = desgastarse
+
+wear out = usar, desgastarse
+
+weather = tiempo
+
+wedding = boda
+
+wedding-party = boda
+
+Wednesday = miércoles
+
+weekly = semanalmente
+
+weep = llorar
+
+weigh = pesar
+
+weight = peso
+
+welcome = dar la bienvenida, bienvenida
+
+well = bien
+
+well-beloved = querido, novio
+
+well-known = notorio, sabido
+
+well-mannered = cortés
+
+well-to-do = acomodado
+
+wench = muchacha
+
+west = oeste
+
+wet = mojado
+
+whale = ballena
+
+whalebone = ballena
+
+wharf = andén
+
+what a = a título de, como
+
+what a pity = es una lástima
+
+what for = por qué
+
+wheat = trigo
+
+wheeziness = asma
+
+when = cuando, cuándo
+
+where = donde
+
+which = cuál, que
+
+while = tiempo
+
+whimstone = basalto
+
+whipped cream = nata batida
+
+whiskers = patillas
+
+whisper = cuchichear
+
+whistle = silbar
+
+white = blanco
+
+Whitsunday = Pentecostés
+
+who = cuál, que
+
+whole = cabal, completo, entero, todo
+
+wholly = enteramente
+
+whore = puta
+
+why = por qué
+
+widower = viudo
+
+width = anchura
+
+wife = esposa, mujer
+
+wild = fiero
+
+wild boar = jabalí
+
+will = voluntad
+
+willingly = voluntariamente
+
+willingness = voluntad
+
+willow = sauce
+
+win = ganar
+
+wind = viento
+
+windfall = desechos, detrito
+
+wind off = devanar
+
+window = ventana, taquilla
+
+wing = ala
+
+winter = invierno
+
+wipe = enjugar, limpiar
+
+wipe off = enjugar, limpiar
+
+wire = alambre
+
+wireless = radio
+
+wish = desear, querer, tener, deseo, voluntad
+
+with = con, por medio de
+
+within = a, dentro de, en, por, dentro de
+
+without = sin
+
+without a name = anónimo
+
+without delay = directamente, en seguida
+
+without prejudice = salvo
+
+withstand = oponerse, oponerse, resistir
+
+with young = en estado
+
+witness = testigo
+
+woe = ay
+
+wolf = lobo
+
+woman = mujer
+
+womb = útero
+
+wonder = preguntarse, asombrarse
+
+wood = leño, madera
+
+wooden = de madera
+
+woodpecker = pico
+
+woods = bosque
+
+word = palabra
+
+work = funcionar, trabajar, trabajo, obra
+
+worker = obrero, trabajador
+
+working man = obrero, trabajador
+
+workman = obrero, trabajador
+
+work out = acabar, calcular, computar
+
+workplace = taller
+
+world = mundo
+
+worldglobe = globo terráqueo
+
+worm = gusano
+
+worn = gastado, usado
+
+worn-out = redicho, trillado
+
+worn out = agotado
+
+worry = cuidar
+
+worship = adoración, adorar
+
+worship service = culto, servicio
+
+worth = valor
+
+wound = herir, herida
+
+wounded = herido
+
+wrangle = disputar, reñir
+
+wrap up = empacar, envolver
+
+wreck = provocar un aborto
+
+wrench = llave
+
+wrest = arrancar
+
+wretched = menesteroso, miserable, necesitado, pobre
+
+wring = arrancar
+
+wrist = muñeca
+
+wrist-watch = reloj de pulsera
+
+writ = orden, orden por escrito
+
+write = escribir
+
+write down = apuntar, notar, anotar
+
+write off = descargar
+
+writer = autor
+
+writing-paper = papel de cartas
+
+wrong = malo
+
+X = equis
+
+X-rays = rayos de Röntgen, rayos x
+
+xylophone = xilófono
+
+yacht = yate
+
+yam = batata, boniato, camote, ñame
+
+yard = grave, patio
+
+ye = usted, ustedes
+
+year = año
+
+yearly = anualmente
+
+yellow = amarillo
+
+yes = sí
+
+yesterday = ayer
+
+yet = aún, todavia, ya
+
+yield = abandonar, ceder
+
+yoghourt = yogur
+
+yoghurt = yogur
+
+yoke = yugo
+
+yon = ahí, allí
+
+yonder = ahí, allí
+
+you = tú, usted, ustedes, vosotras, vosotros
+
+young = joven
+
+youngster = joven
+
+your = tu
+
+youth = juventud, joven
+
+youth hostel = albergue juvenil
+
+Yugoslavia = Yugoeslavia
+
+Yule = Navidad
+
+zeal = celo
+
+Zealand = Zelandia, zelandés
+
+Zealander = zelandés
+
+zero = cero
+
+zinc = zinc
+
+zipper = cremallera
+
+zither = cítara
+
+zone = zona
+
+zoo = jardín zoológico
+
+zucchini = calabacín
