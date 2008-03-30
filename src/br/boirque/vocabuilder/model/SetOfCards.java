@@ -2,8 +2,6 @@ package br.boirque.vocabuilder.model;
 
 import java.util.Vector;
 
-import com.sun.j2me.global.DateTimeFormat;
-
 /**
  * @author cleber.goncalves
  * A list of flash cards to be studied
