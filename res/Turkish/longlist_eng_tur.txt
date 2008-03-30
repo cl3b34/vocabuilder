@@ -1,4841 +1,2421 @@
 a = biri, birisi, bir
-
 abandon = çökmek
-
-abandoned = ahlaksšz, alçak, arlanmaz
-
-abbreviate = kšsaltmak
-
+abandoned = ahlaksız, alçak, arlanmaz
+abbreviate = kısaltmak
 ABC = alfabe
-
-abdomen = göbek, karšn
-
+abdomen = göbek, karın
 abet = alevlendirmek
-
 abide = beklemek, azap çekmek
-
-abiding = artšk
-
+abiding = artık
 abject = alçak
-
-abjection = alçaklšk
-
+abjection = alçaklık
 abjure = feshetmek, iptal etmek
-
 ablaze = alevli
-
 able = muktedir
-
 abnormal = anormal
-
 abolish = feshetmek, iptal etmek
-
 abortive = abes
-
 about = ait
-
-above-board = açšk
-
-abridge = kšsaltmak
-
+above-board = açık
+abridge = kısaltmak
 abrogate = feshetmek, iptal etmek
-
 abrupt = ani
-
 abscess = apse
-
-absence = bulunmayšş, yokluk, açšk
-
+absence = bulunmayış, yokluk, açık
 absent = namevcut, yok
-
-absent onself = bšrakmak
-
+absent onself = bırakmak
 absolute = mutlak, tam
-
 absolutely = mutlaka, tamamen
-
 absolution = af
-
 absorb = çekmek, emmek
-
 abstract = nazari, teorik
-
-abstraction = hšrsšzlšk
-
+abstraction = hırsızlık
 absurd = abes, saçma
-
 abundance = bereket, bolluk
-
 abundant = bol
-
-abuse = acštmak
-
-abusive = aťšr
-
+abuse = acıtmak
+abusive = ağır
 Abyssinia = Habeşistan
-
 acacia = akasya
-
 academy = akademi
-
 accede = muvafakat etmek
-
-accelerate = hšzlandšrmak
-
+accelerate = hızlandırmak
 accept = almak, kabul etmek
-
 acceptable = kabul edilebilir, münasip
-
 acceptor = alan
-
-access = hücum, saldšršş
-
-accident = aršza, kaza, olay
-
-accidental = aršzi
-
-acclaim = alkšşlamak, takdir etmek, alkšş
-
-acclamation = alkšş
-
+access = hücum, saldırış
+accident = arıza, kaza, olay
+accidental = arızi
+acclaim = alkışlamak, takdir etmek, alkış
+acclamation = alkış
 accommodate oneself = adaptasyon
-
 accommodation = anlaşma
-
 accomodate = bitirmek
-
 accompanist = arkadaş
-
 accompany = eşlik etmek
-
 accomplishment = amel
-
-accord = ahenk, anlaşma, uyuşma, baťdaşma, izin vermek, müsaade etmek
-
+accord = ahenk, anlaşma, uyuşma, bağdaşma, izin vermek, müsaade etmek
 accordance = ahenk, anlaşma, uyuşma
-
 accordion = akordeon
-
-account = açšklama, hesap, inanmak
-
+account = açıklama, hesap, inanmak
 accountant = muhasebeci
-
-account for = açšklamak, anlatmak
-
+account for = açıklamak, anlatmak
 accredit = atfetmek, inanmak
-
 accrue = yetişkin
-
 accumulator = akümülatör
-
 accuracy = ayar
-
-accurate = doťru, kat'î, kesin, tam
-
+accurate = doğru, kat'î, kesin, tam
 accusal = suçlama
-
 accusation = suçlama
-
 accuse = itham etmek, suçlamak
-
-accustom = alšşmak, alšştšrmak
-
-accustomed = alelade, alšşšk, bayaťš
-
-accustom oneself = alšşmak
-
+accustom = alışmak, alıştırmak
+accustomed = alelade, alışık, bayağı
+accustom oneself = alışmak
 ace = as
-
-acerbic = acš, keskin, şiddetli
-
-acerbity = acšlšk, sertlik
-
+acerbic = acı, keskin, şiddetli
+acerbity = acılık, sertlik
 acetous = buruk
-
-ache = arzu etmek, özlemek, acšmak, aťršmak, acš, aťrš, azap, arzulamak
-
+ache = arzu etmek, özlemek, acımak, ağrımak, acı, ağrı, azap, arzulamak
 achieve = almak, etmek, yapmak
-
-achievement = amel, hareket, iş, başarš
-
+achievement = amel, hareket, iş, başarı
 acid = buruk, asit
-
-acknowledgement = alšndš
-
+acknowledgement = alındı
 acolyte = aza
-
 acoustics = akustik, ses düzeni
-
 acquaint = bildirmek
-
 acquaintance = aşina, bildik, bilgi
-
-acquire = almak, satšn almak
-
-acquisition = alšş
-
+acquire = almak, satın almak
+acquisition = alış
 acrobat = akrobat, cambaz
-
 across = çaprazvari
-
 across from = aleyh, aleyhinde, karşe
-
 act = amel, hareket, iş, etmek, yapmak, amel
-
-action = amel, hareket, iş, muharebe, boťuşmak, amel
-
+action = amel, hareket, iş, muharebe, boğuşmak, amel
 act of grace = af
-
 actor = aktör, artist
-
 actress = aktris, artist
-
 acupuncture = akupunktur
-
 ad = ilan, reklam
-
 adage = atasözü
-
 Adam = Adem
-
 adaptation = adaptasyon
-
 adapt oneself = adaptasyon
-
-additionally = ayršca
-
-addled = ahmak, akšlsšz
-
+additionally = ayrıca
+addled = ahmak, akılsız
 address = adres
-
-adieu = allahašsmarladšk, gülegüle
-
+adieu = allahaısmarladık, gülegüle
 adjective = bilgisinde
-
 adjustment = adaptasyon
-
 administration = hükümet, yönetim
-
-admirable = takdire deťer
-
+admirable = takdire değer
 admiral = amiral
-
-admire = çok beťenmek, hayran olmak
-
+admire = çok beğenmek, hayran olmak
 admit = izin vermek, müsaade etmek
-
-admixture = alaşšm, bileşim
-
+admixture = alaşım, bileşim
 ado = gürültü
-
-adore = taparcasšna sevmek
-
-advance = hšzlandšrmak
-
+adore = taparcasına sevmek
+advance = hızlandırmak
 advantage = avantaj, yarar
-
-advantageous = avantajlš, yararlš
-
+advantageous = avantajlı, yararlı
 adventurous = avantüriye
-
 adverb = zarf
-
 adversary = aleyhtar
-
-advert = aldšrmak
-
+advert = aldırmak
 advertise = haber vermek, ilan etmek
-
 advertisement = ilan, reklam
-
-advice = nashihat, öťüt
-
-advise = fikir vermek, öťüt vermek
-
+advice = nashihat, öğüt
+advise = fikir vermek, öğüt vermek
 advocate = avukat, savunucul
-
 Aegean = Ege denizi
-
 Aegean Sea = Ege denizi
-
 aerial = anten, havaî
-
 aeroplane = tayyare, uçak
-
 a few = birkaç
-
 affair = iş, macera, mesele
-
-affecting = acšklš
-
+affecting = acıklı
 affection = aşk
-
-affliction = acš
-
+affliction = acı
 afford = izin vermek, müsaade etmek, ürün vermek
-
 afresh = tekrar, yine, bir daha
-
 Africa = Afrika
-
-African = Afrikalš
-
-after = arkasšndan, sonra
-
-afternoon = öťleden sonra
-
-afterwards = sonra, sonralarš
-
+African = Afrikalı
+after = arkasından, sonra
+afternoon = öğleden sonra
+afterwards = sonra, sonraları
 again = tekrar, yine, bir daha
-
 against = aleyh, aleyhinde, karşe
-
 age = yaş
-
 agency = acente
-
 agenda = gündem
-
-agent = acente, ajan, alet, araç, aygšt, arabulucu
-
+agent = acente, ajan, alet, araç, aygıt, arabulucu
 aggrandizement = agrandisman
-
-aggression = hücum, saldšršş
-
-aggro = saldšrš
-
+aggression = hücum, saldırış
+aggro = saldırı
 agitated = asabi
-
 agree = anlaşmak, muvafakat etmek
-
 agreeable = hoş, uygun
-
 agreement = ahenk, anlaşma, uyuşma
-
 ague = ateş
-
 aid = asistan
-
 aim = hedef
-
 air = hava, arya
-
 aircraft = uçak, uçaklar
-
 airplane = tayyare, uçak
-
-airport = tayyare mayadanš, havalimanš
-
+airport = tayyare mayadanı, havalimanı
 alacrity = şevk
-
 alarm = alarm, çalar saat
-
 alarmclock = çalar saat
-
 Albania = Arnavutluk
-
 Albanian = Arnavut
-
 album = albüm
-
 albumen = albumin
-
 alcohol = alkol
-
 alcoholic = ayyaş
-
 ale = bira
-
 algebra = cebir
-
 Algeria = Cezayir
-
 Algerian = Cezayirli
-
 alike = başabaş
-
-a little = azšcšk, biraz
-
+a little = azıcık, biraz
 all = bütün, âlem, amme
-
 allergy = alerji
-
-alligator = Amerikan timsahš
-
-all of a sudden = aniden, ansšzšn, birden, birdenbire
-
+alligator = Amerikan timsahı
+all of a sudden = aniden, ansızın, birden, birdenbire
 all over again = tekrar, yine, bir daha
-
 allow = izin vermek, müsaade etmek
-
-alloy = alaşšm, halita
-
+alloy = alaşım, halita
 all the same = başabaş
-
-almanac = almanak, takvim, yšllšk
-
+almanac = almanak, takvim, yıllık
 almond = badem
-
 almost = adeta
-
 alms = sadaka
-
-alone = yalnšz, ancak
-
+alone = yalnız, ancak
 a lot of = birçok
-
 alphabet = alfabe
-
 Alps = Alp
-
-already = daha şimdiden, halihazšrda
-
+already = daha şimdiden, halihazırda
 also = da, de, dahi, keza
-
 altitude = irtifa
-
 altogether = bütün
-
 aluminium = alüminyum
-
 aluminum = alüminyum
-
 always = daima, her zaman
-
 amateur = amatör
-
 ambassador = büyük elçi
-
 ambition = ihtiras, tutku
-
-ambitious = hšrslš, muhteris, tutkulu
-
-ambulance = ambülans, hasta arabasš
-
+ambitious = hırslı, muhteris, tutkulu
+ambulance = ambülans, hasta arabası
 amen = amin
-
 America = Amerika
-
-American = Amerikalš, Amerikan
-
-American Indian = Kšzšlderili
-
+American = Amerikalı, Amerikan
+American Indian = Kızılderili
 ammonia = amonyak
-
 ammunition = cephane
-
 amnesty = af
-
-among = arasšnda
-
+among = arasında
 ampère = amper
-
 amputate = bir uzvu kesmek
-
-amuse = eťlendirmek
-
-amusement = eťlence
-
+amuse = eğlendirmek
+amusement = eğlence
 an = bir
-
-anaemia = anemi, kansšzlšk
-
+anaemia = anemi, kansızlık
 analyse = analiz etmek
-
 analysis = analiz
-
 anarchist = anarşist, bozguncu
-
 anarchy = anarşi
-
 Anatolia = Anadolu
-
-anatomy = anatomi, beden yapšsš
-
+anatomy = anatomi, beden yapısı
 anchovy = ançüez
-
 ancient = antika
-
 and = ve
-
-anecdote = fškra, hikâye
-
+anecdote = fıkra, hikâye
 anew = tekrar, yine, bir daha
-
 angel = melek
-
 anger = öfke
-
 angina = anjin
-
-angle = açš
-
+angle = açı
 Angora = Ankara
-
-angry = kšzgšn, öfkeli
-
+angry = kızgın, öfkeli
 animal = hayvan, hayvansal
-
 Ankara = Ankara
-
-ankle = ayak bileťi
-
+ankle = ayak bileği
 announce = haber vermek, ilan etmek
-
-annoyance = acš
-
-annual = yšllšk
-
+annoyance = acı
+annual = yıllık
 annul = feshetmek, iptal etmek
-
 anonymous = anonim, isimsiz
-
-another = başka, bir daha, diťer bir
-
+another = başka, bir daha, diğer bir
 answer = cevap vermek, cevap
-
-ant = karšnca
-
+ant = karınca
 antenna = anten, havaî
-
 anthem = ilahi
-
 antique = antika
-
 anvil = örs
-
 any = biri, birisi, birkaç
-
 anybody = biri, birisi
-
-apart = ayrš
-
+apart = ayrı
 ape = maymun
-
-aperture = açšklšk, aťšz
-
+aperture = açıklık, ağız
 apostrophe = apostrof, virgül
-
 appellation = ad, isim
-
 appetite = arzu, istek, iştah
-
-applaud = alkšşlamak, takdir etmek
-
+applaud = alkışlamak, takdir etmek
 apple = elma
-
 appointment book = gündem
-
-appreciate = beťenmek
-
-approval = alkšş
-
-approve = beťenmek
-
-apricot = kayšsš
-
+appreciate = beğenmek
+approval = alkış
+approve = beğenmek
+apricot = kayısı
 April = nisan
-
 apron = önlük
-
 aquarium = akvaryum
-
 Arab = Arap
-
 Arabia = Arabistan
-
 archaeology = arkeoloji
-
 architect = mimar
-
 archive = arşiv
-
 archives = arşiv
-
-arena = arena, boťa güreşi alanš
-
+arena = arena, boğa güreşi alanı
 Argentina = Arjantin
-
 aria = arya
-
 arithmetic = aritmetik
-
 arm = kol
-
 armchair = koltuk
-
 army = asker, ordu
-
 aroma = güzel koku
-
 arrange = düzenlemek, tertip etmek
-
-arrival = varšş
-
-arrive = varmak, vasšl olmak
-
+arrival = varış
+arrive = varmak, vasıl olmak
 arrogant = kibirli
-
 arrow = ok
-
 art = güzel sanat
-
 artery = atardamar
-
 article of clothing = bez
-
 artist = ressam, sanatkâr
-
-as = nasšl, böyle, böylece, çünkü, yüzünden
-
+as = nasıl, böyle, böylece, çünkü, yüzünden
 ash = kül
-
-ashtray = kül tablasš
-
+ashtray = kül tablası
 Asia = Asya
-
 Asia Minor = Anadolu
-
 as if = sanki
-
 ask = sormak
-
 asphalt = asfalt
-
 aspirin = aspirin
-
 ass = eşek
-
-assault = saldšrmak
-
+assault = saldırmak
 assets = aktif
-
 assistant = asistan
-
 associate = birleşmek
-
-asthma = astšm
-
+asthma = astım
 as though = sanki
-
 astrology = müneccimlik
-
 astronaut = astronot
-
 astronomer = astronom
-
 astronomy = astronomi
-
 at all = baştanbaşa, bütün
-
 atelier = atölye
-
 atheism = dinsizlik
-
 athlete = atlet, sporcu
-
 athletics = atletizm
-
 Atlantic = Atlas Okyanusu
-
 Atlantic Ocean = Atlas Okyanusu
-
 atlas = atlas
-
 at least = bari
-
 atmosphere = atmosfer, hava
-
 atom = atom
-
 at once = aniden
-
 at present = şimdi
-
 attaché = ataşe
-
-attack = saldšrmak, hücum, saldšršş
-
+attack = saldırmak, hücum, saldırış
 attain = almak
-
-attempt = atšlšm
-
-attractive = alšmlš
-
-aubergine = patlšcan
-
-August = aťustos
-
+attempt = atılım
+attractive = alımlı
+aubergine = patlıcan
+August = ağustos
 aunt = hala, teyze
-
 Australia = Avustralya
-
-Australian = Avustralyalš
-
+Australian = Avustralyalı
 Austria = Avusturya
-
-Austrian = Avusturyalš
-
+Austrian = Avusturyalı
 author = yazar
-
 autobus = otobüs
-
 automatic = otomatik
-
 automobile = otomobil
-
 autonomy = özerklik
-
 autumn = sonbahar
-
 await = beklemek
-
 aware = bilinçli
-
 axe = balta
-
 baby = bebek
-
 bachelor = bekâr
-
 back = arka
-
-backward = geriye doťru
-
-backwards = geriye doťru
-
-bacon = domuz pastarmasš
-
+backward = geriye doğru
+backwards = geriye doğru
+bacon = domuz pastarması
 bacterium = bakteri
-
 bad = fena, kötü
-
 badger = porsuk
-
 bag = çanta, torba
-
 baggage = bagaj
-
 bairn = çocuk
-
-bake = fšršnda pişirmek
-
-baker = fšršncš
-
+bake = fırında pişirmek
+baker = fırıncı
 balcony = balkon
-
 ballet = bale
-
 balloon = balon
-
-bamboo = ©ngiliz kamšşš, bambu
-
+bamboo = ©ngiliz kamışı, bambu
 banana = muz
-
-bandage = bať, bandaj, sargš
-
+bandage = bağ, bandaj, sargı
 bandit = eşkiya, haydut
-
 bank = banka
-
 bank clerk = banker
-
 banknote = banknot
-
-bank-note = kâťšt para, banknot
-
+bank-note = kâğıt para, banknot
 bank note = banknot
-
 bank official = banker
-
 banner = bayrak
-
 bar = aksatmak, bar
-
 barbarian = barbar
-
 barbaric = barbar, vahşi
-
 barber = berber
-
 bare = çiplak
-
 barely = ancak, sadece, zar zor
-
 barley = arpa
-
 barometer = barometre
-
 baron = baron
-
-barracks = kšşla, kişla
-
+barracks = kışla, kişla
 barrel = fiçi, varil, boru
-
 barricade = barikat
-
 barrier = engel
-
 barrister = avukat, savunucul
-
 barrister-at-law = avukat, savunucul
-
 base = alçak
-
 basement = bodrum
-
 basket = sepet
-
 basketball = basketbol
-
 bastard = piç
-
 bath = banyo
-
-bathroom = banyo, banyo odasš
-
+bathroom = banyo, banyo odası
 battery = akümülatör, batarya
-
-battle = muharebe, boťuşmak
-
+battle = muharebe, boğuşmak
 bayonet = süngü
-
-bazaar = çarşš
-
+bazaar = çarşı
 be = olmak
-
 beach = kumsal, plaj
-
-be acquainted with = tanšmak
-
+be acquainted with = tanımak
 bead = boncuk
-
 beak = gaga
-
 be alive = yaşamak
-
 bean = fasulye
-
-bear = ürün vermek, azap çekmek, ayš
-
+bear = ürün vermek, azap çekmek, ayı
 beard = sakal
-
 be ashamed = arlanmak
-
 be asleep = uyumak
-
 beast = hayvan, hayvansal
-
 beautiful = güzel
-
 beauty = afet
-
 because = çünkü, yüzünden
-
 become = olmak
-
 bed = yatak
-
-be different = ayšrmak
-
-bedroom = yatak odasš
-
-bee = arš, balaršsš
-
-beef = sšgšr eti
-
+be different = ayırmak
+bedroom = yatak odası
+bee = arı, balarısı
+beef = sıgır eti
 beefsteak = biftek
-
-beehive = arš kovanš
-
+beehive = arı kovanı
 beer = bira
-
 be found = bulunmak
-
 beg = dilenmek
-
 beggar = dilenci
-
 begin = başlamak
-
 beginner = acemi
-
-behind = arkasšndan, sonra, arkasšnda
-
-be hungry = acškmak
-
-be in the habit of = alšşmak
-
-Belgian = Belçikalš
-
+behind = arkasından, sonra, arkasında
+be hungry = acıkmak
+be in the habit of = alışmak
+Belgian = Belçikalı
 Belgium = Belçika
-
 belief = inanç
-
 believe = inanmak
-
-bellow = <anšrmak>
-
-belly = göbek, karšn
-
+bellow = <anırmak>
+belly = göbek, karın
 be located = bulunmak
-
-belt = bölge, mšntška, kayšş, kemer
-
-bench = sšra, tezgâh, bank
-
+belt = bölge, mıntıka, kayış, kemer
+bench = sıra, tezgâh, bank
 bend over = abanmak
-
 benefit = avantaj, yarar
-
-be painful = acšmak, aťršmak
-
-be similar = andšrmak, benzemek
-
-be sorry about = acškmak
-
+be painful = acımak, ağrımak
+be similar = andırmak, benzemek
+be sorry about = acıkmak
 better = daha iyi
-
-between = arasšnda
-
+between = arasında
 beverage = içilen şey
-
 beyond = çaprazvari
-
 bibliography = bibliyografi
-
 bicycle = bisiklet
-
 big = büyük
-
 bike = bisiklet
-
 bill = gaga, bilet
-
 billiards = bilardo
-
-bind = baťlamak
-
+bind = bağlamak
 binding = bant
-
 bird = kuş
-
-birth = doťum
-
-birthday = doťum günü
-
+birth = doğum
+birthday = doğum günü
 biscuit = bisküvi
-
 bishop = piskopos
-
-bitter = acš, keskin, şiddetli
-
-bitterness = acšlšk, sertlik
-
+bitter = acı, keskin, şiddetli
+bitterness = acılık, sertlik
 black = kara, siyah
-
-blackberry = böťürtlen
-
-blackberry bush = böťürtlen
-
-bladder = sidik torbasš
-
-blade = aťšz
-
+blackberry = böğürtlen
+blackberry bush = böğürtlen
+bladder = sidik torbası
+blade = ağız
 blame = azarlamak
-
-blanch = aťartmak, aklamak
-
+blanch = ağartmak, aklamak
 blank = beyaz
-
 blanket = battaniye
-
-bleak = aynasšz, soťuk
-
-bleat = <anšrmak>
-
+bleak = aynasız, soğuk
+bleat = <anırmak>
 blind = âmâ
-
 block = abluka etmek, blok
-
 blockade = abluka, abluka etmek
-
-blond = saršşšn
-
+blond = sarışın
 blood = kan
-
-blotter = kurutma kâťštš, murakkap silgisi
-
-blotting paper = kurutma kâťštš, murakkap silgisi
-
+blotter = kurutma kâğıtı, murakkap silgisi
+blotting paper = kurutma kâğıtı, murakkap silgisi
 blouse = bluz, bulüz
-
 blue = mavi
-
 blueberry = yaban mersine
-
 blunt = yassi
-
 blushing = al
-
 boar = erkek domuz
-
-boat = gemi, kayšk, sandal
-
+boat = gemi, kayık, sandal
 bodily = bedeni
-
 body = bedeni, beden, gövde, vücut
-
 body- = bedeni
-
 bomb = bombalamak, bomba
-
 bone = kemik
-
 book = kitap
-
 bookcase = kitap dolabi
-
 book-keeper = defter tutan
-
-bookshop = kitapçš dükkanš
-
-bookstore = kitapçš dükkanš
-
-Bosporus = Boťaziçi, Karadeniz boťazi
-
+bookshop = kitapçı dükkanı
+bookstore = kitapçı dükkanı
+Bosporus = Boğaziçi, Karadeniz boğazi
 boss = amir, patron, baş
-
 botany = botanik
-
-botch = azdšrmak
-
+botch = azdırmak
 bother = aksatmak
-
 bottle = şişe
-
-bottom = dip, kšç, asšl, alt
-
+bottom = dip, kıç, asıl, alt
 boulevard = bulvar
-
 bouquet = buket
-
 boutique = dükkân
-
 box = kutu
-
 boxer = boksör
-
-boy = çoçuk, oťlan
-
+boy = çoçuk, oğlan
 bra = sütyen
-
 bracelet = bilezik
-
-brain = akšl, beyin, dimať
-
+brain = akıl, beyin, dimağ
 brake = fren
-
-bramble = böťürtlen
-
+bramble = böğürtlen
 brandy = kanyak
-
-bray = anšrmak
-
+bray = anırmak
 Brazil = Brezilya
-
-Brazilian = Brezilyalš
-
+Brazilian = Brezilyalı
 bread = ekmek
-
-breakfast = sabah kahvaltšsš
-
+breakfast = sabah kahvaltısı
 breath = nefes, nefes alma
-
 breathe = nefes almak, solumak
-
-brick = tuťla
-
+brick = tuğla
 bridge = köprü
-
 brief = bodur, bücür
-
 brigade = tugay
-
-bright = açšk
-
+bright = açık
 bring = getirmek
-
-brinjal = patlšcan
-
+brinjal = patlıcan
 Britain = Britanya
-
 British = ©ngiliz
-
 broad = bol
-
-broken = aršzalš, bozuk
-
+broken = arızalı, bozuk
 bronze = tunç
-
 brooch = broş
-
 broom = süpürge
-
 brothel = genelev
-
 brother = birader
-
 brother-in-law = bacanak
-
 brown = kahverengi
-
 bruise = bere, berelemek
-
-bubble = sidik torbasš
-
+bubble = sidik torbası
 bucket = kova, bakraç
-
 budget = bütçe
-
 buffalo = manda
-
 buffet = büfe
-
 bug = böcek
-
 building = bina
-
 bulb = ampul
-
 Bulgaria = Bulgaristan
-
-bull = boťa
-
+bull = boğa
 bullet = mermi
-
 bulletin = bülten
-
-bungle = azdšrmak
-
+bungle = azdırmak
 bureau = büro
-
 bus = otobüs
-
-business = iş, macera, mesele, alšşveriş
-
+business = iş, macera, mesele, alışveriş
 business deal = iş, macera, mesele
-
 but = ancak, fakat
-
 butcher = kasap
-
-butter = tereyaťš
-
+butter = tereyağı
 butterfly = kelebek
-
-buy = almak, satšn almak
-
-buyer = alan, alšcš
-
-bye = allahašsmarladšk, gülegüle
-
-by now = daha şimdiden, halihazšrda
-
+buy = almak, satın almak
+buyer = alan, alıcı
+bye = allahaısmarladık, gülegüle
+by now = daha şimdiden, halihazırda
 cabbage = lahana
-
 cabin = kulübe
-
 cadger = anaforcu, asalak
-
 cage = kafes
-
 calendar = takvim
-
-calf = dana, baldšr
-
+calf = dana, baldır
 calm = asude
-
 calorie = kalori
-
 camel = deve
-
-camera = fotoťraf makinasš
-
+camera = fotoğraf makinası
 Canada = Kanada
-
-Canadian = Kanadalš
-
+Canadian = Kanadalı
 canal = kanal
-
 canary = kanarya
-
 cancel = feshetmek, iptal etmek
-
 candidate = aday
-
 cannibal = yamyam
-
 cannon = top
-
 capable = muktedir
-
 capital = başkent
-
 capital city = başkent
-
 capitulate = teslim olmak
-
 captain = kaptan
-
 car = otomobil
-
 card = kart
-
-care = bakšm
-
+care = bakım
 carpenter = dülger, marangoz
-
 carrot = havuç
-
-carry = nakletmek, taşšmak
-
+carry = nakletmek, taşımak
 case = iş, macera, mesele
-
 castle = burç
-
-cat = kedš
-
+cat = kedı
 catalogue = katalog
-
 catastrophe = afet
-
-catching = bulaşšcš
-
-category = kategori, sšnšf
-
-caterpillar = tšrtšl
-
+catching = bulaşıcı
+category = kategori, sınıf
+caterpillar = tırtıl
 cathedral = büyük kilise
-
 cauliflower = karnabahar
-
 cavalier = şövalye
-
 caviar = havyar
-
 cede = teslim etmek
-
 ceiling = tavan
-
 celebrate = anmak, kutlamak
-
 celery = kereviz
-
 cellar = bodrum
-
 cement = çimento
-
-cemetery = mezarlšk
-
-centennial = asšr, yüzyšl
-
+cemetery = mezarlık
+centennial = asır, yüzyıl
 centimetre = santimetre
-
 centre = merkez
-
-century = asšr, yüzyšl
-
+century = asır, yüzyıl
 ceremony = tören
-
 certain = belirli
-
 chain = zincir
-
 chair = sandalye
-
 chairman = başkan
-
 change = başkalaşmak
-
 channel = kanal, boru
-
-chaos = kaos, karmakaršşšk hal
-
-chapter = bölüm, kšsšm
-
+chaos = kaos, karmakarışık hal
+chapter = bölüm, kısım
 character = alamet
-
 charity = sadaka
-
 chase = avlamak
-
-chatterbox = aťustosböceťi
-
+chatterbox = ağustosböceği
 chauffeur = şoför
-
 cheat = aldatmak
-
 check = çek
-
 cheese = peynir
-
 chemistry = kimya
-
 cheque = çek
-
 cherry = kiraz
-
 chestnut = kestane
-
-chew = çiťnemek
-
+chew = çiğnemek
 chicken = tavuk
-
-chief = amir, patron, baş, ana, başlšca
-
+chief = amir, patron, baş, ana, başlıca
 child = çocuk
-
-chilly = soťuk
-
+chilly = soğuk
 chimney = baca
-
 chin = çene
-
 China = Çin
-
 chocolate = çikolata
-
-choke = boťazlamak, boťmak
-
+choke = boğazlamak, boğmak
 cholera = kolera
-
 choose = seçmek
-
 chord = akord
-
 Christ = ©sa
-
-Christian = Hšristiyan
-
+Christian = Hıristiyan
 Christmas = Noel
-
 chromium = krom
-
 cigar = puro, sigar
-
 cigarette = sigara
-
 cinder = kül
-
 cinema = sinema
-
 circle = daire
-
 circus = sirk
-
 city = kent, şehir, belde
-
-clap = alkšşlamak, takdir etmek
-
-clarify = açšklamak, anlatmak
-
+clap = alkışlamak, takdir etmek
+clarify = açıklamak, anlatmak
 claw = pençe
-
 clay = kil
-
-clean = arš, halis, saf, temiz, ayšklamak
-
-cleanse = ayšklamak
-
-clear = açšk, anlaşšlšr, aşikâr, belirgin, berrak
-
-clearly = açšk, açškça
-
+clean = arı, halis, saf, temiz, ayıklamak
+cleanse = ayıklamak
+clear = açık, anlaşılır, aşikâr, belirgin, berrak
+clearly = açık, açıkça
 clerk = kâtip
-
-clever = açškgöz, akšlš, zeki
-
-client = alan, alšcš, müşteri, müvekkil
-
+clever = açıkgöz, akılı, zeki
+client = alan, alıcı, müşteri, müvekkil
 climate = iklim
-
-climb = tšrmanmak
-
+climb = tırmanmak
 clinic = klinik
-
 cloakroom = vestiyer
-
 clock = saat
-
 close = kapamak
-
 cloth = bez, kumaş
-
 clothes = elbise
-
 clothing = elbise
-
 cloud = bulut
-
 clover = yonca
-
 clown = palyaço
-
 club = kulüp
-
-coast = kšyš, sahil
-
-cobra = kobra yšlanš
-
+coast = kıyı, sahil
+cobra = kobra yılanı
 cocaine = kokain
-
 cock = horoz
-
 coffee = kahve
-
 cognac = kanyak
-
 coin = akçe
-
-cold = soťuk
-
+cold = soğuk
 colleague = meslekdaş
-
 collect = biriktirmek, toplamak
-
 collection = koleksiyon
-
 college = yüksek okul
-
 colonel = albay
-
 colour = renk
-
 comb = taramak, tarak
-
 combination = bileşik
-
 come = gelmek
-
 come about = olmak
-
 come across = buluşmak
-
 comedy = komedi
-
-comet = kuyruklu yšldšz
-
+comet = kuyruklu yıldız
 come to a halt = durmak
-
 come to an end = bitmek
-
 comfort = avunmak, avutmak
-
 comma = virgül
-
 commander = amir
-
 commence = başlamak
-
-commerce = alšşveriş
-
+commerce = alışveriş
 committee = heyet, komite
-
 common = adi, alelade
-
 communication = bildiri
-
 communism = komünizm
-
 community = belediye
-
 companian = arkadaş
-
 compass = pusula
-
 complain = şikayet etmek
-
 complaint = şikâyet
-
 complete = bütünlemek
-
-completely = adamakšllš
-
-complex = arapsaçš
-
+completely = adamakıllı
+complex = arapsaçı
 complexion = beniz
-
-complicated = arapsaçš
-
+complicated = arapsaçı
 computer = bilgisayar
-
-concern = bakšm
-
+concern = bakım
 concerned = alakadar
-
 concerning = ait
-
 concord = ahenk, anlaşma
-
 concrete = beton
-
 concurrence = ahenk, anlaşma, uyuşma
-
 conflict = mücadele
-
 congress = kongre
-
-conjunction = baťlaç
-
-connect = baťlamak
-
-connection = alaka, bať, baťlantš
-
+conjunction = bağlaç
+connect = bağlamak
+connection = alaka, bağ, bağlantı
 conscious = bilinçli
-
 consent = muvafakat etmek
-
 consider = bakmak
-
 consignee = alan
-
 console = avunmak, avutmak
-
 constitution = anayasa
-
-contagious = bulaşšcš
-
+contagious = bulaşıcı
 convention = kongre
-
-cook = aşçš
-
+cook = aşçı
 cookie = bisküvi
-
 copious = bol
-
-copper = bakšr
-
+copper = bakır
 corkscrew = burgu
-
-corn = darš, mšsšr
-
-corner = açš
-
+corn = darı, mısır
+corner = açı
 corporal = bedeni
-
 corporeal = bedeni
-
-counsel = avukat, savunucul, fikir vermek, öťüt vermek, nashihat, öťüt
-
+counsel = avukat, savunucul, fikir vermek, öğüt vermek, nashihat, öğüt
 count = saymak
-
 country = belde
-
 court = alan, avlu
-
 courtyard = alan, avlu
-
 cousin = amcazade
-
 cow = inek
-
-crisis = kriz, buhran, bunalšm
-
+crisis = kriz, buhran, bunalım
 crocodile = timsah
-
-cross = kšzgšn, öfkeli
-
-cry = feryat, aťlamak
-
-cry out = baťšrmak
-
+cross = kızgın, öfkeli
+cry = feryat, ağlamak
+cry out = bağırmak
 crystal = kristal, billur
-
-cucumber = hšyar, salatalšk
-
+cucumber = hıyar, salatalık
 culture = kültür
-
 cultured = alim
-
-cunning = açškgöz, akšlš, zeki
-
+cunning = açıkgöz, akılı, zeki
 curse = beddua
-
-curtail = kšsaltmak
-
+curtail = kısaltmak
 curtain = perde
-
 custom = âdet
-
-customary = alelade, alšşšk, bayaťš
-
-customer = alšcš, müşteri, müvekkil
-
+customary = alelade, alışık, bayağı
+customer = alıcı, müşteri, müvekkil
 cut = kesmek
-
 cycle = bisiklet
-
-cyclone = kasšrga
-
+cyclone = kasırga
 cylinder = silindir
-
 cymbal = büyük zil
-
 cypres = selvi
-
-Cypriot = Kšbršslš
-
-Cyprus = Kšbršs
-
+Cypriot = Kıbrıslı
+Cyprus = Kıbrıs
 Czech = Çek
-
 Czechoslovakia = Çekoslovakya
-
 dabbler = amatör
-
-dad = baba, babacšťšm
-
-daddy = baba, babacšťšm
-
+dad = baba, babacığım
+daddy = baba, babacığım
 daisy = papatya
-
-damage = aršza
-
+damage = arıza
 dance = dans etmek, dans
-
-Dane = Danimarkalš
-
+Dane = Danimarkalı
 danger = tehlike
-
-dangerous = tehlikeli, azšlš
-
-Dardanelles = Çanakkale boťazi
-
-daughter = kšz, kšz evlat
-
+dangerous = tehlikeli, azılı
+Dardanelles = Çanakkale boğazi
+daughter = kız, kız evlat
 day = gün, gündüz
-
-daylight = aydšnlšk
-
+daylight = aydınlık
 dead = ölü, ölmüş
-
-deaf = saťšr
-
-deceitful = aldatšcš
-
+deaf = sağır
+deceitful = aldatıcı
 deceive = aldatmak
-
-December = aralšk
-
-deceptive = aldatšcš
-
+December = aralık
+deceptive = aldatıcı
 declaration of policy = program
-
 deem = inanmak, bakmak
-
 defeat = altetmek
-
-deficit = açšk
-
+deficit = açık
 defining = berlirli
-
 degree = aşama
-
-delusive = aldatšcš
-
+delusive = aldatıcı
 Denmark = Danimarka
-
-depart = bšrakmak
-
-dependent = baťšmlš
-
-depression = kriz, buhran, bunalšm
-
+depart = bırakmak
+dependent = bağımlı
+depression = kriz, buhran, bunalım
 descend = alçalmak
-
 desire = arzu etmek, arzulamak, arzu
-
-destiny = alšnyazšsš
-
+destiny = alınyazısı
 destroy = bozmak
-
 determining = berlirli
-
 dialect = lehçe
-
 dialogue = diyalog, konuşma
-
 diarrhoea = amel
-
 dictator = diktatör
-
 die = ölmek
-
 diet = perhiz, rejim
-
-differ = ayšrmak
-
+differ = ayırmak
 difference = fark
-
 dilemma = açmaz
-
 dilettante = amatör
-
-diligent = çalšşkan
-
+diligent = çalışkan
 dimension = boyut, buut
-
 din = gürültü
-
 diploma = diploma
-
 diplomat = diplomat
-
 directory = katalog
-
 dirty = kirli
-
-disagreement = anlaşmazlšk
-
-disappointment = acš
-
-discord = anlaşmazlšk
-
-dismal = aynasšz, acšklš
-
+disagreement = anlaşmazlık
+disappointment = acı
+discord = anlaşmazlık
+dismal = aynasız, acıklı
 dispose of = satmak
-
-dissension = anlaşmazlšk
-
+dissension = anlaşmazlık
 distant = uzak
-
-distinct = açšk, anlaşšlšr, aşikâr, belirgin, berrak
-
+distinct = açık, anlaşılır, aşikâr, belirgin, berrak
 district = bölge
-
 disturb = aksatmak
-
-divide = ayšrmak, bölmek
-
+divide = ayırmak, bölmek
 do = etmek, yapmak
-
-do away with = ayršlmak
-
+do away with = ayrılmak
 document = belge
-
 dog = köpek
-
 dog-kennel = köpek kulübesi
-
 doll = bebek
-
 dollar = dolar
-
-dolphin = yunus baliťš
-
-donate = baťšşlamak
-
+dolphin = yunus baliğı
+donate = bağışlamak
 donkey = eşek
-
 drag = çekmek
-
 draw = çekmek
-
-dreary = aynasšz, acšklš
-
+dreary = aynasız, acıklı
 drink = içilen şey, içmek
-
 driver = şoför
-
-droop = asšlmak
-
+droop = asılmak
 drop = düşmek
-
-drown = boťmak
-
+drown = boğmak
 drunk = ayyaş
-
 duchess = düşes
-
 duck = ördek
-
 duke = dük, duka
-
 dung = bok
-
 duplicate = artmak
-
-dusk = alacakaranlšk
-
-Dutch = Hollandalš
-
-Dutchman = Hollandalš
-
+dusk = alacakaranlık
+Dutch = Hollandalı
+Dutchman = Hollandalı
 dye = boya, renk
-
 dynamite = dinamit
-
 each other = birbiri
-
 eagle = kartal
-
 ear = kulak
-
-earnest = aťšrbaşlš
-
+earnest = ağırbaşlı
 earring = küe
-
 earth = toprak, yeryüzü, arz
-
-east = doťu
-
+east = doğu
 Easter = Paskalya
-
-eastern = doťuya ait
-
+eastern = doğuya ait
 eat = yemek
-
 echo = aksetmek
-
 educated = alim
-
-effort = atšlšm
-
+effort = atılım
 egg = yumurta
-
-eggfruit = patlšcan
-
-eggplant = patlšcan
-
-Egypt = Mšsšr
-
-Egyptian = Mšsšrlš
-
+eggfruit = patlıcan
+eggplant = patlıcan
+Egypt = Mısır
+Egyptian = Mısırlı
 eight = sekiz
-
 elbow = dirsek
-
-elder brother = aťabey
-
-elder sister = abla, bacš
-
+elder brother = ağabey
+elder sister = abla, bacı
 elect = seçmek
-
 electric = elektriki
-
 electricity = elektrik
-
 elegant = zarif
-
-element = adet, altyapš
-
+element = adet, altyapı
 elements = alfabe
-
 elephant = fil
-
 elevator = asansör
-
-eleven = on bšr
-
-elm = karaaťaç
-
-else = başka, bir daha, diťer bir
-
-emergency = kriz, buhran, bunalšm
-
+eleven = on bır
+elm = karaağaç
+else = başka, bir daha, diğer bir
+emergency = kriz, buhran, bunalım
 eminent = âlâ
-
-emmet = karšnca
-
+emmet = karınca
 emperor = imparator
-
 empire = imparatorluk
-
 employ = kullanmak
-
 empress = imparatoriçe
-
 emptiness = boşluk
-
 empty = boş, boşalmak, boşaltmak
-
 enchanter = sihirbaz
-
 encounter = buluşmak
-
 encyclopaedia = ansiklopedi
-
 end = bitirmek, bitmek
-
-end up = varmak, vasšl olmak, bitmek
-
+end up = varmak, vasıl olmak, bitmek
 endure = azap çekmek
-
 energy = güç, kuvvet
-
 engine = makine, motor
-
 engineer = mühendis
-
 England = ©ngiltere
-
 English = ©ngiliz, ©ngilizce
-
 Englishman = ©ngiliz
-
 enigma = bilmece, bulmaca
-
 enjoyable = hoş, uygun
-
 enlargement = agrandisman
-
 enter = girmek
-
 enterprise = angajman
-
 enthusiasm = şevk
-
 entire = bütün
-
-entirely = adamakšllš, baştanbaşa, bütün
-
+entirely = adamakıllı, baştanbaşa, bütün
 equal = başabaş
-
 equally = başabaş
-
 err = aldanmak
-
 essential = asil
-
 Ethiopia = Habeşistan
-
 Europa = Avrupa
-
 Europe = Avrupa
-
-European = Avrupalš
-
+European = Avrupalı
 even = başabaş
-
 evening = akşam
-
-evening meal = akşam yemeťi
-
+evening meal = akşam yemeği
 ever = daima, her zaman
-
 everyday = adi
-
 everything = bütün
-
 evident = aşikâr, belirgin, belli
-
 ex- = eski
-
 exactness = ayar
-
 exaggerate = abartmak
-
-examine = araştšrmak
-
+examine = araştırmak
 excite = alevlendirmek
-
-excite pity = acšndšrmak
-
+excite pity = acındırmak
 exclusively = ancak
-
 excrement = bok
-
 excuse = affetmek
-
 excuse me = affedersiniz
-
 exhausted = bitap
-
-exit = çškmak
-
+exit = çıkmak
 expect = beklemek
-
 expert = bilirkişi
-
 expire = bitmek, ölmek
-
-explain = açšklamak, anlatmak
-
-explanation = açšklama
-
-exploration = araştšrma
-
-explore = araştšrmak
-
-extreme = aşšrš
-
-fade = aťarmak
-
+explain = açıklamak, anlatmak
+explanation = açıklama
+exploration = araştırma
+explore = araştırmak
+extreme = aşırı
+fade = ağarmak
 faint = aciz
-
-fair = çarşš, saršşšn
-
+fair = çarşı, sarışın
 fall = düşmek
-
-fallacious = aldatšcš
-
-false = asšlsšz
-
+fallacious = aldatıcı
+false = asılsız
 fame = debdebe, ihtişam, şan
-
 family = aile
-
-fanatical = baťnaz
-
+fanatical = bağnaz
 fancier = amatör
-
 far = uzak
-
-farewell = allahašsmarladšk, gülegüle
-
+farewell = allahaısmarladık, gülegüle
 fast = acele
-
-fate = alšnyazšsš
-
+fate = alınyazısı
 father = baba, ata
-
 fatherland = anavatan, anayurt
-
 February = şubat
-
 feed = yemek
-
 fellow = adam, erkek
-
 fertile = bereketli, bitek
-
 fervor = büyük istek, gayret, şevk
-
 fervour = büyük istek, gayret, şevk
-
 fetch = getirmek
-
 fever = ateş
-
-field hospital = ambülans, hasta arabasš
-
+field hospital = ambülans, hasta arabası
 fifth = beşinci
-
 files = arşiv
-
 filthy = kirli
-
-find = algšlamak, bulmak
-
+find = algılamak, bulmak
 find oneself = bulunmak
-
 fine = güzel, âlâ
-
 finish = bitirmek
-
 finished = alesta
-
 Finland = Finlandiya
-
 fir = köknar
-
 fire = ateş
-
 first = birinci
-
 first night = başbakan
-
 first run = başbakan
-
-fish = balšk
-
-fisherman = balškçš
-
-fit together = baťdaşma
-
+fish = balık
+fisherman = balıkçı
+fit together = bağdaşma
 five = beş
-
 fix up = düzenlemek, tertip etmek
-
 flag = bayrak, ayar
-
 flame = alev
-
 flavour = güzel koku
-
 flea = pire
-
 float = yüzmek
-
 flow = akmak
-
-fluent = akšcš
-
+fluent = akıcı
 fly = uçmak
-
 folk = ahali
-
-following = ardšsšra
-
-food = azšk, besin
-
+following = ardısıra
+food = azık, besin
 fool = ahmak, avanak
-
-foolish = ahmak, akšlsšz
-
+foolish = ahmak, akılsız
 foot = ayak
-
 football = ayaktopu
-
 for = çünkü, yüzünden
-
 force = kuvvet
-
 forefather = ata
-
-forehead = alšn
-
+forehead = alın
 foreign country = ecnebi memlekette
-
 forget = unutmak
-
-forgive = affetmek, baťšşlamak
-
+forgive = affetmek, bağışlamak
 form = biçim
-
 former = eski
-
 formula = formül
-
 fortunate = bahtiyar
-
-fortune = alšnyazšsš
-
-foundation = altyapš, dip, kšç, asšl
-
-fountain = çeşme, fšskiye
-
+fortune = alınyazısı
+foundation = altyapı, dip, kıç, asıl
+fountain = çeşme, fıskiye
 four = dört
-
 fowl = tavuk
-
 fox = tilki
-
 fragment = adet
-
 France = Fransa
-
-frankly = açškça, alenen
-
-free = açšk, azade, boş, bedava, beleş
-
+frankly = açıkça, alenen
+free = açık, azade, boş, bedava, beleş
 freezing cold = ayaz
-
-French = Fransšz
-
+French = Fransız
 Friday = cuma
-
 friend = ahbap, arkadaş
-
-friendship = ahbaplšk
-
+friendship = ahbaplık
 frost = ayaz
-
 fruitful = bereketli
-
 full of zeal = gayretli
-
-fully = adamakšllš
-
-fun = eťlence
-
+fully = adamakıllı
+fun = eğlence
 fundamental = asil
-
-furious = azgšn
-
+furious = azgın
 futile = abes
-
 gag = alay, azizlik
-
 gape = esnemek
-
 garden = bahçe
-
-gardener = bahçšvan
-
+gardener = bahçıvan
 garment = bez
-
 gasolene = benzin
-
 gasoline = benzin
-
-gate = kapš
-
-gateway = kapš
-
+gate = kapı
+gateway = kapı
 gather = biriktirmek, toplamak
-
-gaunt = köşeli, acšklš
-
+gaunt = köşeli, acıklı
 gawk = esnemek
-
 gazelle = ceylan
-
 generous = alicenap
-
-gentle = hoş, tatlš, aheste
-
+gentle = hoş, tatlı, aheste
 gentleman = bay, bey, beyefendi
-
-geography = coťrafya
-
+geography = coğrafya
 geology = jeoloji
-
 geometry = geometri
-
 germ = bakteri
-
 German = Alman
-
 Germany = Almanya
-
-get = almak, varmak, vasšl olmak, olmak
-
+get = almak, varmak, vasıl olmak, olmak
 get off = alçalmak
-
-get rid of = ayršlmak
-
-get used = alšşmak
-
-ghastly = aynasšz
-
+get rid of = ayrılmak
+get used = alışmak
+ghastly = aynasız
 ghost = hortlak
-
 giant = dev
-
-gift = armaťan, baťšş
-
+gift = armağan, bağış
 giraffe = zürafa
-
-girdle = kayšş, kemer
-
-girl = kšz
-
-give = baťšşlamak, vermek, bahşetmek
-
+girdle = kayış, kemer
+girl = kız
+give = bağışlamak, vermek, bahşetmek
 give in = teslim etmek
-
 give notice = haber vermek, ilan etmek
-
 give up = teslim etmek, çökmek
-
 give way = teslim etmek
-
 gladness = lezzet
-
 glass = bardak
-
 glory = debdebe, ihtişam, şan
-
 glove = eldiven
-
 go = gitmek
-
 goal = hedef
-
 goat = keçi
-
-go away = bšrakmak
-
-god = tanrš
-
+go away = bırakmak
+god = tanrı
 go down = alçalmak
-
-God's acre = mezarlšk
-
+God's acre = mezarlık
 go in = girmek
-
-gold = altšn
-
-golden = altšn
-
+gold = altın
+golden = altın
 good = iyi
-
-goodbye = allahašsmarladšk, gülegüle
-
+goodbye = allahaısmarladık, gülegüle
 good-for-nothing = avare
-
-goodness = hayšr, iyilik
-
+goodness = hayır, iyilik
 goose = kaz
-
-go out = çškmak
-
+go out = çıkmak
 government = hükümet, yönetim
-
 grade = aşama
-
 gradually = azar azar
-
 gram = gram
-
 grammar = dilbilgisi
-
 gramme = gram
-
 grandchild = torun
-
-granddaughter = kšz torun
-
+granddaughter = kız torun
 grandfather = büyükbaba
-
 grandmother = <anneanne>, <babaanne>, büyükanne
-
 grandson = erkek torun
-
 granite = granit
-
 grape = üzüm
-
 grass = çimen, ot
-
 grasshopper = çekirge
-
-gratitude = minnettarlšk, şükran
-
-graveyard = mezarlšk
-
-gravity = aťšrlšk
-
+gratitude = minnettarlık, şükran
+graveyard = mezarlık
+gravity = ağırlık
 great = âlâ, büyük
-
 Great Britain = Britanya
-
 Greece = Yunanistan
-
-Greek = Yunanlš, Rumca
-
+Greek = Yunanlı, Rumca
 green = yeşil
-
 grey = gri, boz
-
-grief = acš
-
-gripped = alakadar, alakalš
-
-grisly = aynasšz
-
-ground = dip, kšç, asšl
-
+grief = acı
+gripped = alakadar, alakalı
+grisly = aynasız
+ground = dip, kıç, asıl
 group = grup
-
 grow = olmak, yetişkin
-
 guard = bekçi, biletçi
-
 guess = sanmak
-
 guest = misafir
-
 guilty = suçlu
-
 guitar = gitar
-
 gun = top, tüfek, silah
-
-gypsum = alçš
-
+gypsum = alçı
 gypsy = çingene
-
 habit = âdet
-
 haemorhoids = basur
-
 hairdresser = berber
-
 half = buçuk
-
 halt = durmak
-
 hammock = branda
-
 hand = amele, el
-
 handsome = güzel
-
-hang = asšlmak, asmak
-
+hang = asılmak, asmak
 hang onto = tutmak
-
 happen = olmak
-
 happiness = baht
-
 happy = bahtiyar
-
 hardly = ancak, sadece, zar zor
-
-hardworking = çalšşkan
-
+hardworking = çalışkan
 hare = tavşan
-
 harmonica = armonika
-
 harmonious = ahenkli
-
-harmonize = baťdaşma
-
+harmonize = bağdaşma
 harmony = ahenk
-
 haste = acele
-
 hastily = alelacele
-
 hat = şapka
-
 haul = çekmek
-
 have = almak
-
-have compassion on = acšmak
-
+have compassion on = acımak
 hawk = atmaca
-
 hay = saman
-
 he = o
-
 head = baş
-
-headache = başaťršsš
-
-health = saťlšk, sšhhat
-
-healthy = sšhhatlš
-
+headache = başağrısı
+health = sağlık, sıhhat
+healthy = sıhhatlı
 hear = duymak, işitmek
-
 heart = kalp, yürek
-
-heat = sšcaklšk
-
+heat = sıcaklık
 heel = ökçe, topuk
-
 height = yükseklik, irtifa
-
-Hellespont = Çanakkale boťazi
-
+Hellespont = Çanakkale boğazi
 hello = alo, merhaba
-
 helper = asistan
-
 helpless = aciz
-
 her = o
-
 herb = çimen, ot
-
 here = burada, buraya
-
 hereafter = ahret
-
 hero = kahraman
-
-heroin = eroin, kadšn kahraman
-
-heroine = kadšn kahraman, eroin
-
-herring = ringa balšťš
-
-hexagon = atšgen
-
+heroin = eroin, kadın kahraman
+heroine = kadın kahraman, eroin
+herring = ringa balığı
+hexagon = atıgen
 high = ali, yüksek
-
 hill = tepe
-
 him = o
-
 hinder = aksatmak
-
-hoarse = boťuk
-
+hoarse = boğuk
 hog = domuz
-
 hold = ambar, tutmak
-
 holiday = bayram
-
 Holland = Hollanda
-
-Hollander = Hollandalš
-
+Hollander = Hollandalı
 holy = kutsal
-
 honey = bal
-
 honor = hürmet göstermek, namus, şeref
-
 honour = hürmet göstermek, namus, şeref
-
 hooker = orospu
-
 hooter = boynuz
-
 hope = ummak, umut
-
 horizon = ufuk
-
 horn = boynuz
-
-horoscope = burç, falš, yšldšz
-
-horrible = aynasšz
-
+horoscope = burç, falı, yıldız
+horrible = aynasız
 horse = at, beygir
-
 horse-chestnut = kestane
-
 horsepower = beygirgücü
-
-hot = kšzgšn, sšcak
-
+hot = kızgın, sıcak
 hotel = otel
-
 hour = saat
-
 house = ev, mesken
-
-housewife = ev kadšnš
-
-how = nasšl
-
+housewife = ev kadını
+how = nasıl
 however = ancak
-
 human = beşeri
-
 human being = insan
-
 human race = beşer
-
 humble = alçakgönüllü
-
 hundred = yüz
-
 Hungary = Macaristan
-
-hunger = açlšk
-
+hunger = açlık
 hungry = aç
-
 hunt = avlamak
-
-hunter = avcš
-
+hunter = avcı
 hurried = acele
-
 hurriedly = alelacele
-
-hurt = acšmak, aťršmak
-
+hurt = acımak, ağrımak
 husband = koca
-
 hut = kulübe
-
 hymn = ilahi
-
 ice = dondurma, buz
-
 icecream = dondurma
-
 Iceland = ©zlanda
-
 idea = fikir
-
 idealist = idealist, ülkücü
-
-identical = aynš
-
+identical = aynı
 ideology = ideoloji
-
-idiot = allahlšk
-
-if = eťer, ise
-
+idiot = allahlık
+if = eğer, ise
 immediately = aniden
-
-immune = baťšşšk
-
-important = aťšr, aťšrbaşlš
-
-in addition = ayršca
-
+immune = bağışık
+important = ağır, ağırbaşlı
+in addition = ayrıca
 in a hurry = alelacele
-
 in a way = sanki
-
 incendiary bomb = yakici bomba
-
 incite = alevlendirmek
-
 income = aidat
-
 increase = agrandisman
-
 incus = örs
-
-independant = baťšmsšz
-
+independant = bağımsız
 India = Hindistan
-
-Indian = Hintli, Kšzšlderili
-
-Indian corn = darš, mšsšr
-
+Indian = Hintli, Kızılderili
+Indian corn = darı, mısır
 indifference = balgam
-
-industrious = çalšşkan
-
+industrious = çalışkan
 in exchange for = aleyh, aleyhinde, karşe
-
 inexperienced = acemi
-
 infant = çocuk
-
-infectious = bulaşšcš
-
+infectious = bulaşıcı
 inform = bildirmek
-
 inhibit = aksatmak
-
 in my opinion = bence
-
 in my view = bence
-
 in question = alakadar
-
 insatiable = açgözlü
-
 insect = böcek
-
 instant = an
-
-instrument = alet, aygšt
-
-insult = acštmak
-
-insulting = aťšr
-
-intelligence = akšl
-
+instrument = alet, aygıt
+insult = acıtmak
+insulting = ağır
+intelligence = akıl
 intend = amaçlamak
-
 intention = amaç
-
 intercessor = avukat, savunucul
-
-interest = alakalandšrmak, alaka
-
-interested = alakadar, alakalš
-
+interest = alakalandırmak, alaka
+interested = alakadar, alakalı
 international = beynelmilel
-
-interval = aralšk
-
-intestine = baťšrsak
-
+interval = aralık
+intestine = bağırsak
 in the evening = akşamleyin
-
 in vain = beyhude
-
-investigate = araştšrmak
-
-investigation = araştšrma
-
-in what way = nasšl
-
+investigate = araştırmak
+investigation = araştırma
+in what way = nasıl
 iodine = iyod
-
 Iran = ©ran
-
-Iranian = ©ranlš
-
+Iranian = ©ranlı
 Ireland = ©rlanda
-
-Irish = ©rlandalš
-
-Irishman = ©rlandalš
-
+Irish = ©rlandalı
+Irishman = ©rlandalı
 iron = demir
-
 irony = alay, istihza
-
 Islam = ©slam
-
 island = ada
-
 Israel = ©srail
-
 Istanbul = ©stanbul
-
 it = o
-
 Italian = ©talyan, ©talyanca
-
 Italy = ©talya
-
 itch = boyunduruk
-
 item = adet
-
 ivory = fildişi
-
-ivy = sarmaşšk
-
-January = ocak ayš
-
+ivy = sarmaşık
+January = ocak ayı
 Japan = Japonya
-
-Japanese = Japonca, Japonyalš
-
+Japanese = Japonca, Japonyalı
 jaw = çene
-
 jawbone = çene
-
 Jew = Musevi, Yahudi
-
 job = iş
-
-join = baťlamak, birleşmek
-
+join = bağlamak, birleşmek
 joke = alay, azizlik
-
 Jordan = Ürdün
-
 journalist = gazeteci
-
 joy = lezzet
-
 July = temmuz
-
 June = haziran
-
 just = ancak, aniden
-
 kennel = köpek kulübesi
-
 key = anahtar
-
 kidney = böbrek
-
 kill = öldürmek
-
 kilo = kilo
-
 king = kral
-
 kingdom = kraliyet
-
 kiss = buse
-
 kitchen = mutfak
-
 kitten = yavru kedi
-
 klaxon = boynuz
-
 knee = diz
-
-knife = biçak, çakš
-
+knife = biçak, çakı
 knight = şövalye
-
-knot = boťum
-
-know = tanšmak, bilmek
-
+knot = boğum
+know = tanımak, bilmek
 know how = bilmek
-
 knowledge = bilgi
-
 laborer = amele
-
 labourer = amele
-
-lack = açšk
-
-lad = çoçuk, oťlan
-
-laddie = çoçuk, oťlan
-
+lack = açık
+lad = çoçuk, oğlan
+laddie = çoçuk, oğlan
 lady = bayan
-
 lake = göl
-
 lame = aksak
-
 lamp-shade = abajur
-
-lance = mšzrak
-
+lance = mızrak
 land = belde, toprak, yeryüzü, arz
-
 large = büyük
-
-lass = kšz
-
+lass = kız
 lawyer = avukat, savunucul
-
 lay hold of = almak
-
 leader = amir, patron, baş
-
 leaflet = broşür
-
-league = bať, baťlantš
-
-learn = öťrenmek
-
+league = bağ, bağlantı
+learn = öğrenmek
 learned = alim
-
 leather = deri
-
-leave = bšrakmak
-
+leave = bırakmak
 Lebanon = Lübnan
-
-left = artšk
-
-left over = artšk
-
+left = artık
+left over = artık
 leg = bacak
-
 lemon = limon
-
 lemonade = limonata
-
 length = boy
-
 leopard = pars
-
 letter of credit = akreditif
-
 lettuce = marul, salata
-
 level = başabaş
-
 lie = yalan
-
-life = çoťulu
-
+life = çoğulu
 lift = asansör
-
-light = açšk, aydšnlšk, aciz, aťšr
-
-like = nasšl, beťenmek
-
+light = açık, aydınlık, aciz, ağır
+like = nasıl, beğenmek
 likewise = da, de, dahi, keza
-
 lily = zambak
-
 limb = aza
-
 limp = aksamak
-
-lineage = asšl
-
+lineage = asıl
 lineseed oil = bezir
-
 lion = aslan
-
 lip = dudak
-
-liquid = akšcš
-
+liquid = akıcı
 liquidate = öldürmek
-
 listen = dinlemek
-
 liter = litre
-
 litre = litre
-
 little = az
-
 little by little = azar azar
-
 live = yaşamak
-
-liver = karaciťer
-
+liver = karaciğer
 loaf = ekmek
-
 lobster = istakoz
-
 loch = göl
-
 locust = çekirge
-
 lofty = ali, yüksek
-
 long for = arzulamak
-
 longitude = boylam
-
 look = bakmak
-
 look at = bakmak
-
 look for = aramak
-
 looking-glass = ayna
-
 lord = bay, bey, beyefendi
-
 lose = kaybetmek
-
 lottery = piyango
-
 louse = bit
-
 love = sevmek, aşk
-
 lovely = hoş, uygun, güzel
-
 low = alçak
-
-lower part of the body = karšn
-
+lower part of the body = karın
 Lucifer = Şeytan
-
-luck = alšnyazšsš
-
+luck = alınyazısı
 luggage = bagaj
-
-lung = akciťer
-
+lung = akciğer
 lust = aşk
-
 machine = makine
-
 madam = bayan
-
 magician = sihirbaz
-
-mailman = postacš
-
-main = ana, başlšca
-
-maize = darš, mšsšr
-
-major = ana, başlšca
-
+mailman = postacı
+main = ana, başlıca
+maize = darı, mısır
+major = ana, başlıca
 major road = anayol
-
 make = etmek, yapmak
-
 make a mistake = aldanmak
-
-make clean = ayšklamak
-
+make clean = ayıklamak
 make use of = kullanmak
-
-malaria = sštma
-
-male cook = aşçš
-
+malaria = sıtma
+male cook = aşçı
 man = insan, adam, erkek
-
 mankind = beşer
-
 many = birçok
-
 map = kart
-
 march = yürümek
-
 mark = alamet
-
-market = çarşš
-
-marsh = batak, bataklšk
-
+market = çarşı
+marsh = batak, bataklık
 maternal grandmother = anneanne
-
 matter = iş, macera, mesele
-
 maximum = azami
-
 maybe = belki
-
 mayhap = belki
-
-mealies = darš, mšsšr
-
+mealies = darı, mısır
 mean = amaçlamak
-
 meaning = amaç, anlam
-
-means = alet, araç, aygšt
-
+means = alet, araç, aygıt
 measurement = boyut, buut
-
 Mediterranean = Akdeniz
-
 meet = buluşmak
-
 melody = beste
-
 member = aza
-
-membership = azalšk
-
-memory = anš, bellek
-
+membership = azalık
+memory = anı, bellek
 mental = akli
-
 mention = anmak, bahsetmek
-
 menu = kart
-
 metropolis = başkent
-
 microbe = bakteri
-
-midday = öťle vakti
-
+midday = öğle vakti
 mild = aheste
-
 minimum = asgari
-
 minister = bakan
-
-ministry = bakanlšk
-
-minority = azšnlšk
-
+ministry = bakanlık
+minority = azınlık
 mirror = ayna
-
-miserable = fena, kötü, acšklš
-
+miserable = fena, kötü, acıklı
 Mister = bay, bey, beyefendi
-
-misunderstanding = anlaşmazlšk, anlaşmak
-
+misunderstanding = anlaşmazlık, anlaşmak
 mitten = eldiven
-
-mixture = alaşšm, bileşim
-
+mixture = alaşım, bileşim
 mockery = alay
-
 modern = modern, asri
-
 modest = alçakgönüllü
-
 Mohammed = Muhammet
-
 Mohammedan = Müslüman
-
 molecule = molekül
-
 moment = an
-
 Monday = pazartesi
-
 money = akçe, para
-
 monk = keşiş
-
 monkey = maymun
-
 monotonous = biteviye
-
 month = ay
-
-monthly = aylšk
-
-monument = abide, anšt
-
+monthly = aylık
+monument = abide, anıt
 moon = ay
-
-moor = bozkšr
-
+moor = bozkır
 morning = sabah
-
 Moslem = Müslüman
-
 mosque = cami
-
 mosquito = sivrisinek
-
 motel = motel
-
 moth = güve
-
 mother = anne
-
 mother-in-law = kaynana
-
 motor = motor
-
 motor car = otomobil
-
 motorcycle = motosiklet
-
-mountain = dať
-
-mourning = aťšt
-
+mountain = dağ
+mourning = ağıt
 mouse = fare
-
-moustache = bšyšk
-
-mouth = aťšz
-
+moustache = bıyık
+mouth = ağız
 movie theatre = sinema
-
-moving = acšklš
-
+moving = acıklı
 Mr. = bay, bey, beyefendi
-
 Mrs. = bayan
-
 much = birçok
-
 Muhammad = Muhammet
-
 multiply = artmak
-
 munition = cephane
-
 muscle = adale
-
 Muslim = Müslüman
-
 Mussulman = Müslüman
-
 mutineer = asilik
-
 my = benim
-
 naïf = bön
-
 naïve = bön
-
 naked = çiplak
-
 name = ad, isim
-
 nameless = anonim, isimsiz
-
 namesake = adaş
-
 narrate = anlatmak
-
 narrow = dar
-
-nasty = aynasšz, fena, kötü, ahlaksšz, alçak
-
+nasty = aynasız, fena, kötü, ahlaksız, alçak
 nation = millet, ulus, ahali
-
 national = ulusal
-
-naught = sšfšr
-
+naught = sıfır
 nearly = adeta
-
 neck = boyun
-
-necktie = boyunbaťš
-
-neigh = <anšrmak>
-
+necktie = boyunbağı
+neigh = <anırmak>
 neighbour = komşu
-
-nephew = yeťen
-
+nephew = yeğen
 nerve = asap
-
 nervous = asabi
-
-net = ať
-
-network = ať
-
+net = ağ
+network = ağ
 never = asla
-
 nevertheless = ancak
-
 new = yeni
-
-next = sonra, sonralarš, ardšsšra
-
+next = sonra, sonraları, ardısıra
 nice = hoş, uygun, iyi
-
-niece = amcazade, yeťen
-
+niece = amcazade, yeğen
 night = gece
-
 nightingale = bülbül
-
 nine = dokuz
-
 nitrogen = azot
-
-no = deťil, hayšr
-
+no = değil, hayır
 nobility = asilik
-
 nobleman = asilzade
-
-node = boťum
-
+node = boğum
 noise = gürültü
-
 noisy = gürültücü, gürültülü
-
 nonsense = abuk sabuk
-
-noon = öťle vakti
-
+noon = öğle vakti
 normal = normal
-
 north = kuzey
-
 northern = kuzeye ait
-
 Norway = Norveç
-
 Norwegian = Norveçce, Norveçli
-
 nose = burun
-
-not = deťil, hayšr
-
+not = değil, hayır
 not at all = birtürlü
-
 note = bilet
-
 notebook = defter
-
 nothing = hiçbir şey
-
-notice = afiş, algšlamak
-
-notion = anlayšş
-
-nought = sšfšr
-
+notice = afiş, algılamak
+notion = anlayış
+nought = sıfır
 noun = isim
-
 novel = yeni, roman
-
-November = kasšm
-
+November = kasım
 novice = acemi
-
 now = şimdi
-
-now and then = aradabir, arasšra
-
+now and then = aradabir, arasıra
 nowhere = hiçbir yerde
-
 nude = çiplak
-
-null = sšfšr
-
+null = sıfır
 nun = rahibe
-
-nurse = bakšcš
-
+nurse = bakıcı
 nursery school = anaokulu
-
-nut = fšndšk
-
+nut = fındık
 nymph = peri
-
 oak = meşe
-
 oath = yemin
-
 oats = yulaf
-
 obey = itaat etmek
-
 obtain = almak
-
 obvious = aşikâr, belirgin, belli
-
 o'clock = saat
-
 October = ekim
-
 octopus = ahtapot
-
 odd = acayip
-
-of course = açšk, açškça
-
-offend = acštmak
-
-offensive = aťšr
-
+of course = açık, açıkça
+offend = acıtmak
+offensive = ağır
 office = büro
-
 of the body = bedeni
-
 oh = ah
-
-oil = yať
-
+oil = yağ
 okay = iyi
-
 old = eski
-
 olive = zeytin
-
 omnibus = otobüs
-
 once more = tekrar, yine, bir daha
-
 one = biri, birisi, bir
-
 one another = birbiri
-
 one hundred = yüz
-
 one thousand = bin
-
-onion = soťan
-
-only = ancak, yalnšz, ancak
-
+onion = soğan
+only = ancak, yalnız, ancak
 only just = ancak, sadece, zar zor
-
-on the contrary = aksine, aykšrš, bšlakis
-
+on the contrary = aksine, aykırı, bılakis
 on the other side of = çaprazvari
-
-on time = doťru, kat'î, kesin, tam
-
-open = açmak, açšk
-
-opening = açšklšk, aťšz
-
-openly = açškça, alenen
-
+on time = doğru, kat'î, kesin, tam
+open = açmak, açık
+opening = açıklık, ağız
+openly = açıkça, alenen
 open up = açmak
-
 operative = amele
-
 opium = afyon
-
 opponent = aleyhtar
-
 opposed to = aleyh, aleyhinde, karşe
-
 opposite = aleyh, aleyhinde, karşe
-
-opprobrious = aťšr
-
+opprobrious = ağır
 orange = portakal
-
 ordinary = adi, alelade
-
-Oriental = doťuya ait
-
-origin = asšl
-
-other = başka, bir daha, diťer bir
-
-otherwise = aksine, bšlakis
-
+Oriental = doğuya ait
+origin = asıl
+other = başka, bir daha, diğer bir
+otherwise = aksine, bılakis
 our = bizim
-
-out of order = aršzalš, bozuk
-
+out of order = arızalı, bozuk
 overall = bütün
-
 owl = baykuş
-
-ox = öküz, sšťšr
-
+ox = öküz, sığır
 oxygen = oksijen
-
 oyster = istiridye
-
-pace = adšm, ayak
-
+pace = adım, ayak
 Pacific = Büyük Okyanus
-
 Pacific Ocean = Büyük Okyanus
-
-pacifist = baršşsever
-
+pacifist = barışsever
 pad = blok
-
 pagan = kâfir
-
 page = sayfa
-
 pail = kova, bakraç
-
-pain = acš, aťrš, azap
-
-painful = aťršlš
-
+pain = acı, ağrı, azap
+painful = ağrılı
 paint = boyamak, boya
-
 Palestine = Filistin
-
 palm = avuç
-
 pamphlet = broşür
-
 paper = belge
-
 paperback = broşür
-
 paragraph = bent
-
 parasite = anaforcu, asalak
-
-pardon = aaffetmek, baťšşlama, af
-
+pardon = aaffetmek, bağışlama, af
 particle = adet
-
 particular = özel
-
-partition = ayršlšk
-
+partition = ayrılık
 pass away = ölmek
-
 passion = aşk
-
 pate = baş
-
 patent = berat
-
 paternal grandmother = babaanne
-
 paternal uncle = amca
-
 paw = bacak, ayak
-
 pawn = asker
-
-pay attention = aldšrmak
-
-pay attention to = aldšrmak
-
+pay attention = aldırmak
+pay attention to = aldırmak
 pea = bezelye
-
-peace = baršş
-
-peaceful = baršşsever
-
-peaceloving = baršşsever
-
+peace = barış
+peaceful = barışsever
+peaceloving = barışsever
 pear = armut
-
 peculiar = acayip
-
 pencil = kurşun kalem
-
-peninsula = yaršmada
-
+peninsula = yarımada
 people = ahali
-
 pepper = biber
-
-perceive = algšlamak
-
+perceive = algılamak
 perchance = belki
-
 perform = girmek, etmek, yapmak
-
 perhaps = belki
-
 peril = tehlike
-
 permit = izin vermek, müsaade etmek
-
 Persia = ©ran
-
-person = kişi, şahšs
-
+person = kişi, şahıs
 perspiration = ter
-
 pessimistic = bedbin
-
 petrol = benzin
-
 phantom = hortlak
-
 pheasant = sülün
-
 phlegm = balgam
-
 phonograph = gramofon
-
-photograph = fotoťraf
-
+photograph = fotoğraf
 physical = bedeni
-
 physicist = fizikçi
-
 physics = fizik
-
 pianist = piyanist
-
 piano = piyano
-
 pick out = seçmek
-
 pick up = biriktirmek, toplamak, almak
-
 pig = domuz
-
 pineapple = ananas
-
 pipe = boru
-
-pity = acšmak
-
+pity = acımak
 placard = afiş
-
-plain = açšk, anlaşšlšr, aşikâr, belirgin, berrak
-
+plain = açık, anlaşılır, aşikâr, belirgin, berrak
 plan = amaç, proje
-
 plane = tayyare, uçak
-
 plant = bitkin, bitki
-
-plaster of Paris = alçš
-
+plaster of Paris = alçı
 platform = program
-
 plaza = alan
-
 pleasant = hoş, uygun
-
 plentiful = bol
-
 plenty = bereket, bolluk
-
 plenty of = birçok
-
 poison = zehir
-
 Poland = Polonya
-
-police = emniyet, polis, zabšta
-
+police = emniyet, polis, zabıta
 police-station = karakol
-
-politician = politikacš, siyaset adamš
-
+politician = politikacı, siyaset adamı
 pony = midilli
-
 pool = birleşmek
-
 poor = fena, kötü
-
 pork = domuz eti
-
-portal = kapš
-
+portal = kapı
 Portugal = Portekiz
-
 Portuguese = Portekizli
-
 possibly = belki
-
 postage stamp = posta pulu
-
 postcard = kartpostal
-
 poster = afiş
-
 post office = postane
-
 potassium = potasyum
-
 potato = patates
-
-pour = akštmak
-
+pour = akıtmak
 powder = barut
-
 practical = ameli
-
 precise = tam
-
 precision = ayar
-
-predominant = ana, başlšca
-
+predominant = ana, başlıca
 premier = başbakan
-
 première = başbakan
-
-present = armaťan, baťšş
-
+present = armağan, bağış
 president = başkan
-
-press = basšn
-
+press = basın
 pressing = acil
-
-pressure = basšnç
-
+pressure = basınç
 presume = sanmak
-
 pretext = bahane
-
 pretty = hoş, nefis
-
 prevent = aksatmak
-
 prime minister = başbakan
-
 prince = prens
-
 princess = prenses
-
-principal = ana, başlšca
-
+principal = ana, başlıca
 print = basmak
-
-privilege = ayršcalšk
-
+privilege = ayrıcalık
 problem = problem
-
 produce = ürün vermek
-
 professional = profesyonel
-
 professor = profesör
-
 profile = profil
-
 profuse = bol
-
 programme = program
-
 project = proje
-
-prompt = doťru, kat'î, kesin, tam
-
+prompt = doğru, kat'î, kesin, tam
 propaganda = propaganda
-
 protein = protein
-
 protest = protesto etmek, protesto
-
 proverb = atasözü
-
-provided that = eťer, ise
-
+provided that = eğer, ise
 provoke = alevlendirmek
-
 psychology = psikoloji
-
 pub = bar
-
 public = aleni
-
 publicity = propaganda
-
 public square = alan
-
-publish = açšklamak
-
+publish = açıklamak
 pull = çekmek
-
-punctual = doťru, kat'î, kesin, tam
-
+punctual = doğru, kat'î, kesin, tam
 puppet = bebek
-
-purchase = alšş, almak, satšn almak
-
-purchaser = alan, alšcš
-
-pure = arš, halis, saf, temiz, arš, halis, saf
-
-purge = ayšklamak
-
+purchase = alış, almak, satın almak
+purchaser = alan, alıcı
+pure = arı, halis, saf, temiz, arı, halis, saf
+purge = ayıklamak
 purpose = hedef
-
 put up with = azap çekmek
-
 puzzle = bilmece, bulmaca
-
-quarrel = atšşmak
-
+quarrel = atışmak
 quash = bozmak
-
 quick = acele
-
 quinsy = anjin
-
 quite = pek, baştanbaşa, bütün
-
 rabbit = tavşan
-
-radically = adamakšllš
-
+radically = adamakıllı
 raffle = piyango
-
 railway station = istasyon
-
-rain = yaťmur
-
+rain = yağmur
 rainbow = alaimisema
-
 rank = aşama
-
 rapid = acele
-
 raspberry = ahududu
-
 rate = aşama
-
-rather = azšcšk, biraz
-
+rather = azıcık, biraz
 read = okumak
-
 ready = alesta
-
-realization = anlayšş
-
+realization = anlayış
 realize = anlamak
-
-rebel = asilik, ayaklanmak, baş kaldšrmak, asi
-
+rebel = asilik, ayaklanmak, baş kaldırmak, asi
 rebuke = azarlamak
-
-recall = anšmsamak, anmak
-
-receipt = alšndš
-
+recall = anımsamak, anmak
+receipt = alındı
 receive = almak, kabul etmek
-
 recipient = alan
-
-recollect = anšmsamak, anmak
-
-recollection = anš, bellek
-
+recollect = anımsamak, anmak
+recollection = anı, bellek
 record = bildirge
-
 record-player = gramofon
-
 records = arşiv
-
 red = al
-
 redemption = amortisman
-
 reflect = aksetmek
-
-refrigerator = buzdolabš
-
+refrigerator = buzdolabı
 regard = bakmak
-
 regiment = alay
-
-regret = acškmak
-
+regret = acıkmak
 regulate = ayarlamak
-
 relate = anlatmak
-
-relation = baťšntš
-
+relation = bağıntı
 relinquish = teslim etmek
-
-remainder = artšk, bakiye
-
-remaining = artšk
-
-remember = anšmsamak, anmak
-
+remainder = artık, bakiye
+remaining = artık
+remember = anımsamak, anmak
 remit = feshetmek, iptal etmek
-
 remote = uzak
-
-remove = ayršlmak
-
+remove = ayrılmak
 renounce = çökmek
-
 renown = debdebe, ihtişam, şan
-
 reply = cevap vermek, cevap
-
 report = bildirmek, bildirge
-
 reproach = azarlamak, azar
-
 reprove = azarlamak
-
 republic = cumhuriyet
-
 reputation = ad
-
-research = araştšrma, araştšrmak
-
-resemble = andšrmak, benzemek
-
+research = araştırma, araştırmak
+resemble = andırmak, benzemek
 resign = çökmek
-
 respond = cevap vermek
-
-rest = artšk, bakiye
-
-reveal = açšklamak
-
+rest = artık, bakiye
+reveal = açıklamak
 reverse = arka
-
 reverse side = arka
-
-revolt = ayaklanmak, baş kaldšrmak
-
+revolt = ayaklanmak, baş kaldırmak
 revolver = revolver
-
 Rhine = Ren
-
 riddle = bilmece, bulmaca
-
 ride = binmek
-
 rifle = top, tüfek, silah
-
 right away = aniden
-
 right now = aniden
-
 rite = ayin
-
-river = šrmak, nehir
-
+river = ırmak, nehir
 roller = silindir
-
 Roman = roman
-
 Romania = Romanya
-
-room = açšklšk, aralšk, boşluk
-
+room = açıklık, aralık, boşluk
 rooster = horoz
-
 rouse = alevlendirmek
-
-rude = arsšz
-
+rude = arsız
 rudiments = alfabe
-
 run = koşmak
-
 Russia = Rusya
-
 Russian = Rusça, Rus
-
 Sabbath = cumartesi
-
 sack = çanta, torba
-
 sacred = kutsal
-
-sad = acšklš
-
-sadness = acš
-
-sagacious = akšllš
-
-sage = akšllš
-
+sad = acıklı
+sadness = acı
+sagacious = akıllı
+sage = akıllı
 sailor = bahriyeli
-
 saint = aziz
-
 salary = maaş
-
-salmon = som balšťš
-
+salmon = som balığı
 salt = tuz
-
 salty = tuzlu
-
-same = aynš
-
+same = aynı
 sand = kum
-
 sandal = sandal
-
 sandwich = sandviç
-
 Sassenach = ©ngiliz
-
 Satan = Şeytan
-
 Saturday = cumartesi
-
 say = demek, söylemek
-
 scarcely = ancak, sadece, zar zor
-
-scatter = akštmak
-
+scatter = akıtmak
 scheme = proje
-
 scholar = alim
-
 science = bilim
-
 scientific = bilimsel
-
 scientist = bilgin
-
 scold = azarlamak
-
 scorpion = akrep
-
-scream = baťšrmak
-
-screw up = azdšrmak
-
-scuffle = muharebe, boťuşmak
-
+scream = bağırmak
+screw up = azdırmak
+scuffle = muharebe, boğuşmak
 sea = deniz
-
-seaside = kšyš, sahil
-
+seaside = kıyı, sahil
 see = buluşmak, görmek
-
 seek = aramak
-
 seldom = az
-
 selfinterest = benlik
-
 self-interested = bencil
-
 selfish = bencil
-
 selfishness = benlik
-
 sell = satmak
-
 send = göndermek, yollamak
-
-sense = anlayšş
-
-separate = ayšrmak, bölmek
-
-separately = ayrš
-
-separation = ayršlšk
-
+sense = anlayış
+separate = ayırmak, bölmek
+separately = ayrı
+separation = ayrılık
 September = eylül
-
-serene = açšk
-
-serious = aťšr, aťšrbaşlš
-
+serene = açık
+serious = ağır, ağırbaşlı
 set = alçalmak
-
 seven = yedi
-
 several times = bazan
-
 shack = kulübe
-
-shame = ayšp
-
+shame = ayıp
 shamrock = yonca
-
 shape = biçim
-
 share = aksiyon, bölmek
-
 sharpen = bilemek
-
 she = o
-
-shed = akštmak
-
-shoe = ayakkabš
-
+shed = akıtmak
+shoe = ayakkabı
 shop = dükkân
-
-shore = kšyš, sahil
-
+shore = kıyı, sahil
 short = bodur, bücür
-
-shortage = açšk
-
-shortcoming = açšk
-
-shorten = kšsaltmak
-
-shortness of breath = astšm
-
-shout = baťšrmak, feryat
-
+shortage = açık
+shortcoming = açık
+shorten = kısaltmak
+shortness of breath = astım
+shout = bağırmak, feryat
 shut = kapamak
-
 sign = alamet
-
 signal = alamet
-
 simple = basit
-
 simplify = basitleştirmek
-
 since = çünkü, yüzünden
-
-sincere = açšk
-
-sink = batšrmak
-
+sincere = açık
+sink = batırmak
 sir = bay, bey, beyefendi
-
-sister = <abla>, <bacš>
-
-sister-in-law = <baldšz>
-
+sister = <abla>, <bacı>
+sister-in-law = <baldız>
 sit = oturmak
-
-six = altš
-
-sixth = altšncš
-
-sixtieth = altmšşšncš
-
-sixty = altmšş
-
+six = altı
+sixth = altıncı
+sixtieth = altmışıncı
+sixty = altmış
 size = azamet
-
 skin = post
-
 slay = öldürmek
-
 sleep = uyumak
-
 slice = kesmek
-
-slow = aťšr, aheste
-
-sly = açškgöz, akšlš, zeki
-
-smart = açškgöz, akšlš, zeki
-
+slow = ağır, aheste
+sly = açıkgöz, akılı, zeki
+smart = açıkgöz, akılı, zeki
 smith = demirci, nalbant
-
 smoke = içmek
-
 smokestack = baca
-
-sneeze = aksšrmak, aksšršk
-
+sneeze = aksırmak, aksırık
 snow = kar
-
 so = böyle, böylece
-
 soccer = ayaktopu
-
 society = kulüp
-
 sodium = sodyum
-
-soft = hoş, tatlš
-
+soft = hoş, tatlı
 soil = toprak, yeryüzü, arz
-
 soiled = kirli
-
 soldier = asker
-
-sole = yalnšz
-
+sole = yalnız
 solely = ancak
-
 solicitor = avukat, savunucul
-
-solitary = yalnšz
-
+solitary = yalnız
 some = biri, birisi, birkaç
-
 somebody = biri, birisi
-
 someone = biri, birisi
-
 some one = biri, birisi
-
 sometimes = bazan
-
-son = oťul
-
-song = şarkš
-
+son = oğul
+song = şarkı
 son-in-law = damat
-
-soon = çok geçmeden, yakšnda
-
+soon = çok geçmeden, yakında
 sorcerer = sihirbaz
-
-sorrow = acš
-
+sorrow = acı
 soup = çorba
-
 sour = buruk
-
-Soviet Union = Sovyetler Birliťi
-
-space = açšklšk, aralšk, boşluk
-
+Soviet Union = Sovyetler Birliği
+space = açıklık, aralık, boşluk
 spaceman = astronot
-
 Spain = ©spanya
-
 Spaniard = ©spanyol
-
-spear = mšzrak
-
+spear = mızrak
 special = özel
-
 specialist = bilirkişi
-
 speedy = acele
-
 spice = bahar
-
-spiderweb = ať
-
-spine = belkemiťi
-
+spiderweb = ağ
+spine = belkemiği
 spinster = bayan
-
 spiral = burma
-
-spoil = azdšrmak
-
+spoil = azdırmak
 sponger = anaforcu, asalak
-
 square = alan
-
 squirrel = sincap
-
-staid = aťšrbaşlš
-
+staid = ağırbaşlı
 stale = bayat
-
-stallion = aygšr
-
+stallion = aygır
 stamp = posta pulu
-
 standard = ayar
-
 start = başlamak
-
 statement of policy = program
-
 steak = biftek
-
-steal = araklamak, aşšrmak
-
-steam = buťu, buhar
-
+steal = araklamak, aşırmak
+steam = buğu, buhar
 steamship = vapur
-
-step = adšm, ayak
-
-steppe = bozkšr
-
+step = adım, ayak
+steppe = bozkır
 stimulate = alevlendirmek
-
 stir up = alevlendirmek
-
 stock exchange = borsa
-
 stoop = abanmak
-
 stop = durmak
-
 storage battery = akümülatör
-
 store = dükkân
-
 storm = bora
-
 straightforward = basit
-
 strange = acayip
-
-strangle = boťazlamak, boťmak
-
-straw = hasšrdan yapšlmšş, saman
-
+strangle = boğazlamak, boğmak
+straw = hasırdan yapılmış, saman
 strawberry = çilek
-
 street = cadde, sokak
-
 strength = kuvvet
-
-stride = adšm, ayak
-
+stride = adım, ayak
 strip = bant
-
 structure = bünye
-
-struggle = muharebe, boťuşmak
-
+struggle = muharebe, boğuşmak
 studio = atölye, atelye
-
-stupid = ahmak, akšlsšz
-
-sty = arpacšk
-
+stupid = ahmak, akılsız
+sty = arpacık
 subscriber = abone
-
 subscription = abone
-
-subsequently = sonra, sonralarš
-
+subsequently = sonra, sonraları
 substantive = isim
-
 suburb = banliyö
-
 subway = altgeçit
-
-success = başarš
-
-successfully = başaršlš
-
+success = başarı
+successfully = başarılı
 such = böyle, böylece
-
-such a = nasšl
-
-such as = nasšl
-
+such a = nasıl
+such as = nasıl
 sudden = ani
-
-suddenly = aniden, ansšzšn, birden, birdenbire
-
+suddenly = aniden, ansızın, birden, birdenbire
 suffer = azap çekmek
-
 sultan = sultan
-
 sun = güneş
-
 Sunday = pazar
-
-sunflower = ayçiçeťi
-
-superstitious = batšl
-
-supper = akşam yemeťi
-
+sunflower = ayçiçeği
+superstitious = batıl
+supper = akşam yemeği
 supporter = aza
-
 suppose = sanmak
-
 sure = belirli
-
 surmise = sanmak
-
-surname = soyadš
-
+surname = soyadı
 surrender = teslim olmak
-
-swallow = kšrlangšç
-
-swamp = batak, bataklšk
-
-swan = kuťu
-
+swallow = kırlangıç
+swamp = batak, bataklık
+swan = kuğu
 swear = ant içmek
-
 sweat = terlemek, ter
-
 Swede = ©sveçli
-
 Sweden = ©sveç
-
 Swedish = ©sveçli
-
-sweet = hoş, tatlš
-
+sweet = hoş, tatlı
 swift = acele
-
 swim = yüzmek
-
 swine = domuz
-
 Swiss = ©sviçreli
-
 switch = anahtar
-
 Switzerland = ©sviçre
-
-sword = kšlšç
-
+sword = kılıç
 syllable = hece
-
 symbol = alamet, sembol
-
 symmetric = simetrik
-
-symmetry = bakšşšm, simetri
-
+symmetry = bakışım, simetri
 symptom = araz
-
 syntax = cümle kuruluşu
-
 Syria = Suriye
-
 Syrian = Suriyeli
-
 tail = kuyruk
-
 tailor = terzi
-
 take = almak, kabul etmek
-
 take in = almak, kabul etmek
-
-take offence = alšnmak
-
-take offense = alšnmak
-
-take over = almak, satšn almak
-
+take offence = alınmak
+take offense = alınmak
+take over = almak, satın almak
 tall = ali, yüksek
-
 tangerine = mandalina
-
-tangle = kaos, karmakaršşšk hal
-
+tangle = kaos, karmakarışık hal
 tape = bant
-
 target = hedef
-
 tart = buruk
-
-tattler = aťustosböceťi
-
+tattler = ağustosböceği
 taxi = taksi
-
 tea = çay
-
 tell = demek, söylemek, anlatmak
-
 tell a lie = yalan
-
-telltale = aťustosböceťi
-
+telltale = ağustosböceği
 tempest = bora
-
 ten = on
-
-tender = hoş, tatlš
-
+tender = hoş, tatlı
 terminate = bitirmek
-
 thanks = teşekkür
-
 thank you = teşekkür
-
 that = böyle, böylece
-
 that way = böyle, böylece
-
 theatre = tiyatro
-
-theft = hšrsšzlšk
-
+theft = hırsızlık
 the Netherlands = Hollanda
-
 theology = ilahiyat, teoloji
-
 therapy = tedavi
-
 thermometer = termometre
-
 they = onlar
-
 thigh = kalça
-
 thing = madde, şey
-
 think = düşünmek
-
 thirst = susuzluk
-
 thirsty = susamiş
-
-thorn = dikenli çalš
-
-thoroughly = adamakšllš
-
+thorn = dikenli çalı
+thoroughly = adamakıllı
 thou = sana, sen, seni, siz, size, sizi
-
 thousand = bin
-
 thread = iplik
-
 three = üç
-
-throat = boťaz
-
-through = adamakšllš, alesta
-
+throat = boğaz
+through = adamakıllı, alesta
 throw = atmak
-
 thumb = başparmak
-
 Thursday = perşembe
-
 thus = böyle, böylece
-
 ticket = bilet
-
-tie = boyunbaťš, baťlamak
-
-tie up = baťlamak
-
+tie = boyunbağı, bağlamak
+tie up = bağlamak
 tiger = kaplan
-
-timber = aťaç
-
+timber = ağaç
 time = saat
-
 tin = kalay
-
 tired out = bitap
-
 tobacco = tütün
-
 today = bugün
-
-toe = ayak parmaťš
-
+toe = ayak parmağı
 together = beraber
-
 token = alamet
-
 to my thinking = bence
-
 tonsil = bademcik
-
 too = da, de, dahi, keza
-
-tool = alet, araç, aygšt
-
+tool = alet, araç, aygıt
 topic = aktüalite
-
 torture = azap
-
-touching = acšklš
-
+touching = acıklı
 toward = ait
-
 towards = ait
-
 tower = burç
-
 town = kent, şehir, belde
-
-trade = alšşveriş
-
+trade = alışveriş
 tradition = anane
-
 traditional = ananevi
-
-tragedy = acšklš
-
-tragic = acšklš
-
+tragedy = acıklı
+tragic = acıklı
 train = tren
-
 tranquil = asude
-
 transmit = göndermek, yollamak
-
-tree = aťaç
-
+tree = ağaç
 trefoil = yonca
-
 tribe = aşiret
-
 trouble = problem, aksatmak
-
-trout = alabalšk
-
+trout = alabalık
 trumpet = borazan
-
 trunk = bavul
-
 tube = boru
-
-Tuesday = salš
-
+Tuesday = salı
 tug = çekmek
-
-tummy = göbek, karšn
-
+tummy = göbek, karın
 tune = beste, akort etmek
-
-twilight = alacakaranlšk
-
+twilight = alacakaranlık
 two = iki
-
 uncertain = belirsiz
-
-uncle = <amca, dayš>, amca
-
+uncle = <amca, dayı>, amca
 unclean = kirli
-
 underground = altgeçit
-
 understand = anlamak
-
-understandable = anlaşšlšr
-
+understandable = anlaşılır
 unemployed = aylak
-
 unhappy = bedbaht
-
 unique = biriçik
-
 united = birleşik
-
 United States of America = Amerika, Birleşik Devletler
-
 unity = birlik
-
 university = üniversite
-
 unmarried woman = bayan
-
 unoccupied = boş
-
-untroubled = açšk
-
-untrue = asšlsšz
-
+untroubled = açık
+untrue = asılsız
 upon = aleyh, aleyhinde, karşe
-
 urgent = acil
-
 urgently = alelacele
-
 USA = Amerika, Birleşik Devletler
-
 US citizen = Amerikan
-
 use = kullanmak
-
-used to = alelade, alšşšk, bayaťš
-
+used to = alelade, alışık, bayağı
 useless = abes
-
-USSR = Sovyetler Birliťi
-
-usual = alelade, alšşšk, bayaťš, adi
-
+USSR = Sovyetler Birliği
+usual = alelade, alışık, bayağı, adi
 uterus = rahim
-
-vacant = boş, açšk
-
+vacant = boş, açık
 vacuum = boşluk
-
 vain = abes
-
-vapor = buťu, buhar
-
-vapour = buťu, buhar
-
+vapor = buğu, buhar
+vapour = buğu, buhar
 vend = satmak
-
 very = pek
-
 very much = pek
-
 view = bakmak
-
 vigour = kuvvet
-
 vile = alçak
-
-vine = bať
-
+vine = bağ
 virgin = bakir, bakire
-
 virginal = bakir
-
 voice = ses
-
 void = boş
-
 volcano = volkan
-
 vote = ses
-
 vow = adak
-
 vowel = sesli harf
-
 vulgar = adi
-
 vulture = akbaba
-
 wage = maaş
-
 wages = maaş
-
 waist = bel
-
 waistline = bel
-
 wait = beklemek
-
 wait for = beklemek
-
 waiting-room = bekleme salonu
-
 waiting room = bekleme salonu
-
 walk = yürümek
-
 walnut = ceviz
-
 want = arzu
-
 war = savaş
-
 warehouse = ambar, ardiye, ardye
-
 warlock = sihirbaz
-
-warm = šlšk
-
+warm = ılık
 watch = saat, bakmak
-
-watch out for = aldšrmak
-
+watch out for = aldırmak
 water = su
-
 wax = balmumu
-
 way = âdet
-
 weak = aciz
-
 weapon = silah
-
-wear = nakletmek, taşšmak
-
+wear = nakletmek, taşımak
 Wednesday = çarşamba
-
 week = hafta
-
-weep = aťlamak
-
+weep = ağlamak
 weighing machine = baskül
-
-weight = aťšrlšk
-
-well = sšhhatlš
-
+weight = ağırlık
+well = sıhhatlı
 well-informed = alim
-
 well-known = bildik
-
-wench = kšz
-
-west = batš
-
-western = batšya ait
-
+wench = kız
+west = batı
+western = batıya ait
 whale = balina
-
-what a = nasšl
-
+what a = nasıl
 what for = niçin
-
-wheat = buťday
-
-wheeziness = astšm
-
+wheat = buğday
+wheeziness = astım
 whiskey = viski
-
 whisky = viski
-
 white = beyaz
-
-whiten = aťartmak, aklamak
-
+whiten = ağartmak, aklamak
 whole = bütün
-
 wholly = baştanbaşa, bütün
-
 whore = orospu
-
 why = niçin
-
 width = genişlik, bolluk
-
-wife = aile, eş, karš, avrat
-
+wife = aile, eş, karı, avrat
 will = arzu
-
 willingness = arzu
-
-willow = söťüt
-
+willow = söğüt
 wind = rüzgar
-
 window = pencere
-
 wine = şarap
-
 wing = kanat
-
 win over = altetmek
-
-winter = kšş
-
-wisdom = akšl
-
-wise = akšllš
-
+winter = kış
+wisdom = akıl
+wise = akıllı
 wish = arzu etmek, arzulamak, arzu
-
-witch = büyücü, cadš
-
+witch = büyücü, cadı
 without a name = anonim, isimsiz
-
 with reference to = ait
-
 wizard = sihirbaz
-
 wolf = kurt
-
 womb = rahim
-
-wonted = alelade, alšşšk, bayaťš
-
-wood = aťaç
-
-wooden = aťaç, ahşap
-
-woodpecker = aťaçkakan
-
+wonted = alelade, alışık, bayağı
+wood = ağaç
+wooden = ağaç, ahşap
+woodpecker = ağaçkakan
 wool = yün
-
 word = söz, sözcük
-
 work = çalişmak, iş
-
 worker = amele
-
 working man = amele
-
 workman = amele
-
 work-room = atölye
-
 workshop = atölye
-
 world = dünya
-
 worm = kurt, solucan
-
 worn out = bitap
-
-worship = taparcasšna sevmek
-
-wrangle = atšşmak
-
+worship = taparcasına sevmek
+wrangle = atışmak
 wrench = anahtar
-
 wrist = bilek
-
 write = yazmak
-
-X-rays = röntgen šşšnš
-
+X-rays = röntgen ışını
 yacht = yat
-
 yard = yarda, alan, avlu
-
 ye = sana, sen, seni, siz, size, sizi
-
 year = sene
-
-yearly = yšllšk
-
+yearly = yıllık
 yearn = arzulamak
-
 yeast = maya
-
-yellow = sarš
-
+yellow = sarı
 yes = evet
-
 yesterday = dün
-
-yet = daha şimdiden, halihazšrda, ancak
-
+yet = daha şimdiden, halihazırda, ancak
 yield = teslim etmek
-
 you = sana, sen, seni, siz, size, sizi
-
 young = genç
-
-youngster = delikanlš, genç
-
+youngster = delikanlı, genç
 your = senin, sizin
-
 yours = seninki, sizinki
-
 yourself = kendiniz
-
-youth = gençlik, delikanlš, genç
-
+youth = gençlik, delikanlı, genç
 youth hostel = gençler için ucuz otel
-
 Yugoslav = Yugoslav
-
 Yugoslavia = Yugoslavya
-
 Yugoslavian = Yugoslav
-
 Yule = Noel
-
 zeal = büyük istek, gayret, şevk
-
 zealous = gayretli
-
-zebra = yaban eşeťi, zebra
-
+zebra = yaban eşeği, zebra
 zephyr = hafif rüzgar, meltem
-
-zero = sšfšr
-
+zero = sıfır
 zigzag = zigzag
-
-zilch = sšfšr
-
+zilch = sıfır
 zinc = çinko
-
 zipper = fermuar
-
-zone = bölge, mšntška, kayšş, kemer
-
+zone = bölge, mıntıka, kayış, kemer
 zoo = hayvanat bahçesi
-
 zoology = hayvanbilim, zooloji
