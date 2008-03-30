@@ -16,7 +16,7 @@ public class SetOfCardsLoader {
 
 	//load the default set
 	public SetOfCards loadSet() throws IOException {
-		return loadSet("/Finnish/longlist_eng_fin.txt");
+		return loadSet("/Finnish/longlist_fin_eng.txt");
 	}
 	
 	// this method tries to load a set
