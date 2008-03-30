@@ -272,6 +272,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			//show the side
 			cardText.setLabel(c.getSideTwoTitle() + ": \n");
 			cardText.setText(c.getSideTwo());
+			//Show side one again as a reminder to the user
+			cardStatistics.setLabel("\n\n\n" + c.getSideOne());
 			sideOne = false;
 			break;
 		default:
