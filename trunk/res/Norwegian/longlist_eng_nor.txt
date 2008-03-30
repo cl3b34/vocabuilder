@@ -1,5063 +1,2532 @@
 a = i, på
-
 abandon = forlate
-
 abashed = blyg, sjenert
-
 abate = forminske
-
 abdomen = buk, mave
-
 aberration = feil, mistak
-
 abet = hjelpe
-
 abhor = avsky
-
 abide = vente, forvente
-
 able = dyktig
-
 abode = bolig
-
 abominate = avsky
-
 about = om, over, omkring
-
 above = over, oppe, ovenpå, hit
-
 above-board = ærlig
-
 abridge = forminske
-
 abroad = utenfor
-
 absent = fraværende
-
 absent onself = dra bort
-
 abuse = skjelle ut, fornærme, fornærmelse
-
 abysmal = forferdelig, skrekkelig
-
 academic = student
-
 accelerator = gasspedal
-
 accelerator pedal = gasspedal
-
 accept = godta, takke ja til
-
 access = adgang
-
 accident = ulykke
-
 accommodation = innredning, avtale, bolig
-
 accomodate = hjelpe
-
 accompany = ledsage
-
 accord = avtale
-
 accordance = avtale
-
 accordion = trekkspill
-
 account = regning, opplysning, ta hensyn til, konto, tro, synes
-
 accredit = tro
-
 accrue = vokse
-
 accumulator = akkumulator
-
 accustomed = vanlig
-
 acerbic = bitter, sur
-
 acetous = sur
-
 ache = pine, smerte, lengte
-
 ache for = lengte etter
-
 achieve = gjøre
-
 acid = sur
-
 acknowledge = takke for, tilstå
-
 acquaintance = bekjent, kjenning
-
 acquire = kjøpe
-
 across = tvers over
-
 across from = mot
-
 act = gjøre, presentere
-
 action = slagsmål
-
 actor = skuespiller
-
 actuate = bevege
-
 ad = annonse
-
 address = adresse
-
 adieu = farvel, ha det, morna
-
 adjustment = innredning
-
 administration = regjering
-
 admission = adgang
-
 admit = innrømme, tilstå
-
 admittance = adgang
-
 ado = larm
-
 adult = voksen, myndig
-
 advantage = fordel
-
 advantageous = fordelaktig
-
 adversary = fiende
-
 adverse = motsatt, ufordelaktig
-
 advertisement = annonse
-
 advice = råd
-
 advocate = advokat
-
 aerodrome = flyplass
-
 aeroplane = fly
-
 affable = vennlig
-
 affair = anliggende
-
 affecting = følsom
-
 affection = kjærlighet
-
 affirmation = løfte
-
 affluent = rik
-
 afraid = sjenert
-
 afresh = igjen, pånytt
-
 Africa = Afrika
-
 African = afrikansk, afrikaner
-
 after = bak, etter
-
 afternoon = ettermiddag
-
 afterwards = bak
-
 again = igjen, pånytt
-
 against = mot
-
 age = alder
-
 agent = middel
-
 agitated = nervøs
-
 agony = frykt, redsel
-
 agreeable = behagelig
-
 agreement = avtale
-
 agree with = være enig med
-
 aid = hjelpe
-
 ailment = sykdom
-
 aim = mål, forsøke
-
 air = luft
-
 airbed = luftseng
-
 aircraft = fly
-
 airdrome = flyplass
-
 airfield = flyplass
-
 airmail = luftpost
-
 air mattress = luftseng
-
 airplane = fly
-
 airport = lufthavn, flyplass
-
 air pump = luftpumpe
-
 alarmed = forferdelig
-
 alas = dessverre, det var synd
-
 ale = øl
-
 alien = fremmed, motsatt
-
 all = all
-
 all over again = igjen, pånytt
-
 allow = forlate
-
 all the = all
-
 almost = nesten
-
 alone = alene, aleine
-
 also = også
-
 altitude = høyde
-
 altogether = all
-
 aluminium = aluminium
-
 aluminum = aluminium
-
 ambassador = ambassador
-
 ambulance = ambulanse, sykebil
-
 American = amerikansk
-
 ammeter = amperemeter
-
 among = imellom
-
 amount = nummer, beløp
-
 anchovy = ansjos
-
 and = og
-
 anew = igjen, pånytt
-
 angry = sint
-
 anguish = frykt, redsel
-
 animal = dyr
-
 ankle = ankel
-
 anoint = smøre
-
 another = en anden
-
 answer = svare
-
 ant = maur
-
 Antarctic = Sydpolen, Sørpolen
-
 antithesis = motsetning
-
 anything = noe
-
 apartment = leilighet
-
 apartment building = høyblokk
-
 apologize = unnskylde seg
-
 appellation = navn
-
 apple = eple
-
 apple-sauce = eplemos
-
 appointment = avtale
-
 appreciate = like, sette pris på
-
 apricot = aprikos
-
 April = april
-
 architect = arkitekt
-
 Arctic = Nordpolen
-
 Arctic Ocean = Nordishavet
-
 arm = arm
-
 armchair = lenestol
-
 army = hær
-
 around = om, omkring
-
 arouse = vegge
-
 arrange = innrede
-
 arrangement = innredning
-
 arrival = ankomst, komme
-
 arrive = ankomme
-
 art = kunst
-
 article = ting
-
 artificial = kunstig
-
 as = når, hvordan, fordi
-
 as ... as = like ... som
-
 ashtray = askebeger
-
 Asia = Asia
-
 Asian = asiatisk, asiat
-
 Asiatic = asiatisk
-
 ask = spørre
-
 asparagus = asparges
-
 aspirin = globoid
-
 ass = esel
-
 assert = hevde, påstå
-
 assertion = påstand
-
 assist = hjelpe
-
 associate with = omgås
-
 association = forening
-
 astonishment = forbauselse
-
 at = på, til, nær
-
 Atlantic = Atlanterhavet
-
 Atlantic Ocean = Atlanterhavet
-
 at present = nå
-
 attempt = forsøke, prøve
-
 attend = besøke
-
 at that place = der
-
 attitude = holdning
-
 at variance = uenig
-
 August = august
-
 aunt = tante
-
 Australia = Australia
-
 Australian = australier
-
 Austria = Østerrike
-
 author = forfatter
-
 authority = myndighet
-
 automatic = automatisk
-
 automobile = bil
-
 automoton = automat
-
 autumn = høst
-
 available = disponibel
-
 avalanche = skred
-
 avenue = allé
-
 await = vente, forvente
-
 awaken = vegge
-
 axis = aksel
-
 axle = aksel
-
 baby = baby, spebarn
-
 back = rygg, tilbake
-
 backpack = ryggsekk
-
 backward = tilbake
-
 backwards = tilbake
-
 back wheel = bakhjul
-
 bacon = flesk
-
 bad = dårlig
-
 bag = sekk, veske
-
 baggage = bagasje
-
 bairn = barn, unge
-
 bake = bake
-
 baker = baker
-
 bakery = bakeri
-
 balcony = altan, balkon
-
 ball = ball
-
 ballpoint pen = kulepenn
-
 Baltic Sea = Østersjøen
-
 banana = banan
-
 bandage = bind
-
 bank = bank
-
 banner = flagg
-
 barber = barbermester, frisør
-
 barley = bygg
-
 barrel = tønne, rør
-
 barrister = advokat
-
 barrister-at-law = advokat
-
 basement = kjeller
-
 basin = skål
-
 basket = kurv
-
 bath = bad
-
 bathing-suit = badedrakt
-
 bathing suit = badedrakt
-
 baton = stokk
-
 battery = akkumulator, batteri
-
 battle = slagsmål
-
 battlefront = forside
-
 bazaar = torg, samvirkelag
-
 be = være
-
 be absent = være borte
-
 beach = strand
-
 be acquainted with = kjenne
-
 be afraid of = være redd, være redd for
-
 bean = bønne
-
 bear = bjørn
-
 beard = skjegg
-
 be asleep = sove
-
 beast = dyr
-
 beat = slå
-
 beautiful = pen, skjønn, vakker
-
 be bold = tore
-
 be called = hete, kalles
-
 because = fordi
-
 because of = for
-
 become = bli
-
 become engaged = forlove seg
-
 become engaged with = forlove sig med
-
 become the fiacée of = forlove sig med
-
 become the fiancé of = forlove seg med
-
 become the husband of = gifte sig med
-
 become the wife of = gifte sig med
-
 bed = seng
-
 bedroom = soverom
-
 bee = bie
-
 beef = oksekjøtt
-
 beefsteak = biff
-
 beer = øl
-
 beet = bete
-
 be fond of = være vill etter
-
 before = før, foran
-
 begin = begynne
-
 be grieved = være trist
-
 behave = oppføre seg
-
 behavior = oppførsel
-
 behaviour = oppførsel
-
 behind = bak, etter
-
 beige = beige
-
 be indignant = ergre seg
-
 Belgian = belgisk, belgier
-
 Belgium = Belgia
-
 belief = overbevisning, tro
-
 believe = tro
-
 believe in = tro på
-
 bell = klokke
-
 belly = buk, mave
-
 below = ned, under
-
 belt = belte
-
 be lucky = være heldig
-
 be missing = være borte
-
 bend = kurve, sving
-
 beneath = under
-
 benefit = fordel
-
 bent = buktet
-
 be related to = være i slekt med
-
 be sad = være trist
-
 beside = nær
-
 be similar = ligne
-
 be sorrowful = være trist
-
 be sorry about = angre på
-
 best = best
-
 bet = vedde
-
 betray = forråde
-
 betrothal = forlovelse
-
 better = bedre
-
 between = imellom
-
 be willing to = ville
-
 beyond = tvers over
-
 bicycle = sykkel
-
 big = stor
-
 bike = sykkel
-
 bill = billett, regning
-
 billiards = biljard
-
 bird = fugl
-
 birth = fødsel
-
 birthday = bursdag, fødselsdag
-
 biscuit = kjeks
-
 bitter = bitter, sur
-
 black = svart
-
 bladder = blære
-
 blame = bebreide
-
 blanch = bleike
-
 blank = hvit
-
 blanket = teppe, ullteppe
-
 blaspheme = banne
-
 bleak = ubehagelig, sturen, trist
-
 blend = blande
-
 blind = blind
-
 blind alley = blindvei
-
 block of flats = høyblokk
-
 blond = blond
-
 blood = blod
-
 bloom = blomst
-
 blotter = trekkpapiret
-
 blotting paper = trekkpapiret
-
 blouse = bluse
-
 blue = blå
-
 blueberry = blåbær
-
 blunt = butt, sløv, stump
-
 blushing = rød
-
 boarding house = pensjon
-
 boarding school = pensjon
-
 boast = skryte
-
 boat = båt
-
 body = legeme
-
 boil = koke
-
 boiler = kjele
-
 bold = tykk
-
 bomb = bombe
-
 bone = ben
-
 bonnet = panser
-
 book = bok
-
 bookcase = bokskap
-
 book-keeper = bokholder
-
 bookshop = bokhandel
-
 bookstore = bokhandel
-
 boring = kjedelig
-
 bosom = bryst, barm
-
 bottle = flaske
-
 bouillon = buljong
-
 boundary = grense
-
 boutique = butikk, forretning
-
 bowl = skål
-
 boy = gutt
-
 bra = bysteholder
-
 bracelet = armbånd
-
 braces = bukseseler
-
 brag = skryte
-
 brain = hjerne
-
 branch = avdeling
-
 brandy = brennevin
-
 brass = messing
-
 bread = brød
-
 breakable = skjør
-
 breakfast = frokost
-
 breast = bryst
-
 breath = ånde
-
 brick = murstein
-
 bride = forlovede, brud
-
 bridegroom = brudgom
-
 bridge = bro
-
 brief = kort
-
 bring = bringe
-
 Britain = Storbritannia
-
 British = britisk
-
 Briton = brite
-
 brittle = skjør
-
 broad = bred
-
 broken stones = steinsprut
-
 broker = eiendomsmekler
-
 brooch = brosje
-
 broom = kost
-
 brother = bror
-
 brother-in-law = svoger
-
 brothers and sisters = søsken
-
 brown = brun
-
 brush = børste
-
 brutal = uvennlig
-
 bubble = blære
-
 buffer = støtfanger
-
 buffet = bar
-
 bug = insekt
-
 build = bygge
-
 builder = byggmester
-
 building = bygning
-
 building contractor = byggmester
-
 bulb = pære
-
 bulk = størrelse
-
 bullet = kule
-
 bumper = støtfanger
-
 burdensome = tung
-
 bureau = kontor
-
 burial = begravelse
-
 burn = brenne
-
 business = anliggende, forretning
-
 business deal = anliggende
-
 busstop = buss-stopp
-
 bus stop = buss-stopp
-
 busy = opptatt
-
 butcher = slakter
-
 butter = smør
-
 butterfly = sommerfugl
-
 button = knapp
-
 buy = kjøpe
-
 buyer = kjøper
-
 by = nær, om, på
-
 bye = farvel, ha det, morna, ha det så lenge, på gjensyn, vi ses, vi sees
-
 cabaret = kabaret
-
 cabbage = kål
-
 cabin = hytte, kahytt
-
 cab-stand = drosjeholdeplass
-
 café = kafé
-
 cake = kake
-
 calculate = regne
-
 calf = kalv, legg
-
 call = kalle
-
 call box = telefonkiosk
-
 call on = besøke
-
 camel = kamel
-
 camera = fotoapparat, kamera
-
 camping ground = leirplass
-
 camping site = leirplass
-
 can = blikk
-
 canal = kanal
-
 cane = stokk
-
 can opener = hermetikkåpner
-
 canteen = feltflaske
-
 capable = dyktig
-
 capital = hovedstad
-
 capital city = hovedstad
-
 captain = kaptein
-
 capture = fange, gripe
-
 car = bil
-
 carburettor = forgasser
-
 card = kart
-
 cardboard = kartong
-
 cardiac = hjertelig
-
 careful = forsiktig
-
 cargo = last
-
 carnation = nellik
-
 car park = parkeringsplass
-
 carpenter = snekker
-
 carpet = teppe
-
 carriage = vogn
-
 carrot = gulrot
-
 carry = bære
-
 case = anliggende
-
 cashier's stand = kasse
-
 cash money = kontanter
-
 castle = slott, tårn
-
 cat = katte
-
 catch = fange, gripe
-
 cathedral = domkirke, katedral
-
 cauldron = kjele
-
 cauliflower = blomkål
-
 caution = forsiktighet
-
 cautious = forsiktig
-
 cave = grotte
-
 cavern = grotte
-
 celebrate = feste
-
 celebrating one's birthday = feire bursdagen
-
 celebration = fest
-
 cellar = kjeller
-
 cemetery = kirkegård
-
 centennial = århundre
-
 centre = sentrum
-
 century = århundre
-
 chain = kjede
-
 chair = stol
-
 chamber = rom, værelse
-
 chance = anledning
-
 change = forandre, veksle
-
 channel = kanal, rør
-
 character = karakter, natur
-
 charming = snill
-
 chase = jage
-
 chat = skravle
-
 chatter = skravle
-
 chauffeur = sjåfør
-
 cheap = billig
-
 cheat = bedra, snyte
-
 check = sjekk
-
 checked = rutet
-
 cheek = kinn
-
 cheerful = glad, lystig, blid, munter
-
 cheese = ost
-
 chemistry = kjemi
-
 chemist's shop = apotek
-
 cheque = sjekk
-
 chequered = rutet
-
 cherry = kirsebær
-
 chest = bryst
-
 chick = kylling
-
 chicken = kylling, høne
-
 child = barn, unge
-
 chin = hake
-
 chippings = steinsprut
-
 chive = gressløk
-
 chocolate = sjokolade
-
 chord = avtale
-
 church = kirke
-
 church-building = kirke
-
 cigar = sigar
-
 cigarette = sigarett
-
 cinema = kino
-
 circle = sirkel, forening
-
 citizen = statsborger
-
 city = by
-
 city hall = rådhus
-
 civil status = sivilstand
-
 class = klasse
-
 clean = ren
-
 clear = klar
-
 client = kjøper
-
 climb = klatre
-
 clip = klippe
-
 cloak = kåpe
-
 clock = ur
-
 close = intim, trang
-
 clothes = kledning
-
 clothespeg = klæsklype
-
 clothespin = klæsklype
-
 clothing = kledning
-
 cloud = sky
-
 clover = kløver
-
 club = forening
-
 coach = vogn
-
 coal = kull
-
 coat = frakk
-
 cockroach = kakerlakk
-
 cocoa = kakao
-
 cod = torsk
-
 coddle = skjemme
-
 codfish = torsk
-
 coffee = kaffe
-
 coffee-house = kafé
-
 cohabit = bo sammen
-
 collar = krage, snipp
-
 colour = farge
-
 comb = kam
-
 come = komme
-
 come about = bli
-
 come across = møte, treffe
-
 come to an end = utlope
-
 comfort = bekvemmelighet, trøste
-
 commence = begynne
-
 commerce = forretning
-
 commission = oppdrag
-
 common = felles, vanlig
-
 communication-cord = nødbremse
-
 companion = samboer
-
 compartment = avdeling, kupé
-
 compass = kompass
-
 compassion = medlidenhet
-
 compel = tvinge
-
 competition = konkurranse
-
 concede = innrømme
-
 concept = oppfatning
-
 concerning = om, over
-
 concert = konsert
-
 concord = avtale
-
 concrete = betong
-
 concurrence = avtale
-
 condom = kondom
-
 conduct = oppførsel
-
 conduct oneself = oppføre seg
-
 conductor = sjåfør
-
 confectionery = konditori
-
 confess = tilstå
-
 confidence = tillit
-
 congratulate = gratulere
-
 conifer = nåletre
-
 connection = forbindelse
-
 consider = ta hensyn til
-
 consolation = trøst
-
 console = trøste
-
 construct = bygge
-
 consulate = konsulat
-
 contact = kontakt
-
 contented = fornøyd
-
 contention = påstand
-
 contractor = byggmester
-
 contradistinction = motsetning
-
 contrary = motsatt
-
 contrast = motsetning
-
 control = beherske, styre
-
 control oneself = beherske seg, styre seg
-
 conversation = samtale
-
 conviction = overbevisning
-
 convince = overbevise
-
 co-occupant = samboer
-
 cook = kokk
-
 cookie = kjeks
-
 Copenhagen = København
-
 coping = nokke
-
 copper = kopper
-
 copy = avskrift, kopi
-
 cord = reip, tau
-
 cordial = hjertelig
-
 corkscrew = korketrekker
-
 corn = mais
-
 corpulent = tykk
-
 correct = riktig
-
 cosmetic powder = pudder
-
 costly = dyr, kostbar
-
 cotton = bomull
-
 cotton-wool = bomull
-
 couch = sjeselong, sofa
-
 cough = hoste
-
 counsel = advokat, råd
-
 count = regne
-
 country = land
-
 countryman = bonde
-
 coupé = kupé
-
 couple = ektepar
-
 courage = mot
-
 course = fat, tallerken
-
 court = ha samleie med, elske
-
 courteous = høflig
-
 cousin = kusine, fetter
-
 cover = dekk
-
 cow = ku
-
 cradle = vugge, fødested
-
 cramped = trang
-
 cream = fløte
-
 crime = forbrytelse
-
 crockery set = servise
-
 cross = sint
-
 cross roads = veikryss
-
 cry = gråte
-
 cry out = skrike
-
 cucumber = agurk, slangeagurk
-
 cul-de-sac = blindvei
-
 cup = kopp
-
 current = strøm
-
 curse = banne
-
 curtain = gardin
-
 curve = kurve, sving
-
 curved = buktet
-
 cushion = pute
-
 cuss = banne
-
 custom = bruk, vane
-
 customary = vanlig
-
 custom-house = tollbod, tollkontor
-
 customs = toll
-
 cut = klippe, skjære
-
 cycle = sykkel
-
 cylinder = sylinder
-
 cylinder phonograph = grammofon
-
 daily paper = avis
-
 dairy = meieri
-
 damage = skade
-
 dance = dans
-
 Dane = danske
-
 danger = fare
-
 Danish = dansk
-
 dare = tore
-
 dark = mørk
-
 dark blue = mørkeblå
-
 date = daddel, dato, avtale
-
 daughter = datter
-
 daughter-in-law = svigerdatter
-
 day = dag
-
 deaf = døv
-
 dear = søt, dyr, kostbar
-
 death = død
-
 debt = gjeld
-
 deceive = bedra, snyte
-
 December = desember
-
 decrease = forminske
-
 deem = tro, synes
-
 deep = dyp
-
 degree = grad
-
 delay = forsinkelse
-
 deliver = levere
-
 den = grotte
-
 Denmark = Danmark
-
 dentist = tannlege
-
 deny = nekte, benekte
-
 depart = dra bort
-
 department = avdeling
-
 departure = avgang, avreise
-
 dependant on = avhengig av
-
 deportment = oppførsel
-
 depository = låve
-
 depressed = deprimert, nedfor
-
 desert = ørken, forlate
-
 design = tegning, bykart
-
 desire = ønske, ønske seg
-
 desperate = desperat
-
 dessert = dessert
-
 detached house = enebolig
-
 detrimental = ufordelaktig
-
 develop = fremkalle
-
 diagram = bykart
-
 diarrhoea = diaré
-
 dictionary = ordbok
-
 difference = forskjell, skilnad
-
 different = forskjellig, ulik
-
 difficult = vanskelig
-
 digestion = fordøyelse
-
 dim = mørk, matt
-
 dimension = størrelse
-
 diminutive = liten
-
 din = larm
-
 dining-room = spisestue
-
 dinner = middag
-
 direction = retning
-
 dirty = skitten
-
 disadvantage = ulempe
-
 disagreeing = uenig
-
 disagreement = uenighet
-
 disappoint = skuffe
-
 disappointment = skuffelse
-
 discontented = misfornøyd
-
 discord = uenighet
-
 discrete = beskjeden
-
 disease = sykdom
-
 dish = fat, tallerken
-
 dish cloth = håndkle
-
 dislike = mislike
-
 dismal = ubehagelig, sturen, trist, sur
-
 dismayed = forferdelig
-
 displeased = misfornøyd
-
 dispose of = selge
-
 dispute = krangel
-
 dissatisfied = misfornøyd
-
 dissension = uenighet
-
 distance = avstand
-
 distant = fjern
-
 distinct = klar
-
 distributor = fordeler
-
 distrust = mistro
-
 divan = sjeselong, sofa
-
 divorce = skilsmisse
-
 divorced = skilt
-
 do = gjøre
-
 doctor = dokter, læge
-
 document = dokument
-
 dog = hund
-
 donkey = esel
-
 don't mention it = det gjør ikke noe, ingen årsak
-
 door = dør
-
 dot = punkt
-
 dove = due
-
 down = ned
-
 downstairs = ned
-
 dram = dram
-
 drawers = underbukse
-
 drawing = tegning
-
 dreadful = forferdelig, skrekkelig
-
 dream = drøm
-
 dreary = ensom, ubehagelig, sturen, trist
-
 dress = kjole
-
 drink = drikke
-
 driver = sjåfør
-
 driving-licence = førerkart
-
 droop = henge
-
 drown = drunke
-
 drug = medisin
-
 drugstore = apotek
-
 dry = tørr
-
 duck = and
-
 dumb = stum
-
 dumbfounded = forferdelig
-
 dust = støv
-
 dust rag = håndkle
-
 Dutch = nederlandsk
-
 Dutchman = nederlender
-
 dwell = bo
-
 dwelling = bolig
-
 dye = farge
-
 each = all
-
 eagle = ørn
-
 ear = øre
-
 earn = oppnå, vinne
-
 earnest = alvorlig
-
 earring = dobb
-
 east = øst
-
 eat = spise
-
 edible = spiselig
-
 eel = ål
-
 egg = egg
-
 eight = åtte
-
 eighteen = atten
-
 eighty = åtti
-
 elbow = albue
-
 electric fan = ventilator
-
 electric torch = lommelykt
-
 elevator = heis
-
 eleven = elleve
-
 else = en anden
-
 embrace = gi en klem
-
 eminent = utmerket
-
 emmet = maur
-
 emotion = følelse
-
 empty = tom
-
 encounter = møte, treffe
-
 end = utlope, slutt
-
 endeavour = forsøke
-
 ending = slutt
-
 end up = ankomme, utlope
-
 endure = tåle
-
 enemy = fiende
-
 energy = kraft
-
 engagement = forlovelse
-
 engine = maskin, motor
-
 engineer = ingeniør
-
 England = England
-
 Englishman = engelskmann
-
 enjoyable = behagelig
-
 enough = nok
-
 entertainment = forlystelse
-
 entrance = inngang
-
 envelope = konvolutt
-
 envious = misunnelig
-
 envy = være misunnelig, være misunnelig på
-
 equal = lik
-
 equilibrium = likevekt
-
 errand = oppdrag
-
 erroneous = urett
-
 error = feil, mistak
-
 estate = gård
-
 esteem = ta hensyn til
-
 Europa = Europa
-
 Europe = Europa
-
 European = europeer
-
 even = flat, lik
-
 evening = kveld
-
 evening meal = aftens, kveldsmat
-
 event = anledning
-
 every = all
-
 everybody = all
-
 every one = all
-
 everything = all
-
 excursion = utflukt
-
 excuse me = om forlatelse, unnskyld
-
 exhibition = utstilling
-
 exit = utgang
-
 expect = vente, forvente
-
 expectation = forventning
-
 expenses = omkostning
-
 expensive = dyr, kostbar
-
 expire = utlope
-
 exposition = utstilling
-
 express = expresstog
-
 extend = størrelse
-
 extensive = romslig, vid
-
 extreme = ytterst
-
 eye = øye
-
 face = ansikt
-
 factory = fabrikk
-
 fair = torg, blond
-
 faith = tillit
-
 fall in love with = forelske seg
-
 false = usann
-
 family = familie
-
 far = fjern
-
 farewell = farvel, ha det, morna
-
 farm = gård
-
 farmer = bonde
-
 fast = hurtig, kvikk
-
 fasten = fortøye
-
 fast train = hurtigtog
-
 fat = tykk, fett
-
 father = far
-
 father-in-law = svigerfar
-
 fear = frykt, redsel, være redd, være redd for
-
 feather = penn
-
 February = februar
-
 feed = spise
-
 feign = late som, late som om
-
 felloe = felg
-
 fellow = mann
-
 felly = felg
-
 ferry = ferje
-
 festival = fest
-
 fetch = bringe
-
 few = få
-
 fiancé = forlovede
-
 fiancée = forlovede
-
 field = leir
-
 field hospital = ambulanse, sykebil
-
 fifteen = femten
-
 fifty = femti
-
 fig = fiken
-
 fight = slåss
-
 figure = regne
-
 file = fil
-
 film = film
-
 filter = filter
-
 filthy = skitten
-
 find = finne
-
 fine = pen, skjønn, vakker, utmerket, mulkt
-
 finger = finger
-
 Finland = Finland
-
 Finn = finne
-
 fir = gran, edelgran
-
 fire = ild
-
 first name = fornavn
-
 fish = fisk
-
 fist = neve
-
 five = fem
-
 fix up = innrede
-
 fjord = fjord
-
 flag = flagg
-
 flask = feltflaske
-
 flat = leilighet, flat
-
 flea = loppe
-
 float = svømme
-
 flood = strøm
-
 floor = etasje, gulv
-
 flour = mel
-
 flower = blomst
-
 flute = fløyte
-
 fly = flue
-
 fog = tåke, skodde
-
 food = næring
-
 foot = fot
-
 football = fotball
-
 for = for, fordi
-
 force = tvinge
-
 forehead = panne
-
 foreign = fremmed
-
 foreigner = fremmed
-
 forest = skog
-
 forget = glemme
-
 forgive = tilgi
-
 forks, knives and spoons = spisebestikk
-
 for rent = til leie
-
 forsake = forlate
-
 for sake of = for
-
 for sale = til salgs
-
 for the reason that = fordi
-
 fortunate = lykkelig
-
 forty = førti
-
 fountain = kilde
-
 fountain-pen = fyllepenn
-
 fountain pen = fyllepenn
-
 four = fire
-
 fourteen = fjorten
-
 fourth = fjerdedel
-
 fowl = høne
-
 fox = rev
-
 fragile = skjør
-
 France = Frankrike
-
 free = fri, ledig, gratis
-
 French = fransk
-
 Frenchman = franskmann
-
 fresh = frisk
-
 Friday = fredag
-
 friend = venninne, venn
-
 friendly = vennlig, vennskapelig
-
 friendship = vennskap
-
 fright = frykt, redsel
-
 frog = frosk
-
 from = om, fra
-
 from where = hvor ... fra
-
 front = forside
-
 frontage = forside
-
 frontier = grense
-
 fruit = frukt
-
 full-grown = myndig, voksen
-
 fund = kasse
-
 funeral = begravelse
-
 fungus = sopp
-
 funnel = trakt
-
 fur = pels
-
 fur coat = pels
-
 furnace = ovn
-
 furnish = levere
-
 furnished = møblert
-
 furniture = innbo
-
 furniture van = flyttebil
-
 fur piece = pels
-
 gag = spøk
-
 gain = oppnå, vinne, gagn
-
 game = spill
-
 gaol = fengsel
-
 garage = garasje
-
 garden = have
-
 garlic = hvitløk
-
 gas = gass
-
 gasolene = bensin
-
 gasoline = bensin
-
 gaunt = ensom, tynn, sturen, trist
-
 gay = glad, lystig, blid, munter
-
 gazette = tidskrift
-
 gear-box = girkasse
-
 gear-case = girkasse
-
 gem = juvel
-
 generative = seksuell
-
 gentle = søt
-
 gentleman = herr, herre
-
 German = tysk, tysker
-
 Germany = Tyskland
-
 get = ankomme, bli, ta, få
-
 get a divorce = skille seg
-
 get divorced = skille seg
-
 ghastly = ubehagelig
-
 gift = gave, presang
-
 gin = aquavit
-
 girdle = belte
-
 girl = jente, pike
-
 give = gi, presentere
-
 give off an odour = lukte
-
 glacier = bre
-
 glad = glad
-
 glass = glass
-
 glasses = briller
-
 glove = hanske
-
 glue = lim
-
 go = gå, kjøre
-
 goal = mål
-
 goat = geit
-
 go away = dra bort
-
 god = gud
-
 God's acre = kirkegård
-
 go for a walk = spasere
-
 gold = gull
-
 goldsmith = gullsmed
-
 good = god
-
 good afternoon = goddag
-
 goodbye = farvel, ha det, morna, ha det så lenge, på gjensyn, vi ses, vi sees
-
 good day = goddag
-
 good evening = god kveld
-
 good morning = god morgen
-
 good-natured = vennlig
-
 good night = god natt
-
 goose = gås
-
 gooseberry = stikkelsbaer
-
 gossip = skravle
-
 govern = beherske, styre
-
 government = regjering
-
 gown = kjole
-
 grade = grad
-
 grandfather = bestefar
-
 grandmother = bestemor
-
 grandparents = besteforeldre
-
 grandson = barnebarn
-
 grant = innrømme
-
 grape = drue
-
 grapefruit = grapefrukt
-
 grapple = fange, gripe
-
 grass = gress
-
 grateful for = takknemlig for
-
 grave = grav
-
 gravel = grus
-
 graveyard = kirkegård
-
 gravy = saus
-
 grease = fett
-
 great = utmerket, stor
-
 Great Britain = Storbritannia
-
 Greece = Hellas
-
 green = grønn
-
 greet = hilse
-
 grey = grå
-
 grid = firkant, grind, nummertegn
-
 grisly = ubehagelig
-
 grit = grus
-
 grotto = grotte
-
 grow = bli, vokse
-
 grown-up = myndig, voksen
-
 gruesome = forferdelig, skrekkelig
-
 gruff = uvennlig
-
 guard = vakt, konduktør
-
 guest = gjest
-
 guide = fører
-
 guidebook = fører
-
 guilty = skyldig
-
 Gulf of Bothnia = Bottenviken
-
 gun = gevær
-
 gymnastics = gymnastikk
-
 habit = bruk, vane
-
 haddock = kolje
-
 hail = hagl
-
 hair = hår
-
 hairdresser = frisør
-
 half = halv
-
 halibut = hellefisk, kveite
-
 ham = skinke
-
 hammer = hammer
-
 hand = hånd
-
 handbook = fører
-
 handkerchief = lommetørkle
-
 handlebars = ratt
-
 handsome = pen, skjønn, vakker
-
 hang = henge, henge opp
-
 happen = bli
-
 happiness = lykke
-
 happy = lykkelig, glad
-
 harbor = havn
-
 harbour = havn
-
 hard = hård, vanskelig
-
 hare = hare
-
 harm = ulempe
-
 harsh = uvennlig
-
 harvest = avling, høst
-
 hash = firkant, grind, nummertegn
-
 hat = hatt
-
 hate = hate, hat
-
 have = ha, få
-
 have bad luck = være uheldig
-
 have compassion on = synes synd, synes synd på
-
 have faith = ha tillit til
-
 have faith in = ha tillit til
-
 have good luck = være heldig
-
 have got = ha
-
 hazard = risiko
-
 he = han
-
 head = hode
-
 health = helse
-
 healthy = frisk
-
 hear = høre
-
 heart = hjerte
-
 heart- = hjertelig
-
 hearty = hjertelig
-
 heaven = himmel
-
 heavy = tung
-
 heel = hæl
-
 height = høyde
-
 hello = hei, morn
-
 helm = ratt
-
 help = hjelpe
-
 herb = gress
-
 here = her
-
 herring = sild
-
 herself = selv, sjølv
-
 high = høy
-
 high tide = strøm
-
 highway = landevei
-
 hill = bakke
-
 him = han
-
 himself = selv, sjølv
-
 hind wheel = bakhjul
-
 hire = leie
-
 hit = slå
-
 hog = gris, svin
-
 hole = hull
-
 holiday = ferie
-
 Holland = Holland, Nederland
-
 homy = hyggelig, koselig
-
 honest = ærlig
-
 honey = honning
-
 hood = panser
-
 hope = håpe, håp
-
 horrible = ubehagelig, forferdelig, skrekkelig
-
 horse = hest
-
 hospital = sykehus
-
 hot = het
-
 hotel = hotell
-
 hour = time
-
 house = hus
-
 housefly = flue
-
 house of worship = kirke
-
 house-owner = huseier
-
 how = hvordan
-
 how many = hvor mye
-
 how much = hvor mye
-
 hug = gi en klem
-
 human being = menneske
-
 humour = humør
-
 hundred = hundre
-
 hungry = sulten
-
 hunt = jage
-
 husband = ektefelle, mann, ektemann
-
 hut = hytte
-
 ice = is, iskrem
-
 icecream = is, iskrem
-
 Iceland = Island
-
 Icelander = islending
-
 Icelandic = islandsk
-
 idea = oppfatning
-
 ignition = tenning
-
 ill = syk
-
 illness = sykdom
-
 image = bilde
-
 impartial = nøytral
-
 impatient = utålmodig
-
 impertinent = frekk
-
 in = i, på
-
 incendiary bomb = brandbombe
-
 inconvenient = vanskelig
-
 independant = selvstendig, sjølvstendig, uavhengig
-
 Indian corn = mais
-
 individual = individ
-
 industry = industri
-
 in exchange for = mot
-
 inexpensive = billig
-
 infant = barn, unge
-
 inflate = pumpe opp
-
 inflation = inflasjon
-
 information = opplysning
-
 in front of = før, foran
-
 initial = forbokstav
-
 ink = blekk
-
 inlet = fjord
-
 inner tube = slange
-
 insect = insekt
-
 inside = i, på
-
 install = innrede
-
 instructor = lærer
-
 insulation = isolasjon
-
 insult = skjelle ut, fornærme
-
 insurance = forsikring
-
 intercessor = advokat
-
 interest = rente
-
 interment = begravelse
-
 interpreter = tolk
-
 intimate = intim
-
 into = i, på
-
 intolerant = intolerant
-
 introduce = presentere
-
 invective = skjellsord
-
 invention = oppfinnelse
-
 invitation = innbydelse
-
 invite = invitere
-
 invoice = regning
-
 in what way = hvordan
-
 iron = jern-, jern, stryke
-
 iron clothes = stryke
-
 island = øy
-
 isolation = isolasjon
-
 Italy = Italia
-
 it doesn't matter = det gjør ikke noe, ingen årsak
-
 itself = selv, sjølv
-
 jack = jekk
-
 jail = fengsel
-
 jam = marmelade
-
 January = januar
-
 jealous = sjalu
-
 jewel = juvel
-
 jeweller = juvelér
-
 job = arbeid
-
 joint = felles
-
 joke = spøk
-
 journal = avis
-
 journey = reise
-
 joystick = ratt
-
 jug = krukke, gryte, potte
-
 July = juli
-
 June = juni
-
 keepsake = minnesmerke
-
 kettle = kjele
-
 key = nøkkel
-
 kidney = nyre
-
 kiln = ovn
-
 kilo = kilo
-
 kind = vennlig
-
 king = konge
-
 kiss = kysse, kyss
-
 kitchen = kjøkken
-
 knapsack = ryggsekk
-
 knee = kne
-
 knife = kniv
-
 know = kjenne
-
 lace = kniplinger
-
 lad = gutt
-
 ladder = stige
-
 laddie = gutt
-
 lady = fru, frue
-
 lady's bag = dameveske
-
 lake = sjø, innsjø
-
 lamb = lam
-
 lamp = lampe
-
 land = land
-
 language = språk
-
 larch = lerk
-
 large = stor
-
 lass = jente, pike
-
 late = sen
-
 laugh = le
-
 laundry = vaskeri
-
 lawyer = advokat
-
 lay = legge
-
 lay-by = parkeringsplass
-
 lay down = legge, sette
-
 lay hold of = ta
-
 lazy = doven
-
 lead = bly
-
 leader = fører
-
 leaf = blad
-
 lean = tynn
-
 learn = lære
-
 lease = leiekontrakt
-
 leather = lær
-
 leave = dra bort, forlate
-
 leek = hvitløk
-
 left = til venstre
-
 leg = ben
-
 lemon = sitron
-
 lens = linse
-
 lessen = forminske
-
 let = forlate, leie bort
-
 letter = brev, bokstav
-
 letterbox = postkasse
-
 level = flat, lik
-
 library = bibliotek
-
 lie = lyve, løgn
-
 life = liv
-
 lifebelt = livbelte
-
 life-belt = livbelte
-
 lift = heis
-
 light = lys, lett
-
 lightning = lyn
-
 like = hvordan, like, sette pris på
-
 likewise = også
-
 lilac = syrin
-
 lime = kalk
-
 limit = grense
-
 linen = lin
-
 lining = for
-
 lion = løve
-
 lip = leppe
-
 liqueur = likør
-
 liter = liter
-
 litre = liter
-
 little = liten
-
 live = bo
-
 live in lodgings = bo på hybel
-
 liver = lever
-
 live together = bo sammen
-
 living alone = enslig
-
 living-room = dagligstue
-
 loaf = brød
-
 loathe = avsky
-
 lobster = hummer
-
 location = plass
-
 loch = fjord, sjø, innsjø
-
 lock = lås
-
 lofty = høy
-
 long = lang
-
 long for = lengte
-
 longing = lengsel
-
 looking-glass = speil
-
 lord = herr, herre
-
 lorry = lastebil
-
 loss = tap
-
 lounge = sal
-
 love = elske, være glad I, kjærlighet, være vill etter
-
 lovely = behagelig, pen, skjønn, vakker, søt, snill
-
 low = lav
-
 lower-arm = underarm
-
 luggage = bagasje
-
 lunch = lunsj
-
 lung = lunge
-
 machine = maskin
-
 mackerel = makrell
-
 madam = fru, frue
-
 magazine = tidskrift
-
 maid = hushjelp, stuepike, kammerpike, værelsepike
-
 mail = post
-
 mailbox = postkasse
-
 maize = mais
-
 major road = vei med forkjørsrett
-
 make = gjøre
-
 make ... acquaintance = bli kjent med, hilse på
-
 male cook = kokk
-
 man = menneske, mann
-
 mantle = kåpe
-
 map = kart, bykart
-
 market = torg
-
 marmelade = marmelade
-
 marriage = ekteskap
-
 married = gift
-
 married people = ektepar
-
 marry = gifte sig med
-
 marvel = bli forbauset
-
 marvel at = bli forbauset
-
 master builder = byggmester
-
 match = fyrstikk
-
 matrimony = ekteskap
-
 matter = anliggende
-
 mattress = madrass
-
 mature = moden
-
 maybe = kanskje
-
 mayhap = kanskje
-
 meal = mel, måltid
-
 mealies = mais
-
 means = middel
-
 measure = mål
-
 measurement = mål
-
 meat = kjøtt
-
 medicine = medisin
-
 meet = møte, treffe
-
 meet each other = møtes
-
 meet one another = møtes
-
 melon = melon
-
 memento = minnesmerke
-
 menu = kart, spisekart
-
 merchant = kjøpmann
-
 merry = glad, lystig, blid, munter
-
 metal = metall
-
 metalled = stein-
-
 methylated spirit = denaturert sprit
-
 metre = meter
-
 metropolis = hovedstad
-
 midday = middag
-
 midday meal = middag
-
 milk = melk
-
 minced meat = kjøttkaker
-
 mineral = malm
-
 mingle = blande
-
 minute = minutt
-
 mirror = speil
-
 miserable = dårlig, sturen, trist, fattig
-
 miss = sakne, savne
-
 mist = tåke, skodde
-
 mistake = feil, mistak
-
 mistaken = urett
-
 Mister = herr
-
 misunderstanding = misforstælse
-
 mitten = hanske
-
 mix = blande
-
 modest = beskjeden
-
 Monday = mandag
-
 money = penger
-
 money-box = kasse
-
 money box = kasse
-
 money order = postanvisning
-
 monkey-wrench = skiftenøkkel
-
 month = måned
-
 monument = minnesmerke
-
 mood = humør
-
 moon = måne
-
 moor = fortøye
-
 moped = moped
-
 morning = morgen
-
 Moscow = Moskva
-
 mosquito = mygg
-
 mother = mor
-
 mother-in-law = svigermor
-
 motion picture = film
-
 motor = motor
-
 motor car = bil
-
 motorcycle = motorsykkel
-
 motor road = autobane
-
 motorway = autobane
-
 mountain = fjell
-
 mouse = mus
-
 mouth = munn
-
 move = bevege, flytte, flytting
-
 movie = film
-
 movie theatre = kino
-
 moving = følsom
-
 Mr. = herr, herre
-
 Mrs. = fru, frue
-
 museum = museum
-
 mushroom = sopp
-
 music = musikk
-
 mustard = sennep
-
 mute = stum
-
 nail = spiker, negl
-
 nail-varnish = neglelakk
-
 name = navn
-
 napkin = serviett
-
 narrate = fortelle
-
 narrative = historie
-
 narrow = smal, trang
-
 nasty = ubehagelig, heslig, stygg, dårlig, uærlig
-
 nationality = nasjonalitet
-
 nature = karakter, natur
-
 naught = null
-
 near = nær
-
 nearby = nær
-
 nearly = nesten
-
 near to = nær
-
 neck = hals
-
 necktie = slips
-
 needle = nål, knappenål
-
 neighbour = nabo
-
 nephew = nevø, søskenbarn
-
 nervous = nervøs
-
 neutral = nøytral
-
 never = aldri
-
 never mind = det gjør ikke noe, ingen årsak
-
 new = ny
-
 newspaper = tidskrift, avis
-
 next = bak
-
 next of kin = pårørende
-
 next to = nær
-
 nice = behagelig, god
-
 niece = niese, søskenbarn
-
 night = natt
-
 nine = ni
-
 nineteen = nitten
-
 ninety = nitti
-
 nip = dram
-
 no = ikke, ne
-
 noise = larm
-
 noon = middag
-
 north = nord
-
 North America = Nord-Amerika
-
 North Sea = Nordsjøen
-
 Norway = Norge
-
 Norwegian = norsk, nordmann
-
 nose = nese
-
 not = ikke, ne
-
 note = billett
-
 noteworthy = merkelig
-
 notice = legge merke til
-
 nought = null
-
 nourishment = næring
-
 novel = ny
-
 November = november
-
 now = nå
-
 null = null
-
 number = nummer på huset, nummer
-
 number of the house = nummer på huset
-
 numberplate = nummerskilt
-
 number sign = firkant, grind, nummertegn
-
 nurse = sykepleierske
-
 nut = mutter, nøtt
-
 nylon = nylon
-
 oak = eik
-
 oar = åre
-
 oats = havre
-
 object = ting
-
 occupy = besette
-
 occurence = anledning
-
 o'clock = time
-
 October = oktober
-
 odd = gal, rar, sprø
-
 of = om, fra
-
 offend = skjelle ut, fornærme
-
 offer = presentere
-
 office = kontor
-
 offset = avstand
-
 oil = olje
-
 okay = god
-
 old = gammel
-
 olive = oliven
-
 omelette = omelett
-
 on = om, i, på, over
-
 on account of = for
-
 once more = igjen, pånytt
-
 one = en
-
 one hundred = hundre
-
 onerous = tung
-
 one thousand = tusen
-
 one-way traffic = enveiskjøring
-
 onion = løk
-
 only = alene, aleine
-
 on that account = derfor
-
 on the left = venstre
-
 on the occasion of = i anledning av
-
 on the other side of = tvers over
-
 on the right = høyre
-
 on top = oppe, ovenpå
-
 open = åpen
-
 opera = opera
-
 opine = synes
-
 opinion = mening, oppfatning
-
 opportunity = anledning
-
 opposed to = mot
-
 opposite = mot, motsatt
-
 opposition = motsetning
-
 orange = appelsin
-
 orange-coloured = orange
-
 ordinary = vanlig
-
 other = en anden
-
 out = utenfor
-
 outer cover = dekk
-
 outing = utflukt
-
 outside = utenfor
-
 oven = ovn
-
 over = over
-
 overcoat = frakk
-
 overhead = oppe, ovenpå
-
 overpower = okkupere
-
 over there = der
-
 overthrow = kantre
-
 owing to = for
-
 own = eie
-
 packet = pakke
-
 pain = pine, smerte
-
 painting = maleri
-
 pair = par
-
 palace = slott
-
 pale = blek
-
 pamper = skjemme
-
 pancake = pannekake
-
 panic = panikk
-
 pantechnicon = flyttebil
-
 pantechnicon van = flyttebil
-
 panties = underbukse
-
 pants = benklær, bukser
-
 paper = dokument, papir
-
 parachute = fallskjerm
-
 paraffin-oil = parafin
-
 parcel = pakke
-
 pardon = tilgi
-
 parents = foreldre
-
 parents-in-law = svigerforeldre
-
 park = park
-
 parking bay = parkeringsplass
-
 parking garage = parkeringsplass
-
 parking place = parkeringsplass
-
 parlour = sal
-
 parsley = persille
-
 part = del
-
 particular = spesiell
-
 partridge = åkerhøne
-
 party = fest
-
 passport = pass
-
 pate = hode
-
 patience = tålmodighet
-
 patient = tålmodig
-
 paw = ben, fot
-
 pawn = soldat
-
 pay = betale
-
 pay attention to = ta hensyn til
-
 pea = ert
-
 peace = fred
-
 pear = pære
-
 pearl = perle
-
 peasant = bonde
-
 peculiar = gal, rar, sprø
-
 pedal = pedal
-
 peg = dram
-
 pelvis = skål
-
 pen = penn
-
 pencil = blyant
-
 pen-knife = lommekniv
-
 pepper = pepper
-
 per = i, på
-
 perchance = kanskje
-
 perform = gjøre, presentere
-
 perhaps = kanskje
-
 peril = fare
-
 period = punkt
-
 periodical = tidskrift
-
 person = person
-
 personality = karakter
-
 personal number = personnummer
-
 persuade = overbevise
-
 pet = skjemme
-
 petrol = bensin
-
 petroleum = parafin
-
 petticoat = underskjørt
-
 pharmaceutical = medisin
-
 pheasant = fasan
-
 phone booth = telefonkiosk
-
 photographer = fotograf
-
 physician = dokter, læge
-
 piano = piano
-
 pick = stikke
-
 pick up = ta
-
 picture = bilde, maleri
-
 picture postcard = prospektkort
-
 piece = del
-
 pig = gris, svin
-
 pigeon = due
-
 pigeonhole = avdeling
-
 pillow = hodepute
-
 pilot = los
-
 pin = knappenål
-
 pincers = knipetang
-
 pine = furu
-
 pineapple = ananas
-
 pine-tree = furu
-
 pink = nellik, rosa
-
 pipe = rør
-
 piston = stempel
-
 pitcher = krukke
-
 pity = synes synd, synes synd på, medlidenhet
-
 place = plass, legge, sette
-
 place of birth = fødested
-
 place of worship = kirke
-
 plain = klar
-
 plan = bykart
-
 plane = fly, bykart
-
 plaster = plaster
-
 plate = fat, tallerken
-
 platform = kai, perrong
-
 platter = fat, tallerken
-
 plaza = plass
-
 pleasant = behagelig
-
 please = vær så god
-
 pleased = fornøyd
-
 plug = tennplugg
-
 plum = plomme
-
 plume = penn
-
 pocket = lomme
-
 point = punkt
-
 poison = gift
-
 pole = stang
-
 police = politi
-
 policeman = politikonstabel
-
 police-station = politistasjon
-
 polite = høflig
-
 pool = svømmebad, svømmeplass
-
 poor = dårlig, fattig, stakkars
-
 population = befolkning
-
 pork = svinekjøtt
-
 port = havn
-
 portable = transportabel
-
 portal = inngang
-
 porter = portier, bybud, bærer
-
 possess = eie
-
 possession = eiendom
-
 possibly = kanskje
-
 post = post
-
 postage stamp = frimerke
-
 postal code = postnummer
-
 postcard = brevkort
-
 postman = postbud
-
 post office = postkontor
-
 pot = gryte, potte
-
 potato = potet
-
 pound sign = firkant, grind, nummertegn
-
 powder = pudder, pulver
-
 prescription = resept
-
 present = gave, presang, presentere
-
 present with = presentere
-
 preservative = prevensjonsmiddel
-
 pressing = inntrengende
-
 pretend = late som, late som om
-
 price = pris
-
 pricey = dyr, kostbar
-
 print = trykke, kopiere
-
 prison = fengsel
-
 profess = tilstå
-
 profession = yrke
-
 profit = gagn
-
 profound = dyp
-
 promise = love, løfte
-
 property = gård, egenskap, kvalitet, eiendom
-
 public square = plass
-
 pudding = pudding
-
 pulse = puls
-
 pump = pumpe
-
 purchase = kjøpe
-
 purchase money = kjøpesum
-
 purchaser = kjøper
-
 pure = ren
-
 purple = purpur
-
 purpose = mål
-
 purse = børs, pung, pengepung
-
 put = legge, sette
-
 put down = legge, sette
-
 put in order = innrede
-
 put on the stage = presentere
-
 put out of countenance = forferdelig
-
 put up with = tåle
-
 puzzle over = gruble
-
 quality = egenskap, kvalitet
-
 quantity = beløp
-
 quarrel = krangle, trette
-
 quay = kai, perrong
-
 queen = dronning
-
 question = spørsmål
-
 quick = hurtig
-
 quickly = kvikk
-
 quit = forlate
-
 quite = meget
-
 rabbit = kanin
-
 rack one's brains = gruble
-
 radio = radio
-
 rag = klut
-
 railway carriage = vogn
-
 railway platform = perrong
-
 railway station = jernbanestasjon
-
 rain = regn
-
 raincoat = regnfrakke
-
 ranch = gård
-
 rapid = hurtig
-
 raspberry = bringebær
-
 rat = rotte
-
 ravine = kløft
-
 razor = barberkniv
-
 razor-blade = barberblad
-
 read = lese
-
 reality = sannhet
-
 realize = forstå
-
 rear-lamp = baklys
-
 rear-light = baklys
-
 rear wheel = bakhjul
-
 rebuke = dadle, bebreide
-
 receipt = kvittering
-
 receive = godta, takke ja til, få
-
 recent = frisk
-
 recipe = resept
-
 record = innskrive
-
 red = rød
-
 red herring = røkesild
-
 reek = lukte
-
 refuse = avfall, nekte
-
 regard = ta hensyn til
-
 register = innskrive
-
 regret = angre på
-
 regrettably = dessverre, det var synd
-
 reject = takke nei til, nekte
-
 relate = fortelle
-
 relation = forhold
-
 relations = familie
-
 relative = slektning
-
 relatives = familie
-
 release = forlate
-
 reliable = pålitelig
-
 relief = lettelse
-
 relieved = lettet
-
 religion = religion
-
 religious = religiøs, troende
-
 rely on = ha tillit til, stole på
-
 remarkable = merkelig
-
 remedy = middel
-
 remote = ensom, fjern
-
 removal = flytting
-
 rendezvous = avtale
-
 rent = leie
-
 rent money = leie
-
 rent out = leie bort
-
 repeat = gjenta
-
 reply = svare
-
 repose = hvile
-
 reproach = dadle, bebreide, bebreidelse
-
 reprove = dadle, bebreide
-
 resemblance = likhet
-
 resemble = ligne
-
 resent = ergre seg over
-
 residence = bolig
-
 resources = middel
-
 respect = ha respekt for, respektere
-
 respond = svare
-
 rest = hvile
-
 restaurant = restaurant
-
 restrain = beherske, styre
-
 retardation = forsinkelse
-
 return-ticket = returbillett
-
 reveal = fremkalle
-
 revue = tidsskrift
-
 rice = ris
-
 rich = rik
-
 ride = kjøre
-
 rifle = gevær
-
 right = til høyre, riktig
-
 rim = felg
-
 ring = ring
-
 ripe = moden
-
 risk = risiko
-
 river = elv, flod
-
 road = vei
-
 road-metal = steinsprut
-
 roast = steke
-
 robe = kjole
-
 rod = stang
-
 roll = bolle
-
 roller = sylinder
-
 roof = tak
-
 room = rom, værelse
-
 root = rot
-
 rope = reip, tau
-
 rough = uvennlig
-
 round = reip, om, omkring
-
 route = vei
-
 rubber = gummi, kondom
-
 rubbish = avfall
-
 rubble = steinsprut
-
 rucksack = ryggsekk
-
 rudder = ratt
-
 rude = uhøflig
-
 rule = beherske, styre
-
 run = løpe
-
 Russia = Russland
-
 Russian = russisk, russer
-
 rust = rust
-
 rye = rug
-
 Sabbath = lørdag
-
 sack = sekk, veske
-
 sad = sturen, trist
-
 saddle = sal
-
 sadness = sorg
-
 safety = sikkerhet
-
 safety-belt = livbelte
-
 safety pin = sikkerhetsnål
-
 sailor = sjømann
-
 sallow = blek
-
 salmon = laks
-
 salon = sal
-
 salt = salt
-
 salute = hilse
-
 sample = mønster
-
 sand = sand
-
 Sassenach = engelskmann
-
 satisfied = fornøyd
-
 Saturday = lørdag
-
 sauce = saus
-
 saucer = koppeskål
-
 sausage = pølse
-
 say = si
-
 say goodbye = ta farvel, ta farvel med
-
 say goodbye to = ta farvel, ta farvel med
-
 Scandinavia = Norden
-
 Scandinavian = nordisk
-
 schedule = rutetabell, timeplan
-
 school = skole
-
 science = vitenskap
-
 scissors = saks
-
 scold = dadle, bebreide
-
 scrap = klut
-
 scream = skrike
-
 screw = skrue
-
 screwdriver = skrujern
-
 scuffle = slagsmål
-
 sea = hav
-
 section = avdeling
-
 security = sikkerhet
-
 see = møte, treffe, se, besøke
-
 self = selv, sjølv
-
 self-confidence = selvtillit
-
 self-conscious = blyg, sjenert
-
 self-reliance = selvtillit
-
 sell = selge
-
 send = sende
-
 sender = avsender
-
 September = september
-
 serious = alvorlig
-
 serpent = orm
-
 servant = hushjelp
-
 set straight = skuffe
-
 seven = sju
-
 seventeen = sytten
-
 seventy = sytti
-
 sew = sy
-
 sex = kjønn, sex
-
 sexual = seksuell
-
 shack = hytte
-
 shamrock = kløver
-
 share = del
-
 sharp = firkant, grind, nummertegn
-
 shave = barbere
-
 shaving-brush = barberkost
-
 shawl = sjal
-
 shear = klippe
-
 sheep = får
-
 sheet = blad, laken
-
 shifting spanner = skiftenøkkel
-
 shirt = skjorte, trøye
-
 shock-absorber = støtfjær
-
 shoe = sko
-
 shoemaker = skomaker
-
 shop = butikk, forretning
-
 short = kort
-
 short circuit = kortslutning
-
 shoulder = vegkant, skulder
-
 shout = skrike
-
 shower = dusj
-
 shuffle = blande
-
 shy = blyg, sjenert
-
 siblings = søsken
-
 sick = syk
-
 sight = utsikt
-
 sightseeing trip = utflukt
-
 sign = skrive under
-
 signature = underskrift
-
 signpost = veiviser
-
 silent = stille
-
 silk = silke
-
 silver = sølv
-
 similarity = likhet
-
 since = om, fordi
-
 sing = synge
-
 single = ugift, enslig
-
 sir = herr
-
 sister = søster
-
 sister-in-law = svigerinne
-
 sit = sitte
-
 sitting-room = dagligstue, sal
-
 six = seks
-
 sixteen = seksten
-
 sixty = seksti
-
 size = størrelse
-
 ski = ski
-
 skin = hud
-
 sky = himmel
-
 slander = sladre
-
 sledge = slede
-
 sleep = sove
-
 sleeping-car = sovevogn
-
 sleigh = slede
-
 slender = tynn
-
 slice = skjære
-
 slow = langsom
-
 slow train = somletog
-
 small = liten
-
 smear = smøre
-
 smell = lukte
-
 smile = smile, smil
-
 smoke = røyk
-
 smokers = røyke-kupé
-
 smooth = flat
-
 snack = lunsj
-
 snail = kringle, kroell-alfa
-
 snake = orm
-
 snifter = dram
-
 snorter = dram
-
 snow = sne
-
 soap = såpe
-
 so ... as = like ... som
-
 soccer = fotball
-
 society = forening
-
 sock = sokk
-
 sofa = sjeselong, sofa
-
 soft = søt, bløt
-
 soiled = skitten
-
 soldier = soldat
-
 sole = alene, aleine, tunge
-
 solicitor = advokat
-
 solitary = alene, aleine
-
 so long = ha det så lenge, på gjensyn, vi ses, vi sees
-
 solution = oppløsning
-
 somber = sturen, trist
-
 something = noe
-
 son = sønn
-
 son-in-law = svigersønn
-
 sorrow = sorg
-
 soup = suppe
-
 sour = sur, uvennlig
-
 source = kilde
-
 south = syd
-
 South America = Sør-Amerika
-
 souvenir = minnesmerke
-
 Soviet Union = Sovjetunionen
-
 space = rom
-
 spacious = romslig, vid
-
 Spain = Spania
-
 spare time = ferie
-
 spark = gnist
-
 spark plug = tennplugg
-
 speak = prate, snake, tale
-
 special = spesiell
-
 speciality = avdeling
-
 specimen = mønster
-
 spectacles = briller
-
 speechless = stum
-
 speed = fart
-
 speed-limit = fartsgrense
-
 speed limit = fartsgrense
-
 speedy = hurtig
-
 spell = stave
-
 spice = kryddek
-
 spinach = spinat
-
 Spitsbergen = Svalbard
-
 spoiled = bortskjemt
-
 spoon = skje
-
 spot = plass, punkt
-
 spread = smøre
-
 spring = kilde, vår
-
 springtime = vår
-
 spruce = gran
-
 spruce-fir = gran
-
 square = plass
-
 square metre = kvadratmeter
-
 squatter = husokkupant
-
 stab = stikke
-
 stable = stall
-
 stage = scene, stasjon
-
 staid = alvorlig
-
 staircase = trappe
-
 stairs = trappe
-
 stall = stall
-
 stamp = frimerke
-
 stand = stå
-
 star = stjerne
-
 start = begynne
-
 starter = starter
-
 state = hevde, påstå
-
 station = stasjon
-
 station-master = stasjonmester
-
 statue = statue
-
 steak = biff
-
 steal = stjele
-
 steamship = dampbåt
-
 steel = stål
-
 steering-wheel = ratt
-
 stick = stokk
-
 sting = stikke
-
 stock exchange = børs
-
 stocking = strømpe
-
 stodgy = kjedelig
-
 stomach = mave
-
 stone = stein-, stein
-
 stone-chippings = steinsprut
-
 stop = holdeplass, stoppested, stasjon
-
 storage battery = akkumulator
-
 store = butikk, forretning
-
 storey = etasje
-
 storm = storm
-
 story = etasje, historie
-
 stove = ovn
-
 strange = fremmed, gal, rar, sprø
-
 stranger = fremmed
-
 strawberry = jordbær
-
 stream = å
-
 street = gate
-
 streetcar = sporvogn, trikk
-
 strike = slå
-
 striking = påfallende
-
 string = reip, tau
-
 stroll = spasertur, spasere
-
 strong = sterk
-
 struggle = slåss, slagsmål
-
 student = student
-
 sty = stall
-
 subsequently = bak
-
 subway = undergrund, undergrunnsbane
-
 such a = hvordan
-
 such as = hvordan
-
 sufficient = nok
-
 sugar = sukker
-
 sum = beløp
-
 summer = sommer
-
 summon = kalle
-
 sun = sol
-
 Sunday = søndag
-
 sun-glasses = solbriller
-
 sunset = solnedgang
-
 super highway = autobane
-
 supper = aftens, kveldsmat
-
 supply = levere
-
 surly = uvennlig
-
 surname = etternavn
-
 surprise = forbauselse, overraske, overraskelse
-
 suspect = mistro
-
 suspenders = bukseseler
-
 suspicion = mistro
-
 swaddling cloth = bleie
-
 swear = banne
-
 Swede = svenske
-
 Sweden = Sverige
-
 Swedish = svensk
-
 sweet = søt
-
 swift = hurtig
-
 swiftly = kvikk
-
 swim = svømme
-
 swimming-bath = svømmebad, svømmeplass
-
 swimming-pool = svømmebad, svømmeplass
-
 swimming trunks = badebukse
-
 swindle = bedrag
-
 swine = gris, svin
-
 Switzerland = Sveits
-
 sympathetic = grei, sympatisk
-
 table = bord
-
 tail = hale
-
 tail-light = baklys
-
 tailor = skredder
-
 take = godta, takke ja til, besette, ta
-
 take account of = ta hensyn til
-
 take exception to = ergre seg over
-
 take in = godta, takke ja til
-
 take into account = ta hensyn til
-
 take leave = ta farvel, ta farvel med
-
 take leave from = ta farvel, ta farvel med
-
 take offence at = ergre seg over
-
 take over = kjøpe
-
 tale = historie
-
 talk = prate, snake, tale
-
 tall = høy
-
 tank = tank
-
 tardy = sen
-
 target = mål
-
 tart = sur
-
 taste = smak
-
 tax = skatt
-
 taxi = drosje
-
 tea = te
-
 teacher = lærer
-
 tear = tåre
-
 telegram = telegram
-
 telephone = telefon
-
 telephone booth = telefonkiosk
-
 telephone kiosk = telefonkiosk
-
 television = fjernsyn
-
 tell = si, fortelle
-
 tell a lie = lyve
-
 temper = humør
-
 tempest = storm
-
 ten = ti
-
 tender = søt, presentere
-
 tent = telt
-
 term of abuse = skjellsord
-
 terraced house = rekkehus
-
 terrace house = rekkehus
-
 terrible = forferdelig, skrekkelig
-
 test = prøve
-
 thank = takke
-
 thank for = takke for
-
 thankful = takknemlig
-
 thankless = utakknemlig
-
 thanks = takk, takk skal du ha
-
 thank you = takk, takk skal du ha
-
 thank you very much = tusen takk
-
 that = hva, hvem, hvilken
-
 that's all right = det gjør ikke noe, ingen årsak
-
 that's okay = det gjør ikke noe, ingen årsak
-
 that's too bad = det var synd
-
 the Antarctic = Sydpolen, Sørpolen
-
 the Arctic = Nordpolen
-
 theatre = teater
-
 the Netherlands = Nederland
-
 there = der
-
 therefore = derfor
-
 thermos = termosflaske
-
 thermos bottle = termosflaske
-
 thermos flask = termosflaske
-
 they = de
-
 thick = tykk
-
 thief = tyv
-
 thigh = lår
-
 thin = tynn
-
 thing = ting
-
 think = synes, tenke
-
 thirst = tørst
-
 thirteen = tretten
-
 thirty = tredve
-
 thou = du
-
 thought = tanke
-
 thousand = tusen
-
 thread = tråd
-
 three = tre
-
 throat = strupe
-
 through = for
-
 throw = kaste
-
 thumb = tommelfinger
-
 thunder = torden
-
 Thursday = torsdag
-
 ticket = billett
-
 ticket-window = luke
-
 tidy = innrede
-
 tie = fortøye, slips
-
 tie on = fortøye
-
 tiger = tiger
-
 till = kasse, til
-
 timber = tre
-
 time = time, tid
-
 time off = ferie
-
 time-table = rutetabell, timeplan
-
 timid = sjenert
-
 tin = blikk
-
 tin can = blikk
-
 tin-opener = hermetikkåpner
-
 tip = drikkepenger
-
 tire = dekk
-
 tired = trøtt
-
 tiresome = kjedelig
-
 to = på, til
-
 toast = steke
-
 tobacco = tobakk
-
 today = i dag
-
 toe = tå
-
 together = sammen
-
 toilet = toalett, WC
-
 tolerant = tolerant
-
 tolerate = tåle
-
 tomato = tomat
-
 tomato juice = tomato
-
 tomato-soup = tomatsuppe
-
 tomb = grav
-
 tomorrow = i morgen
-
 tongs = tange
-
 tongue = tunge, språk
-
 too = også
-
 tool = middel
-
 tooth = tann
-
 tooth-brush = tannbørste
-
 tooth-paste = tannkrem
-
 to the left = til venstre
-
 to the right = til høyre
-
 touching = følsom
-
 tourist agency = reisebyrå
-
 toward = på, til
-
 towards = på, til, om, omkring
-
 towel = håndkle
-
 tower = tårn
-
 towing-line = slepetau
-
 town = by
-
 town-hall = rådhus
-
 town hall = rådhus
-
 toy = leketøy
-
 trade = forretning
-
 traffic = trafikk
-
 train = tog
-
 tram = sporvogn, trikk
-
 translate = oversette
-
 transmit = sende
-
 transparant = gjennomsiktig
-
 travel = kjøre, reise
-
 travel agency = reisebyrå
-
 tree = tre
-
 trefoil = kløver
-
 trip = reise
-
 trouble = vanskelighet
-
 trousers = benklær, bukser
-
 truck = lastebil
-
 true = sann
-
 trunk = kuffert
-
 trust = ha tillit til, tillit
-
 trust in = ha tillit til, stole på
-
 trustworthy = pålitelig
-
 truth = sannhet
-
 try = forsøke
-
 tube = sslang, rør, ventil
-
 Tuesday = tirsdag
-
 tulip = tulipan
-
 tummy = buk, mave
-
 tumor = svulst
-
 tumour = svulst
-
 turkey = kalkun
-
 turn = kantre
-
 turn over = kantre
-
 turnpike = autobane
-
 TV = fjernsyn
-
 twelve = tolv
-
 twenty = tjue, tyve
-
 two = to
-
 typewriter = skrivemaskin
-
 tyre = dekk
-
 ugly = heslig, stygg
-
 umbrella = paraply
-
 uncle = onkel
-
 unclean = skitten
-
 under = under
-
 under age = mindreårig
-
 undergarment = underkjole
-
 underground = undergrund, undergrunnsbane
-
 underneath = ned, under
-
 underpants = underbukse
-
 understand = forstå
-
 unfortunately = dessverre, det var synd
-
 ungrateful = utakknemlig
-
 unhappy = ulykkelig
-
 United States of America = De forente stater, USA
-
 unkind = uvennlig
-
 unmarried = ugift
-
 unoccupied = ledig
-
 unpleasant = uvennlig
-
 unreliable = upålitelig
-
 unthankful = utakknemlig
-
 until = til
-
 untrue = usann
-
 up = hit
-
 uphill = hit
-
 upon = på, mot, om, over
-
 upper arm = overarm
-
 upset = kantre
-
 upstairs = oppe, ovenpå
-
 upwards = hit
-
 urgency = hast
-
 urgent = inntrengende
-
 USA = De forente stater, USA
-
 US citizen = amerikaner
-
 used to = vanlig
-
 USSR = Sovjetunionen
-
 usual = vanlig
-
 usurp = okkupere
-
 vacant = ledig, vakant
-
 vacation = ferie
-
 vaccine = vaksinasjon
-
 valid = gyldig
-
 valley = dal
-
 valuable = kostbar
-
 value = verdi
-
 valve = ventil
-
 vanity bag = dameveske
-
 vast = romslig, vid
-
 veal = kalvekjøtt
-
 vegetable = grønsak
-
 velvet = fløyel
-
 vend = selge
-
 ventilator = ventilator
-
 verge = vegkant
-
 verge of a road = vegkant
-
 very = meget
-
 very much = meget
-
 vest = vest
-
 victim = offer
-
 view = utsikt
-
 village = bygd, landsby
-
 vinegar = eddik
-
 violence = overtredelse
-
 violet = fiolett
-
 violin = fiolin
-
 visit = besøke, visitt
-
 vocabulary = ordbok
-
 voice = stemme
-
 void = tom
-
 voyage = reise
-
 wadding = bomull
-
 wager = vedde
-
 waggon = vogn
-
 waistcoat = vest
-
 wait = vente, forvente
-
 waiter = kelner
-
 wait for = vente, forvente
-
 waiting-room = venterom
-
 waiting room = venterom
-
 wake = vegge
-
 wake up = vegge
-
 walk = spasertur
-
 wall = vegg
-
 wallet = børs, pung, pengepung
-
 want = ønske, ville
-
 war = krig
-
 warehouse = samvirkelag, varehus
-
 warm = hjertelig, varm
-
 wash = vaske
-
 waste = avfall
-
 watch = armbåndsur, ur
-
 water = vann
-
 water-bottle = feltflaske
-
 waterfall = foss
-
 way = bruk, vane, vei
-
 way out = utgang
-
 wealthy = rik
-
 wear = bære
-
 weather = væer
-
 wedding = bryllup
-
 wedding-party = bryllup
-
 Wednesday = onsdag
-
 week = uke
-
 week-end = helg
-
 weep = gråte
-
 weight = vekt
-
 well = frisk
-
 well-mannered = høflig
-
 well-off = rik
-
 wench = jente, pike
-
 west = vest
-
 wet = våt
-
 whale = hval
-
 wharf = kai, perrong
-
 what = hva
-
 what a = hvordan
-
 what a pity = det var synd
-
 what for = hvorfor
-
 wheat = hvete
-
 wheel = hjul
-
 when = når
-
 whence = hvor ... fra
-
 where = hvor
-
 wherefore = hvorfor
-
 which = hvem, hvilken
-
 while = tid
-
 whipped cream = fløtekrem
-
 whisper = hviske
-
 white = hvit
-
 whiten = bleike
-
 who = hvem, hvilken
-
 why = hvorfor
-
 wide = romslig, vid
-
 widow = enke
-
 widower = enkemann
-
 wife = ektefelle, kone
-
 will = vilje
-
 willingness = vilje
-
 win = oppnå, vinne
-
 wind = vind
-
 window = vindu, luke
-
 wine = vin
-
 winter = vinter
-
 wireless = radio
-
 wish = ønske, ønske seg, ville, vilje
-
 with = med
-
 within = i, på
-
 woman = kvinne
-
 wonder = bli forbauset, forbauselse
-
 wonted = vanlig
-
 woo = ha samleie med, elske
-
 wood = tre
-
 wooden = tre-
-
 woods = skog
-
 wool = ull
-
 word = ord
-
 work = arbeid
-
 work out = regne
-
 world = verden
-
 worse = verre
-
 worst = verst
-
 worth = verdi
-
 wrangle = krangle, trette
-
 wrench = nøkkel
-
 wrist-watch = armbåndsur
-
 write = skrive
-
 wrong = urett
-
 ye = du
-
 year = år
-
 yearn = lengte
-
 yellow = gul
-
 yes = ja
-
 yesterday = i går
-
 yon = der
-
 yonder = der
-
 you = du
-
 young = ung
-
 youngster = ungdom
-
 you're welcome = det gjør ikke noe, ingen årsak
-
 youth = ungdom
-
 zero = null
-
 zilch = null
-
 ZIP code = postnummer
-
 zipper = glidelås
-
 zoo = dyrehave
