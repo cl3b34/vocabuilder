@@ -1,3 +1,6 @@
+#setName = longlist_en_fi
+#sideOneTitle = ENG
+#sideTwoTitle = FIN
 a = -ssa, joku, kohti
 abandon = alistua
 abashment = pula

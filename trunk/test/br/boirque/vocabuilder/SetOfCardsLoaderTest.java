@@ -46,6 +46,10 @@ public class SetOfCardsLoaderTest extends TestCase {
 		Vector cards = soc.getFlashCards();
 		System.out.println("Number of Cards: " + cards.size());
 		assertNotNull(cards);
+		// check the set name
+//		String setName = soc.getTitle();
+//		assertEquals("longlist fi_en", setName);
+		
 		//check the first card
 		FlashCard firstCard = (FlashCard) cards.elementAt(0);
 		assertNotNull(firstCard);
@@ -54,6 +58,10 @@ public class SetOfCardsLoaderTest extends TestCase {
 		String secondWordFirstCard = firstCard.getSideTwo();
 		assertEquals("fluid, liquid, wave", secondWordFirstCard);
 		assertTrue(false == firstCard.isDone());
+		String sideOneTitleFirstCard = firstCard.getSideOneTitle();
+		assertEquals("FIN", sideOneTitleFirstCard);
+		String sideTwoTitleFirstCard = firstCard.getSideTwoTitle();
+		assertEquals("ENG", sideTwoTitleFirstCard);
 		
 		//check the second card
 		FlashCard secondCard = (FlashCard) cards.elementAt(1);
@@ -63,15 +71,23 @@ public class SetOfCardsLoaderTest extends TestCase {
 		String secondWordsecondCard = secondCard.getSideTwo();
 		assertEquals("breakfast", secondWordsecondCard);
 		assertTrue(false == secondCard.isDone());
+		String sideOneTitleSecondCard = secondCard.getSideOneTitle();
+		assertEquals("FIN", sideOneTitleSecondCard);
+		String sideTwoTitleSecondCard = secondCard.getSideTwoTitle();
+		assertEquals("ENG", sideTwoTitleSecondCard);
 		
 		// check the last card
 		FlashCard lastCard = (FlashCard) cards.lastElement();
 		assertNotNull(lastCard);
 		String firstWordLastCard = lastCard.getSideOne();
-		assertEquals("Ã¶ljy", firstWordLastCard);
+		assertEquals("öljy", firstWordLastCard);
 		String secondWordLastCard = lastCard.getSideTwo();
 		assertEquals("oil", secondWordLastCard);
 		assertTrue(false == lastCard.isDone());
+		String sideOneTitleLastCard = lastCard.getSideOneTitle();
+		assertEquals("FIN", sideOneTitleLastCard);
+		String sideTwoTitleLastCard = lastCard.getSideTwoTitle();
+		assertEquals("ENG", sideTwoTitleLastCard);
 		
 		assertTrue(false == soc.isDone());		
 	}

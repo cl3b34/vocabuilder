@@ -1,3 +1,6 @@
+#setName = semantic primitives
+#sideOneTitle = ENG
+#sideTwoTitle = FIN
 I  = Minä
 YOU  = Sinä
 SOMEONE  = Joku 

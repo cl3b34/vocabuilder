@@ -1,3 +1,6 @@
+#setName = longlist_fi_en
+#sideOneTitle = FIN
+#sideTwoTitle = ENG
 aalto = fluid, liquid, wave
 
 aamiainen = breakfast
