@@ -7,7 +7,9 @@ import java.util.Vector;
  * A list of flash cards to be studied
  */
 public class SetOfCards {
+	//This set's title
 	private String title;
+	//If all the cards in this set are marked as done
 	private boolean done;
 	//total amount of time spent studying this set
 	private long totalStudiedTimeInMiliseconds;
@@ -15,8 +17,11 @@ public class SetOfCards {
 	private Vector flashCards;
 	//how many times the cards on this set were displayed
 	private int totalNumberOfDisplayedCards;
+	//last time the set was viewed
 	private long lastTimeViewed;
+	//last time the set was marked done
 	private long lastTimeMarkedDone;
+	//how many times it was marked done
 	private int markedDoneCounter;
 	
 	
@@ -29,12 +34,11 @@ public class SetOfCards {
 	
 	
 	/**
-	 * @param title
-	 * @param done
-	 * @param totalStudiedTimeInMiliseconds
-	 * @param flashCards
-	 * 
 	 * Convenience constructor
+	 * @param title - the set title
+	 * @param done - the set is done if all cards are marked as done
+	 * @param totalStudiedTimeInMiliseconds - how long has this set been studied
+	 * @param flashCards - the cards contained in this set
 	 */
 	public SetOfCards(String title, boolean done,
 			long totalStudiedTimeInMiliseconds, Vector flashCards) {
