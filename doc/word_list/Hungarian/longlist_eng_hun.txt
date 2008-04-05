@@ -1,3 +1,6 @@
+#setName = longlist_en_hu
+#sideOneTitle = ENG
+#sideTwoTitle = HUN
 abacus = abakusz
 abandon = elhagy, lemond
 abbess = apátnõ

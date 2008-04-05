@@ -1,3 +1,6 @@
+#setName = longlist_en_de
+#sideOneTitle = ENG
+#sideTwoTitle = GER
 a = in, nach, pro, zu, ein gewisser, einer, irgend einer, irgendwer, jemand, pro, à, je, zu, ein, eine
 Aar = Aare
 Aaron = Aaron

@@ -1,3 +1,6 @@
+#setName = longlist_en_es
+#sideOneTitle = ENG
+#sideTwoTitle = SPA
 a = a, dentro de, en, por, alguien, alguno, cierto, por, un, una
 abandon = abandonar
 abandonment = cesión

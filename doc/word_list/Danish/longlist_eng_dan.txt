@@ -1,3 +1,6 @@
+#setName = longlist_en_da
+#sideOneTitle = ENG
+#sideTwoTitle = DAN
 a = i, om, på, en, et
 Aaron = Aaron
 abacus = abacus

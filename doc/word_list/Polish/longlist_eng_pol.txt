@@ -1,3 +1,6 @@
+#setName = longlist_en_pl
+#sideOneTitle = ENG
+#sideTwoTitle = POL
 a = w, ktoś, po
 abandon = opuściæ
 abashed = zażenowany
