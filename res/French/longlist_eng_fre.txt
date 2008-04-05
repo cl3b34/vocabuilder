@@ -1,3 +1,6 @@
+#setName = longlist_en_fr
+#sideOneTitle = ENG
+#sideTwoTitle = FRE
 a = à, au milie de, en, dans, parmi, un, quelqu'un, à, à raison de, par, une
 abacus = abaque
 abandon = abdiquer, abandonner, délaisser, livrer, quitter, renoncer, résigner
