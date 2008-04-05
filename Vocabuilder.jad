@@ -1,10 +1,10 @@
-MIDlet-1: Vocab_en_de,,br.boirque.vocabuilder.view.Vocabuilder
+MIDlet-1: Vocab_en_da,,br.boirque.vocabuilder.view.Vocabuilder
 MIDlet-Data-Size: 51794
 MIDlet-Description: Portable Flash Cards to aid on vocabulary learning
 MIDlet-Info-URL: http://code.google.com/p/vocabuilder/
-MIDlet-Jar-URL: Vocabuilder104_en_de.jar
-MIDlet-Name: Vocabuilder ENGLISH - GERMAN
+MIDlet-Jar-URL: Vocabuilder104_en_da.jar
+MIDlet-Name: Vocabuilder ENGLISH - DANISH
 MIDlet-Vendor: Cleber Goncalves - Boirque
-MIDlet-Version: 1.4.37
+MIDlet-Version: 1.4.38
 MicroEdition-Configuration: CLDC-1.0
 MicroEdition-Profile: MIDP-2.0
