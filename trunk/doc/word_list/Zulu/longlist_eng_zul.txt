@@ -1,3 +1,6 @@
+#setName = longlist_en_zu
+#sideOneTitle = ENG
+#sideTwoTitle = ZUL
 abatement = isephulelo
 aberration = isiphosiso
 abet = ukunceda, ukusiza
