@@ -94,7 +94,14 @@ public class SetOfCardsLoader {
 	private SetOfCards extractSetOfCards(ByteArrayInputStream bais) {
 		boolean done = false;
 		boolean isMetadata = false;
-		//the metadata
+		
+		final char LINEFEED = '\n';
+		final char CHARIAGERETURN = '\r';
+		final char EQUALSIGN = '=';
+		final char NUMBERSIGN = '#';
+	//	final char SPACE = ' ';
+		
+		//the metadata. Default values
 		String setName = "default set";
 		String sideOneTitle = "ENG";
 		String sideTwoTitle = "FIN";
@@ -105,30 +112,22 @@ public class SetOfCardsLoader {
 		FlashCard readCard = new FlashCard();
 		Vector cards = new Vector();
 		StringBuffer sb = new StringBuffer();
-//		char space = ' ';
-		char lineFeed = '\n';
-		char chariageReturn = '\r';
-		char equalSign = '=';
-		char numberSign = '#';
+		
 		while (!done) {
 			int readChar = bais.read();
 			if (readChar == -1) {
 				// Save the last Flashcard to the vector before exiting
-				String sideTwoText = sb.toString();
-				sideTwoText = sideTwoText.trim();
-				readCard.setSideTwo(sideTwoText);
-				readCard.setSideTwoTitle(sideTwoTitle);
-				readCard.setDone(false);
-				readCard.setTip("");
+				readCard = fillCardSide(false, sb.toString(), sideTwoTitle, readCard);
 				cards.addElement(readCard);
+				sb = null;
 				done = true;
 			} else {
 				char c = (char) readChar;
-				if (c == numberSign) {
+				if (c == NUMBERSIGN) {
 					isMetadata = true;
 					continue;
 				}
-				if (c == lineFeed || c == chariageReturn && isMetadata) {
+				if (c == LINEFEED || c == CHARIAGERETURN && isMetadata) {
 					if (sb.length() > 0) {
 						// got the value of the metadata
 						if(metadata.equals("setName")) {
@@ -139,45 +138,40 @@ public class SetOfCardsLoader {
 						}else if(metadata.equals("sideTwoTitle")) {
 							sideTwoTitle = sb.toString().trim();
 						}
-						
 						//reset metadata and the string buffer
 						metadata = "";
+						sb = null;
 						sb = new StringBuffer();
 						isMetadata = false;
-						}
+					}
 					continue;
 				}					
-				if (c == lineFeed || c == chariageReturn) {
+				if (c == LINEFEED || c == CHARIAGERETURN) {
 					// end of the second word
 					// Save this Flashcard to the vector and
 					// continue to the next Flashcard
 					if (sb.length() > 0) {
-						String sideTwoText = sb.toString();
-						sideTwoText = sideTwoText.trim();
-						readCard.setSideTwo(sideTwoText);
-						readCard.setSideTwoTitle(sideTwoTitle);
-						readCard.setDone(false);
-						readCard.setTip("");
+						readCard = fillCardSide(false, sb.toString(), sideTwoTitle, readCard);
 						cards.addElement(readCard);
 						readCard = new FlashCard();
+						sb = null;
 						sb = new StringBuffer();
 					}
 					continue;
 				}
-				if (c == equalSign && isMetadata) {
+				if (c == EQUALSIGN && isMetadata) {
 					if (sb.length() > 0) {
 						// got the title of the metadata
 						metadata = sb.toString().trim();
+						sb = null;
 						sb = new StringBuffer();
 					}
 					continue;
 				}					
-				if (c == equalSign) {
+				if (c == EQUALSIGN) {
 					// end of the first word, start of the translation word
-					String sideOneText = sb.toString();
-					sideOneText = sideOneText.trim();
-					readCard.setSideOne(sideOneText);
-					readCard.setSideOneTitle(sideOneTitle);
+					readCard = fillCardSide(true, sb.toString(), sideOneTitle, readCard);
+					sb = null;
 					sb = new StringBuffer();
 					continue;
 				}
@@ -188,6 +182,20 @@ public class SetOfCardsLoader {
 		}
 		soc.setFlashCards(cards);
 		return soc;
+	}
+	
+	private FlashCard fillCardSide(boolean sideOne, String value, String sideTitle, FlashCard card) {
+		value = value.trim();
+		if(sideOne) {
+		card.setSideOne(value);
+		card.setSideOneTitle(sideTitle);
+		}else {
+			card.setSideTwo(value);
+			card.setSideTwoTitle(sideTitle);
+			card.setDone(false);
+			card.setTip("");
+		}
+		return card;
 	}
 	
 }
