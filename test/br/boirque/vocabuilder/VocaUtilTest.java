@@ -1,5 +1,7 @@
 package br.boirque.vocabuilder;
 
+import java.util.TimeZone;
+
 import br.boirque.vocabuilder.util.VocaUtil;
 import j2meunit.framework.*;
 
@@ -41,12 +43,28 @@ public class VocaUtilTest extends TestCase {
 		assertEquals("1 day 1hr 13min", vu.getStudyTimeAsString(90780000L)); // 1 day 1hr 13min
 	}
 	
+	public void testGetLastTimeViewedAsString() {
+		VocaUtil vu = new VocaUtil();
+		//this was supposed to be 18/04/2008 23:11 but for some
+		//reason the default time zone on the emulator is UTC
+		// (-3 h) so it evaluates to 18/04/2008 20:11
+		System.out.println((TimeZone.getDefault()).getID());
+		assertEquals("18/4/2008 20:11", vu.getLastTimeViewedAsString(1208549471078L)); 
+	}
+	
+	
 	public Test suite() {
 		TestSuite testsuite = new TestSuite();
 		
 		testsuite.addTest(new VocaUtilTest("testGetStudyTimeAsString", new TestMethod(){ 
 			public void run(TestCase tc){
 				((VocaUtilTest) tc).testGetStudyTimeAsString(); 
+			} 
+		}));
+		
+		testsuite.addTest(new VocaUtilTest("testGetLastTimeViewedAsString", new TestMethod(){ 
+			public void run(TestCase tc){
+				((VocaUtilTest) tc).testGetLastTimeViewedAsString(); 
 			} 
 		}));
 

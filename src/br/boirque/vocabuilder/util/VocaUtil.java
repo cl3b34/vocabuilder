@@ -12,6 +12,12 @@ public class VocaUtil {
 		// TODO Auto-generated constructor stub
 	}
 	
+	/**
+	 * Format a long into a string representing a date. ex:
+	 * 90780000L becomes '1 day 1hr 13min'
+	 * @param studyTime - total time studied
+	 * @return the formatted string
+	 */
 	public String getStudyTimeAsString(long studyTime) {
 		// 1s = 1000 ms
 		studyTime = studyTime / 1000; // study time in seconds
@@ -49,7 +55,8 @@ public class VocaUtil {
 
 	/**
 	 * Format a long into a string representing a date. ex:
-	 * 13/7/1974 08:15 
+	 * 1208548890078L becomes 18/04/2008 23:01
+	 * (the time i'm writing this)
 	 */
 	Calendar calendar = Calendar.getInstance();
 	public String getLastTimeViewedAsString(long lastTimeViewed) {
