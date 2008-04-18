@@ -48,6 +48,32 @@ public class SetOfCards {
 		this.totalStudiedTimeInMiliseconds = totalStudiedTimeInMiliseconds;
 		this.flashCards = flashCards;
 	}
+	
+	/**
+	 * @param title - the set title
+	 * @param done - the set is done if all cards are marked as done
+	 * @param totalStudiedTimeInMiliseconds - how long has this set been studied
+	 * @param flashCards - the cards contained in this set
+	 * @param totalNumberOfDisplayedCards - how many cards where displayed since the first time this set was used
+	 * @param lastTimeViewed - last time this set was viewed
+	 * @param lastTimeMarkedDone - last time this set was marked as 'done'
+	 * @param markedDoneCounter - how many times this set was marked 'done'
+	 */
+	public SetOfCards(String title, boolean done,
+			long totalStudiedTimeInMiliseconds, Vector flashCards,
+			int totalNumberOfDisplayedCards, long lastTimeViewed,
+			long lastTimeMarkedDone, int markedDoneCounter) {
+		super();
+		this.title = title;
+		this.done = done;
+		this.totalStudiedTimeInMiliseconds = totalStudiedTimeInMiliseconds;
+		this.flashCards = flashCards;
+		this.totalNumberOfDisplayedCards = totalNumberOfDisplayedCards;
+		this.lastTimeViewed = lastTimeViewed;
+		this.lastTimeMarkedDone = lastTimeMarkedDone;
+		this.markedDoneCounter = markedDoneCounter;
+	}
+
 
 	/**
 	 * @return the title
