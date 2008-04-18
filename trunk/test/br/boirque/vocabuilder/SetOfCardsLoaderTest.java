@@ -10,6 +10,8 @@ import j2meunit.framework.*;
 
 public class SetOfCardsLoaderTest extends TestCase {
 
+	String setToLoad = "/Finnish/longlist_fin_eng.txt";
+	
 	/**
 	 * Default constructor
 	 */
@@ -35,20 +37,22 @@ public class SetOfCardsLoaderTest extends TestCase {
 		super.tearDown();
 	}
 
-	public void testLoadSet(){
-		
+	public void testLoadSet() throws IOException{
+		SetOfCardsLoader socl = new SetOfCardsLoader();
+		SetOfCards soc = socl.loadSet(setToLoad);
+		assertNotNull(soc);
 	}
 	
 	public void testTextFileLoader() throws IOException{
 		SetOfCardsLoader socl = new SetOfCardsLoader();
-		SetOfCards soc = socl.loadSet("/Finnish/longlist_fin_eng.txt");
+		SetOfCards soc = socl.loadSet(setToLoad);
 		assertNotNull(soc);
 		Vector cards = soc.getFlashCards();
 		System.out.println("Number of Cards: " + cards.size());
 		assertNotNull(cards);
 		// check the set name
-//		String setName = soc.getTitle();
-//		assertEquals("longlist fi_en", setName);
+		String setName = soc.getTitle();
+		assertEquals("longlist_fi_en", setName);
 		
 		//check the first card
 		FlashCard firstCard = (FlashCard) cards.elementAt(0);
@@ -95,11 +99,19 @@ public class SetOfCardsLoaderTest extends TestCase {
 	public Test suite() {
 		TestSuite testsuite = new TestSuite();
 
+		testsuite.addTest(new SetOfCardsLoaderTest("testLoadSet", new TestMethod(){ 
+			public void run(TestCase tc) throws IOException{
+				((SetOfCardsLoaderTest) tc).testLoadSet(); 
+			} 
+		}));
+		
 		testsuite.addTest(new SetOfCardsLoaderTest("testTextFileLoader", new TestMethod(){ 
 			public void run(TestCase tc) throws IOException{
 				((SetOfCardsLoaderTest) tc).testTextFileLoader(); 
 			} 
 		}));
+		
+		
 		
 		return testsuite;
 	}
