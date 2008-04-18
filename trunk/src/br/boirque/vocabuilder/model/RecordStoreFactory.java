@@ -32,7 +32,7 @@ public class RecordStoreFactory {
 	}
 	
 	/**
-	 * Gets the current open instance of the recordStore or opens one
+	 * Gets the current open instance of the recordStore or opens (creates) one
 	 * @return The RecordStore currently being used
 	 * @throws RecordStoreFullException
 	 * @throws RecordStoreNotFoundException
