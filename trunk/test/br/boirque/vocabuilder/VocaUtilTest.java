@@ -48,8 +48,9 @@ public class VocaUtilTest extends TestCase {
 		//this was supposed to be 18/04/2008 23:11 but for some
 		//reason the default time zone on the emulator is UTC
 		// (-3 h) so it evaluates to 18/04/2008 20:11
-		System.out.println((TimeZone.getDefault()).getID());
-		assertEquals("18/4/2008 20:11", vu.getLastTimeViewedAsString(1208549471078L)); 
+		// should work on the handset
+		String timezoneID = (TimeZone.getDefault()).getID();
+		assertEquals("Wrong last time view format.\nCheck Timezone:" + timezoneID ,"18/4/2008 23:11", vu.getLastTimeViewedAsString(1208549471078L)); 
 	}
 	
 	
