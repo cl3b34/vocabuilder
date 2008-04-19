@@ -38,9 +38,14 @@ public class SetOfCardsLoaderTest extends TestCase {
 	}
 
 	public void testLoadSet() throws IOException{
+		long startTime = System.currentTimeMillis();
 		SetOfCardsLoader socl = new SetOfCardsLoader();
 		SetOfCards soc = socl.loadSet(setToLoad);
+		long endTime = System.currentTimeMillis();
+		long loadingTime = endTime -startTime;
 		assertNotNull(soc);
+		// loading time must be under 5s
+		assertTrue("Loading time is too high", loadingTime < 5000L);
 	}
 	
 	public void testTextFileLoader() throws IOException{
