@@ -18,6 +18,7 @@ public class FlashCard {
 	private int markedDoneCounter;
 	private long lastTimeViewed;
 	private long lastTimeMarkedDone;
+	private int cardId;
 	
 		
 	/**
@@ -150,6 +151,14 @@ public class FlashCard {
 
 	public void setLastTimeViewed(long lastTimeViewed) {
 		this.lastTimeViewed = lastTimeViewed;
+	}
+
+	public int getCardId() {
+		return cardId;
+	}
+
+	public void setCardId(int cardId) {
+		this.cardId = cardId;
 	}
 	
 }
