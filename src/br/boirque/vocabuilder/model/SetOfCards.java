@@ -23,9 +23,21 @@ public class SetOfCards {
 	private long lastTimeMarkedDone;
 	//how many times it was marked done
 	private int markedDoneCounter;
+	//the recordId of the meta data
+	private int setId;
 	
 	
 	
+	public int getSetId() {
+		return setId;
+	}
+
+
+	public void setSetId(int setId) {
+		this.setId = setId;
+	}
+
+
 	/**
 	 * Default constructor 
 	 */
