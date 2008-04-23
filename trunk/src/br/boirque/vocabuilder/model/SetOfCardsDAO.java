@@ -20,6 +20,12 @@ import javax.microedition.rms.RecordStoreNotOpenException;
  */
 public class SetOfCardsDAO {
 	RecordStore recordStore;
+	// The first file format was not publicly released
+	// The second does not have the format number in the record
+	static final int THRIRDYFILEFORMAT = 3;
+
+	static final int FILEFORMATVERSIONRECORD = 1;
+	static final int METADATARECORD = 2;
 
 	/**
 	 * @param recordStore
@@ -66,9 +72,8 @@ public class SetOfCardsDAO {
 	}
 
 	/**
-	 * Read back the data from the record store In the format written by the
-	 * SaveState method. Both methods have to be changed at the same time if the
-	 * record format changes
+	 * Read back the data from the record store. It is selectively reads from
+	 * either the v2 format or v3 (current) file format
 	 * 
 	 * @return a SetOfCards read from the store or null if the store was empty
 	 * @throws IOException
@@ -78,25 +83,31 @@ public class SetOfCardsDAO {
 	 */
 	public SetOfCards loadState() throws IOException, InvalidRecordIDException,
 			RecordStoreException {
+		SetOfCards setToReturn = null;
 		int numRecords = recordStore.getNumRecords();
-		// create a set and loads it's meta data from the first record
-		SetOfCards setToReturn;
 		if (numRecords > 0) {
-			setToReturn = loadSetMetadata(1);
-		} else {
-			setToReturn = null;
-		}
-		// vector to hold the cards
-		Vector cards = new Vector();
-		for (int i = 1; i <= numRecords; i++) {
-			// Load the card from the stream
-			FlashCard card = loadCard(i);
-			// Add the card to the Vector
-			cards.addElement(card);
-		}
-		// add the vector of cards to the set
-		if (setToReturn != null) {
-			setToReturn.setFlashCards(cards);
+			if (loadFileFormatVersionNumber(FILEFORMATVERSIONRECORD) == THRIRDYFILEFORMAT) {
+				// create a set and loads it's meta data
+				if (numRecords >= METADATARECORD) {
+					setToReturn = loadSetMetadata(METADATARECORD);
+					Vector cards = new Vector();
+					// The cards start at the 3rd record
+					for (int i = 3; i <= numRecords; i++) {
+						FlashCard card = loadCard(i);
+						cards.addElement(card);
+					}
+					setToReturn.setFlashCards(cards);
+				}
+			} else {
+				setToReturn = loadSetMetadata(1);
+				Vector cards = new Vector();
+				// Old format, the cards start at the 1st record
+				for (int i = 1; i <= numRecords; i++) {
+					FlashCard card = loadCard(i);
+					cards.addElement(card);
+				}
+				setToReturn.setFlashCards(cards);
+			}
 		}
 		return setToReturn;
 	}
@@ -114,12 +125,12 @@ public class SetOfCardsDAO {
 			RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
 
-		// file format version is on record 1
-		int fileFormatVersion = loadFileFormatVersionNumber(1);
+		// file format version
+		int fileFormatVersion = loadFileFormatVersionNumber(FILEFORMATVERSIONRECORD);
 
-		if (fileFormatVersion == -1) {
+		if (fileFormatVersion != THRIRDYFILEFORMAT) {
 			// old file format, file format version was not found
-			return loadCardV104(recordId);
+			return loadCardV2(recordId);
 		} else {
 
 			// Create a input stream for the cards, one record at a time
@@ -151,6 +162,7 @@ public class SetOfCardsDAO {
 			card.setMarkedDoneCounter(cardMarkedDoneCounter);
 			card.setLastTimeViewed(cardLastTimeViewed);
 			card.setLastTimeMarkedDone(cardLastTimeMarkedDone);
+			card.setCardId(recordId);
 
 			System.gc();
 			return card;
@@ -160,7 +172,8 @@ public class SetOfCardsDAO {
 	/**
 	 * reads a card identified by ID from RMS *
 	 * 
-	 * This is the old file format used in v. 1.04
+	 * This is the old file format used in v. 1.04 of the application (second
+	 * file format)
 	 * 
 	 * @param recordID -
 	 *            The id of the record to be recovered
@@ -170,7 +183,7 @@ public class SetOfCardsDAO {
 	 * are mixed with 'uninteresting' ones.
 	 * 
 	 */
-	private FlashCard loadCardV104(int recordId) throws IOException,
+	private FlashCard loadCardV2(int recordId) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
 		// Create a input stream for the cards, one record at a time
@@ -212,6 +225,7 @@ public class SetOfCardsDAO {
 		card.setMarkedDoneCounter(cardMarkedDoneCounter);
 		card.setLastTimeViewed(cardLastTimeViewed);
 		card.setLastTimeMarkedDone(cardLastTimeMarkedDone);
+		card.setCardId(recordId);
 
 		System.gc();
 		return card;
@@ -266,17 +280,18 @@ public class SetOfCardsDAO {
 	/**
 	 * adds a card to RMS
 	 * 
-	 * @param card - the card to be added to RMS
+	 * @param card -
+	 *            the card to be added to RMS
+	 * 
 	 */
-	public void addCard(FlashCard card) throws IOException,
+	public int addCard(FlashCard card) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
 
-		int recordId = card.getCardId();
 		byte[] b = cardToByteArray(card);
 		// write a record to the record store
 		int recordLength = b.length;
-		recordStore.setRecord(recordId, b, 0, recordLength);
+		return recordStore.addRecord(b, 0, recordLength);
 	}
 
 	private byte[] cardToByteArray(FlashCard card) throws IOException {
@@ -307,8 +322,7 @@ public class SetOfCardsDAO {
 		// Extract the byte array
 		return baos.toByteArray();
 	}
-	
-	
+
 	/**
 	 * updates the set meta data to RMS
 	 * 
@@ -347,16 +361,50 @@ public class SetOfCardsDAO {
 	}
 
 	/**
-	 * saves the file format version number to RMS
+	 * Add the set meta data to RMS
 	 * 
 	 * @param recordID -
-	 *            The id of the record to be saved
-	 * @param recordID -
-	 *            The new file version number
+	 *            The set to be added
 	 */
-	private void addFileFormatVersionNumber(int fileVersionNumber) throws IOException,
+	public int addSetMetadata(SetOfCards setOfCards) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
+
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		DataOutputStream outputStream = new DataOutputStream(baos);
+
+		String title = setOfCards.getTitle();
+		boolean setIsDone = setOfCards.isDone();
+		long totalTime = setOfCards.getTotalStudiedTimeInMiliseconds();
+		int totalOfDisplayedCards = setOfCards.getTotalNumberOfDisplayedCards();
+		long setLastTimeViewed = setOfCards.getLastTimeViewed();
+		long setLastTimeMarkedDone = setOfCards.getLastTimeMarkedDone();
+		int setMarkedDoneCounter = setOfCards.getMarkedDoneCounter();
+
+		outputStream.writeUTF(title);
+		outputStream.writeBoolean(setIsDone);
+		outputStream.writeLong(totalTime);
+		outputStream.writeInt(totalOfDisplayedCards);
+		outputStream.writeLong(setLastTimeViewed);
+		outputStream.writeLong(setLastTimeMarkedDone);
+		outputStream.writeInt(setMarkedDoneCounter);
+
+		// Extract the byte array
+		byte[] b = baos.toByteArray();
+		// write a record to the record store
+		int recordLength = b.length;
+		return recordStore.addRecord(b, 0, recordLength);
+	}
+
+	/**
+	 * saves the file format version number to RMS
+	 * 
+	 * @param fileVersionNumber -
+	 *            The new file version number
+	 */
+	private void addFileFormatVersionNumber(int fileVersionNumber)
+			throws IOException, RecordStoreNotOpenException,
+			InvalidRecordIDException, RecordStoreException {
 
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		DataOutputStream outputStream = new DataOutputStream(baos);
@@ -390,14 +438,14 @@ public class SetOfCardsDAO {
 			RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
 
-		// file format version is on record 1
-		int fileFormatVersion = loadFileFormatVersionNumber(1);
+		// file format version
+		int fileFormatVersion = loadFileFormatVersionNumber(FILEFORMATVERSIONRECORD);
 
-		if (fileFormatVersion == -1) {
+		if (fileFormatVersion != THRIRDYFILEFORMAT) {
 			// old file format, file format version was not found
-			return loadSetMetadata(recordId);
+			return loadSetMetadataV2(recordId);
 		} else {
-			
+
 			SetOfCards setToReturn = new SetOfCards();
 			ByteArrayInputStream bais = new ByteArrayInputStream(recordStore
 					.getRecord(recordId));
@@ -411,7 +459,7 @@ public class SetOfCardsDAO {
 			long lastTimeSetViewed = inputStream.readLong();
 			long lastTimeSetMarkedDone = inputStream.readLong();
 			int markedDoneSetCounter = inputStream.readInt();
-			
+
 			// populate the set
 			setToReturn.setTitle(setOfCardsTitle);
 			setToReturn.setDone(setOfCardsIsDone);
@@ -430,7 +478,7 @@ public class SetOfCardsDAO {
 	 * reads the meta data for the SetOfCards from the record identified by
 	 * recordID from RMS
 	 * 
-	 * This is the old file format
+	 * This is the old (second) file format
 	 * 
 	 * I'm reading data from the Card that is not important to the set in here.
 	 * This is because the record has a fixed format and the interesting fields
@@ -444,7 +492,7 @@ public class SetOfCardsDAO {
 	 * @throws InvalidRecordIDException
 	 * @throws RecordStoreNotOpenException
 	 */
-	public SetOfCards loadSetMetadataV104(int recordId) throws IOException,
+	private SetOfCards loadSetMetadataV2(int recordId) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
 		SetOfCards setToReturn = new SetOfCards();
@@ -489,15 +537,16 @@ public class SetOfCardsDAO {
 	}
 
 	/**
+	 * Save the current state to persistence (file on the device)
 	 * 
+	 * @deprecated Old v2 File format. Use saveSaveSetOfCards(SetOfCards
+	 *             setOfCards)instead
 	 * @param setOfCards
 	 * @throws IOException
 	 * @throws RecordStoreNotOpenException
 	 * @throws RecordStoreFullException
 	 * @throws RecordStoreException
-	 *             Save the current state to persistence (file on the device)
-	 *             TODO: Try to recover from some of the exceptions (like record
-	 *             is full)
+	 * 
 	 */
 	public void saveState(SetOfCards setOfCards) throws IOException,
 			RecordStoreNotOpenException, RecordStoreFullException,
@@ -555,6 +604,37 @@ public class SetOfCardsDAO {
 			// write a record to the record store
 			int recordLength = b.length;
 			recordStore.addRecord(b, 0, recordLength);
+		}
+	}
+
+	/**
+	 * Saves a whole SetOfCards to persistence <br>
+	 * This is a slow operation, use with care. <br>
+	 * Implements the v3 file format: <br>
+	 * 1st record = file format version <br>
+	 * number 2nd record = set meta data <br>
+	 * 3rd record on = card data <br>
+	 * <br>
+	 * 
+	 * @param setOfCards
+	 *            the set to save
+	 * @throws RecordStoreException
+	 * @throws IOException
+	 * @throws InvalidRecordIDException
+	 * @throws RecordStoreNotOpenException
+	 */
+	public void saveSaveSetOfCards(SetOfCards setOfCards)
+			throws RecordStoreNotOpenException, InvalidRecordIDException,
+			IOException, RecordStoreException {
+		this.addFileFormatVersionNumber(THRIRDYFILEFORMAT);
+		this.addSetMetadata(setOfCards);
+
+		Vector cards = setOfCards.getFlashCards();
+		// get each card and save to the record store
+		int size = cards.size();
+		for (int i = 0; i < size; i++) {
+			FlashCard card = (FlashCard) cards.elementAt(i);
+			this.addCard(card);
 		}
 	}
 }

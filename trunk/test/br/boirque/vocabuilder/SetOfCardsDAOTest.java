@@ -95,6 +95,8 @@ public class SetOfCardsDAOTest extends TestCase {
 	
 	public void testLoadCard() throws RecordStoreNotOpenException, InvalidRecordIDException, IOException, RecordStoreException  {
 		SetOfCardsDAO socdao = new SetOfCardsDAO();
+		//tests the old loading method, the file format should be the old one
+		int cardId = 1;
 		FlashCard flashCard1 = socdao.loadCard(1);
 		assertEquals("value is not equal","Auto", flashCard1.getSideOne());
 		assertEquals("value is not equal","Suomi", flashCard1.getSideOneTitle());
@@ -122,6 +124,39 @@ public class SetOfCardsDAOTest extends TestCase {
 		assertEquals("value is not equal",100, soc.getMarkedDoneCounter());
 	}
 	
+	public void testSaveSetOfCards() throws RecordStoreNotOpenException, RecordStoreFullException, IOException, RecordStoreException {
+		SetOfCardsDAO socdao = new SetOfCardsDAO();
+		socdao.resetState();
+		socdao.saveSaveSetOfCards(setOfCards);
+		SetOfCards soc = socdao.loadState();
+		assertNotNull("set is null", soc);
+		//check if the recovered data from the set is correct
+		assertTrue("set should not be done", !soc.isDone());
+		assertEquals("value is not equal","Semantic primitives", soc.getTitle());
+		assertEquals("value is not equal",10000L, soc.getTotalStudiedTimeInMiliseconds());
+		//recover the flash cards from the set and check
+		// if the data is matches the original
+		Vector flashCards = soc.getFlashCards();
+		//Card 1
+		FlashCard flashCard1 = ((FlashCard)(flashCards.elementAt(0)));
+		assertEquals("value is not equal","Auto", flashCard1.getSideOne());
+		assertEquals("value is not equal","Suomi", flashCard1.getSideOneTitle());
+		assertEquals("value is not equal","Car", flashCard1.getSideTwo());
+		assertEquals("value is not equal","English", flashCard1.getSideTwoTitle());
+		assertEquals("value is not equal","runs on the street", flashCard1.getTip());
+		assertTrue("should be done", flashCard1.isDone());
+		
+		// Card 2
+		FlashCard flashCard2 = ((FlashCard)(flashCards.elementAt(1)));
+		assertEquals("value is not equal","Muna", flashCard2.getSideOne());
+		assertEquals("value is not equal","Fin", flashCard2.getSideOneTitle());
+		assertEquals("value is not equal","Egg", flashCard2.getSideTwo());
+		assertEquals("value is not equal","Eng", flashCard2.getSideTwoTitle());
+		assertEquals("value is not equal","who came first?", flashCard2.getTip());
+		assertTrue("should not be done", !flashCard2.isDone());
+	}	
+	
+	
 	/**
 	 * tests if the card is updated correctly
 	 * Original values:
@@ -136,24 +171,25 @@ public class SetOfCardsDAOTest extends TestCase {
 	 */
 	public void testUpdateCard() throws RecordStoreNotOpenException, InvalidRecordIDException, IOException, RecordStoreException {
 		SetOfCardsDAO socdao = new SetOfCardsDAO();
-		FlashCard card = socdao.loadCard(1);
+		int cardId = 3;
+		FlashCard card = socdao.loadCard(cardId);
 		card.setSideOne("viini");
 		card.setSideOneTitle("Suomi");
 		card.setSideTwo("vodka");
 		card.setSideTwoTitle("english");
 		card.setDone(false);
 		card.setTip("Makes you crazy");
-		card.setCardId(1);
+		card.setCardId(cardId);
 		socdao.updateCard(card);
 		//recover it and verify
-		FlashCard cardNew = socdao.loadCard(1);
+		FlashCard cardNew = socdao.loadCard(cardId);
 		assertEquals(cardNew.getSideOne(), "viini");
 		assertEquals(cardNew.getSideOneTitle(), "Suomi");
 		assertEquals(cardNew.getSideTwo(), "vodka");
 		assertEquals(cardNew.getSideTwoTitle(), "english");
 		assertTrue(cardNew.isDone() == false);
 		assertEquals(cardNew.getTip(), "Makes you crazy");
-		assertEquals(cardNew.getCardId(), 1);
+		assertEquals(cardNew.getCardId(), cardId);
 	}
 
 	public void testAddCard() throws RecordStoreNotOpenException, InvalidRecordIDException, IOException, RecordStoreException {
@@ -163,13 +199,13 @@ public class SetOfCardsDAOTest extends TestCase {
 		card.setCardId(recordId);
 		//recover it and verify
 		FlashCard cardNew = socdao.loadCard(recordId);
-		assertTrue(cardNew.getSideOne() == card.getSideOne());
-		assertTrue(cardNew.getSideOneTitle() == card.getSideOneTitle());
-		assertTrue(cardNew.getSideTwo() == "beard");
-		assertTrue(cardNew.getSideTwoTitle() == "english");
+		assertEquals(cardNew.getSideOne(), card.getSideOne());
+		assertEquals(cardNew.getSideOneTitle(), card.getSideOneTitle());
+		assertEquals(cardNew.getSideTwo(), "beard");
+		assertEquals(cardNew.getSideTwoTitle(), "english");
 		assertTrue(cardNew.isDone() == card.isDone());
-		assertTrue(cardNew.getTip() == card.getTip());
-		assertTrue(cardNew.getCardId()== 3);
+		assertEquals(cardNew.getTip(), card.getTip());
+		assertTrue(cardNew.getCardId()== card.getCardId());
 		assertTrue(cardNew.getLastTimeMarkedDone()== card.getLastTimeMarkedDone());
 		assertTrue(cardNew.getMarkedDoneCounter()== card.getMarkedDoneCounter());
 		assertTrue(cardNew.getLastTimeViewed()== card.getLastTimeViewed());
@@ -179,8 +215,8 @@ public class SetOfCardsDAOTest extends TestCase {
 	public void testGetRecordCount() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException {
 		SetOfCardsDAO socdao = new SetOfCardsDAO();
 		int recordCount = socdao.getRecordCount();
-		// the record store should have 3 records now
-		assertEquals(3, recordCount); 	
+		// the record store should have 5 records now
+		assertEquals(5, recordCount); 	
 	}
 
 	public void testAddSetMetadata() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
@@ -190,10 +226,9 @@ public class SetOfCardsDAOTest extends TestCase {
 		soc.setSetId(recordId);
 		//recover it and verify
 		SetOfCards socNew = socdao.loadSetMetadata(recordId);
-		assertTrue(socNew.getTitle() == soc.getTitle());
+		assertEquals(socNew.getTitle(), soc.getTitle());
 		assertTrue(socNew.isDone() == soc.isDone());
 		assertTrue(socNew.getTotalStudiedTimeInMiliseconds() == 999L);
-		assertTrue(socNew.getFlashCards() == null);
 		assertTrue(socNew.getTotalNumberOfDisplayedCards() == soc.getTotalNumberOfDisplayedCards());
 		assertTrue(socNew.getLastTimeViewed()== soc.getLastTimeViewed());
 		assertTrue(socNew.getLastTimeMarkedDone()== soc.getLastTimeMarkedDone());
@@ -202,7 +237,9 @@ public class SetOfCardsDAOTest extends TestCase {
 	
 	/**
 	 * This should be run after testAddSetMetadata. The metadata is to 
-	 * be found in record 4
+	 * be found in record 6. There is also another record containing other metadata in 
+	 * record 2. This was set there by 'testSaveSetOfCards'
+	 * 
 	 * original data: "jet set", true, 999L, null, 0, 993L,88L, 2
 	 * @throws RecordStoreException 
 	 * @throws IOException 
@@ -211,30 +248,32 @@ public class SetOfCardsDAOTest extends TestCase {
 	 */
 	public void testUpdateSetMetadata() throws RecordStoreNotOpenException, InvalidRecordIDException, IOException, RecordStoreException {
 		SetOfCardsDAO socdao = new SetOfCardsDAO();
-		SetOfCards soc = socdao.loadSetMetadata(4);
+		int setId = 6;
+		int recordCount = socdao.getRecordCount();
+		SetOfCards soc = socdao.loadSetMetadata(setId);
 		//modify it
 		soc.setTitle("turbo set");
 		soc.setDone(false);
 		soc.setTotalStudiedTimeInMiliseconds(9L);
-		soc.setFlashCards(new Vector());
+		//soc.setFlashCards(new Vector()); //this is not metadata
 		soc.setTotalNumberOfDisplayedCards(983);
 		soc.setLastTimeViewed(444L);
 		soc.setLastTimeMarkedDone(867756L);
 		soc.setMarkedDoneCounter(328838);
+		soc.setSetId(setId);
 		socdao.updateSetMetadata(soc);
 		
 		//recover it and verify
 		SetOfCards socNew = socdao.loadSetMetadata(soc.getSetId());
-		assertTrue(socNew.getTitle() == soc.getTitle());
-		assertTrue(socNew.isDone() == soc.isDone());
-		assertTrue(socNew.getTotalStudiedTimeInMiliseconds() == 9L);
-		assertTrue(socNew.getFlashCards() != null);
-		assertTrue(socNew.getTotalNumberOfDisplayedCards() == soc.getTotalNumberOfDisplayedCards());
-		assertTrue(socNew.getLastTimeViewed()== soc.getLastTimeViewed());
-		assertTrue(socNew.getLastTimeMarkedDone()== soc.getLastTimeMarkedDone());
-		assertTrue(socNew.getMarkedDoneCounter()== soc.getMarkedDoneCounter());
-	}
-	
+		assertEquals("Title differ", socNew.getTitle(), soc.getTitle());
+		assertTrue("done differ", socNew.isDone() == soc.isDone());
+		assertTrue("studied time differ",socNew.getTotalStudiedTimeInMiliseconds() == 9L);
+//		assertTrue("flashcards null", socNew.getFlashCards() != null);
+		assertTrue("number of displayed",socNew.getTotalNumberOfDisplayedCards() == soc.getTotalNumberOfDisplayedCards());
+		assertTrue("last time view",socNew.getLastTimeViewed()== soc.getLastTimeViewed());
+		assertTrue("last time done",socNew.getLastTimeMarkedDone()== soc.getLastTimeMarkedDone());
+		assertTrue("done counter",socNew.getMarkedDoneCounter()== soc.getMarkedDoneCounter());
+	}	
 	
 	public void testResetState() throws RecordStoreNotFoundException, RecordStoreException{
 		SetOfCardsDAO socdao = new SetOfCardsDAO();
@@ -270,6 +309,12 @@ public class SetOfCardsDAOTest extends TestCase {
 			} 
 		}));
 		
+		testsuite.addTest(new SetOfCardsDAOTest("testSaveSetOfCards", new TestMethod(){ 
+			public void run(TestCase tc) throws RecordStoreNotOpenException, RecordStoreFullException, IOException, RecordStoreException {
+				((SetOfCardsDAOTest) tc).testSaveSetOfCards(); 
+			} 
+		}));
+		
 		testsuite.addTest(new SetOfCardsDAOTest("testUpdateCard", new TestMethod(){ 
 			public void run(TestCase tc) throws RecordStoreNotOpenException, InvalidRecordIDException, IOException, RecordStoreException{
 				((SetOfCardsDAOTest) tc).testUpdateCard(); 
@@ -280,8 +325,7 @@ public class SetOfCardsDAOTest extends TestCase {
 			public void run(TestCase tc) throws RecordStoreNotOpenException, InvalidRecordIDException, IOException, RecordStoreException{
 				((SetOfCardsDAOTest) tc).testAddCard(); 
 			} 
-		}));
-		
+		}));		
 		
 		testsuite.addTest(new SetOfCardsDAOTest("testGetRecordCount", new TestMethod(){ 
 			public void run(TestCase tc) throws RecordStoreNotOpenException, RecordStoreFullException, IOException, RecordStoreException {
