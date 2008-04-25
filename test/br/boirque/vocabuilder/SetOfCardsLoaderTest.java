@@ -43,9 +43,10 @@ public class SetOfCardsLoaderTest extends TestCase {
 		SetOfCards soc = socl.loadSet(setToLoad);
 		long endTime = System.currentTimeMillis();
 		long loadingTime = endTime -startTime;
-		assertNotNull(soc);
+		assertEquals("wrong card amount\n",1827, soc.getFlashCards().size());
+		assertNotNull("Null Set of cards", soc);
 		// loading time must be under 5s
-		assertTrue("Loading time is too high", loadingTime < 5000L);
+		assertTrue("Text load:" + milisecondsToSeconds(loadingTime), loadingTime < 5000L);
 	}
 	
 	public void testTextFileLoader() throws IOException{
@@ -99,6 +100,13 @@ public class SetOfCardsLoaderTest extends TestCase {
 		assertEquals("ENG", sideTwoTitleLastCard);
 		
 		assertTrue(false == soc.isDone());		
+	}
+	
+	private String milisecondsToSeconds(long timeToConvert) {
+		if (timeToConvert < 1000L){
+			return timeToConvert + "ms";
+		}
+		return timeToConvert/1000L + "s";		
 	}
 
 	public Test suite() {
