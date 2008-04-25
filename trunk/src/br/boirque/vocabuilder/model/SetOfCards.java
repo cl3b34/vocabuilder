@@ -23,9 +23,10 @@ public class SetOfCards {
 	private long lastTimeMarkedDone;
 	//how many times it was marked done
 	private int markedDoneCounter;
-	//the recordId of the meta data
+	//the recordId of the set
 	private int setId;
-	
+	//TODO: amount of cards in the set
+	//TODO: amount of cards marked 'done' in the set
 	
 	
 	public int getSetId() {

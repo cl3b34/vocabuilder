@@ -183,7 +183,7 @@ public class SetOfCardsDAO {
 	 * are mixed with 'uninteresting' ones.
 	 * 
 	 */
-	private FlashCard loadCardV2(int recordId) throws IOException,
+	public FlashCard loadCardV2(int recordId) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
 		// Create a input stream for the cards, one record at a time
@@ -241,7 +241,7 @@ public class SetOfCardsDAO {
 	 * @throws RecordStoreNotOpenException
 	 * 
 	 */
-	private int loadFileFormatVersionNumber(int recordId)
+	public int loadFileFormatVersionNumber(int recordId)
 			throws RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
 
@@ -284,14 +284,16 @@ public class SetOfCardsDAO {
 	 *            the card to be added to RMS
 	 * 
 	 */
-	public int addCard(FlashCard card) throws IOException,
+	public FlashCard addCard(FlashCard card) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
 
 		byte[] b = cardToByteArray(card);
 		// write a record to the record store
 		int recordLength = b.length;
-		return recordStore.addRecord(b, 0, recordLength);
+		int cardId = recordStore.addRecord(b, 0, recordLength);
+		card.setCardId(cardId);
+		return card;
 	}
 
 	private byte[] cardToByteArray(FlashCard card) throws IOException {
@@ -366,7 +368,7 @@ public class SetOfCardsDAO {
 	 * @param recordID -
 	 *            The set to be added
 	 */
-	public int addSetMetadata(SetOfCards setOfCards) throws IOException,
+	public SetOfCards addSetMetadata(SetOfCards setOfCards) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
 
@@ -393,7 +395,9 @@ public class SetOfCardsDAO {
 		byte[] b = baos.toByteArray();
 		// write a record to the record store
 		int recordLength = b.length;
-		return recordStore.addRecord(b, 0, recordLength);
+		int setId = recordStore.addRecord(b, 0, recordLength);
+		setOfCards.setSetId(setId);
+		return setOfCards;
 	}
 
 	/**
@@ -401,8 +405,9 @@ public class SetOfCardsDAO {
 	 * 
 	 * @param fileVersionNumber -
 	 *            The new file version number
+	 * @return the recordId where the version number was saved
 	 */
-	private void addFileFormatVersionNumber(int fileVersionNumber)
+	public int addFileFormatVersionNumber(int fileVersionNumber)
 			throws IOException, RecordStoreNotOpenException,
 			InvalidRecordIDException, RecordStoreException {
 
@@ -415,7 +420,7 @@ public class SetOfCardsDAO {
 		byte[] b = baos.toByteArray();
 		// write a record to the record store
 		int recordLength = b.length;
-		recordStore.addRecord(b, 0, recordLength);
+		return recordStore.addRecord(b, 0, recordLength);
 	}
 
 	/**
@@ -468,6 +473,7 @@ public class SetOfCardsDAO {
 			setToReturn.setLastTimeViewed(lastTimeSetViewed);
 			setToReturn.setLastTimeMarkedDone(lastTimeSetMarkedDone);
 			setToReturn.setMarkedDoneCounter(markedDoneSetCounter);
+			setToReturn.setSetId(recordId);
 
 			System.gc();
 			return setToReturn;
@@ -492,7 +498,7 @@ public class SetOfCardsDAO {
 	 * @throws InvalidRecordIDException
 	 * @throws RecordStoreNotOpenException
 	 */
-	private SetOfCards loadSetMetadataV2(int recordId) throws IOException,
+	public SetOfCards loadSetMetadataV2(int recordId) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
 		SetOfCards setToReturn = new SetOfCards();
@@ -618,23 +624,27 @@ public class SetOfCardsDAO {
 	 * 
 	 * @param setOfCards
 	 *            the set to save
+	 * @return the set just saved, with the setId and cardIds
 	 * @throws RecordStoreException
 	 * @throws IOException
 	 * @throws InvalidRecordIDException
 	 * @throws RecordStoreNotOpenException
 	 */
-	public void saveSaveSetOfCards(SetOfCards setOfCards)
+	public SetOfCards saveSetOfCards(SetOfCards setOfCards)
 			throws RecordStoreNotOpenException, InvalidRecordIDException,
 			IOException, RecordStoreException {
 		this.addFileFormatVersionNumber(THRIRDYFILEFORMAT);
-		this.addSetMetadata(setOfCards);
+		setOfCards = this.addSetMetadata(setOfCards);
 
 		Vector cards = setOfCards.getFlashCards();
 		// get each card and save to the record store
 		int size = cards.size();
 		for (int i = 0; i < size; i++) {
 			FlashCard card = (FlashCard) cards.elementAt(i);
-			this.addCard(card);
+			card = this.addCard(card);
+			cards.setElementAt(card, i);
 		}
+		setOfCards.setFlashCards(cards);
+		return setOfCards;
 	}
 }

@@ -12,6 +12,7 @@ import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.model.SetOfCardsDAO;
 import br.boirque.vocabuilder.model.SetOfCardsLoader;
 import j2meunit.framework.*;
+import j2meunit.util.Version;
 
 /**
  * Tests the performance of the loading system
@@ -23,7 +24,7 @@ import j2meunit.framework.*;
 public class PerformanceTest extends TestCase {
 	
 	String setToLoad = "/Finnish/longlist_fin_eng.txt";
-	SetOfCards soc;
+	SetOfCards setOfCards;
 
 	/**
 	 * Default constructor
@@ -44,13 +45,13 @@ public class PerformanceTest extends TestCase {
 
 
 	protected void setUp() throws Exception {
-		SetOfCardsLoader socl = new SetOfCardsLoader();
-		soc = socl.loadSet(setToLoad);
+		SetOfCardsLoader setOfCardsl = new SetOfCardsLoader();
+		setOfCards = setOfCardsl.loadSet(setToLoad);
 	}
 
 	protected void tearDown() throws Exception {
 		super.tearDown();
-		soc = null;
+		setOfCards = null;
 		setToLoad = null;
 		SetOfCardsDAO socd = new SetOfCardsDAO();
 		socd.resetState();
@@ -67,12 +68,12 @@ public class PerformanceTest extends TestCase {
 		
 		//performance of loading a file 
 		startTime = System.currentTimeMillis();		
-		SetOfCardsLoader socl = new SetOfCardsLoader();
-		soc = socl.loadSet(setToLoad);
+		SetOfCardsLoader setOfCardsl = new SetOfCardsLoader();
+		setOfCards = setOfCardsl.loadSet(setToLoad);
 		endTime = System.currentTimeMillis();
 		timeTaken = endTime -startTime;
-		assertEquals("wrong card amount\n",1827, soc.getFlashCards().size());
-		assertNotNull("Null Set of cards", soc);
+		assertEquals("wrong card amount\n",1827, setOfCards.getFlashCards().size());
+		assertNotNull("Null Set of cards", setOfCards);
 		// loading time must be under 5s
 		System.out.println("Text load:" + milisecondsToSeconds(timeTaken));
 //		assertTrue("Text load:" + milisecondsToSeconds(timeTaken), timeTaken < 5000L);
@@ -80,7 +81,7 @@ public class PerformanceTest extends TestCase {
 		// performance of saving to RMS 
 		startTime = System.currentTimeMillis();		
 		socd.resetState();
-		socd.saveState(soc);		
+		socd.saveState(setOfCards);		
 		endTime = System.currentTimeMillis();
 		timeTaken = endTime -startTime;
 		assertTrue("Empty Saved set", socd.getRecordCount() > 0);
@@ -91,10 +92,10 @@ public class PerformanceTest extends TestCase {
 		
 		//performance of loading from RMS
 		startTime = System.currentTimeMillis();
-		soc = socd.loadState();
+		setOfCards = socd.loadState();
 		endTime = System.currentTimeMillis();
 		timeTaken = endTime -startTime;
-		assertNotNull("Null set of cards", soc);
+		assertNotNull("Null set of cards", setOfCards);
 		assertEquals("wrong card amount\n",1827, socd.getRecordCount());
 		// loading time must be under 5s
 		System.out.println("RMS load:" + milisecondsToSeconds(timeTaken));
@@ -113,10 +114,10 @@ public class PerformanceTest extends TestCase {
 		
 		//performance of loading the metadata
 		startTime = System.currentTimeMillis();		
-		SetOfCards socMeta = socd.loadSetMetadata(2);
+		SetOfCards setOfCardsMeta = socd.loadSetMetadata(2);
 		endTime = System.currentTimeMillis();
 		timeTaken = endTime -startTime;
-		assertNotNull("Null card metadata", socMeta);
+		assertNotNull("Null card metadata", setOfCardsMeta);
 		assertEquals("wrong card amount\n",1827, socd.getRecordCount());
 		// under 300ms
 		System.out.println("RMS loadMeta: " + milisecondsToSeconds(timeTaken));
@@ -126,12 +127,12 @@ public class PerformanceTest extends TestCase {
 
 	public void testTextFileLoaderPerformance() throws IOException{
 		long startTime = System.currentTimeMillis();		
-		SetOfCardsLoader socl = new SetOfCardsLoader();
-		soc = socl.loadSet(setToLoad);
+		SetOfCardsLoader setOfCardsl = new SetOfCardsLoader();
+		setOfCards = setOfCardsl.loadSet(setToLoad);
 		long endTime = System.currentTimeMillis();
 		long loadingTime = endTime -startTime;
-		assertEquals("wrong card amount\n",1827, soc.getFlashCards().size());
-		assertNotNull("Null Set of cards", soc);
+		assertEquals("wrong card amount\n",1827, setOfCards.getFlashCards().size());
+		assertNotNull("Null Set of cards", setOfCards);
 		// loading time must be under 5s
 		assertTrue("Text load:" + milisecondsToSeconds(loadingTime), loadingTime < 5000L);
 	}
@@ -140,7 +141,7 @@ public class PerformanceTest extends TestCase {
 		long startTime = System.currentTimeMillis();		
 		SetOfCardsDAO socd = new SetOfCardsDAO();
 		socd.resetState();
-		socd.saveState(soc);		
+		socd.saveState(setOfCards);		
 		long endTime = System.currentTimeMillis();
 		long savingTime = endTime -startTime;
 		assertTrue("Empty Saved set", socd.getRecordCount() > 0);
@@ -152,22 +153,35 @@ public class PerformanceTest extends TestCase {
 	public void testLoadStatePerformance() throws IOException, InvalidRecordIDException, RecordStoreException{
 		SetOfCardsDAO socd = new SetOfCardsDAO();
 		socd.resetState();
-		socd.saveState(soc);
+		socd.saveState(setOfCards);
 		//measure the performance
 		long startTime = System.currentTimeMillis();
-		soc = socd.loadState();
+		setOfCards = socd.loadState();
 		long endTime = System.currentTimeMillis();
 		long loadingTime = endTime -startTime;
-		assertNotNull("Null set of cards", soc);
+		assertNotNull("Null set of cards", setOfCards);
 		assertEquals("wrong card amount\n",1827, socd.getRecordCount());
 		// loading time must be under 5s
 		assertTrue("RMS load:" + milisecondsToSeconds(loadingTime), loadingTime < 5000L);
 	}	
 	
+	public void testSaveSetOfCardsPerformance() throws IOException, RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException{
+		long startTime = System.currentTimeMillis();		
+		SetOfCardsDAO socd = new SetOfCardsDAO();
+		socd.resetState();
+		socd.saveSetOfCards(setOfCards);		
+		long endTime = System.currentTimeMillis();
+		long savingTime = endTime -startTime;
+		assertTrue("Empty Saved set", socd.getRecordCount() > 0);
+		assertEquals("wrong card amount\n",1829, socd.getRecordCount());
+		// time must be under 5s
+		assertTrue("RMS saveSet:" + milisecondsToSeconds(savingTime), savingTime < 5000L);
+	}	
+	
 	public void testLoadCardPerformance() throws IOException, RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException{
 		SetOfCardsDAO socd = new SetOfCardsDAO();
 		socd.resetState();
-		socd.saveState(soc);
+		socd.saveState(setOfCards);
 		//measure performance
 		long startTime = System.currentTimeMillis();
 		FlashCard card = socd.loadCard(3);
@@ -182,18 +196,75 @@ public class PerformanceTest extends TestCase {
 	public void testLoadSetMetadataPerformance() throws IOException, RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException{
 		SetOfCardsDAO socd = new SetOfCardsDAO();
 		socd.resetState();
-		socd.saveState(soc);
+		socd.saveState(setOfCards);
 		//measure performance
 		long startTime = System.currentTimeMillis();		
-		SetOfCards socMeta = socd.loadSetMetadata(2);
+		SetOfCards setOfCardsMeta = socd.loadSetMetadata(2);
 		long endTime = System.currentTimeMillis();
 		long loadingTime = endTime -startTime;
 		System.out.println("RMS loading set metadata time: " + loadingTime);
-		assertNotNull("Null card metadata", socMeta);
+		assertNotNull("Null card metadata", setOfCardsMeta);
 		assertEquals("wrong card amount\n",1827, socd.getRecordCount());
 		// under 300ms
 		assertTrue("RMS loadMeta:" + milisecondsToSeconds(loadingTime), loadingTime < 300L);
 	}
+	
+	public void testLoadCardV2Performance() throws IOException, RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException{
+		SetOfCardsDAO socd = new SetOfCardsDAO();
+		socd.resetState();
+		socd.saveState(setOfCards);
+		//measure performance
+		long startTime = System.currentTimeMillis();
+		FlashCard card = socd.loadCard(3);
+		long endTime = System.currentTimeMillis();
+		long loadingTime = endTime -startTime;
+		assertNotNull("Null card", card);
+		assertEquals("wrong card amount\n",1827, socd.getRecordCount());
+		// loading time must be under 300ms
+		assertTrue("RMS loadCardV2:" + milisecondsToSeconds(loadingTime), loadingTime < 300L);
+	}
+	
+	public void testLoadFileFormatVersionNumberPerformance() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
+		SetOfCardsDAO socd = new SetOfCardsDAO();
+		socd.resetState();
+		socd.saveSetOfCards(setOfCards);
+		//measure performance
+		long startTime = System.currentTimeMillis();
+		int versionNumber = socd.loadFileFormatVersionNumber(1);
+		long endTime = System.currentTimeMillis();
+		long loadingTime = endTime -startTime;
+		assertEquals(3, versionNumber);
+		// loading time must be under 300ms
+		assertTrue("RMS LoadFileFormatVersion:" + milisecondsToSeconds(loadingTime), loadingTime < 300L);
+	}
+	
+	public void testUpdateCardPerformance() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
+		SetOfCardsDAO setOfCardsdao = new SetOfCardsDAO();
+		int cardId = 3;
+		FlashCard card = setOfCardsdao.loadCard(cardId);
+		card.setSideOne("viini");
+		card.setSideOneTitle("Suomi");
+		card.setSideTwo("vodka");
+		card.setSideTwoTitle("english");
+		card.setDone(false);
+		card.setTip("Makes you crazy");
+		card.setCardId(cardId);
+		long startTime = System.currentTimeMillis();
+		setOfCardsdao.updateCard(card);
+		long endTime = System.currentTimeMillis();
+		long loadingTime = endTime -startTime;
+		//recover it and verify
+		FlashCard cardNew = setOfCardsdao.loadCard(cardId);
+		assertEquals(cardNew.getSideOne(), "viini");
+		assertEquals(cardNew.getSideOneTitle(), "Suomi");
+		assertEquals(cardNew.getSideTwo(), "vodka");
+		assertEquals(cardNew.getSideTwoTitle(), "english");
+		assertTrue(cardNew.isDone() == false);
+		assertEquals(cardNew.getTip(), "Makes you crazy");
+		assertEquals(cardNew.getCardId(), cardId);
+		assertTrue("RMS UpdateCard:" + milisecondsToSeconds(loadingTime), loadingTime < 300L);
+	}
+	
 
 	private String milisecondsToSeconds(long timeToConvert) {
 		if (timeToConvert < 1000L){
@@ -207,11 +278,11 @@ public class PerformanceTest extends TestCase {
 	public Test suite() {
 		TestSuite testsuite = new TestSuite();
 		
-//		testsuite.addTest(new PerformanceTest("testPerformance", new TestMethod(){ 
-//			public void run(TestCase tc) throws IOException, RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException{
-//				((PerformanceTest) tc).testPerformance(); 
-//			} 
-//		}));
+		testsuite.addTest(new PerformanceTest("testPerformance", new TestMethod(){ 
+			public void run(TestCase tc) throws IOException, RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException{
+				((PerformanceTest) tc).testPerformance(); 
+			} 
+		}));
 		
 		testsuite.addTest(new PerformanceTest("testTextFileLoaderPerformance", new TestMethod(){ 
 			public void run(TestCase tc) throws IOException{
@@ -229,16 +300,37 @@ public class PerformanceTest extends TestCase {
 				((PerformanceTest) tc).testSaveStatePerformance(); 
 			} 
 		}));
+		
+		testsuite.addTest(new PerformanceTest("testSaveSetOfCardsPerformance", new TestMethod(){ 
+			public void run(TestCase tc) throws RecordStoreFullException, RecordStoreNotFoundException, IOException, RecordStoreException{
+				((PerformanceTest) tc).testSaveSetOfCardsPerformance(); 
+			} 
+		}));
+		
 		testsuite.addTest(new PerformanceTest("testLoadCardPerformance", new TestMethod(){ 
 			public void run(TestCase tc) throws RecordStoreFullException, RecordStoreNotFoundException, IOException, RecordStoreException{
 				((PerformanceTest) tc).testLoadCardPerformance(); 
 			} 
 		}));
+		
 		testsuite.addTest(new PerformanceTest("testLoadSetMetadataPerformance", new TestMethod(){ 
 			public void run(TestCase tc) throws RecordStoreFullException, RecordStoreNotFoundException, IOException, RecordStoreException{
 				((PerformanceTest) tc).testLoadSetMetadataPerformance(); 
 			} 
 		}));
+		
+		testsuite.addTest(new PerformanceTest("testLoadCardV2Performance", new TestMethod(){ 
+			public void run(TestCase tc) throws RecordStoreFullException, RecordStoreNotFoundException, IOException, RecordStoreException{
+				((PerformanceTest) tc).testLoadCardV2Performance(); 
+			} 
+		}));
+		
+		testsuite.addTest(new PerformanceTest("testLoadFileFormatVersionNumberPerformance", new TestMethod(){ 
+			public void run(TestCase tc) throws RecordStoreFullException, RecordStoreNotFoundException, IOException, RecordStoreException{
+				((PerformanceTest) tc).testLoadFileFormatVersionNumberPerformance(); 
+			} 
+		}));
+		
 		
 		return testsuite;
 	}

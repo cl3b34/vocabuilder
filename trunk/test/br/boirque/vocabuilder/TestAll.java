@@ -28,12 +28,9 @@ public class TestAll extends TestCase
 	public Test suite()
 	{
 		TestSuite suite = new TestSuite();
-
-		suite.addTest(new SetOfCardsDAOTest().suite());
-		suite.addTest(new SetOfCardsLoaderTest().suite());
 		suite.addTest(new VocaUtilTest().suite());
-		suite.addTest(new PerformanceTest().suite());
-
+		suite.addTest(new SetOfCardsLoaderTest().suite());
+		suite.addTest(new SetOfCardsDAOTest().suite());
 		return suite;
 	}
 }
