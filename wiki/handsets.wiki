@@ -1,0 +1,16 @@
+#summary Handsets in which the was reported to work by users
+
+= Supported handsets =
+Vocabuilder should work in any modern phone (less than 2 years old). It was tested and found to work in the following phone models:
+
+*Nokia*
+
+ * E50
+ * E70
+ * 5700 Music Express
+ * 2626
+ * N76
+ * 6630
+ * 9300i
+ * N81 8GB
+

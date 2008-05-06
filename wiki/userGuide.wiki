@@ -15,3 +15,5 @@ That screen will disappear automatically after a few seconds.
 When you mark all words as 'done' the application will ask if you want to start over, so you can study the whole list again.
 
 The application saves its own state between sessions, that way, you are able to use it for studying even in very short periods (say in the bus from home to work).
+
+
