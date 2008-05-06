@@ -1,0 +1,33 @@
+#summary Thesis weblog
+
+= Thesis work on Vocabuilder =
+
+I'm doing several improvements on Vocabuilder as part of my final Thesis work at Haaga-Helia.
+
+Here you can find a short list of what is planned, the progress and an account of the time spent per task.
+
+  * Fix a performance Issue on the RMS subsystem
+  	# Modify the internal file format improving flexibility and performance
+  		* week 15: 30h
+  	# Create a new model for the storage (m2), updating single records
+  		* week 16: 30h
+  	# Create a new model for the storage (m3), saving the whole list in a single record
+  		* week 17: 35h
+  	# Create Unit tests, fix bugs and validate the performance
+  		* week 18: 30h
+  	# Fix bugs and validate the performance in the test handset (Nokia E50)
+  		* week 19: 15h
+  	# Create a beta version with m3 as storage technic
+  		* week 19: 
+  	
+  * Improve the user interface
+  	# The 'statistics' page should have an 'exit' button
+  * Create 'preferences' for the application
+  	# Show words in random or sequential order
+  	# Show first side 1 or side 2 of the card
+  * Create a website where the user can create his own lists of words
+  	# The lists can be private or public
+  	# Let the user load his own lists and public lists via HTTP to the mobile
+  * Include support for multiple lists of words (read / delete)
+  	# Should be possible to load for study or delete permanently any of the lists available in the handset
+  * Write a thesis document (min 25 pages)

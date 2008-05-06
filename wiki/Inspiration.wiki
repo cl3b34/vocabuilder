@@ -1,4 +1,4 @@
-#summary Inspiration for creating vocabuilder
+#summary Inspiration for creating Vocabuilder
 
 = Similar applications =
 
