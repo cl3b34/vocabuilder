@@ -2,8 +2,6 @@
 
 = Installing Vocabuilder in your Mobile Phone =
 
-= Installing Vocabuilder =
-
 == Download it using your mobile's browser ==
 The easiest way to install is by downloading it to your mobile using the mobile's browser.
 
