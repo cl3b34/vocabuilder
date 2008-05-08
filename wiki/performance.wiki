@@ -277,3 +277,27 @@ F.RMS AddFileFormatVersionNumber time: 0ms
 F.RMS loadMetaV2 time: 32ms
 F.RMS saveSetV4 time: 171ms
 F.RMS AddCardV4 time: 0ms
+
+Handset. static methods
+
+..F..Number of Cards: 1827
+.RMS loadState time: 239s
+F.RMS saveState time: 51s
+F.RMS loadCardV2 time: 117ms
+F.RMS loadCardV3 time: 123ms
+F.RMS LoadFileFormatVersion time: 118ms
+F.RMS loadMeta time: 136ms
+F.RMS saveSet time: 60s
+F.RMS UpdateCard time: 32ms
+F.RMS AddCard time: 123ms
+F.RMS getRecordCount time: 1ms
+F.RMS AddSetMetadata time: 114ms
+F.RMS updateSetMetadata time: 32ms
+F.RMS resetState time: 434ms
+F.RMS loadSet time: 760s
+F.RMS loadSetV4 time: 237s
+F.RMS loadCardV4 time: 114ms
+F.RMS AddFileFormatVersionNumber time: 124ms
+F.RMS loadMetaV2 time: 126ms
+F.RMS saveSetV4 time: 963ms
+F.RMS AddCardV4 time: 140ms
