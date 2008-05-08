@@ -2,10 +2,34 @@
 
 = Statistics on poor RMS performance =
 
+Tests were done by loading the list 'longlist_fin_en.txt' that contains 1827 flashcards.
+
+||Operation||Simulator||Nokia E50|| Change || Run ||
+|| Load (original) || 22s || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+||  ||  || || || ||
+
+
+
 RMS Performance in the simulator
 
-..F..Number of Cards: 1827
-.RMS loading state time: 22s
 F.RMS save state time: 7s
 F.RMS loading cardv2 time: 15ms
 .RMS loading cardV3 time: 15ms
