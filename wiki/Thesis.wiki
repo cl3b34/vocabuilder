@@ -18,7 +18,7 @@ Here you can find a short list of what is planned, the progress and an account o
   	* week 19: 5h 
   		* Fix bugs and validate the performance in the test handset (Nokia E50)
   		* Create a beta version with m3 as storage tecnic
-  		* Update the website, and create this page
+  		* Update the website and create this page
   	
   * Improve the user interface
   	# The 'statistics' page should have an 'exit' button

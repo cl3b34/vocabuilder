@@ -1,0 +1,255 @@
+#summary Findings from issue 3 (poor RMS performance)
+
+= Statistics on poor RMS performance =
+
+RMS Performance in the simulator
+
+..F..Number of Cards: 1827
+.RMS loading state time: 22s
+F.RMS save state time: 7s
+F.RMS loading cardv2 time: 15ms
+.RMS loading cardV3 time: 15ms
+.RMS loading file format version time: 15ms
+.RMS loading set metadata time: 15ms
+.RMS save set time: 7s
+F.RMS update card time: 0ms
+.RMS add card time: 0ms
+.RMS get record count time: 0ms
+.RMS add metadata time: 0ms
+.RMS update metadata time: 0ms
+.RMS reset state time: 0ms
+.RMS loading set time: 28s
+F.RMS loading setV4 time: 4s
+.RMS loading cardV4 time: 0ms
+.RMS add fileFormatVersion time: 0ms
+.RMS loading set metadataV2 time: 16ms
+.RMS saveSetV4 time: 171ms
+.RMS add cardV4 time: 0ms
+
+2nd run
+
+..F..Number of Cards: 1827
+.RMS loading state time: 22s
+F.RMS save state time: 7s
+F.RMS loading cardv2 time: 32ms
+.RMS loading cardV3 time: 31ms
+.RMS loading file format version time: 16ms
+.RMS loading set metadata time: 15ms
+.RMS save set time: 6s
+F.RMS update card time: 0ms
+.RMS add card time: 0ms
+.RMS get record count time: 0ms
+.RMS add metadata time: 0ms
+.RMS update metadata time: 0ms
+.RMS reset state time: 16ms
+.RMS loading set time: 28s
+F.RMS loading setV4 time: 4s
+.RMS loading cardV4 time: 0ms
+.RMS add fileFormatVersion time: 16ms
+.RMS loading set metadataV2 time: 16ms
+.RMS saveSetV4 time: 203ms
+.RMS add cardV4 time: 0ms
+
+
+3rd run
+
+..F..Number of Cards: 1827
+.RMS loading state time: 22s
+F.RMS save state time: 7s
+F.RMS loading cardv2 time: 31ms
+.RMS loading cardV3 time: 16ms
+.RMS loading file format version time: 32ms
+.RMS loading set metadata time: 15ms
+.RMS save set time: 6s
+F.RMS update card time: 0ms
+.RMS add card time: 0ms
+.RMS get record count time: 0ms
+.RMS add metadata time: 0ms
+.RMS update metadata time: 16ms
+.RMS reset state time: 0ms
+.RMS loading set time: 28s
+F.RMS loading setV4 time: 4s
+.RMS loading cardV4 time: 0ms
+.RMS add fileFormatVersion time: 16ms
+.RMS loading set metadataV2 time: 16ms
+.RMS saveSetV4 time: 188ms
+.RMS add cardV4 time: 0ms
+
+
+4th run
+
+..F..Number of Cards: 1827
+RMS loadState time: 22s
+F.RMS saveState time: 7s
+F.RMS loadCardV2 time: 16ms
+RMS loadCardV3 time: 31ms
+RMS LoadFileFormatVersion time: 31ms
+RMS loadMeta time: 16ms
+RMS saveSet time: 6s
+F.RMS UpdateCard time: 0ms
+RMS AddCard time: 0ms
+RMS getRecordCount time: 0ms
+F.RMS AddSetMetadata time: 0ms
+RMS updateSetMetadata time: 0ms
+RMS resetState time: 0ms
+F.RMS loadSet time: 29s
+F.RMS loadSetV4 time: 5s
+F.RMS loadCardV4 time: 16ms
+RMS AddFileFormatVersion time: 0ms
+RMS loadMetaV2 time: 31ms
+RMS AddCardV4 time: 16ms
+
+
+Run on handset
+
+..F..Number of Cards: 1827
+RMS loadState time: 300s
+F.RMS saveState time: 51s
+F.RMS loadCardV2 time: 135ms
+RMS loadCardV3 time: 144ms
+RMS LoadFileFormatVersion time: ?ms
+RMS loadMeta time: 153ms
+RMS saveSet time: 59s
+F.RMS UpdateCard time: 31ms
+RMS AddCard time: 131ms
+RMS getRecordCount time: 1ms
+F.RMS AddSetMetadata time: ?ms
+RMS updateSetMetadata time: ?ms
+RMS resetState time: 457ms
+F.RMS loadSet time: 884s
+F.RMS loadSetV4 time: 297s
+F.RMS loadCardV4 time: 133ms
+RMS AddFileFormatVersion time: ?ms
+RMS loadMetaV2 time: 140ms
+.RMS saveSetV4 time: 979ms
+RMS AddCardV4 time: 140ms
+
+
+
+
+LoadSet refactored to contain the card loading code. 
+
+Simulator
+
+..F..Number of Cards: 1827
+.RMS loadState time: 17s
+F.RMS saveState time: 6s
+F.RMS loadCardV2 time: 16ms
+.RMS loadCardV3 time: 31ms
+.RMS LoadFileFormatVersion time: 16ms
+.RMS loadMeta time: 32ms
+.RMS saveSet time: 5s
+F.RMS UpdateCard time: 0ms
+.RMS AddCard time: 0ms
+.RMS getRecordCount time: 0ms
+.RMS AddSetMetadata time: 0ms
+.RMS updateSetMetadata time: 0ms
+.RMS resetState time: 0ms
+.RMS loadSet time: 17s
+F.RMS loadSetV4 time: 641ms
+.RMS loadCardV4 time: 0ms
+.RMS AddFileFormatVersion time: 16ms
+.RMS loadMetaV2 time: 31ms
+.RMS saveSetV4 time: 156ms
+.RMS AddCardV4 time: 0ms
+
+
+Handset
+
+.F..Number of Cards: 1827
+.RMS loadState time: 4s
+F.RMS saveState time: 51s
+F.RMS loadCardV2 time: 142ms
+.RMS loadCardV3 time: 137ms
+.RMS LoadFileFormatVersion time: 141ms
+.RMS loadMeta time: 162ms
+.RMS saveSet time: 60s
+F.RMS UpdateCard time: 54ms
+.RMS AddCard time: 165ms
+.RMS getRecordCount time: 0ms
+.RMS AddSetMetadata time: 123ms
+.RMS updateSetMetadata time: 199ms
+.RMS resetState time: 458ms
+.RMS loadSet time: 3s
+F.RMS loadSetV4 time: 523ms
+.RMS loadCardV4 time: 134ms
+.RMS AddFileFormatVersion time: 136ms
+.RMS loadMetaV2 time: 144ms
+.RMS saveSetV4 time: 1s
+.RMS AddCardV4 time: 130ms
+
+Handset 2nd run
+
+.F..Number of Cards: 1827
+.RMS loadState time: 4s
+F.RMS saveState time: 52s
+F.RMS loadCardV2 time: 142ms
+.RMS loadCardV3 time: 137ms
+.RMS LoadFileFormatVersion time: 139ms
+.RMS loadMeta time: 145ms
+.RMS saveSet time: 60s
+F.RMS UpdateCard time: 32ms
+.RMS AddCard time: 165ms
+.RMS getRecordCount time: 0ms
+.RMS AddSetMetadata time: 121ms
+.RMS updateSetMetadata time: 31ms
+.RMS resetState time: 451ms
+.RMS loadSet time: 3s
+F.RMS loadSetV4 time: 532ms
+.RMS loadCardV4 time: 138ms
+.RMS AddFileFormatVersion time: 139ms
+.RMS loadMetaV2 time: 144ms
+.RMS saveSetV4 time: 1s
+.RMS AddCardV4 time: 123ms
+
+
+
+LoadSet refactored to use static loading methods. 
+
+Simulator
+
+..F..Number of Cards: 1827
+.RMS loadState time: 30s
+F.RMS saveState time: 12s
+F.RMS loadCardV2 time: 15ms
+F.RMS loadCardV3 time: 15ms
+F.RMS LoadFileFormatVersion time: 15ms
+F.RMS loadMeta time: 31ms
+F.RMS saveSet time: 7s
+F.RMS UpdateCard time: 16ms
+F.RMS AddCard time: 16ms
+F.RMS getRecordCount time: 0ms
+F.RMS AddSetMetadata time: 0ms
+F.RMS updateSetMetadata time: 0ms
+F.RMS resetState time: 0ms
+F.RMS loadSet time: 33s
+F.RMS loadSetV4 time: 4s
+F.RMS loadCardV4 time: 0ms
+F.RMS AddFileFormatVersionNumber time: 0ms
+F.RMS loadMetaV2 time: 15ms
+F.RMS saveSetV4 time: 156ms
+F.RMS AddCardV4 time: 0ms
+
+Simulator 2nd run. Also loadCard and loadSetMetadata made static
+
+..F..Number of Cards: 1827
+.RMS loadState time: 23s
+F.RMS saveState time: 5s
+F.RMS loadCardV2 time: 31ms
+F.RMS loadCardV3 time: 47ms
+F.RMS LoadFileFormatVersion time: 32ms
+F.RMS loadMeta time: 31ms
+F.RMS saveSet time: 5s
+F.RMS UpdateCard time: 0ms
+F.RMS AddCard time: 16ms
+F.RMS getRecordCount time: 0ms
+F.RMS AddSetMetadata time: 0ms
+F.RMS updateSetMetadata time: 16ms
+F.RMS resetState time: 0ms
+F.RMS loadSet time: 29s
+F.RMS loadSetV4 time: 4s
+F.RMS loadCardV4 time: 0ms
+F.RMS AddFileFormatVersionNumber time: 0ms
+F.RMS loadMetaV2 time: 32ms
+F.RMS saveSetV4 time: 171ms
+F.RMS AddCardV4 time: 0ms
