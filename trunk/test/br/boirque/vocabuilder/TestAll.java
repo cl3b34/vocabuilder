@@ -4,6 +4,10 @@ package br.boirque.vocabuilder;
 import j2meunit.framework.Test;
 import j2meunit.framework.TestCase;
 import j2meunit.framework.TestSuite;
+import br.boirque.vocabuilder.util.*;
+import br.boirque.vocabuilder.model.*;
+import br.boirque.vocabuilder.controller.*;
+import br.boirque.vocabuilder.view.*;
 
 public class TestAll extends TestCase
 {
@@ -31,6 +35,7 @@ public class TestAll extends TestCase
 		suite.addTest(new VocaUtilTest().suite());
 		suite.addTest(new SetOfCardsLoaderTest().suite());
 		suite.addTest(new SetOfCardsDAOTest().suite());
+		suite.addTest(new InitializerTest().suite());
 		return suite;
 	}
 }

@@ -20,17 +20,8 @@ import br.boirque.vocabuilder.model.SetOfCardsLoader;
  */
 public class Initializer {
 
-	// In the future, this guy should check if there is any partially saved
-	// state available
-	// (record stores in the hand set)
 	public SetOfCards initializeApp() {
 		// first try to load a partially studied set from a recordStore
-
-		// TODO: remove this. Hack to remove the RS so we can
-		// start afresh. Should do better RS management
-//		if(this.getRecordCount() > 150) {
-//			this.resetState();
-//		}
 
 		SetOfCards soc = this.loadState();
 		// TODO: the returned set might be marked as 'done'
@@ -59,6 +50,8 @@ public class Initializer {
 	/**
 	 * Save the current state of the set being studied to persistent storage
 	 * 
+	 * Use the newest file format
+	 * 
 	 * @param soc
 	 * @return true if successfully saved the current state
 	 */
@@ -69,7 +62,7 @@ public class Initializer {
 			// removes the previous recordstore
 			socDao.resetState();
 			// create a new one with the current state
-			socDao.saveState(soc);
+			socDao.saveSetOfCardsV4(soc);
 			savedSuccesfully = true;
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block
@@ -93,14 +86,29 @@ public class Initializer {
 	/**
 	 * Load the state of the set being currently studied from persistent
 	 * storage.
+	 * It tries to find out what is the file format version
+	 * by reading the version from file, if available.
 	 * 
 	 * @return the currently studied set or null if a error occurred
+	 * @throws RecordStoreException 
+	 * @throws RecordStoreNotFoundException 
+	 * @throws RecordStoreFullException 
+	 * @throws IOException 
 	 */
 	public SetOfCards loadState() {
 		SetOfCards soc = null;
 		try {
 			SetOfCardsDAO socDao = new SetOfCardsDAO();
-			soc = socDao.loadState();
+			// file format version
+			int fileFormatVersion = socDao.loadFileFormatVersionNumber(SetOfCardsDAO.FILEFORMATVERSIONRECORD);
+			if (fileFormatVersion == SetOfCardsDAO.FOURTHFILEFORMAT) {
+				return socDao.loadSetOfCardsV4();
+			} else if (fileFormatVersion == SetOfCardsDAO.THRIRDYFILEFORMAT) {
+				return socDao.loadSetOfCardsV3();
+			} else {
+				// old file format, file format version was not found
+				return socDao.loadSetOfCardsV2();
+			}
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

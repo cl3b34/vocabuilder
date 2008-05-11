@@ -1,4 +1,4 @@
-package br.boirque.vocabuilder;
+package br.boirque.vocabuilder.model;
 
 import java.io.IOException;
 import java.util.Vector;

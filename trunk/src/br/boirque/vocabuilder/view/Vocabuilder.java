@@ -22,6 +22,7 @@ import br.boirque.vocabuilder.util.VocaUtil;
 public class Vocabuilder extends MIDlet implements CommandListener {
 	// Commands
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
+	private Command quitCommand = new Command("Quit", Command.EXIT, 1);
 	private Command turnCommand = new Command("Turn", Command.SCREEN, 1);
 	private Command doneCommand = new Command("Done", Command.SCREEN, 2);
 	private Command wrongCommand = new Command("Wrong", Command.SCREEN, 1);
@@ -226,6 +227,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		mainForm.removeCommand(restartCommand);
 		mainForm.removeCommand(reviewCommand);
 		mainForm.removeCommand(nextSet);
+		mainForm.removeCommand(quitCommand);
+
 
 		if (commands != null) {
 			// add the desired commands
@@ -239,7 +242,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private void displayCardSide(int side) {
 		switch (side) {
 		case 1:
-			Command[] commands = { turnCommand, exitCommand };
+			Command[] commands = { turnCommand, quitCommand };
 			setCommands(commands);
 			cardText.setLabel(c.getSideOneTitle() + ": \n");
 			cardText.setText(c.getSideOne());
@@ -359,19 +362,28 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		this.sessionStudyTime = updateSessionStudyTime(sessionStudyTime, lastActivityTime, maxIdleTime);
 		lastActivityTime = System.currentTimeMillis();
 
+		if (cmd == quitCommand) {
+			// Display statistics
+			// update the total study time for the set
+			long previousTotalStudiedTime = soc.getTotalStudiedTimeInMiliseconds();
+			long newTotalStudiedTime = previousTotalStudiedTime + sessionStudyTime;
+			soc.setTotalStudiedTimeInMiliseconds(newTotalStudiedTime);
+			displayStatistics(true);
+		}
+		
 		if (cmd == exitCommand) {
 			// should save the state and exit
 			// update the total study time for the set
 			long previousTotalStudiedTime = soc.getTotalStudiedTimeInMiliseconds();
 			long newTotalStudiedTime = previousTotalStudiedTime + sessionStudyTime;
 			soc.setTotalStudiedTimeInMiliseconds(newTotalStudiedTime);
-			displayStatistics(false);
+//			displayStatistics(false);
 			Initializer initializer = new Initializer();
 			initializer.saveState(soc);
 			//exit
 			destroyApp(false);
 			notifyDestroyed();
-		}
+		}		
 
 		if (cmd == reviewCommand) {
 			// show again the cards in the set not marked as 'done'

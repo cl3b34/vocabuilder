@@ -1,9 +1,11 @@
-package br.boirque.vocabuilder;
+package br.boirque.vocabuilder.util;
+
+import j2meunit.framework.Test;
+import j2meunit.framework.TestCase;
+import j2meunit.framework.TestMethod;
+import j2meunit.framework.TestSuite;
 
 import java.util.TimeZone;
-
-import br.boirque.vocabuilder.util.VocaUtil;
-import j2meunit.framework.*;
 
 public class VocaUtilTest extends TestCase {
 
