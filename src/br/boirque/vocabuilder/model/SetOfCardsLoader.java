@@ -49,7 +49,7 @@ public class SetOfCardsLoader {
 		cards.addElement(mockCard3);
 		cards.addElement(mockCard4);
 
-		SetOfCards mockSet = new SetOfCards("mockSet", false, 2000L, cards);
+		SetOfCards mockSet = new SetOfCards("mockSet", false, cards);
 		return mockSet;
 	}
 
@@ -82,6 +82,8 @@ public class SetOfCardsLoader {
 		byte[] content = baos.toByteArray();
 		ByteArrayInputStream bais = new ByteArrayInputStream(content);
 		SetOfCards soc = extractSetOfCards(bais);
+		//set the total amount of cards as set meta data
+		soc.setTotalNumberOfCards(soc.getFlashCards().size());
 		return soc;
 	}
 
@@ -108,7 +110,7 @@ public class SetOfCardsLoader {
 		String metadata = "";
 
 		// process the file into a set of cards
-		SetOfCards soc = new SetOfCards(setName, false, 0L, null);
+		SetOfCards soc = new SetOfCards(setName, false, null);
 		FlashCard readCard = new FlashCard();
 		Vector cards = new Vector();
 		StringBuffer sb = new StringBuffer();

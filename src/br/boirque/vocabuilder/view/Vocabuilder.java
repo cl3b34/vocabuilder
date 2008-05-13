@@ -369,18 +369,11 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			long newTotalStudiedTime = previousTotalStudiedTime + sessionStudyTime;
 			soc.setTotalStudiedTimeInMiliseconds(newTotalStudiedTime);
 			displayStatistics(true);
+			Initializer initializer = new Initializer();
+			initializer.saveState(soc);
 		}
 		
 		if (cmd == exitCommand) {
-			// should save the state and exit
-			// update the total study time for the set
-			long previousTotalStudiedTime = soc.getTotalStudiedTimeInMiliseconds();
-			long newTotalStudiedTime = previousTotalStudiedTime + sessionStudyTime;
-			soc.setTotalStudiedTimeInMiliseconds(newTotalStudiedTime);
-//			displayStatistics(false);
-			Initializer initializer = new Initializer();
-			initializer.saveState(soc);
-			//exit
 			destroyApp(false);
 			notifyDestroyed();
 		}		

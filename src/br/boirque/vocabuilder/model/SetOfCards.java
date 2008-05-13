@@ -25,10 +25,80 @@ public class SetOfCards {
 	private int markedDoneCounter;
 	//the recordId of the set
 	private int setId;
-	//TODO: amount of cards in the set
-	//TODO: amount of cards marked 'done' in the set
+	//the amount of cards in this set
+	private int totalNumberOfCards;
+	//amount of cards marked 'done' in the set
+	private int totalNumberOfCardsMarkedDone;
 	
 	
+	
+	
+	/**
+	 * @param title
+	 * @param done
+	 * @param flashCards
+	 */
+	public SetOfCards(String title, boolean done, Vector flashCards) {
+		super();
+		this.title = title;
+		this.done = done;
+		this.flashCards = flashCards;
+	}
+
+
+	/**
+	 * @param title
+	 * @param done
+	 * @param totalStudiedTimeInMiliseconds
+	 * @param flashCards
+	 * @param totalNumberOfDisplayedCards
+	 * @param lastTimeViewed
+	 * @param lastTimeMarkedDone
+	 * @param markedDoneCounter
+	 * @param setId
+	 * @param totalNumberOfCards
+	 * @param totalNumberOfCardsMarkedDone
+	 */
+	public SetOfCards(String title, boolean done,
+			long totalStudiedTimeInMiliseconds, Vector flashCards,
+			int totalNumberOfDisplayedCards, long lastTimeViewed,
+			long lastTimeMarkedDone, int markedDoneCounter, int setId,
+			int totalNumberOfCards, int totalNumberOfCardsMarkedDone) {
+		super();
+		this.title = title;
+		this.done = done;
+		this.totalStudiedTimeInMiliseconds = totalStudiedTimeInMiliseconds;
+		this.flashCards = flashCards;
+		this.totalNumberOfDisplayedCards = totalNumberOfDisplayedCards;
+		this.lastTimeViewed = lastTimeViewed;
+		this.lastTimeMarkedDone = lastTimeMarkedDone;
+		this.markedDoneCounter = markedDoneCounter;
+		this.setId = setId;
+		this.totalNumberOfCards = totalNumberOfCards;
+		this.totalNumberOfCardsMarkedDone = totalNumberOfCardsMarkedDone;
+	}
+
+
+	public int getTotalNumberOfCards() {
+		return totalNumberOfCards;
+	}
+
+
+	public void setTotalNumberOfCards(int totalNumberOfCards) {
+		this.totalNumberOfCards = totalNumberOfCards;
+	}
+
+
+	public int getTotalNumberOfCardsMarkedDone() {
+		return totalNumberOfCardsMarkedDone;
+	}
+
+
+	public void setTotalNumberOfCardsMarkedDone(int totalNumberOfCardsMarkedDone) {
+		this.totalNumberOfCardsMarkedDone = totalNumberOfCardsMarkedDone;
+	}
+
+
 	public int getSetId() {
 		return setId;
 	}
@@ -45,49 +115,6 @@ public class SetOfCards {
 	public SetOfCards() {
 	}
 	
-	
-	/**
-	 * Convenience constructor
-	 * @param title - the set title
-	 * @param done - the set is done if all cards are marked as done
-	 * @param totalStudiedTimeInMiliseconds - how long has this set been studied
-	 * @param flashCards - the cards contained in this set
-	 */
-	public SetOfCards(String title, boolean done,
-			long totalStudiedTimeInMiliseconds, Vector flashCards) {
-		super();
-		this.title = title;
-		this.done = done;
-		this.totalStudiedTimeInMiliseconds = totalStudiedTimeInMiliseconds;
-		this.flashCards = flashCards;
-	}
-	
-	/**
-	 * @param title - the set title
-	 * @param done - the set is done if all cards are marked as done
-	 * @param totalStudiedTimeInMiliseconds - how long has this set been studied
-	 * @param flashCards - the cards contained in this set
-	 * @param totalNumberOfDisplayedCards - how many cards where displayed since the first time this set was used
-	 * @param lastTimeViewed - last time this set was viewed
-	 * @param lastTimeMarkedDone - last time this set was marked as 'done'
-	 * @param markedDoneCounter - how many times this set was marked 'done'
-	 */
-	public SetOfCards(String title, boolean done,
-			long totalStudiedTimeInMiliseconds, Vector flashCards,
-			int totalNumberOfDisplayedCards, long lastTimeViewed,
-			long lastTimeMarkedDone, int markedDoneCounter) {
-		super();
-		this.title = title;
-		this.done = done;
-		this.totalStudiedTimeInMiliseconds = totalStudiedTimeInMiliseconds;
-		this.flashCards = flashCards;
-		this.totalNumberOfDisplayedCards = totalNumberOfDisplayedCards;
-		this.lastTimeViewed = lastTimeViewed;
-		this.lastTimeMarkedDone = lastTimeMarkedDone;
-		this.markedDoneCounter = markedDoneCounter;
-	}
-
-
 	/**
 	 * @return the title
 	 */

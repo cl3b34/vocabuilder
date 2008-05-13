@@ -62,7 +62,7 @@ public class InitializerTest extends TestCase {
 		SetOfCards soc = init.initializeApp();
 		init.saveState(soc);
 		SetOfCards socNew = init.loadState();
-		assertNotNull(socNew);
+		assertNotNull("Null set",socNew);
 		init.resetState();
 		int recordCount = init.getRecordCount();
 		assertEquals("Didn't reset", 0, recordCount);
@@ -70,6 +70,7 @@ public class InitializerTest extends TestCase {
 
 	public void testGetRecordCount() {
 		Initializer init = new Initializer();
+		init.resetState();
 		int recordCount = init.getRecordCount();
 		assertEquals("Wrong record count", 0, recordCount);
 	}
