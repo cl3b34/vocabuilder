@@ -22,12 +22,14 @@ public class SetOfCardsDAO {
 	private RecordStore recordStore;
 	// The first file format was not publicly released
 	// The second does not have the format number in the record
+	// third adds file format and separes card data from set meta data
 	// the fourth file format has all the cards in a single record
 	public static final int THRIRDYFILEFORMAT = 3;
 	public static final int FOURTHFILEFORMAT = 4;
 
 	public static final int FILEFORMATVERSIONRECORD = 1;
 	public static final int METADATARECORD = 2;
+	public static final int FIRSTCARDRECORD = 3;
 
 	/**
 	 * @param recordStore
@@ -372,7 +374,7 @@ public class SetOfCardsDAO {
 	 * @param recordID -
 	 *            The set to be added
 	 */
-	public SetOfCards addSetMetadata(SetOfCards setOfCards) throws IOException,
+	public SetOfCards addSetMetadataV4(SetOfCards setOfCards) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
 	
@@ -386,6 +388,8 @@ public class SetOfCardsDAO {
 		long setLastTimeViewed = setOfCards.getLastTimeViewed();
 		long setLastTimeMarkedDone = setOfCards.getLastTimeMarkedDone();
 		int setMarkedDoneCounter = setOfCards.getMarkedDoneCounter();
+		int setTotalOfCards = setOfCards.getTotalNumberOfCards();
+		int setTotalOfCardsMarkedDone = setOfCards.getTotalNumberOfCardsMarkedDone();
 	
 		outputStream.writeUTF(title);
 		outputStream.writeBoolean(setIsDone);
@@ -394,6 +398,8 @@ public class SetOfCardsDAO {
 		outputStream.writeLong(setLastTimeViewed);
 		outputStream.writeLong(setLastTimeMarkedDone);
 		outputStream.writeInt(setMarkedDoneCounter);
+		outputStream.writeInt(setTotalOfCards);
+		outputStream.writeInt(setTotalOfCardsMarkedDone);
 	
 		// Extract the byte array
 		byte[] b = baos.toByteArray();
@@ -410,7 +416,7 @@ public class SetOfCardsDAO {
 	 * @param recordID -
 	 *            The id of the record to be updated
 	 */
-	public void updateSetMetadata(SetOfCards setOfCards) throws IOException,
+	public void updateSetMetadataV4(SetOfCards setOfCards) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
 	
@@ -424,7 +430,8 @@ public class SetOfCardsDAO {
 		long setLastTimeViewed = setOfCards.getLastTimeViewed();
 		long setLastTimeMarkedDone = setOfCards.getLastTimeMarkedDone();
 		int setMarkedDoneCounter = setOfCards.getMarkedDoneCounter();
-		int setId = setOfCards.getSetId();
+		int setTotalOfCards = setOfCards.getTotalNumberOfCards();
+		int setTotalOfCardsMarkedDone = setOfCards.getTotalNumberOfCardsMarkedDone();
 	
 		outputStream.writeUTF(title);
 		outputStream.writeBoolean(setIsDone);
@@ -433,10 +440,13 @@ public class SetOfCardsDAO {
 		outputStream.writeLong(setLastTimeViewed);
 		outputStream.writeLong(setLastTimeMarkedDone);
 		outputStream.writeInt(setMarkedDoneCounter);
+		outputStream.writeInt(setTotalOfCards);
+		outputStream.writeInt(setTotalOfCardsMarkedDone);
 	
 		// Extract the byte array
 		byte[] b = baos.toByteArray();
 		// write a record to the record store
+		int setId = setOfCards.getSetId();
 		int recordLength = b.length;
 		recordStore.setRecord(setId, b, 0, recordLength);
 	}
@@ -446,18 +456,13 @@ public class SetOfCardsDAO {
 	 * recordID from RMS
 	 * 
 	 * @param recordID -
-	 *            The id of the record to be recovered TODO: I'm reading data
-	 *            from the Card that is not important to the set in here. This
-	 *            is because the record has a fixed format and the interesting
-	 *            fields are mixed with 'uninteresting' ones. I cannot do much
-	 *            about that at this point, unless I change the file format and
-	 *            the parsers.
+	 *            The id of the record to be recovered 
 	 * @throws IOException
 	 * @throws RecordStoreException
 	 * @throws InvalidRecordIDException
 	 * @throws RecordStoreNotOpenException
 	 */
-	public SetOfCards loadSetMetadata(int recordId) throws IOException,
+	public SetOfCards loadSetMetadataV4(int recordId) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,
 			RecordStoreException {
 
@@ -474,7 +479,9 @@ public class SetOfCardsDAO {
 			long lastTimeSetViewed = inputStream.readLong();
 			long lastTimeSetMarkedDone = inputStream.readLong();
 			int markedDoneSetCounter = inputStream.readInt();
-
+			int totalNumberOfCards = inputStream.readInt();
+			int totalNumberOfCardsMarkedDone = inputStream.readInt();
+					
 			// populate the set
 			setToReturn.setTitle(setOfCardsTitle);
 			setToReturn.setDone(setOfCardsIsDone);
@@ -484,6 +491,8 @@ public class SetOfCardsDAO {
 			setToReturn.setLastTimeMarkedDone(lastTimeSetMarkedDone);
 			setToReturn.setMarkedDoneCounter(markedDoneSetCounter);
 			setToReturn.setSetId(recordId);
+			setToReturn.setTotalNumberOfCards(totalNumberOfCards);
+			setToReturn.setTotalNumberOfCardsMarkedDone(totalNumberOfCardsMarkedDone);
 
 			System.gc();
 			return setToReturn;
@@ -564,56 +573,56 @@ public class SetOfCardsDAO {
 		 */
 		public SetOfCards loadSetOfCardsV2() throws IOException, InvalidRecordIDException,
 				RecordStoreException {
-			SetOfCards setToReturn = loadSetMetadata(1);
+			SetOfCards setToReturn = loadSetMetadataV4(1);
 			int numRecords = recordStore.getNumRecords();
 			Vector cards = new Vector();
 			// Old format, the cards start at the 1st record
 			for (int i = 1; i <= numRecords; i++) {
 	
 				
-				FlashCard card = loadCardV2(i);
+//				FlashCard card = loadCardV2(i);
 				
 // Duplicated code. Should use the above method.
 // This is here only due to performance issues using loadCard methods (see performance in the wiki)				
-	//			ByteArrayInputStream bais = new ByteArrayInputStream(recordStore
-	//					.getRecord(i));
-	//			DataInputStream inputStream = new DataInputStream(bais);
-	//		
-	//			// Just skip data from the set of cards
-	//			inputStream.readUTF();
-	//			inputStream.readBoolean();
-	//			inputStream.readLong();
-	//			// recover the card
-	//			String cardSideOneTitle = inputStream.readUTF();
-	//			String cardSideOneText = inputStream.readUTF();
-	//			String cardSideTwoTitle = inputStream.readUTF();
-	//			String cardSideTwoText = inputStream.readUTF();
-	//			boolean cardIsDone = inputStream.readBoolean();
-	//			String cardTip = inputStream.readUTF();
-	//			// more set data, skip
-	//			inputStream.readInt();
-	//			inputStream.readLong();
-	//			inputStream.readLong();
-	//			inputStream.readInt();
-	//			// new card data 20071208
-	//			int cardViewedCounter = inputStream.readInt();
-	//			int cardMarkedDoneCounter = inputStream.readInt();
-	//			long cardLastTimeViewed = inputStream.readLong();
-	//			long cardLastTimeMarkedDone = inputStream.readLong();
-	//		
-	//			// create a card from the data read
-	//			FlashCard card = new FlashCard();
-	//			card.setSideOneTitle(cardSideOneTitle);
-	//			card.setSideOne(cardSideOneText);
-	//			card.setSideTwoTitle(cardSideTwoTitle);
-	//			card.setSideTwo(cardSideTwoText);
-	//			card.setDone(cardIsDone);
-	//			card.setTip(cardTip);
-	//			card.setViewedCounter(cardViewedCounter);
-	//			card.setMarkedDoneCounter(cardMarkedDoneCounter);
-	//			card.setLastTimeViewed(cardLastTimeViewed);
-	//			card.setLastTimeMarkedDone(cardLastTimeMarkedDone);
-	//			card.setCardId(i);
+				ByteArrayInputStream bais = new ByteArrayInputStream(recordStore
+						.getRecord(i));
+				DataInputStream inputStream = new DataInputStream(bais);
+			
+				// Just skip data from the set of cards
+				inputStream.readUTF();
+				inputStream.readBoolean();
+				inputStream.readLong();
+				// recover the card
+				String cardSideOneTitle = inputStream.readUTF();
+				String cardSideOneText = inputStream.readUTF();
+				String cardSideTwoTitle = inputStream.readUTF();
+				String cardSideTwoText = inputStream.readUTF();
+				boolean cardIsDone = inputStream.readBoolean();
+				String cardTip = inputStream.readUTF();
+				// more set data, skip
+				inputStream.readInt();
+				inputStream.readLong();
+				inputStream.readLong();
+				inputStream.readInt();
+				// new card data 20071208
+				int cardViewedCounter = inputStream.readInt();
+				int cardMarkedDoneCounter = inputStream.readInt();
+				long cardLastTimeViewed = inputStream.readLong();
+				long cardLastTimeMarkedDone = inputStream.readLong();
+			
+				// create a card from the data read
+				FlashCard card = new FlashCard();
+				card.setSideOneTitle(cardSideOneTitle);
+				card.setSideOne(cardSideOneText);
+				card.setSideTwoTitle(cardSideTwoTitle);
+				card.setSideTwo(cardSideTwoText);
+				card.setDone(cardIsDone);
+				card.setTip(cardTip);
+				card.setViewedCounter(cardViewedCounter);
+				card.setMarkedDoneCounter(cardMarkedDoneCounter);
+				card.setLastTimeViewed(cardLastTimeViewed);
+				card.setLastTimeMarkedDone(cardLastTimeMarkedDone);
+				card.setCardId(i);
 				
 				
 				
@@ -638,46 +647,46 @@ public class SetOfCardsDAO {
 		int numRecords = recordStore.getNumRecords();
 		// create a set and loads it's meta data
 		if (numRecords > METADATARECORD) {
-			setToReturn = loadSetMetadata(METADATARECORD);
+			setToReturn = loadSetMetadataV4(METADATARECORD);
 			Vector cards = new Vector();
 			// The cards start at the 3rd record
 			for (int i = 3; i <= numRecords; i++) {
-				FlashCard card = loadCard(i, null);
+//				FlashCard card = loadCard(i, null);
 		
 // Duplicated code. Should use the above method.
 // This is here only due to performance issues using loadCard methods (see performance in the wiki)						
 //				
-//				// Create a input stream for the cards, one record at a time
-//				ByteArrayInputStream bais = new ByteArrayInputStream(recordStore
-//						.getRecord(i));
-//				DataInputStream inputStream = new DataInputStream(bais);
-//
-//				// recover the card
-//				String cardSideOneTitle = inputStream.readUTF();
-//				String cardSideOneText = inputStream.readUTF();
-//				String cardSideTwoTitle = inputStream.readUTF();
-//				String cardSideTwoText = inputStream.readUTF();
-//				boolean cardIsDone = inputStream.readBoolean();
-//				String cardTip = inputStream.readUTF();
-//				int cardViewedCounter = inputStream.readInt();
-//				int cardMarkedDoneCounter = inputStream.readInt();
-//				long cardLastTimeViewed = inputStream.readLong();
-//				long cardLastTimeMarkedDone = inputStream.readLong();
-//
-//				// create a card from the data read
-//				FlashCard card = new FlashCard();
-//				card.setSideOneTitle(cardSideOneTitle);
-//				card.setSideOne(cardSideOneText);
-//				card.setSideTwoTitle(cardSideTwoTitle);
-//				card.setSideTwo(cardSideTwoText);
-//				card.setDone(cardIsDone);
-//				card.setTip(cardTip);
-//				card.setViewedCounter(cardViewedCounter);
-//				card.setMarkedDoneCounter(cardMarkedDoneCounter);
-//				card.setLastTimeViewed(cardLastTimeViewed);
-//				card.setLastTimeMarkedDone(cardLastTimeMarkedDone);
-//				card.setCardId(i);		
-//				
+				// Create a input stream for the cards, one record at a time
+				ByteArrayInputStream bais = new ByteArrayInputStream(recordStore
+						.getRecord(i));
+				DataInputStream inputStream = new DataInputStream(bais);
+
+				// recover the card
+				String cardSideOneTitle = inputStream.readUTF();
+				String cardSideOneText = inputStream.readUTF();
+				String cardSideTwoTitle = inputStream.readUTF();
+				String cardSideTwoText = inputStream.readUTF();
+				boolean cardIsDone = inputStream.readBoolean();
+				String cardTip = inputStream.readUTF();
+				int cardViewedCounter = inputStream.readInt();
+				int cardMarkedDoneCounter = inputStream.readInt();
+				long cardLastTimeViewed = inputStream.readLong();
+				long cardLastTimeMarkedDone = inputStream.readLong();
+
+				// create a card from the data read
+				FlashCard card = new FlashCard();
+				card.setSideOneTitle(cardSideOneTitle);
+				card.setSideOne(cardSideOneText);
+				card.setSideTwoTitle(cardSideTwoTitle);
+				card.setSideTwo(cardSideTwoText);
+				card.setDone(cardIsDone);
+				card.setTip(cardTip);
+				card.setViewedCounter(cardViewedCounter);
+				card.setMarkedDoneCounter(cardMarkedDoneCounter);
+				card.setLastTimeViewed(cardLastTimeViewed);
+				card.setLastTimeMarkedDone(cardLastTimeMarkedDone);
+				card.setCardId(i);		
+				
 				
 				cards.addElement(card);
 			}
@@ -694,7 +703,6 @@ public class SetOfCardsDAO {
 		 * @throws RecordStoreException
 		 * @throws InvalidRecordIDException
 		 *             TODO: Try to recover from some of the exceptions
-		 *             TODO: the number of records is hardcoded
 		 */
 		public SetOfCards loadSetOfCardsV4() throws IOException,
 				InvalidRecordIDException, RecordStoreException {
@@ -703,13 +711,15 @@ public class SetOfCardsDAO {
 			if (numRecords > 0) {
 				// create a set and loads it's meta data
 				if (numRecords > METADATARECORD) {
-					setToReturn = loadSetMetadata(METADATARECORD);
+					setToReturn = loadSetMetadataV4(METADATARECORD);
+					// The amount of cards come from meta data
+					int cardCount = setToReturn.getTotalNumberOfCards();
 					Vector cards = new Vector();
 					ByteArrayInputStream bais = new ByteArrayInputStream(
-							recordStore.getRecord(3));
+							recordStore.getRecord(FIRSTCARDRECORD));
 					DataInputStream inputStream = new DataInputStream(bais);
 					// The cards start at the 3rd record
-					for (int i = 3; i <= 1829; i++) {
+					for (int i = FIRSTCARDRECORD; i <= cardCount + 2; i++) {
 					
 						
 //						FlashCard card = loadCardV4(inputStream);
@@ -842,7 +852,7 @@ public class SetOfCardsDAO {
 			throws RecordStoreNotOpenException, InvalidRecordIDException,
 			IOException, RecordStoreException {
 		this.addFileFormatVersionNumber(THRIRDYFILEFORMAT);
-		setOfCards = this.addSetMetadata(setOfCards);
+		setOfCards = this.addSetMetadataV4(setOfCards);
 
 		Vector cards = setOfCards.getFlashCards();
 		// get each card and save to the record store
@@ -873,11 +883,11 @@ public class SetOfCardsDAO {
 	 * @throws InvalidRecordIDException
 	 * @throws RecordStoreNotOpenException
 	 */
-	public void saveSetOfCardsV4(SetOfCards setOfCards)
+	public SetOfCards saveSetOfCardsV4(SetOfCards setOfCards)
 			throws RecordStoreNotOpenException, InvalidRecordIDException,
 			IOException, RecordStoreException {
 		this.addFileFormatVersionNumber(FOURTHFILEFORMAT);
-		setOfCards = this.addSetMetadata(setOfCards);
+		setOfCards = this.addSetMetadataV4(setOfCards);
 
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		DataOutputStream outputStream = new DataOutputStream(baos);
@@ -892,6 +902,8 @@ public class SetOfCardsDAO {
 		byte[] b = baos.toByteArray();
 		int recordLength = b.length;
 		recordStore.addRecord(b, 0, recordLength);
+		setOfCards.setFlashCards(cards);
+		return setOfCards;
 	}
 
 	private byte[] cardToByteArray(FlashCard card) throws IOException {

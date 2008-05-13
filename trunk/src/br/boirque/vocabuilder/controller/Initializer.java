@@ -85,29 +85,31 @@ public class Initializer {
 
 	/**
 	 * Load the state of the set being currently studied from persistent
-	 * storage.
-	 * It tries to find out what is the file format version
-	 * by reading the version from file, if available.
+	 * storage. It tries to find out what is the file format version by reading
+	 * the version from file, if available.
 	 * 
 	 * @return the currently studied set or null if a error occurred
-	 * @throws RecordStoreException 
-	 * @throws RecordStoreNotFoundException 
-	 * @throws RecordStoreFullException 
-	 * @throws IOException 
+	 * @throws RecordStoreException
+	 * @throws RecordStoreNotFoundException
+	 * @throws RecordStoreFullException
+	 * @throws IOException
 	 */
 	public SetOfCards loadState() {
 		SetOfCards soc = null;
 		try {
-			SetOfCardsDAO socDao = new SetOfCardsDAO();
-			// file format version
-			int fileFormatVersion = socDao.loadFileFormatVersionNumber(SetOfCardsDAO.FILEFORMATVERSIONRECORD);
-			if (fileFormatVersion == SetOfCardsDAO.FOURTHFILEFORMAT) {
-				return socDao.loadSetOfCardsV4();
-			} else if (fileFormatVersion == SetOfCardsDAO.THRIRDYFILEFORMAT) {
-				return socDao.loadSetOfCardsV3();
-			} else {
-				// old file format, file format version was not found
-				return socDao.loadSetOfCardsV2();
+			if (this.getRecordCount() > 0) {
+				SetOfCardsDAO socDao = new SetOfCardsDAO();
+				// file format version
+				int fileFormatVersion = socDao
+						.loadFileFormatVersionNumber(SetOfCardsDAO.FILEFORMATVERSIONRECORD);
+				if (fileFormatVersion == SetOfCardsDAO.FOURTHFILEFORMAT) {
+					return socDao.loadSetOfCardsV4();
+				} else if (fileFormatVersion == SetOfCardsDAO.THRIRDYFILEFORMAT) {
+					return socDao.loadSetOfCardsV3();
+				} else {
+					// old file format, file format version was not found
+					return socDao.loadSetOfCardsV2();
+				}
 			}
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block
