@@ -223,7 +223,7 @@ public class SetOfCardsDAOTest extends TestCase {
 		// loading time must be under 300ms
 		assertTrue("RMS loadCardV3:" + milisecondsToSeconds(loadingTime), loadingTime < LOADCARDMAXTIME);
 		assertEquals("wrong card amount\n",TOTALOFCARDS+2, socd.getRecordCount());
-		validateLastCard(card);
+		validateFirstCard(card);
 	}	
 	
 	
@@ -241,17 +241,7 @@ public class SetOfCardsDAOTest extends TestCase {
 		assertTrue("RMS AddCard:" + milisecondsToSeconds(loadingTime), loadingTime < ADDMAXTIME);
 		//recover it and verify
 		FlashCard cardNew = socdao.loadCard(card.getCardId(),null);
-		assertEquals(cardNew.getSideOne(), card.getSideOne());
-		assertEquals(cardNew.getSideOneTitle(), card.getSideOneTitle());
-		assertEquals(cardNew.getSideTwo(), "beard");
-		assertEquals(cardNew.getSideTwoTitle(), "english");
-		assertTrue(cardNew.isDone() == card.isDone());
-		assertEquals(cardNew.getTip(), card.getTip());
-		assertTrue(cardNew.getCardId()== card.getCardId());
-		assertTrue(cardNew.getLastTimeMarkedDone()== card.getLastTimeMarkedDone());
-		assertTrue(cardNew.getMarkedDoneCounter()== card.getMarkedDoneCounter());
-		assertTrue(cardNew.getLastTimeViewed()== card.getLastTimeViewed());
-		assertTrue(cardNew.getViewedCounter()== card.getViewedCounter());		
+		validateCardAgainstOldCard(cardNew, card);
 	}
 
 	/**
@@ -281,17 +271,11 @@ public class SetOfCardsDAOTest extends TestCase {
 		long endTime = System.currentTimeMillis();
 		long loadingTime = endTime -startTime;
 		System.out.println("RMS UpdateCard time: " + milisecondsToSeconds(loadingTime));
-	
+		assertTrue("RMS UpdateCard:" + milisecondsToSeconds(loadingTime), loadingTime < UPDATEMAXTIME);	
+		
 		//recover it and verify
 		FlashCard cardNew = setOfCardsdao.loadCard(cardId,null);
-		assertEquals(cardNew.getSideOne(), "viini");
-		assertEquals(cardNew.getSideOneTitle(), "Suomi");
-		assertEquals(cardNew.getSideTwo(), "vodka");
-		assertEquals(cardNew.getSideTwoTitle(), "english");
-		assertTrue(cardNew.isDone() == false);
-		assertEquals(cardNew.getTip(), "Makes you crazy");
-		assertEquals(cardNew.getCardId(), cardId);
-		assertTrue("RMS UpdateCard:" + milisecondsToSeconds(loadingTime), loadingTime < UPDATEMAXTIME);
+		validateCardAgainstOldCard(cardNew, card);
 	}
 
 	public void testSaveSetOfCards() throws RecordStoreNotOpenException, RecordStoreFullException, IOException, RecordStoreException {
@@ -342,7 +326,6 @@ public class SetOfCardsDAOTest extends TestCase {
 		// the record store should have 1827 records + 1 metadata + 1 file format version
 		assertEquals(TOTALOFCARDS+2, recordCount); 	
 		assertTrue("RMS getRecordCount:" + milisecondsToSeconds(loadingTime), loadingTime < COUNTMAXTIME);
-
 	}
 
 	public void testAddSetMetadata() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
@@ -426,7 +409,6 @@ public class SetOfCardsDAOTest extends TestCase {
 		assertTrue("RMS loadSetV4:" + milisecondsToSeconds(loadingTime), loadingTime < LOADSETMAXTIME);
 		validateSet(setOfCards);
 		validateCards(setOfCards.getFlashCards());
-		assertNotNull("Null set of cards", setOfCards);
 		assertEquals("wrong card amount\n",TOTALOFCARDS, setOfCards.getFlashCards().size());	
 	}
 
@@ -498,17 +480,21 @@ public class SetOfCardsDAOTest extends TestCase {
 		
 		//recover it and verify
 		FlashCard cardNew = socdao.loadCardV4(inputStream);
-		assertEquals(cardNew.getSideOne(), card.getSideOne());
-		assertEquals(cardNew.getSideOneTitle(), card.getSideOneTitle());
-		assertEquals(cardNew.getSideTwo(), "beard");
-		assertEquals(cardNew.getSideTwoTitle(), "english");
-		assertTrue(cardNew.isDone() == card.isDone());
-		assertEquals(cardNew.getTip(), card.getTip());
-		assertTrue(cardNew.getCardId()== card.getCardId());
-		assertTrue(cardNew.getLastTimeMarkedDone()== card.getLastTimeMarkedDone());
-		assertTrue(cardNew.getMarkedDoneCounter()== card.getMarkedDoneCounter());
-		assertTrue(cardNew.getLastTimeViewed()== card.getLastTimeViewed());
-		assertTrue(cardNew.getViewedCounter()== card.getViewedCounter());
+		validateCardAgainstOldCard(cardNew, card);
+	}
+	
+	private void validateCardAgainstOldCard(FlashCard newCard, FlashCard oldCard) {
+		assertEquals(newCard.getSideOne(), oldCard.getSideOne());
+		assertEquals(newCard.getSideOneTitle(), oldCard.getSideOneTitle());
+		assertEquals(newCard.getSideTwo(), oldCard.getSideTwo());
+		assertEquals(newCard.getSideTwoTitle(), oldCard.getSideTwoTitle());
+		assertTrue(newCard.isDone() == oldCard.isDone());
+		assertEquals(newCard.getTip(), oldCard.getTip());
+		assertTrue(newCard.getCardId()== oldCard.getCardId());
+		assertTrue(newCard.getLastTimeMarkedDone()== oldCard.getLastTimeMarkedDone());
+		assertTrue(newCard.getMarkedDoneCounter()== oldCard.getMarkedDoneCounter());
+		assertTrue(newCard.getLastTimeViewed()== oldCard.getLastTimeViewed());
+		assertTrue(newCard.getViewedCounter()== oldCard.getViewedCounter());
 	}
 	
 	private void validateCards(Vector flashCards) {

@@ -10,6 +10,8 @@ import j2meunit.framework.*;
 
 public class SetOfCardsLoaderTest extends TestCase {
 
+	private static final long MAXLOADINGTIME = 5000L;
+	private static final int TOTALOFCARDS = 1827;
 	String setToLoad = "/Finnish/longlist_fin_eng.txt";
 	
 	/**
@@ -43,10 +45,10 @@ public class SetOfCardsLoaderTest extends TestCase {
 		SetOfCards soc = socl.loadSet(setToLoad);
 		long endTime = System.currentTimeMillis();
 		long loadingTime = endTime -startTime;
-		assertEquals("wrong card amount\n",1827, soc.getFlashCards().size());
+		assertEquals("wrong card amount\n",TOTALOFCARDS, soc.getFlashCards().size());
 		assertNotNull("Null Set of cards", soc);
 		// loading time must be under 5s
-		assertTrue("Text load:" + milisecondsToSeconds(loadingTime), loadingTime < 5000L);
+		assertTrue("Text load:" + milisecondsToSeconds(loadingTime), loadingTime < MAXLOADINGTIME);
 	}
 	
 	public void testTextFileLoader() throws IOException{
