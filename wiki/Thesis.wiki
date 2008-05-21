@@ -15,13 +15,16 @@ Here you can find a short list of what is planned, the progress and an account o
   		* Create a new model for the storage (m3), saving the whole list in a single record
   	* week 18: 30h 
   		* Create Unit tests, fix bugs and validate the performance
-  	* week 19: 5h 
-  		* Fix bugs and validate the performance in the test handset (Nokia E50)
-  		* Create a beta version with m3 as storage tecnic
-  		* Update the website and create this page
+  	* week 19: 15h 
+  		* Fix bugs and validate the performance in the test hand set (Nokia E50)
+  		* Update the web site and create this page
+  	* week 20: 10h 
+  		* Create a beta version with m3 as storage mechanism
+  		* Create unit tests and fix bugs
+  		* Improve the user interface
+  			# The 'statistics' page should have an 'exit' button
   	
-  * Improve the user interface
-  	# The 'statistics' page should have an 'exit' button
+ 
   * Create 'preferences' for the application
   	# Show words in random or sequential order
   	# Show first side 1 or side 2 of the card
