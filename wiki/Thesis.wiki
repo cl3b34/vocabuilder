@@ -24,18 +24,13 @@ Here you can find a short list of what is planned, the progress and an account o
   		* Improve the user interface
   			# The 'statistics' page should have an 'exit' button
  
-  * Include support for multiple lists of words (read / delete)
-  	# Should be possible to load for study or delete permanently any of the lists available in the handset
-		* week 21: 5h  		
-  			* Use the list name as the recordStore name
-  			
-  			* Fix OutOfMemory exceptions when loading very long lists (issue 7) 
-  		
-  				* Divide the long lists in smaller ones
-  				* change the UI to allow the selection and loading of any available list
-  			
+  * Include support for multiple lists of words (read / delete). Should be possible to load for study or delete permanently any of the lists available in the handset, but the default.
+	* week 21: 5h
+  		* Use the list name as the recordStore name  		
+  		* Change the UI to allow the selection and loading of any available list
+  		* Divide the long lists in smaller ones
+  		* Recompile the demo applications with the lists divided in smaller ones (will break backward compatibility)
   	
- 
   * Create 'preferences' for the application
   	# Show words in random or sequential order
   	# Show first side 1 or side 2 of the card
