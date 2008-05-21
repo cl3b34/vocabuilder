@@ -23,6 +23,17 @@ Here you can find a short list of what is planned, the progress and an account o
   		* Create unit tests and fix bugs
   		* Improve the user interface
   			# The 'statistics' page should have an 'exit' button
+ 
+  * Include support for multiple lists of words (read / delete)
+  	# Should be possible to load for study or delete permanently any of the lists available in the handset
+		* week 21: 5h  		
+  			* Use the list name as the recordStore name
+  			
+  			* Fix OutOfMemory exceptions when loading very long lists (issue 7) 
+  		
+  				* Divide the long lists in smaller ones
+  				* change the UI to allow the selection and loading of any available list
+  			
   	
  
   * Create 'preferences' for the application
@@ -31,6 +42,4 @@ Here you can find a short list of what is planned, the progress and an account o
   * Create a website where the user can create his own lists of words
   	# The lists can be private or public
   	# Let the user load his own lists and public lists via HTTP to the mobile
-  * Include support for multiple lists of words (read / delete)
-  	# Should be possible to load for study or delete permanently any of the lists available in the handset
-  * Write a thesis document (min 25 pages)
+   * Write a thesis document (min 25 pages)
