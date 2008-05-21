@@ -24,7 +24,7 @@ Here you can find a short list of what is planned, the progress and an account o
   		* Improve the user interface
   			# The 'statistics' page should have an 'exit' button
  
-  * Include support for multiple lists of words (read / delete). Should be possible to load for study or delete permanently any of the lists available in the handset, but the default.
+  * Include support for multiple lists of words (read / delete). Should be possible to load for study or delete permanently any of the lists available in the handset, but the default. This should fix issue 7. 
   	* week 21: 5h
   		* Use the list name as the recordStore name  		
   		* Change the UI to allow the selection and loading of any available list
