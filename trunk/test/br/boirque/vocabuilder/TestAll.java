@@ -36,6 +36,7 @@ public class TestAll extends TestCase
 		suite.addTest(new SetOfCardsLoaderTest().suite());
 		suite.addTest(new SetOfCardsDAOTest().suite());
 		suite.addTest(new InitializerTest().suite());
+		suite.addTest(new RecordStoreFactoryTest().suite());
 		return suite;
 	}
 }
