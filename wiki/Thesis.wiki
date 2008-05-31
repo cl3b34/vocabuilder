@@ -26,10 +26,10 @@ Here you can find a short list of what is planned, the progress and an account o
  
   * Include support for multiple lists of words (read / delete). Should be possible to load for study or delete permanently any of the lists available in the handset, but the default. This should fix issue 7. 
   	* week 21: 5h
-        * week 22: 11h
+  	* week 22: 11h
   		* Use the list name as the recordStore name
-                * Correct the unit test cases
-                * Reorganize the DAO layer with the use of a interface and a abstract class
+  		* Correct the unit test cases
+  		* Reorganize the DAO layer with the use of a interface and a abstract class
   		
   		* Change the UI to allow the selection and loading of any available list
   		* Divide the long lists in smaller ones
