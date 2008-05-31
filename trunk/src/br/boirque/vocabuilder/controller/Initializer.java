@@ -9,7 +9,9 @@ import javax.microedition.rms.RecordStoreNotFoundException;
 import javax.microedition.rms.RecordStoreNotOpenException;
 
 import br.boirque.vocabuilder.model.SetOfCards;
-import br.boirque.vocabuilder.model.SetOfCardsDAO;
+import br.boirque.vocabuilder.model.SetOfCardsDAOAbst;
+import br.boirque.vocabuilder.model.SetOfCardsDAOIF;
+import br.boirque.vocabuilder.model.SetOfCardsDAOV4Impl;
 import br.boirque.vocabuilder.model.SetOfCardsLoader;
 
 /**
@@ -22,8 +24,19 @@ public class Initializer {
 
 	public SetOfCards initializeApp() {
 		// first try to load a partially studied set from a recordStore
-
-		SetOfCards soc = this.loadState();
+		// TODO: the set to be loaded is hardcoded at this point. It
+		// should come from the UI
+		String[] availableSets = null;
+		try {
+			availableSets = SetOfCardsDAOAbst.getAvailableSets();
+		} catch (RecordStoreNotOpenException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		SetOfCards soc = null;
+		if (availableSets != null && availableSets.length > 0) {
+			soc = this.loadState(availableSets[0]);
+		}
 		// TODO: the returned set might be marked as 'done'
 		// we should ask the user what to do...
 		// either try to load another set from other media and
@@ -58,11 +71,11 @@ public class Initializer {
 	public boolean saveState(SetOfCards soc) {
 		boolean savedSuccesfully = false;
 		try {
-			SetOfCardsDAO socDao = new SetOfCardsDAO();
+			SetOfCardsDAOIF socDao = new SetOfCardsDAOV4Impl(soc.getSetName());
 			// removes the previous recordstore
 			socDao.resetState();
 			// create a new one with the current state
-			socDao.saveSetOfCardsV4(soc);
+			socDao.saveSetOfCards(soc);
 			savedSuccesfully = true;
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block
@@ -94,22 +107,12 @@ public class Initializer {
 	 * @throws RecordStoreFullException
 	 * @throws IOException
 	 */
-	public SetOfCards loadState() {
+	public SetOfCards loadState(String setName) {
 		SetOfCards soc = null;
 		try {
-			if (this.getRecordCount() > 0) {
-				SetOfCardsDAO socDao = new SetOfCardsDAO();
-				// file format version
-				int fileFormatVersion = socDao
-						.loadFileFormatVersionNumber(SetOfCardsDAO.FILEFORMATVERSIONRECORD);
-				if (fileFormatVersion == SetOfCardsDAO.FOURTHFILEFORMAT) {
-					return socDao.loadSetOfCardsV4();
-				} else if (fileFormatVersion == SetOfCardsDAO.THRIRDYFILEFORMAT) {
-					return socDao.loadSetOfCardsV3();
-				} else {
-					// old file format, file format version was not found
-					return socDao.loadSetOfCardsV2();
-				}
+			if (this.getCardCount(setName) > 0) {
+				SetOfCardsDAOAbst socDao = new SetOfCardsDAOV4Impl(setName);
+				return socDao.loadSetOfCards();
 			}
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block
@@ -133,9 +136,9 @@ public class Initializer {
 	/**
 	 * reset the state of the set being studied so we start fresh.
 	 */
-	public void resetState() {
+	public void resetState(String setName) {
 		try {
-			SetOfCardsDAO socDao = new SetOfCardsDAO();
+			SetOfCardsDAOIF socDao = new SetOfCardsDAOV4Impl(setName);
 			socDao.resetState();
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block
@@ -152,10 +155,10 @@ public class Initializer {
 	/**
 	 * return the record count or -1 if an error occurs
 	 */
-	public int getRecordCount() {
+	public int getCardCount(String setName) {
 		try {
-			SetOfCardsDAO socDao = new SetOfCardsDAO();
-			return socDao.getRecordCount();
+			SetOfCardsDAOIF socDao = new SetOfCardsDAOV4Impl(setName);
+			return socDao.getCardCount();
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -166,6 +169,9 @@ public class Initializer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (RecordStoreException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

@@ -32,11 +32,11 @@ public class TestAll extends TestCase
 	public Test suite()
 	{
 		TestSuite suite = new TestSuite();
-		suite.addTest(new VocaUtilTest().suite());
-		suite.addTest(new SetOfCardsLoaderTest().suite());
-		suite.addTest(new SetOfCardsDAOTest().suite());
 		suite.addTest(new InitializerTest().suite());
+		suite.addTest(new SetOfCardsLoaderTest().suite());
 		suite.addTest(new RecordStoreFactoryTest().suite());
+		suite.addTest(new SetOfCardsDAOV4ImplTest().suite());
+		suite.addTest(new VocaUtilTest().suite());
 		return suite;
 	}
 }

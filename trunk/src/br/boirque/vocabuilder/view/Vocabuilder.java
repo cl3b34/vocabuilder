@@ -104,7 +104,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			while (soc.isDone()) {
 				soc = initializer.initializeApp();
 			}
-			String titleOfThisSet = soc.getTitle();
+			String titleOfThisSet = soc.getSetName();
 			mainForm.setTitle(titleOfThisSet);
 			cards = soc.getFlashCards();
 			soc.setLastTimeViewed(System.currentTimeMillis());

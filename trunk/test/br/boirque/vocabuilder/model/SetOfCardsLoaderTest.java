@@ -59,7 +59,7 @@ public class SetOfCardsLoaderTest extends TestCase {
 		System.out.println("Number of Cards: " + cards.size());
 		assertNotNull(cards);
 		// check the set name
-		String setName = soc.getTitle();
+		String setName = soc.getSetName();
 		assertEquals("longlist_fi_en", setName);
 		
 		//check the first card
