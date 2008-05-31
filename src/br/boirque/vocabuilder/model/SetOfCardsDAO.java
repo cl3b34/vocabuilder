@@ -19,11 +19,11 @@ import javax.microedition.rms.RecordStoreNotOpenException;
  * @author cleber.goncalves
  * 
  */
-public abstract class SetOfCardsDAOAbst implements SetOfCardsDAOIF {
+public abstract class SetOfCardsDAO implements SetOfCardsDAOIF {
 
 	protected RecordStore recordStore;
 
-	public SetOfCardsDAOAbst() {
+	public SetOfCardsDAO() {
 		super();
 	}
 

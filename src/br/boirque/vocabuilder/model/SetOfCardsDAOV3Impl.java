@@ -18,7 +18,7 @@ import javax.microedition.rms.RecordStoreNotOpenException;
  * 
  * @author cleber.goncalves Encapsulates the persistence of a set of cards
  */
-public class SetOfCardsDAOV3Impl extends SetOfCardsDAOAbst  {
+public class SetOfCardsDAOV3Impl extends SetOfCardsDAO  {
 	private RecordStore recordStore;
 
 	/**

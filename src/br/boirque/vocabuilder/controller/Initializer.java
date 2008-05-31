@@ -9,7 +9,7 @@ import javax.microedition.rms.RecordStoreNotFoundException;
 import javax.microedition.rms.RecordStoreNotOpenException;
 
 import br.boirque.vocabuilder.model.SetOfCards;
-import br.boirque.vocabuilder.model.SetOfCardsDAOAbst;
+import br.boirque.vocabuilder.model.SetOfCardsDAO;
 import br.boirque.vocabuilder.model.SetOfCardsDAOIF;
 import br.boirque.vocabuilder.model.SetOfCardsDAOV4Impl;
 import br.boirque.vocabuilder.model.SetOfCardsLoader;
@@ -28,7 +28,7 @@ public class Initializer {
 		// should come from the UI
 		String[] availableSets = null;
 		try {
-			availableSets = SetOfCardsDAOAbst.getAvailableSets();
+			availableSets = SetOfCardsDAO.getAvailableSets();
 		} catch (RecordStoreNotOpenException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -111,7 +111,7 @@ public class Initializer {
 		SetOfCards soc = null;
 		try {
 			if (this.getCardCount(setName) > 0) {
-				SetOfCardsDAOAbst socDao = new SetOfCardsDAOV4Impl(setName);
+				SetOfCardsDAO socDao = new SetOfCardsDAOV4Impl(setName);
 				return socDao.loadSetOfCards();
 			}
 		} catch (RecordStoreFullException e) {

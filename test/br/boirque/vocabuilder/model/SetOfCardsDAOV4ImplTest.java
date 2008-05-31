@@ -132,7 +132,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 
 
 	public void testAddSetMetadata() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
-		SetOfCardsDAOAbst socdao = new SetOfCardsDAOV4Impl(setName);
+		SetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(setName);
 		socdao.resetState();
 		socdao.addFileFormatVersionNumber(3);
 		SetOfCards soc;
@@ -150,7 +150,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	}
 
 	public void testGetCardCount() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
-		SetOfCardsDAOAbst socdao = new SetOfCardsDAOV4Impl(setName);
+		SetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(setName);
 		socdao.resetState();
 		socdao.saveSetOfCards(setOfCards);		
 		long startTime = System.currentTimeMillis();
@@ -187,7 +187,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	
 	
 	public void testLoadFileFormatVersionNumber() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
-		SetOfCardsDAOAbst socd = new SetOfCardsDAOV4Impl(setName);
+		SetOfCardsDAO socd = new SetOfCardsDAOV4Impl(setName);
 		socd.resetState();
 		socd.saveSetOfCards(setOfCards);
 		//measure performance
@@ -205,7 +205,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	 * Tests if the set metadata is correctly recovered 
 	 */
 	public void testLoadSetMetadata() throws RecordStoreNotOpenException, InvalidRecordIDException, IOException, RecordStoreException  {
-		SetOfCardsDAOAbst socd = new SetOfCardsDAOV4Impl(setName);
+		SetOfCardsDAO socd = new SetOfCardsDAOV4Impl(setName);
 		socd.resetState();	
 		SetOfCards setOrig = socd.saveSetOfCards(setOfCards);
 		//measure performance
@@ -282,7 +282,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	 * @throws RecordStoreNotOpenException 
 	 */
 	public void testUpdateSetMetadata() throws RecordStoreNotOpenException, InvalidRecordIDException, IOException, RecordStoreException {
-		SetOfCardsDAOAbst socdao = new SetOfCardsDAOV4Impl(setName);
+		SetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(setName);
 		socdao.resetState();
 		setOfCards = socdao.saveSetOfCards(setOfCards);
 		//convention for the set meta data = 2nd record
