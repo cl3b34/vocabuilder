@@ -16,7 +16,7 @@ public class SetOfCardsLoader {
 
 	//load the default set
 	public SetOfCards loadSet() throws IOException {
-		return loadSet("/Portuguese_pt/longlist_eng_pt_por.txt");
+		return loadSet("/Finnish/longlist_fin_eng.txt");
 	}
 	
 	// this method tries to load a set
@@ -27,31 +27,6 @@ public class SetOfCardsLoader {
 		return setToReturn;
 	}
 	
-
-	/*
-	 * Only generates a fake set of cards and returns it
-	 * Early development purposes only...
-	 */
-	private SetOfCards mockLoader() {
-		// just return a fake SetOfCards
-		FlashCard mockCard1 = new FlashCard("tuli", "fin", "fire", "eng",
-				false, "burns");
-		FlashCard mockCard2 = new FlashCard("veta", "fin", "water", "eng",
-				false, "wets");
-		FlashCard mockCard3 = new FlashCard("leipa", "fin", "bread", "eng",
-				false, "is eatable");
-		FlashCard mockCard4 = new FlashCard("tietokone", "fin", "computer",
-				"eng", false, "knowledge machine");
-
-		Vector cards = new Vector();
-		cards.addElement(mockCard1);
-		cards.addElement(mockCard2);
-		cards.addElement(mockCard3);
-		cards.addElement(mockCard4);
-
-		SetOfCards mockSet = new SetOfCards("mockSet", false, cards);
-		return mockSet;
-	}
 
 	/**
 	 * Loads and parses a file from the /res folder the file must be in the
@@ -134,7 +109,7 @@ public class SetOfCardsLoader {
 						// got the value of the metadata
 						if(metadata.equals("setName")) {
 							setName = sb.toString().trim();
-							soc.setTitle(setName);
+							soc.setSetName(setName);
 						}else if (metadata.equals("sideOneTitle")) {
 							sideOneTitle = sb.toString().trim();
 						}else if(metadata.equals("sideTwoTitle")) {
