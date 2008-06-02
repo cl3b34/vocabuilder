@@ -38,11 +38,26 @@ public class SetOfCardsLoader {
 	 * @throws IOException
 	 */
 	public SetOfCards textFileLoader(String fileToLoad) throws IOException {
+		ByteArrayInputStream bais = new ByteArrayInputStream(readFile(fileToLoad));
+		SetOfCards soc = extractSetOfCards(bais);
+		//set the total amount of cards as set meta data
+		soc.setTotalNumberOfCards(soc.getFlashCards().size());
+		return soc;
+	}
+	
+	
+	/**
+	 * Reads a file
+	 * @param filename The file to load
+	 * @return a byte[] with the file contents
+	 * @throws IOException
+	 */
+	private byte[] readFile(String filename) throws IOException {
 		// read and buffers the file for better performance
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		ByteArrayOutputStream baos = new ByteArrayOutputStream(4096);
 		byte[] buffer = new byte[4096];
 
-		InputStream istream = getClass().getResourceAsStream(fileToLoad);
+		InputStream istream = getClass().getResourceAsStream(filename);
 		boolean done = false;
 
 		while (!done) {
@@ -53,20 +68,13 @@ public class SetOfCardsLoader {
 				baos.write(buffer, 0, count);
 			}
 		}
-
-		byte[] content = baos.toByteArray();
-		ByteArrayInputStream bais = new ByteArrayInputStream(content);
-		SetOfCards soc = extractSetOfCards(bais);
-		//set the total amount of cards as set meta data
-		soc.setTotalNumberOfCards(soc.getFlashCards().size());
-		return soc;
+		istream.close();
+		return baos.toByteArray();
 	}
 
 	/*
-	 * Extracts a SetOfCards from the given ByteArray It is highly dependent on
-	 * the file format
-	 * TODO: Needs a major refactoring. Lots of repeated and misplaced code.
-	 * Create constants and methods to do repeated tasks.
+	 * Extracts a SetOfCards from the given ByteArray.
+	 * It is highly dependent on the file format
 	 */
 	private SetOfCards extractSetOfCards(ByteArrayInputStream bais) {
 		boolean done = false;
