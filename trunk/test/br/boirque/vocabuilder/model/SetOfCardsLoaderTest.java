@@ -10,7 +10,7 @@ import j2meunit.framework.*;
 
 public class SetOfCardsLoaderTest extends TestCase {
 
-	private static final long MAXLOADINGTIME = 5000L;
+	private static final long MAXLOADINGTIME = 3000L;
 	private static final int TOTALOFCARDS = 1827;
 	String setToLoad = "/Finnish/longlist_fin_eng.txt";
 	
