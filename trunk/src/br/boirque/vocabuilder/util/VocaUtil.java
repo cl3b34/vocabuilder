@@ -1,5 +1,8 @@
 package br.boirque.vocabuilder.util;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -71,4 +74,29 @@ public class VocaUtil {
 		return lastTimeViewedFormatted;
 	}
 
+	/**
+	 * Reads a file
+	 * @param filename The file to load
+	 * @return a byte[] with the file contents
+	 * @throws IOException
+	 */
+	public byte[] readFile(String filename) throws IOException {
+		// read and buffers the file for better performance
+		ByteArrayOutputStream baos = new ByteArrayOutputStream(4096);
+		byte[] buffer = new byte[4096];
+
+		InputStream istream = getClass().getResourceAsStream(filename);
+		boolean done = false;
+
+		while (!done) {
+			int count = istream.read(buffer);
+			if (count == -1) {
+				done = true;
+			} else {
+				baos.write(buffer, 0, count);
+			}
+		}
+		istream.close();
+		return baos.toByteArray();
+	}
 }

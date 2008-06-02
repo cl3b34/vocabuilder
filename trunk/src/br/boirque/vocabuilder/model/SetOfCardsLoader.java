@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Vector;
 
+import br.boirque.vocabuilder.util.VocaUtil;
+
 /**
  * Loads a SetOfCards from external medium (Http, Bluetooth, IR, flashmemory)
  * 
@@ -19,14 +21,12 @@ public class SetOfCardsLoader {
 		return loadSet("/Finnish/longlist_fin_eng.txt");
 	}
 	
-	// this method tries to load a set
-	// from whatever medium it can
 	public SetOfCards loadSet(String setName) throws IOException {
 		SetOfCards setToReturn = null;
 		setToReturn = textFileLoader(setName);
 		return setToReturn;
 	}
-	
+		
 
 	/**
 	 * Loads and parses a file from the /res folder the file must be in the
@@ -37,41 +37,15 @@ public class SetOfCardsLoader {
 	 * @return a SetOfCards with the cards parsed from the file
 	 * @throws IOException
 	 */
-	public SetOfCards textFileLoader(String fileToLoad) throws IOException {
-		ByteArrayInputStream bais = new ByteArrayInputStream(readFile(fileToLoad));
+	private SetOfCards textFileLoader(String fileToLoad) throws IOException {
+		VocaUtil util = new VocaUtil();
+		ByteArrayInputStream bais = new ByteArrayInputStream(util.readFile(fileToLoad));
 		SetOfCards soc = extractSetOfCards(bais);
 		//set the total amount of cards as set meta data
 		soc.setTotalNumberOfCards(soc.getFlashCards().size());
 		return soc;
 	}
 	
-	
-	/**
-	 * Reads a file
-	 * @param filename The file to load
-	 * @return a byte[] with the file contents
-	 * @throws IOException
-	 */
-	private byte[] readFile(String filename) throws IOException {
-		// read and buffers the file for better performance
-		ByteArrayOutputStream baos = new ByteArrayOutputStream(4096);
-		byte[] buffer = new byte[4096];
-
-		InputStream istream = getClass().getResourceAsStream(filename);
-		boolean done = false;
-
-		while (!done) {
-			int count = istream.read(buffer);
-			if (count == -1) {
-				done = true;
-			} else {
-				baos.write(buffer, 0, count);
-			}
-		}
-		istream.close();
-		return baos.toByteArray();
-	}
-
 	/*
 	 * Extracts a SetOfCards from the given ByteArray.
 	 * It is highly dependent on the file format
