@@ -51,6 +51,7 @@ public class SetOfCardsLoaderTest extends TestCase {
 		assertTrue("Text load:" + milisecondsToSeconds(loadingTime), loadingTime < MAXLOADINGTIME);
 	}
 	
+	
 	public void testTextFileLoader() throws IOException{
 		SetOfCardsLoader socl = new SetOfCardsLoader();
 		SetOfCards soc = socl.loadSet(setToLoad);
@@ -103,6 +104,8 @@ public class SetOfCardsLoaderTest extends TestCase {
 		
 		assertTrue(false == soc.isDone());		
 	}
+	
+	
 	
 	private String milisecondsToSeconds(long timeToConvert) {
 		if (timeToConvert < 1000L){
