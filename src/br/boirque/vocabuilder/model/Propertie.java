@@ -1,11 +1,11 @@
 package br.boirque.vocabuilder.model;
 
 /**
- * VO to hold application preferences
+ * VO to hold application properties
  * @author cleber.goncalves
  *
  */
-public class Preference {
+public class Propertie {
 	private String name;
 	private String value;
 

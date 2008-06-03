@@ -6,11 +6,12 @@ import java.util.Vector;
 import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.model.SetOfCardsLoader;
+import br.boirque.vocabuilder.util.VocaUtil;
 import j2meunit.framework.*;
 
 public class SetOfCardsLoaderTest extends TestCase {
 
-	private static final long MAXLOADINGTIME = 3000L;
+	private static final long MAXLOADINGTIME = 2000L;
 	private static final int TOTALOFCARDS = 1827;
 	String setToLoad = "/Finnish/longlist_fin_eng.txt";
 	
@@ -47,8 +48,8 @@ public class SetOfCardsLoaderTest extends TestCase {
 		long loadingTime = endTime -startTime;
 		assertEquals("wrong card amount\n",TOTALOFCARDS, soc.getFlashCards().size());
 		assertNotNull("Null Set of cards", soc);
-		// loading time must be under 5s
-		assertTrue("Text load:" + milisecondsToSeconds(loadingTime), loadingTime < MAXLOADINGTIME);
+		assertTrue("Text load:" + VocaUtil.milisecondsToSeconds(loadingTime), loadingTime < MAXLOADINGTIME);
+		System.out.println("TxtSetLoad: " + VocaUtil.milisecondsToSeconds(loadingTime));
 	}
 	
 	
@@ -103,15 +104,6 @@ public class SetOfCardsLoaderTest extends TestCase {
 		assertEquals("ENG", sideTwoTitleLastCard);
 		
 		assertTrue(false == soc.isDone());		
-	}
-	
-	
-	
-	private String milisecondsToSeconds(long timeToConvert) {
-		if (timeToConvert < 1000L){
-			return timeToConvert + "ms";
-		}
-		return timeToConvert/1000L + "s";		
 	}
 
 	public Test suite() {

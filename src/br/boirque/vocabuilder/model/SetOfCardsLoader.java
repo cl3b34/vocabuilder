@@ -1,9 +1,7 @@
 package br.boirque.vocabuilder.model;
 
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Vector;
 
 import br.boirque.vocabuilder.util.VocaUtil;
@@ -60,7 +58,7 @@ public class SetOfCardsLoader {
 		final char NUMBERSIGN = '#';
 	//	final char SPACE = ' ';
 		
-		//the metadata. Default values
+		//the meta data. Default values
 		String setName = "default set";
 		String sideOneTitle = "ENG";
 		String sideTwoTitle = "FIN";
