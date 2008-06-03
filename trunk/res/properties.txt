@@ -1,0 +1,7 @@
+#lists of words distributed with the application
+defaultSet=longlist_fin_eng.txt
+defaultSet=longlist_eng_fin.txt
+defaultSet=frases_eng_fi.txt
+defaultSet=primitives_eng_fin.txt
+#Card display order: random or linear
+cardDisplayOrder=random

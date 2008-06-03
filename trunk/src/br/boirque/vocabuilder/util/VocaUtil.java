@@ -99,4 +99,11 @@ public class VocaUtil {
 		istream.close();
 		return baos.toByteArray();
 	}
+	
+	public static String milisecondsToSeconds(long timeToConvert) {
+		if (timeToConvert < 1000L){
+			return timeToConvert + "ms";
+		}
+		return timeToConvert/1000L + "s";		
+	}
 }
