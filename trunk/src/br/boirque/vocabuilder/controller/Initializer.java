@@ -177,5 +177,19 @@ public class Initializer {
 		}
 		return -1;
 	}
-
+	
+	public static long updateSessionStudyTime(long sessionStudyTime,
+			long lastActivityTime, long maxIdleTime) {
+		// this is not rocket science! if the user is
+		// idle more than 30s we ignore the update as the user
+		// was talking to someone :)
+		long currentTime = System.currentTimeMillis();
+		long idleTime = currentTime - lastActivityTime;
+		if (idleTime < maxIdleTime) {
+			long aditionalStudyTime = currentTime - lastActivityTime;
+			sessionStudyTime = sessionStudyTime + aditionalStudyTime;
+		}
+		return sessionStudyTime;
+	}
+	
 }

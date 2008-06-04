@@ -94,6 +94,9 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		if (!isRunning) {
 			// initialize the application. Load the list
 			Initializer initializer = new Initializer();
+			
+			
+			
 			// TODO: the initialization might return a null set of cards
 			// if so, display an error message
 			soc = initializer.initializeApp();
@@ -339,22 +342,9 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 	
 
-	private long updateSessionStudyTime(long sessionStudyTime,
-			long lastActivityTime, long maxIdleTime) {
-		// this is not rocket science! if the user is
-		// idle more than 30s we ignore the update as the user
-		// was talking to someone :)
-		long currentTime = System.currentTimeMillis();
-		long idleTime = currentTime - lastActivityTime;
-		if (idleTime < maxIdleTime) {
-			long aditionalStudyTime = currentTime - lastActivityTime;
-			sessionStudyTime = sessionStudyTime + aditionalStudyTime;
-		}
-		return sessionStudyTime;
-	}
 
 	public void commandAction(Command cmd, Displayable disp) {
-		this.sessionStudyTime = updateSessionStudyTime(sessionStudyTime, lastActivityTime, maxIdleTime);
+		this.sessionStudyTime = Initializer.updateSessionStudyTime(sessionStudyTime, lastActivityTime, maxIdleTime);
 		lastActivityTime = System.currentTimeMillis();
 
 		if (cmd == quitCommand) {
