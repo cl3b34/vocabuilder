@@ -19,13 +19,13 @@ public class PropertiesLoader {
 	//Filename must start with / (slash)
 	private static final String PROPERTIESFILENAME = "/properties.txt";
 
-	public Propertie[] loadPropertie() throws IOException {
+	public Property[] loadPropertie() throws IOException {
 		VocaUtil util = new VocaUtil();
 		String propertiesString = new String(util.readFile(PROPERTIESFILENAME));
 		return extractProperties(propertiesString);
 	}
 
-	private Propertie[] extractProperties(String propertiesString) {
+	private Property[] extractProperties(String propertiesString) {
 		Vector props = new Vector();
 
 		char buf[] = propertiesString.toCharArray();
@@ -38,14 +38,14 @@ public class PropertiesLoader {
 		while ((propertiesString = getNextLine(buf, ends)) != null) {
 			char equalSign = '=';
 			int equalSignPos = propertiesString.lastIndexOf(equalSign);
-			Propertie p = new Propertie();
+			Property p = new Property();
 			String propName = propertiesString.substring(0, equalSignPos);
 			p.setName(propName);
 			String propValue = propertiesString.substring(equalSignPos + 1, propertiesString.length()); 
 			p.setValue(propValue);
 			props.addElement(p);
 		}
-		Propertie[] propertiesExtracted = new Propertie[props.size()];
+		Property[] propertiesExtracted = new Property[props.size()];
 		props.copyInto(propertiesExtracted);
 		return propertiesExtracted;
 	}

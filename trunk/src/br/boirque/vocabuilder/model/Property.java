@@ -5,7 +5,7 @@ package br.boirque.vocabuilder.model;
  * @author cleber.goncalves
  *
  */
-public class Propertie {
+public class Property {
 	private String name;
 	private String value;
 
