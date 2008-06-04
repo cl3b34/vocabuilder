@@ -1,6 +1,6 @@
 # This is a comment. Comments are ignored
 # spaces and empty lines are ignored
-# all propertie names and values are converted to lowercase
+# all property names and values are converted to lowercase
 
 # lists of words distributed with the application
 # the name must match exactly the name of a file in 
