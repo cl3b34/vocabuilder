@@ -1,6 +1,7 @@
 package br.boirque.vocabuilder.controller;
 
 import java.io.IOException;
+import java.util.Vector;
 
 import javax.microedition.rms.InvalidRecordIDException;
 import javax.microedition.rms.RecordStoreException;
@@ -8,6 +9,8 @@ import javax.microedition.rms.RecordStoreFullException;
 import javax.microedition.rms.RecordStoreNotFoundException;
 import javax.microedition.rms.RecordStoreNotOpenException;
 
+import br.boirque.vocabuilder.model.PropertiesLoader;
+import br.boirque.vocabuilder.model.Property;
 import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.model.SetOfCardsDAO;
 import br.boirque.vocabuilder.model.SetOfCardsDAOIF;
@@ -22,32 +25,28 @@ import br.boirque.vocabuilder.model.SetOfCardsLoader;
  */
 public class Initializer {
 
-	public SetOfCards initializeApp() {
-		// first try to load a partially studied set from a recordStore
-		// TODO: the set to be loaded is hardcoded at this point. It
-		// should come from the UI
-		String[] availableSets = null;
-		try {
-			availableSets = SetOfCardsDAO.getAvailableSets();
-		} catch (RecordStoreNotOpenException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+	private static final String DEFAULTSET = "defaultset";
+
+	public SetOfCards initializeApp(String setToLoad) {
+		
+//		String[] availableSets = null;
+//		try {
+//			availableSets = SetOfCardsDAO.getAvailableSets();
+//		} catch (RecordStoreNotOpenException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
 		SetOfCards soc = null;
-		if (availableSets != null && availableSets.length > 0) {
-			soc = this.loadState(availableSets[0]);
-		}
-		// TODO: the returned set might be marked as 'done'
-		// we should ask the user what to do...
-		// either try to load another set from other media and
-		// replace this or start studying the set again
-		// for now I just load another set. This code should reside in
-		// the UI, not here (soc.isDone check)
-		if (soc == null || soc.isDone()) {
+//		if (availableSets != null && availableSets.length > 0) {
+//			soc = this.loadState(availableSets[0]);
+//		}
+//		//TODO: This code should reside in
+//		// the UI, not here (soc.isDone check)
+//		if (soc == null || soc.isDone()) {
 			// Load the set from any available media (defined in the loader)
 			SetOfCardsLoader socl = new SetOfCardsLoader();
 			try {
-				soc = socl.loadSet();
+				soc = socl.loadSet(setToLoad);
 			} catch (IOException e) {
 				// TODO should send a message to the UI
 				e.printStackTrace();
@@ -56,7 +55,7 @@ public class Initializer {
 			// the return value of this method is ignored
 			// since it is only used for performance at this point
 			// this.saveState(soc); //removed so the startup is faster
-		}
+//		}
 		return soc;
 	}
 
@@ -192,4 +191,25 @@ public class Initializer {
 		return sessionStudyTime;
 	}
 	
+	public String[] loadDefaultSetNames() {
+		PropertiesLoader pldr = new PropertiesLoader();
+		Vector props;
+		try {
+			props = pldr.loadPropertie();
+			Vector setNames = new Vector();
+			for(int i = 0; i<props.size(); i++) {
+				Property p = (Property)props.elementAt(i);
+				if(p.getName().equalsIgnoreCase(DEFAULTSET)) {
+					setNames.addElement(p.getValue());
+				}
+			}
+			String[] temp = new String[setNames.size()];
+			setNames.copyInto(temp);
+			return temp;
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		return null;
+	}
 }

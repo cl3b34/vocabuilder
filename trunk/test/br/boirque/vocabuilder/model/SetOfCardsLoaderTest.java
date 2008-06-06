@@ -13,7 +13,8 @@ public class SetOfCardsLoaderTest extends TestCase {
 
 	private static final long MAXLOADINGTIME = 2000L;
 	private static final int TOTALOFCARDS = 1827;
-	String setToLoad = "/Finnish/longlist_fin_eng.txt";
+//	String setToLoad = "/Finnish/longlist_fin_eng.txt";
+	String setToLoad = "longlist_fin_eng.txt";
 	
 	/**
 	 * Default constructor

@@ -5,12 +5,14 @@ import java.util.Vector;
 
 import javax.microedition.lcdui.Alert;
 import javax.microedition.lcdui.AlertType;
+import javax.microedition.lcdui.Choice;
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
 import javax.microedition.lcdui.Display;
 import javax.microedition.lcdui.Displayable;
 import javax.microedition.lcdui.Form;
 import javax.microedition.lcdui.Item;
+import javax.microedition.lcdui.List;
 import javax.microedition.lcdui.StringItem;
 import javax.microedition.midlet.MIDlet;
 
@@ -28,7 +30,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private Command wrongCommand = new Command("Wrong", Command.SCREEN, 1);
 	private Command restartCommand = new Command("Restart", Command.SCREEN, 2);
 	private Command reviewCommand = new Command("Review", Command.SCREEN, 1);
-	private Command nextSet = new Command("Next set", Command.SCREEN, 1);
+	private Command nextSetCommand = new Command("Next set", Command.SCREEN, 1);
+	private Command loadSetCommand = new Command("load", Command.SCREEN,1);
 
 	// UI elements
 	private Form mainForm;
@@ -92,40 +95,50 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	protected void startApp() {
 		// check if the application is resuming from paused state
 		if (!isRunning) {
-			// initialize the application. Load the list
-			Initializer initializer = new Initializer();
-			
-			
-			
-			// TODO: the initialization might return a null set of cards
-			// if so, display an error message
-			soc = initializer.initializeApp();
-
-			// TODO - transfer this initialization of the set of cards
-			// code to a controller class
-			// Look for a set of cards that is not done yet
-			while (soc.isDone()) {
-				soc = initializer.initializeApp();
-			}
-			String titleOfThisSet = soc.getSetName();
-			mainForm.setTitle(titleOfThisSet);
-			cards = soc.getFlashCards();
-			soc.setLastTimeViewed(System.currentTimeMillis());
-			amountToReview = cards.size() - getDoneAmount();
-			totalOfCards = cards.size();
-			totalReviewed = 0;
-			lastActivityTime = System.currentTimeMillis();
-			// totalDoneSession = 0;
-			if (useRandom) {
-				cardsIndexes = initializeRandomCardIndex(cards);
-				viewedIndexes = new Vector();
-			}
-			displayNextNotDoneCard();
-			Display.getDisplay(this).setCurrent(mainForm);
-
-			isRunning = true;
+			Initializer init = new Initializer();
+			List listSelection = new List("Select a set", Choice.IMPLICIT, init.loadDefaultSetNames(), null);
+			listSelection.addCommand(exitCommand);
+			listSelection.setSelectCommand(loadSetCommand);
+			listSelection.setCommandListener(this);
+		    Display.getDisplay(this).setCurrent(listSelection);
 		}
+
 	}
+	
+	private void initializeMyApp(String listToLoad){
+		System.out.println(listToLoad);
+		// initialize the application. Load the list
+		Initializer initializer = new Initializer();
+		// TODO: the initialization might return a null set of cards
+		// if so, display an error message
+		soc = initializer.initializeApp(listToLoad);
+
+		// TODO - transfer this initialization of the set of cards
+		// code to a controller class
+		// Look for a set of cards that is not done yet
+		while (soc.isDone()) {
+			soc = initializer.initializeApp(listToLoad);
+		}
+		String titleOfThisSet = soc.getSetName();
+		mainForm.setTitle(titleOfThisSet);
+		cards = soc.getFlashCards();
+		soc.setLastTimeViewed(System.currentTimeMillis());
+		amountToReview = cards.size() - getDoneAmount();
+		totalOfCards = cards.size();
+		totalReviewed = 0;
+		lastActivityTime = System.currentTimeMillis();
+		// totalDoneSession = 0;
+		if (useRandom) {
+			cardsIndexes = initializeRandomCardIndex(cards);
+			viewedIndexes = new Vector();
+		}
+		displayNextNotDoneCard();
+		Display.getDisplay(this).setCurrent(mainForm);
+
+		isRunning = true;
+
+	}
+	
 
 	/*
 	 * Utility class to initialize the vector of indexes with the index of each
@@ -224,7 +237,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		mainForm.removeCommand(turnCommand);
 		mainForm.removeCommand(restartCommand);
 		mainForm.removeCommand(reviewCommand);
-		mainForm.removeCommand(nextSet);
+		mainForm.removeCommand(nextSetCommand);
 		mainForm.removeCommand(quitCommand);
 
 
@@ -377,7 +390,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			displayNextNotDoneCard();
 		}
 
-		if (cmd == nextSet) {
+		if (cmd == nextSetCommand) {
 			// Load a new set of cards
 		}
 
@@ -430,6 +443,14 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			// Just show next card, side one
 			totalReviewed++;
 			displayNextNotDoneCard();
+		}
+		
+		if (cmd == loadSetCommand) {
+			// Load the set selected
+			List l = (List)disp;
+			int index = l.getSelectedIndex();
+			String selectedItem = l.getString(index);
+			initializeMyApp(selectedItem);			
 		}
 	}
 }
