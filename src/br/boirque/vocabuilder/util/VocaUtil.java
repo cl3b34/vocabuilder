@@ -85,7 +85,7 @@ public class VocaUtil {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream(4096);
 		byte[] buffer = new byte[4096];
 
-		InputStream istream = getClass().getResourceAsStream(filename);
+		InputStream istream = getClass().getResourceAsStream("/" + filename);
 		boolean done = false;
 
 		while (!done) {

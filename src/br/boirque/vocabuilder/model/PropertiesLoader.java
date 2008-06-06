@@ -19,13 +19,13 @@ public class PropertiesLoader {
 	//Filename must start with / (slash)
 	private static final String PROPERTIESFILENAME = "/properties.txt";
 
-	public Property[] loadPropertie() throws IOException {
+	public Vector loadPropertie() throws IOException {
 		VocaUtil util = new VocaUtil();
 		String propertiesString = new String(util.readFile(PROPERTIESFILENAME));
 		return extractProperties(propertiesString);
 	}
 
-	private Property[] extractProperties(String propertiesString) {
+	private Vector extractProperties(String propertiesString) {
 		Vector props = new Vector();
 
 		char buf[] = propertiesString.toCharArray();
@@ -45,9 +45,7 @@ public class PropertiesLoader {
 			p.setValue(propValue);
 			props.addElement(p);
 		}
-		Property[] propertiesExtracted = new Property[props.size()];
-		props.copyInto(propertiesExtracted);
-		return propertiesExtracted;
+		return props;
 	}
 
 	/**
@@ -57,7 +55,7 @@ public class PropertiesLoader {
 	 * 
 	 * @param buf
 	 */
-	public static void preProcess_TextFile(char buf[]) {
+	private static void preProcess_TextFile(char buf[]) {
 		// preProcess_removeCarriageReturns(buf);
 		int i = 0, k = 0;
 		boolean inquote;
@@ -143,7 +141,7 @@ public class PropertiesLoader {
 			buf[k++] = '\0';
 	}
 
-	public static String getNextLine(char buf[], int ends[]) {
+	private static String getNextLine(char buf[], int ends[]) {
 		int i = ends[0];
 		int k = ends[1];
 

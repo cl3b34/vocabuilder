@@ -15,6 +15,8 @@ import br.boirque.vocabuilder.model.SetOfCards;
 
 public class InitializerTest extends TestCase {
 
+	private static final String SETTOLOAD = "longlist_fin_eng.txt";
+
 	/**
 	 * Required by J2MEUnit
 	 */
@@ -40,20 +42,20 @@ public class InitializerTest extends TestCase {
 
 	public void testInitializeApp() {
 		Initializer init = new Initializer();
-		SetOfCards soc = init.initializeApp();
+		SetOfCards soc = init.initializeApp(SETTOLOAD);
 		assertNotNull(soc);
 	}
 
 	public void testSaveState() {
 		Initializer init = new Initializer();
-		SetOfCards soc = init.initializeApp();
+		SetOfCards soc = init.initializeApp(SETTOLOAD);
 		boolean saved = init.saveState(soc);
 		assertTrue(saved);
 	}
 
 	public void testLoadState() {
 		Initializer init = new Initializer();
-		SetOfCards soc = init.initializeApp();
+		SetOfCards soc = init.initializeApp(SETTOLOAD);
 		init.saveState(soc);
 		SetOfCards socNew = init.loadState(soc.getSetName());
 		assertNotNull(socNew);
@@ -61,7 +63,7 @@ public class InitializerTest extends TestCase {
 
 	public void testResetState() {
 		Initializer init = new Initializer();
-		SetOfCards soc = init.initializeApp();
+		SetOfCards soc = init.initializeApp(SETTOLOAD);
 		init.saveState(soc);
 		String setName = soc.getSetName();
 		SetOfCards socNew = init.loadState(setName);
@@ -73,7 +75,7 @@ public class InitializerTest extends TestCase {
 
 	public void testGetRecordCount() {
 		Initializer init = new Initializer();
-		SetOfCards soc = init.initializeApp();
+		SetOfCards soc = init.initializeApp(SETTOLOAD);
 		init.resetState(soc.getSetName());
 		int recordCount = init.getCardCount(soc.getSetName());
 		assertEquals("Wrong record count", 0, recordCount);
