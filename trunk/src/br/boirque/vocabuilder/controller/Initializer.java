@@ -28,22 +28,13 @@ public class Initializer {
 	private static final String DEFAULTSET = "defaultset";
 
 	public SetOfCards initializeApp(String setToLoad) {
-		
-//		String[] availableSets = null;
-//		try {
-//			availableSets = SetOfCardsDAO.getAvailableSets();
-//		} catch (RecordStoreNotOpenException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		}
+
 		SetOfCards soc = null;
-//		if (availableSets != null && availableSets.length > 0) {
-//			soc = this.loadState(availableSets[0]);
-//		}
-//		//TODO: This code should reside in
-//		// the UI, not here (soc.isDone check)
-//		if (soc == null || soc.isDone()) {
-			// Load the set from any available media (defined in the loader)
+		if (setToLoad.indexOf(".txt") == -1) {
+			// we are loading a set from RMS
+			soc = this.loadState(setToLoad);
+		} else {
+			//Load the set from a TXT resource
 			SetOfCardsLoader socl = new SetOfCardsLoader();
 			try {
 				soc = socl.loadSet(setToLoad);
@@ -51,11 +42,7 @@ public class Initializer {
 				// TODO should send a message to the UI
 				e.printStackTrace();
 			}
-			// save the set to a local recordstore
-			// the return value of this method is ignored
-			// since it is only used for performance at this point
-			// this.saveState(soc); //removed so the startup is faster
-//		}
+		}
 		return soc;
 	}
 
@@ -176,7 +163,7 @@ public class Initializer {
 		}
 		return -1;
 	}
-	
+
 	public static long updateSessionStudyTime(long sessionStudyTime,
 			long lastActivityTime, long maxIdleTime) {
 		// this is not rocket science! if the user is
@@ -190,16 +177,20 @@ public class Initializer {
 		}
 		return sessionStudyTime;
 	}
-	
+
+	/**
+	 * @return an array containing the names of all the default (loaded from txt
+	 *         resources) sets available.
+	 */
 	public String[] loadDefaultSetNames() {
 		PropertiesLoader pldr = new PropertiesLoader();
 		Vector props;
 		try {
 			props = pldr.loadPropertie();
 			Vector setNames = new Vector();
-			for(int i = 0; i<props.size(); i++) {
-				Property p = (Property)props.elementAt(i);
-				if(p.getName().equalsIgnoreCase(DEFAULTSET)) {
+			for (int i = 0; i < props.size(); i++) {
+				Property p = (Property) props.elementAt(i);
+				if (p.getName().equalsIgnoreCase(DEFAULTSET)) {
 					setNames.addElement(p.getValue());
 				}
 			}
@@ -209,7 +200,102 @@ public class Initializer {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}		
+		}
 		return null;
+	}
+
+	/**
+	 * @return an array containing the names of sets whose study is in progress
+	 *         (are loaded from RMS storage)
+	 */
+	public String[] loadOnProgressSetNames() {
+		try {
+			return SetOfCardsDAO.getAvailableSets();
+		} catch (RecordStoreNotOpenException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	/**
+	 * @return an array containing unique set names, loaded from RMS and TXT
+	 *         resources (in /res folder). If a certain set is both in TXT
+	 *         resource and in RMS (meaning that the study is in progress) only
+	 *         the RMS resource name is returned. Both TXT and RMS names must be
+	 *         the same in order to this 'filter' to work.
+	 */
+	public String[] loadUniqueSetNames() {
+		String[] defaultSetsTemp = loadDefaultSetNames();
+		String[] onProgressSets = loadOnProgressSetNames();
+
+		if (onProgressSets == null) {
+			return defaultSetsTemp;
+		}
+
+		Vector defaultSetsClean = stripEnding(defaultSetsTemp);
+		defaultSetsClean = removeDuplicateSets(defaultSetsClean, onProgressSets);
+		defaultSetsClean = addEndingBack(defaultSetsClean);
+
+		String[] allUniqueSetNames = new String[onProgressSets.length
+				+ defaultSetsClean.size()];
+		// copy the results on the array to be returned
+		defaultSetsClean.copyInto(allUniqueSetNames);
+		System.arraycopy(onProgressSets, 0, allUniqueSetNames, defaultSetsClean
+				.size(), onProgressSets.length);
+
+		return allUniqueSetNames;
+	}
+
+	private Vector addEndingBack(Vector defaultSetsClean) {
+		Vector toReturn = new Vector();
+		for (int i = 0; i < defaultSetsClean.size(); i++) {
+			String setName = (String) defaultSetsClean.elementAt(i);
+			setName = setName + ".txt";
+			toReturn.addElement(setName);
+		}
+		return toReturn;
+	}
+
+	/**
+	 * check if there are repeated set names. Strip '.txt.' from the defaultSet
+	 * names and compare with onProgressSets. Sets on progress always have the
+	 * precedence and stay in the returned Vector
+	 * 
+	 * @param defaultSets -
+	 *            Array with the default sets loaded from TXT resources
+	 * @param onProgressSets -
+	 *            Array with the sets in progress
+	 * @return Vector of default sets with no duplicates among the sets in
+	 *         progress
+	 */
+	private Vector removeDuplicateSets(Vector defaultSets,
+			String[] onProgressSets) {
+		for (int i = 0; i < defaultSets.size(); i++) {
+			String setName = (String) defaultSets.elementAt(i);
+			for (int k = 0; k < onProgressSets.length; k++) {
+				if (setName.equals(onProgressSets[k])) {
+					// there is already one set with that name being
+					// studied.
+					defaultSets.removeElementAt(i);
+				}
+			}
+		}
+		return defaultSets;
+	}
+
+	private Vector stripEnding(String[] arrayToStrip) {
+		Vector stripped = new Vector();
+		for (int i = 0; i < arrayToStrip.length; i++) {
+			String dSet = arrayToStrip[i];
+			int dotTxtIndex = dSet.indexOf(".txt");
+			if (dotTxtIndex != -1) {
+				stripped.addElement(dSet.substring(0, dotTxtIndex));
+			} else {
+				// nothing to be stripped
+				stripped.addElement(dSet);
+			}
+		}
+		return stripped;
 	}
 }

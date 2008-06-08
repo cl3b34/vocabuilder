@@ -13,13 +13,8 @@ import br.boirque.vocabuilder.util.VocaUtil;
  * 
  */
 public class SetOfCardsLoader {
-
-	//load the default set
-	public SetOfCards loadSet() throws IOException {
-		return loadSet("/Finnish/longlist_fin_eng.txt");
-	}
 	
-	public SetOfCards loadSet(String setName) throws IOException {
+	public SetOfCards loadSet(String setName) throws IOException{
 		SetOfCards setToReturn = null;
 		setToReturn = textFileLoader(setName);
 		return setToReturn;
@@ -30,9 +25,13 @@ public class SetOfCardsLoader {
 	 * Loads and parses a file from the /res folder the file must be in the
 	 * format: word = translation
 	 * 
+	 * TODO: only works with windows line delimiters
+	 * TODO: If the last line is empty it includes a null element in the set
+	 * 
 	 * @param fileToLoad -
 	 *            The file to load
 	 * @return a SetOfCards with the cards parsed from the file
+	 * @throws IOException 
 	 * @throws IOException
 	 */
 	private SetOfCards textFileLoader(String fileToLoad) throws IOException {
