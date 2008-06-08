@@ -6,10 +6,10 @@
 # the name must match exactly the name of a file in 
 # the 'res' folder in the application.
 # multiple entries are allowed
-defaultset=longlist_fin_eng.txt
-defaultset=longlist_eng_fin.txt
-defaultset=frases_eng_fi.txt
-defaultset=primitives_eng_fin.txt
+defaultset=longlist_fi_en.txt
+defaultset=longlist_en_fi.txt
+defaultset=frases_en_fi.txt
+defaultset=semanticprimitives.txt
 
 # Card display order: random or linear
 # only one entry is allowed
