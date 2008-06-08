@@ -85,6 +85,7 @@ public class VocaUtil {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream(4096);
 		byte[] buffer = new byte[4096];
 
+		//Filename must start with '/' (slash)
 		InputStream istream = getClass().getResourceAsStream("/" + filename);
 		boolean done = false;
 

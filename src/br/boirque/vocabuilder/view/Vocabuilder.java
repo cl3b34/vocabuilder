@@ -31,13 +31,13 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private Command restartCommand = new Command("Restart", Command.SCREEN, 2);
 	private Command reviewCommand = new Command("Review", Command.SCREEN, 1);
 	private Command nextSetCommand = new Command("Next set", Command.SCREEN, 1);
-	private Command loadSetCommand = new Command("load", Command.SCREEN,1);
+	private Command loadTxtSetCommand = new Command("load", Command.SCREEN, 1);
 
 	// UI elements
 	private Form mainForm;
 	private StringItem cardText;
 	private StringItem cardStatistics;
-	private Alert alertStats;
+	// private Alert alertStats;
 
 	// Beans
 	private SetOfCards soc;
@@ -47,7 +47,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	// Statistics
 	private int totalDoneSession = 0;
 	private long sessionStudyTime = 0;
-	private long lastActivityTime = 0; // Last time the user interacted with the app
+	private long lastActivityTime = 0; // Last time the user interacted with
+										// the app
 	private final long maxIdleTime = 30000L; // thirty Seconds
 
 	// Sequential list index management
@@ -68,59 +69,69 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 	// Shall we use a sequential or random list?
 	boolean useRandom = true;
-	
+
 	// Utility class
 	VocaUtil vocaUtil = new VocaUtil();
 
-	public Vocabuilder() {
-
-		mainForm = new Form("Vocabuilder");
-		cardText = new StringItem("", "Card Text");
-		cardStatistics = new StringItem("","");
-		alertStats = new Alert("","",null,AlertType.INFO);
-		cardText.setLayout(Item.LAYOUT_CENTER);
-		cardText.setLayout(Item.LAYOUT_EXPAND);
-		// cardText.setPreferredSize(-1, cardText.getPreferredHeight()+3);
-		// cardText.setText("height " + cardText.getPreferredHeight() + " "
-		// + cardText.getMinimumHeight());
-
-		mainForm.append(cardText);
-		mainForm.append(cardStatistics);
-		mainForm.setCommandListener(this);
+	public Vocabuilder() {// Constructor
 	}
 
 	/**
 	 * Takes care of initializing the app
 	 */
 	protected void startApp() {
-		// check if the application is resuming from paused state
-		if (!isRunning) {
-			Initializer init = new Initializer();
-			List listSelection = new List("Select a set", Choice.IMPLICIT, init.loadDefaultSetNames(), null);
-			listSelection.addCommand(exitCommand);
-			listSelection.setSelectCommand(loadSetCommand);
-			listSelection.setCommandListener(this);
-		    Display.getDisplay(this).setCurrent(listSelection);
-		}
-
+		displayLoadMenu();
 	}
-	
-	private void initializeMyApp(String listToLoad){
+
+	protected void pauseApp() {
+	}
+
+	protected void destroyApp(boolean bool) {
+		if (soc != null) {
+			Initializer initializer = new Initializer();
+			initializer.saveState(soc);
+		}
+	}
+
+	private void displayLoadMenu() {
+		Initializer init = new Initializer();
+		List listSelection = new List("Select a set", Choice.IMPLICIT, init
+				.loadUniqueSetNames(), null);
+		// Command[] c = {exitCommand, loadTxtSetCommand};
+		// setCommands(c, listSelection);
+		listSelection.addCommand(exitCommand);
+		listSelection.setSelectCommand(loadTxtSetCommand);
+		listSelection.setCommandListener(this);
+		Display.getDisplay(this).setCurrent(listSelection);
+	}
+
+	private void displayMainForm() {
+		mainForm = new Form("Vocabuilder");
+		cardText = new StringItem("", "Card Text");
+		cardStatistics = new StringItem("", "");
+		// alertStats = new Alert("","",null,AlertType.INFO);
+		cardText.setLayout(Item.LAYOUT_CENTER);
+		cardText.setLayout(Item.LAYOUT_EXPAND);
+
+		mainForm.append(cardText);
+		mainForm.append(cardStatistics);
+		mainForm.setCommandListener(this);
+	}
+
+	private void initializeMyApp(String listToLoad) {
 		System.out.println(listToLoad);
 		// initialize the application. Load the list
 		Initializer initializer = new Initializer();
-		// TODO: the initialization might return a null set of cards
-		// if so, display an error message
 		soc = initializer.initializeApp(listToLoad);
 
 		// TODO - transfer this initialization of the set of cards
 		// code to a controller class
 		// Look for a set of cards that is not done yet
-		while (soc.isDone()) {
-			soc = initializer.initializeApp(listToLoad);
-		}
-		String titleOfThisSet = soc.getSetName();
-		mainForm.setTitle(titleOfThisSet);
+		// while (soc.isDone()) {
+		// soc = initializer.initializeApp(listToLoad);
+		// }
+		displayMainForm();
+		mainForm.setTitle(soc.getSetName());
 		cards = soc.getFlashCards();
 		soc.setLastTimeViewed(System.currentTimeMillis());
 		amountToReview = cards.size() - getDoneAmount();
@@ -138,7 +149,6 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		isRunning = true;
 
 	}
-	
 
 	/*
 	 * Utility class to initialize the vector of indexes with the index of each
@@ -206,30 +216,18 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			if (getDoneAmount() == totalOfCards) {
 				soc.setDone(true);
 				soc.setLastTimeMarkedDone(System.currentTimeMillis());
-				soc.setMarkedDoneCounter(soc.getMarkedDoneCounter()+1);
+				soc.setMarkedDoneCounter(soc.getMarkedDoneCounter() + 1);
 			}
 			// display the statistics
 			displayStatistics(true);
 		}
 	}
 
-	protected void pauseApp() {
-		cardText.setLabel("APPLICATION PAUSED" + "\n");
-		// displayStatistics(false);
-		// Initializer initializer = new Initializer();
-		// initializer.saveState(soc);
-	}
-
-	protected void destroyApp(boolean bool) {
-		Initializer initializer = new Initializer();
-		initializer.saveState(soc);
-	}
-
 	/*
 	 * Set the currently displayed commands. If the argument is null, no command
 	 * is show.
 	 */
-	private void setCommands(Command[] commands) {
+	private void setCommands(Command[] commands, Displayable commandHost) {
 		// remove all commands
 		mainForm.removeCommand(doneCommand);
 		mainForm.removeCommand(wrongCommand);
@@ -239,13 +237,13 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		mainForm.removeCommand(reviewCommand);
 		mainForm.removeCommand(nextSetCommand);
 		mainForm.removeCommand(quitCommand);
-
+		mainForm.removeCommand(loadTxtSetCommand);
 
 		if (commands != null) {
 			// add the desired commands
 			for (int i = 0; i < commands.length; i++) {
 				Command c = commands[i];
-				mainForm.addCommand(c);
+				commandHost.addCommand(c);
 			}
 		}
 	}
@@ -254,39 +252,38 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		switch (side) {
 		case 1:
 			Command[] commands = { turnCommand, quitCommand };
-			setCommands(commands);
+			setCommands(commands, mainForm);
 			cardText.setLabel(c.getSideOneTitle() + ": \n");
 			cardText.setText(c.getSideOne());
 			sideOne = true;
-			//show statistics for the card
+			// show statistics for the card
 			String lastTimeViewed = "";
 			String tip = "";
 			String viewCounter = "";
-			//only show if there are meaningful values
-			if(c.getLastTimeViewed()>0) {
-				lastTimeViewed = "last: " + vocaUtil.getLastTimeViewedAsString(c.getLastTimeViewed());
+			// only show if there are meaningful values
+			if (c.getLastTimeViewed() > 0) {
+				lastTimeViewed = "last: "
+						+ vocaUtil.getLastTimeViewedAsString(c
+								.getLastTimeViewed());
 			}
-			if(c.getTip() != null && !(c.getTip().equals(""))) {
-				tip = "tip: " + c.getTip() + "\n" ;
+			if (c.getTip() != null && !(c.getTip().equals(""))) {
+				tip = "tip: " + c.getTip() + "\n";
 			}
-			if(c.getViewedCounter() > 0) {
-				viewCounter =  "viewed " + c.getViewedCounter() + " times \n";
+			if (c.getViewedCounter() > 0) {
+				viewCounter = "viewed " + c.getViewedCounter() + " times \n";
 			}
-			String cardStats = "\n\n\n\n"
-					+ viewCounter
-					+ tip
-					+ lastTimeViewed;
+			String cardStats = "\n\n\n\n" + viewCounter + tip + lastTimeViewed;
 			cardStatistics.setLabel(cardStats);
 			break;
 		case 2:
 			Command[] cmds = { doneCommand, wrongCommand };
-			setCommands(cmds);
-			//remove statistics
+			setCommands(cmds, mainForm);
+			// remove statistics
 			cardStatistics.setLabel("");
-			//show the side
+			// show the side
 			cardText.setLabel(c.getSideTwoTitle() + ": \n");
 			cardText.setText(c.getSideTwo());
-			//Show side one again as a reminder to the user
+			// Show side one again as a reminder to the user
 			cardStatistics.setLabel("\n\n\n" + c.getSideOne());
 			sideOne = false;
 			break;
@@ -317,62 +314,78 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			// show the commands for statistics
 			if (incorrectAmount > 0) {
 				Command[] commands = { reviewCommand, exitCommand };
-				setCommands(commands);
+				setCommands(commands, mainForm);
 			} else {
 				Command[] commands = { restartCommand, exitCommand };
-				setCommands(commands);
+				setCommands(commands, mainForm);
 			}
 		} else {
-			setCommands(null);
+			setCommands(null, mainForm);
 		}
 		cardText.setLabel("");
 		cardText.setText("");
-		cardStatistics.setLabel("STATISTICS" + "\n\n"
-				+ "Total of cards: " + totalOfCards + "\n" 
-				+ "Correct: " + done + "\n" 
-				+ "Incorrect: " + incorrectAmount + "\n"
-				+ "Viewed this session: " + totalReviewed + "\n"
-				+ "Correct this session: " + totalDoneSession + "\n"
-				+ "Total viewed: " + soc.getTotalNumberOfDisplayedCards() + "\n" 
-				+ "Session duration: " + vocaUtil.getStudyTimeAsString(sessionStudyTime) + "\n" 
-				+ "Total Study time: " + vocaUtil.getStudyTimeAsString(soc.getTotalStudiedTimeInMiliseconds())
-			);
-//		alertStats.setString("STATISTICS" + "\n\n"
-//				+ "Total of cards: " + totalOfCards + "\n" 
-//				+ "Correct: " + done + "\n" 
-//				+ "Incorrect: " + incorrectAmount + "\n"
-//				+ "Viewed this session: " + totalReviewed + "\n"
-//				+ "Correct this session: " + totalDoneSession + "\n"
-//				+ "Total viewed: " + soc.getTotalNumberOfDisplayedCards() + "\n" 
-//				+ "Session duration: " + vocaUtil.getStudyTimeAsString(sessionStudyTime) + "\n" 
-//				+ "Total Study time: " + vocaUtil.getStudyTimeAsString(soc.getTotalStudiedTimeInMiliseconds())
-//			);
-//		
-//		alertStats.setTimeout(30000);
-//		Display display = Display.getDisplay(this);
-//		display.setCurrent(alertStats);
+		cardStatistics.setLabel("STATISTICS" + "\n\n" + "Total of cards: "
+				+ totalOfCards
+				+ "\n"
+				+ "Correct: "
+				+ done
+				+ "\n"
+				+ "Incorrect: "
+				+ incorrectAmount
+				+ "\n"
+				+ "Viewed this session: "
+				+ totalReviewed
+				+ "\n"
+				+ "Correct this session: "
+				+ totalDoneSession
+				+ "\n"
+				+ "Total viewed: "
+				+ soc.getTotalNumberOfDisplayedCards()
+				+ "\n"
+				+ "Session duration: "
+				+ vocaUtil.getStudyTimeAsString(sessionStudyTime)
+				+ "\n"
+				+ "Total Study time: "
+				+ vocaUtil.getStudyTimeAsString(soc
+						.getTotalStudiedTimeInMiliseconds()));
+		// alertStats.setString("STATISTICS" + "\n\n"
+		// + "Total of cards: " + totalOfCards + "\n"
+		// + "Correct: " + done + "\n"
+		// + "Incorrect: " + incorrectAmount + "\n"
+		// + "Viewed this session: " + totalReviewed + "\n"
+		// + "Correct this session: " + totalDoneSession + "\n"
+		// + "Total viewed: " + soc.getTotalNumberOfDisplayedCards() + "\n"
+		// + "Session duration: " +
+		// vocaUtil.getStudyTimeAsString(sessionStudyTime) + "\n"
+		// + "Total Study time: " +
+		// vocaUtil.getStudyTimeAsString(soc.getTotalStudiedTimeInMiliseconds())
+		// );
+		//		
+		// alertStats.setTimeout(30000);
+		// Display display = Display.getDisplay(this);
+		// display.setCurrent(alertStats);
 	}
 
-	
-
-
 	public void commandAction(Command cmd, Displayable disp) {
-		this.sessionStudyTime = Initializer.updateSessionStudyTime(sessionStudyTime, lastActivityTime, maxIdleTime);
+		this.sessionStudyTime = Initializer.updateSessionStudyTime(
+				sessionStudyTime, lastActivityTime, maxIdleTime);
 		lastActivityTime = System.currentTimeMillis();
 
 		if (cmd == quitCommand) {
 			// Display statistics
 			// update the total study time for the set
-			long previousTotalStudiedTime = soc.getTotalStudiedTimeInMiliseconds();
-			long newTotalStudiedTime = previousTotalStudiedTime + sessionStudyTime;
+			long previousTotalStudiedTime = soc
+					.getTotalStudiedTimeInMiliseconds();
+			long newTotalStudiedTime = previousTotalStudiedTime
+					+ sessionStudyTime;
 			soc.setTotalStudiedTimeInMiliseconds(newTotalStudiedTime);
 			displayStatistics(true);
 		}
-		
+
 		if (cmd == exitCommand) {
 			destroyApp(false);
 			notifyDestroyed();
-		}		
+		}
 
 		if (cmd == reviewCommand) {
 			// show again the cards in the set not marked as 'done'
@@ -415,11 +428,12 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 
 		if (cmd == turnCommand) {
-			//Update the total of cards viewed
-			soc.setTotalNumberOfDisplayedCards(soc.getTotalNumberOfDisplayedCards()+1);
-			//update the number of times this card has been viewed
-			c.setViewedCounter(c.getViewedCounter()+1);
-			//update the last time this card was viewed
+			// Update the total of cards viewed
+			soc.setTotalNumberOfDisplayedCards(soc
+					.getTotalNumberOfDisplayedCards() + 1);
+			// update the number of times this card has been viewed
+			c.setViewedCounter(c.getViewedCounter() + 1);
+			// update the last time this card was viewed
 			c.setLastTimeViewed(System.currentTimeMillis());
 			// turn the card
 			if (!sideOne) {
@@ -432,7 +446,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		if (cmd == doneCommand) {
 			// mark card as done and show next card, side one
 			c.setDone(true);
-			c.setMarkedDoneCounter(c.getMarkedDoneCounter()+1);
+			c.setMarkedDoneCounter(c.getMarkedDoneCounter() + 1);
 			c.setLastTimeMarkedDone(System.currentTimeMillis());
 			totalReviewed++;
 			totalDoneSession++;
@@ -444,13 +458,13 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			totalReviewed++;
 			displayNextNotDoneCard();
 		}
-		
-		if (cmd == loadSetCommand) {
+
+		if (cmd == loadTxtSetCommand) {
 			// Load the set selected
-			List l = (List)disp;
+			List l = (List) disp;
 			int index = l.getSelectedIndex();
 			String selectedItem = l.getString(index);
-			initializeMyApp(selectedItem);			
+			initializeMyApp(selectedItem);
 		}
 	}
 }

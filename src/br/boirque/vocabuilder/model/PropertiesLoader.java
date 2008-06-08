@@ -16,8 +16,7 @@ import br.boirque.vocabuilder.util.VocaUtil;
  */
 public class PropertiesLoader {
 
-	//Filename must start with / (slash)
-	private static final String PROPERTIESFILENAME = "/properties.txt";
+	private static final String PROPERTIESFILENAME = "properties.txt";
 
 	public Vector loadPropertie() throws IOException {
 		VocaUtil util = new VocaUtil();
@@ -105,6 +104,7 @@ public class PropertiesLoader {
 				buf[i++] = ' ';
 		}
 
+		
 		// preProcess_removeWhiteSpace(buf);
 		i = 0;
 		k = 0;
