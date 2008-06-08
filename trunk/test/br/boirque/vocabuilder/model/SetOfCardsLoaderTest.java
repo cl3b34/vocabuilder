@@ -13,14 +13,12 @@ public class SetOfCardsLoaderTest extends TestCase {
 
 	private static final long MAXLOADINGTIME = 2000L;
 	private static final int TOTALOFCARDS = 1827;
-//	String setToLoad = "/Finnish/longlist_fin_eng.txt";
-	String setToLoad = "longlist_fin_eng.txt";
+	private static final String SETTOLOAD = "longlist_fi_en.txt";
 	
 	/**
 	 * Default constructor
 	 */
 	public SetOfCardsLoaderTest() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	/**
@@ -44,7 +42,7 @@ public class SetOfCardsLoaderTest extends TestCase {
 	public void testLoadSet() throws IOException{
 		long startTime = System.currentTimeMillis();
 		SetOfCardsLoader socl = new SetOfCardsLoader();
-		SetOfCards soc = socl.loadSet(setToLoad);
+		SetOfCards soc = socl.loadSet(SETTOLOAD);
 		long endTime = System.currentTimeMillis();
 		long loadingTime = endTime -startTime;
 		assertEquals("wrong card amount\n",TOTALOFCARDS, soc.getFlashCards().size());
@@ -56,7 +54,7 @@ public class SetOfCardsLoaderTest extends TestCase {
 	
 	public void testTextFileLoader() throws IOException{
 		SetOfCardsLoader socl = new SetOfCardsLoader();
-		SetOfCards soc = socl.loadSet(setToLoad);
+		SetOfCards soc = socl.loadSet(SETTOLOAD);
 		assertNotNull(soc);
 		Vector cards = soc.getFlashCards();
 		System.out.println("Number of Cards: " + cards.size());

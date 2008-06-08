@@ -15,7 +15,7 @@ import br.boirque.vocabuilder.model.SetOfCards;
 
 public class InitializerTest extends TestCase {
 
-	private static final String SETTOLOAD = "longlist_fin_eng.txt";
+	private static final String SETTOLOAD = "longlist_fi_en.txt";
 
 	/**
 	 * Required by J2MEUnit
