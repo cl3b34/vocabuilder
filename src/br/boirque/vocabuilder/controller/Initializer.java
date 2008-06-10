@@ -34,7 +34,7 @@ public class Initializer {
 			// we are loading a set from RMS
 			soc = this.loadState(setToLoad);
 		} else {
-			//Load the set from a TXT resource
+			// Load the set from a TXT resource
 			SetOfCardsLoader socl = new SetOfCardsLoader();
 			try {
 				soc = socl.loadSet(setToLoad);
@@ -59,7 +59,7 @@ public class Initializer {
 		try {
 			SetOfCardsDAOIF socDao = new SetOfCardsDAOV4Impl(soc.getSetName());
 			// removes the previous recordstore
-			socDao.resetState();
+			socDao.resetSetState();
 			// create a new one with the current state
 			socDao.saveSetOfCards(soc);
 			savedSuccesfully = true;
@@ -84,8 +84,7 @@ public class Initializer {
 
 	/**
 	 * Load the state of the set being currently studied from persistent
-	 * storage. It tries to find out what is the file format version by reading
-	 * the version from file, if available.
+	 * storage.
 	 * 
 	 * @return the currently studied set or null if a error occurred
 	 * @throws RecordStoreException
@@ -93,7 +92,7 @@ public class Initializer {
 	 * @throws RecordStoreFullException
 	 * @throws IOException
 	 */
-	public SetOfCards loadState(String setName) {
+	protected SetOfCards loadState(String setName) {
 		SetOfCards soc = null;
 		try {
 			if (this.getCardCount(setName) > 0) {
@@ -125,7 +124,26 @@ public class Initializer {
 	public void resetState(String setName) {
 		try {
 			SetOfCardsDAOIF socDao = new SetOfCardsDAOV4Impl(setName);
-			socDao.resetState();
+			socDao.resetSetState();
+		} catch (RecordStoreFullException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (RecordStoreNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (RecordStoreException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Delete permanently the set from RMS
+	 */
+	public void deleteSetOfCardsFromRMS(String setName) {
+		try {
+			SetOfCardsDAOIF socDao = new SetOfCardsDAOV4Impl(setName);
+			socDao.deleteSetOfCards(setName);
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -271,14 +289,11 @@ public class Initializer {
 	 */
 	private Vector removeDuplicateSets(Vector defaultSets,
 			String[] onProgressSets) {
-		for (int i = 0; i < defaultSets.size(); i++) {
-			String setName = (String) defaultSets.elementAt(i);
-			for (int k = 0; k < onProgressSets.length; k++) {
-				if (setName.equals(onProgressSets[k])) {
-					// there is already one set with that name being
-					// studied.
-					defaultSets.removeElementAt(i);
-				}
+		for (int i = 0; i < onProgressSets.length; i++) {
+			String setName = onProgressSets[i];
+			if (defaultSets.contains(setName)) {
+				// there is already one set with that name being studied.
+				defaultSets.removeElement(setName);
 			}
 		}
 		return defaultSets;

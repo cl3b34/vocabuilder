@@ -39,9 +39,11 @@ public class RecordStoreFactoryTest extends TestCase {
 		RecordStore store = factory.getStoreInstance("test_store");
 		RecordStore store1 = factory.getStoreInstance("test_store");
 		assertSame("stores differ",store, store1);
+		assertTrue(store.getName().equals(store1.getName()));
 		RecordStore store2 = factory.getStoreInstance("another_store");
 		try {
 			assertSame("objects differ", store, store2);
+			assertTrue(store.getName().equals(store2.getName()));
 			fail("should be different");
 		}catch(AssertionFailedError e) {
 			//should throw this exception

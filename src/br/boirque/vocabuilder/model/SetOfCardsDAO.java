@@ -62,7 +62,7 @@ public abstract class SetOfCardsDAO implements SetOfCardsDAOIF {
 		return fileFormatVersion;
 	}
 
-	public void resetState() throws RecordStoreNotFoundException,
+	public void resetSetState() throws RecordStoreNotFoundException,
 			RecordStoreException {
 		String recordStoreName = recordStore.getName();
 		RecordStoreFactory factory = RecordStoreFactory.getFactory();
@@ -259,4 +259,9 @@ public abstract class SetOfCardsDAO implements SetOfCardsDAOIF {
 		recordStore.setRecord(recordId, b, 0, recordLength);
 	}
 
+	public void deleteSetOfCards(String setName) throws RecordStoreNotFoundException, RecordStoreException {
+		RecordStoreFactory factory = RecordStoreFactory.getFactory();
+		factory.closeStoreInstance(setName);
+		RecordStore.deleteRecordStore(setName);
+	}
 }
