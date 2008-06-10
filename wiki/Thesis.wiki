@@ -30,8 +30,14 @@ Here you can find a short list of what is planned, the progress and an account o
   		* Use the list name as the recordStore name
   		* Correct the unit test cases
   		* Reorganize the DAO layer with the use of a interface and a abstract class
-  		
+  	* week 23: 13h
   		* Change the UI to allow the selection and loading of any available list
+  		* Reorganize the controller class
+  	* week 24: 10h
+  		* Fix the RecordStoreFactory to support multiple store names
+  		* Method for deleting a recordstore
+  		* Fix the test cases
+  		
   		* Divide the long lists in smaller ones
   		* Recompile the demo applications with the lists divided in smaller ones (will break backward compatibility)
   	
