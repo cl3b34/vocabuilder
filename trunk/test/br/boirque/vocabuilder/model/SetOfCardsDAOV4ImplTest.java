@@ -81,7 +81,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	protected void tearDown() throws Exception {
 		super.tearDown();
 		SetOfCardsDAOIF socd = new SetOfCardsDAOV4Impl(setOfCards.getSetName());
-		socd.resetState();
+		socd.resetSetState();
 		setOfCards = null;
 		socd = null;
 		System.gc();
@@ -89,7 +89,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 
 	public void testAddCardV4() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
 		SetOfCardsDAOV4Impl socdao = new SetOfCardsDAOV4Impl(setName);
-		socdao.resetState();
+		socdao.resetSetState();
 		socdao.addFileFormatVersionNumber(4);
 		socdao.addSetMetadata(setOfCards);
 		FlashCard card = new FlashCard("parta","suomi","beard","english",true,"woman hates",999,65,98877L,93883L,0);
@@ -120,7 +120,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 
 	public void testAddFileFormatVersionNumber() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
 		SetOfCardsDAOIF socdao = new SetOfCardsDAOV4Impl(setName);
-		socdao.resetState();
+		socdao.resetSetState();
 		long startTime = System.currentTimeMillis();
 		socdao.addFileFormatVersionNumber(3);
 		long endTime = System.currentTimeMillis();
@@ -132,7 +132,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 
 	public void testAddSetMetadata() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
 		SetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(setName);
-		socdao.resetState();
+		socdao.resetSetState();
 		socdao.addFileFormatVersionNumber(3);
 		SetOfCards soc;
 		long startTime = System.currentTimeMillis();
@@ -150,7 +150,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 
 	public void testGetCardCount() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
 		SetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(setName);
-		socdao.resetState();
+		socdao.resetSetState();
 		socdao.saveSetOfCards(setOfCards);		
 		long startTime = System.currentTimeMillis();
 		int recordCount = socdao.getCardCount();
@@ -165,7 +165,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 
 	public void testLoadCard() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
 		SetOfCardsDAOV4Impl socd = new SetOfCardsDAOV4Impl(setName);
-		socd.resetState();
+		socd.resetSetState();
 		socd.saveSetOfCards(setOfCards);
 		RecordStoreFactory factory = RecordStoreFactory.getFactory();
 		RecordStore recordStore = factory.getStoreInstance(setOfCards.getSetName());
@@ -187,7 +187,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	
 	public void testLoadFileFormatVersionNumber() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
 		SetOfCardsDAO socd = new SetOfCardsDAOV4Impl(setName);
-		socd.resetState();
+		socd.resetSetState();
 		socd.saveSetOfCards(setOfCards);
 		//measure performance
 		long startTime = System.currentTimeMillis();
@@ -205,7 +205,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	 */
 	public void testLoadSetMetadata() throws RecordStoreNotOpenException, InvalidRecordIDException, IOException, RecordStoreException  {
 		SetOfCardsDAO socd = new SetOfCardsDAOV4Impl(setName);
-		socd.resetState();	
+		socd.resetSetState();	
 		SetOfCards setOrig = socd.saveSetOfCards(setOfCards);
 		//measure performance
 		long startTime = System.currentTimeMillis();		
@@ -227,7 +227,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 
 	public void testLoadSetOfCards() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException{
 		SetOfCardsDAOIF socd = new SetOfCardsDAOV4Impl(setName);
-		socd.resetState();
+		socd.resetSetState();
 		socd.saveSetOfCards(setOfCards);
 		//measure the performance
 		long startTime = System.currentTimeMillis();
@@ -245,7 +245,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	public void testResetState() throws RecordStoreNotFoundException, RecordStoreException{
 		SetOfCardsDAOIF socdao = new SetOfCardsDAOV4Impl(setName);
 		long startTime = System.currentTimeMillis();
-		socdao.resetState();
+		socdao.resetSetState();
 		long endTime = System.currentTimeMillis();
 		long loadingTime = endTime -startTime;
 		System.out.println("RMS resetState time: " + milisecondsToSeconds(loadingTime));
@@ -257,7 +257,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 
 	public void testSaveSetOfCardsV4() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
 		SetOfCardsDAOIF socd = new SetOfCardsDAOV4Impl(setName);
-		socd.resetState();
+		socd.resetSetState();
 		long startTime = System.currentTimeMillis();		
 		socd.saveSetOfCards(setOfCards);		
 		long endTime = System.currentTimeMillis();
@@ -282,7 +282,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	 */
 	public void testUpdateSetMetadata() throws RecordStoreNotOpenException, InvalidRecordIDException, IOException, RecordStoreException {
 		SetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(setName);
-		socdao.resetState();
+		socdao.resetSetState();
 		setOfCards = socdao.saveSetOfCards(setOfCards);
 		//convention for the set meta data = 2nd record
 		SetOfCards soc = socdao.loadSetMetadata(setOfCards.getSetId());
@@ -322,7 +322,11 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	}
 
 	public void testGetRecordCount() {
-//		fail("Not yet implemented");
+		fail("Not yet implemented");
+	}
+	
+	public void testDeleteSetOfCards() {
+		fail("Not yet implemented");
 	}
 
 	private String milisecondsToSeconds(long timeToConvert) {
@@ -485,25 +489,29 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 			
 			
 			testsuite.addTest(new SetOfCardsDAOV4ImplTest("testCardToByteArray", new TestMethod(){ 
-				public void run(TestCase tc) throws RecordStoreNotOpenException, RecordStoreFullException, IOException, RecordStoreException {
+				public void run(TestCase tc) {
 					((SetOfCardsDAOV4ImplTest) tc).testCardToByteArray(); 
 				} 
 			}));
 			
 			testsuite.addTest(new SetOfCardsDAOV4ImplTest("testGetAvailableSets", new TestMethod(){ 
-				public void run(TestCase tc) throws RecordStoreNotOpenException, RecordStoreFullException, IOException, RecordStoreException {
+				public void run(TestCase tc)  {
 					((SetOfCardsDAOV4ImplTest) tc).testGetAvailableSets(); 
 				} 
 			}));
 			
 			
 			testsuite.addTest(new SetOfCardsDAOV4ImplTest("testGetRecordCount", new TestMethod(){ 
-				public void run(TestCase tc) throws RecordStoreNotOpenException, RecordStoreFullException, IOException, RecordStoreException {
+				public void run(TestCase tc) {
 					((SetOfCardsDAOV4ImplTest) tc).testGetRecordCount(); 
 				} 
 			}));
 
-			
+			testsuite.addTest(new SetOfCardsDAOV4ImplTest("testDeleteSetOfCards", new TestMethod(){ 
+				public void run(TestCase tc)  {
+					((SetOfCardsDAOV4ImplTest) tc).testDeleteSetOfCards(); 
+				} 
+			}));
 			
 			return testsuite;
 		}

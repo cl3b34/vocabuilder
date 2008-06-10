@@ -5,6 +5,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 
 import javax.microedition.rms.InvalidRecordIDException;
+import javax.microedition.rms.RecordStore;
 import javax.microedition.rms.RecordStoreException;
 import javax.microedition.rms.RecordStoreNotFoundException;
 import javax.microedition.rms.RecordStoreNotOpenException;
@@ -133,7 +134,7 @@ public interface SetOfCardsDAOIF {
 	 * @throws RecordStoreException
 	 * @throws RecordStoreNotFoundException
 	 */
-	public abstract void resetState() throws RecordStoreNotFoundException,
+	public abstract void resetSetState() throws RecordStoreNotFoundException,
 			RecordStoreException;
 
 	/**
@@ -152,12 +153,12 @@ public interface SetOfCardsDAOIF {
 	 */
 	public abstract int getRecordCount() throws RecordStoreNotOpenException;
 	
+	/**
+	 * Permanently delete a SetOfCards from RMS
+	 * @param setName
+	 * @throws RecordStoreNotFoundException
+	 * @throws RecordStoreException
+	 */
+	public void deleteSetOfCards(String setName) throws RecordStoreNotFoundException, RecordStoreException;
 	
-//	/**
-//	 * Retrieves a list of the SetOfCards available in RMS
-//	 * @return Array with the names of the Sets available
-//	 * @throws RecordStoreNotOpenException
-//	 */
-//	public abstract String[] getAvailableSets() throws RecordStoreNotOpenException;
-
 }
