@@ -22,16 +22,21 @@ import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.util.VocaUtil;
 
 public class Vocabuilder extends MIDlet implements CommandListener {
+	private static final String DELETE_SET = "delete set";
+	private static final String STUDY_SET = "study set";
 	// Commands
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
-	private Command quitCommand = new Command("Quit", Command.EXIT, 1);
+	private Command quitCommand = new Command("Stats", Command.EXIT, 1);
 	private Command turnCommand = new Command("Turn", Command.SCREEN, 1);
 	private Command doneCommand = new Command("Done", Command.SCREEN, 2);
 	private Command wrongCommand = new Command("Wrong", Command.SCREEN, 1);
 	private Command restartCommand = new Command("Restart", Command.SCREEN, 2);
 	private Command reviewCommand = new Command("Review", Command.SCREEN, 1);
-	private Command nextSetCommand = new Command("Next set", Command.SCREEN, 1);
-	private Command loadTxtSetCommand = new Command("load", Command.SCREEN, 1);
+	private Command nextSetCommand = new Command("Load another", Command.SCREEN,
+			2);
+	private Command loadTxtSetCommand = new Command("Load", Command.SCREEN, 1);
+	private Command deleteCommand = new Command("Delete", Command.SCREEN, 1);
+	private Command selectCommand = new Command("Select", Command.SCREEN, 1);
 
 	// UI elements
 	private Form mainForm;
@@ -48,7 +53,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private int totalDoneSession = 0;
 	private long sessionStudyTime = 0;
 	private long lastActivityTime = 0; // Last time the user interacted with
-										// the app
+	// the app
 	private final long maxIdleTime = 30000L; // thirty Seconds
 
 	// Sequential list index management
@@ -80,20 +85,32 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	 * Takes care of initializing the app
 	 */
 	protected void startApp() {
-		displayLoadMenu();
+		// if there is only one list, doesn't display the menu
+		Initializer init = new Initializer();
+		String[] setNames = (init.loadUniqueSetNames());
+		if (setNames.length == 1) {
+			displaySetOfCards(setNames[0]);
+		} else {
+			//displayLoadSetMenu();
+			displayInitialOptionsMenu();
+		}
 	}
 
 	protected void pauseApp() {
 	}
 
 	protected void destroyApp(boolean bool) {
+		save(soc);
+	}
+
+	private void save(SetOfCards soc) {
 		if (soc != null) {
 			Initializer initializer = new Initializer();
 			initializer.saveState(soc);
 		}
 	}
 
-	private void displayLoadMenu() {
+	private void displayLoadSetMenu() {
 		Initializer init = new Initializer();
 		List listSelection = new List("Select a set", Choice.IMPLICIT, init
 				.loadUniqueSetNames(), null);
@@ -118,11 +135,33 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		mainForm.setCommandListener(this);
 	}
 
-	private void initializeMyApp(String listToLoad) {
-		System.out.println(listToLoad);
+	private void displayInitialOptionsMenu() {
+		String[] actions = {STUDY_SET, DELETE_SET};
+		List listSelection = new List("Select action", Choice.IMPLICIT, actions , null);
+		// Command[] c = {exitCommand, loadTxtSetCommand};
+		// setCommands(c, listSelection);
+		listSelection.addCommand(exitCommand);
+		listSelection.setSelectCommand(selectCommand);
+		listSelection.setCommandListener(this);
+		Display.getDisplay(this).setCurrent(listSelection);
+	}
+	
+	private void displayDeleteSetMenu() {
+		Initializer init = new Initializer();
+		List listSelection = new List("DELETE set", Choice.IMPLICIT, init.loadOnProgressSetNames() , null);
+		// Command[] c = {exitCommand, loadTxtSetCommand};
+		// setCommands(c, listSelection);
+		listSelection.addCommand(exitCommand);
+		listSelection.setSelectCommand(deleteCommand);
+		listSelection.setCommandListener(this);
+		Display.getDisplay(this).setCurrent(listSelection);
+	}
+	
+	private void displaySetOfCards(String setToLoad) {
+		System.out.println(setToLoad);
 		// initialize the application. Load the list
 		Initializer initializer = new Initializer();
-		soc = initializer.initializeApp(listToLoad);
+		soc = initializer.initializeApp(setToLoad);
 
 		// TODO - transfer this initialization of the set of cards
 		// code to a controller class
@@ -313,10 +352,12 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		if (showCommands) {
 			// show the commands for statistics
 			if (incorrectAmount > 0) {
-				Command[] commands = { reviewCommand, exitCommand };
+				Command[] commands = { nextSetCommand, reviewCommand,
+						exitCommand };
 				setCommands(commands, mainForm);
 			} else {
-				Command[] commands = { restartCommand, exitCommand };
+				Command[] commands = { nextSetCommand, restartCommand,
+						exitCommand };
 				setCommands(commands, mainForm);
 			}
 		} else {
@@ -404,7 +445,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 
 		if (cmd == nextSetCommand) {
+			//save the previous set
+			save(soc);
 			// Load a new set of cards
+			displayLoadSetMenu();
 		}
 
 		if (cmd == restartCommand) {
@@ -464,7 +508,30 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			List l = (List) disp;
 			int index = l.getSelectedIndex();
 			String selectedItem = l.getString(index);
-			initializeMyApp(selectedItem);
+			displaySetOfCards(selectedItem);
 		}
+		
+		if (cmd == deleteCommand) {
+			//TODO: display a confirmation dialog
+			List l = (List) disp;
+			int index = l.getSelectedIndex();
+			String selectedItem = l.getString(index);
+			Initializer init = new Initializer();
+			init.deleteSetOfCardsFromRMS(selectedItem);
+			displayDeleteSetMenu();
+		}
+		
+		if (cmd == selectCommand) {
+			//which command was selected?
+			List l = (List) disp;
+			int index = l.getSelectedIndex();
+			String selectedItem = l.getString(index);
+			if(selectedItem.equalsIgnoreCase(STUDY_SET)) {
+			displayLoadSetMenu();
+			}else if(selectedItem.equalsIgnoreCase(DELETE_SET)) {
+				displayDeleteSetMenu();				
+			}
+		}
+		
 	}
 }
