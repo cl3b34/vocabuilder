@@ -13,7 +13,7 @@ import br.boirque.vocabuilder.model.PropertiesLoader;
 import br.boirque.vocabuilder.model.Property;
 import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.model.SetOfCardsDAO;
-import br.boirque.vocabuilder.model.SetOfCardsDAOIF;
+import br.boirque.vocabuilder.model.ISetOfCardsDAO;
 import br.boirque.vocabuilder.model.SetOfCardsDAOV4Impl;
 import br.boirque.vocabuilder.model.SetOfCardsLoader;
 
@@ -57,7 +57,7 @@ public class Initializer {
 	public boolean saveState(SetOfCards soc) {
 		boolean savedSuccesfully = false;
 		try {
-			SetOfCardsDAOIF socDao = new SetOfCardsDAOV4Impl(soc.getSetName());
+			ISetOfCardsDAO socDao = new SetOfCardsDAOV4Impl(soc.getSetName());
 			// removes the previous recordstore
 			socDao.resetSetState();
 			// create a new one with the current state
@@ -123,7 +123,7 @@ public class Initializer {
 	 */
 	public void resetState(String setName) {
 		try {
-			SetOfCardsDAOIF socDao = new SetOfCardsDAOV4Impl(setName);
+			ISetOfCardsDAO socDao = new SetOfCardsDAOV4Impl(setName);
 			socDao.resetSetState();
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block
@@ -142,7 +142,7 @@ public class Initializer {
 	 */
 	public void deleteSetOfCardsFromRMS(String setName) {
 		try {
-			SetOfCardsDAOIF socDao = new SetOfCardsDAOV4Impl(setName);
+			ISetOfCardsDAO socDao = new SetOfCardsDAOV4Impl(setName);
 			socDao.deleteSetOfCards(setName);
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block
@@ -161,7 +161,7 @@ public class Initializer {
 	 */
 	public int getCardCount(String setName) {
 		try {
-			SetOfCardsDAOIF socDao = new SetOfCardsDAOV4Impl(setName);
+			ISetOfCardsDAO socDao = new SetOfCardsDAOV4Impl(setName);
 			return socDao.getCardCount();
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block

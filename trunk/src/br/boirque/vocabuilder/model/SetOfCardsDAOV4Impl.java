@@ -130,7 +130,7 @@ public class SetOfCardsDAOV4Impl extends SetOfCardsDAO{
 	}
 
 	/* (non-Javadoc)
-	 * @see br.boirque.vocabuilder.model.SetOfCardsDAOIF#saveSetOfCardsV4(br.boirque.vocabuilder.model.SetOfCards)
+	 * @see br.boirque.vocabuilder.model.ISetOfCardsDAO#saveSetOfCardsV4(br.boirque.vocabuilder.model.SetOfCards)
 	 */
 	public SetOfCards saveSetOfCards(SetOfCards setOfCards)
 			throws RecordStoreNotOpenException, InvalidRecordIDException,
@@ -156,7 +156,7 @@ public class SetOfCardsDAOV4Impl extends SetOfCardsDAO{
 	}
 
 	/* (non-Javadoc)
-	 * @see br.boirque.vocabuilder.model.SetOfCardsDAOIF#loadSetOfCards()
+	 * @see br.boirque.vocabuilder.model.ISetOfCardsDAO#loadSetOfCards()
 	 */
 	public SetOfCards loadSetOfCards() throws IOException,
 			InvalidRecordIDException, RecordStoreException {

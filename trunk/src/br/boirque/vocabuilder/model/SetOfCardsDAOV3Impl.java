@@ -1,9 +1,7 @@
 package br.boirque.vocabuilder.model;
 
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.Vector;
 
@@ -37,7 +35,7 @@ public class SetOfCardsDAOV3Impl extends SetOfCardsDAO  {
 	}
 
 	/* (non-Javadoc)
-	 * @see br.boirque.vocabuilder.model.SetOfCardsDAOIF#addCard(br.boirque.vocabuilder.model.FlashCard)
+	 * @see br.boirque.vocabuilder.model.ISetOfCardsDAO#addCard(br.boirque.vocabuilder.model.FlashCard)
 	 */
 	private FlashCard addCard(FlashCard card) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,
@@ -52,7 +50,7 @@ public class SetOfCardsDAOV3Impl extends SetOfCardsDAO  {
 	}
 
 	/* (non-Javadoc)
-	 * @see br.boirque.vocabuilder.model.SetOfCardsDAOIF#loadCard(int)
+	 * @see br.boirque.vocabuilder.model.ISetOfCardsDAO#loadCard(int)
 	 */
 	public FlashCard loadCard(int recordId) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,
