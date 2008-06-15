@@ -12,8 +12,6 @@ import javax.microedition.rms.RecordStoreFullException;
 import javax.microedition.rms.RecordStoreNotOpenException;
 
 import br.boirque.vocabuilder.model.SetOfCards;
-import br.boirque.vocabuilder.model.SetOfCardsDAO;
-import br.boirque.vocabuilder.model.SetOfCardsDAOV4Impl;
 import br.boirque.vocabuilder.model.SetOfCardsLoader;
 
 public class InitializerTest extends TestCase {
