@@ -5,17 +5,17 @@
 == Download it using your mobile's browser ==
 The easiest way to install is by downloading it to your mobile using the mobile's browser.
 
-For example, to install [http://vocabuilder.googlecode.com/files/Vocabuilder104_fi_en.jar Vocabuilder 1.04 Finnish -> English], enter the following URL in your mobile phone's browser:
+For example, to install [http://vocabuilder.googlecode.com/files/Vocabuilder16_fi_en.jar Vocabuilder 1.6 Finnish -> English], enter the following URL in your mobile phone's browser:
 
-http://vocabuilder.googlecode.com/files/Vocabuilder104_fi_en.jar
+http://vocabuilder.googlecode.com/files/Vocabuilder16_fi_en.jar
 
 There *are other languages available*, to install another language or version, just look at the link location in the [http://code.google.com/p/vocabuilder/downloads/list Downloads] section and load it in the mobile's browser. To see the link location, hover your mouse pointer over the link, the address is show at the status bar in the bottom of your browser screen.
 
 == Copy it to your mobile and execute it ==
 
-Another option for installing it is to copy the application's JAR file to your mobile and execute it. This will start the installation process. To install [http://vocabuilder.googlecode.com/files/Vocabuilder104_fi_en.jar Vocabuilder 1.04 fi-en] this way:
+Another option for installing it is to copy the application's JAR file to your mobile and execute it. This will start the installation process. To install [http://vocabuilder.googlecode.com/files/Vocabuilder16_fi_en.jar Vocabuilder 1.6 fi-en] this way:
 
- * Download the [http://vocabuilder.googlecode.com/files/Vocabuilder104_fi_en.jar JAR file] to your computer.
+ * Download the [http://vocabuilder.googlecode.com/files/Vocabuilder16_fi_en.jar JAR file] to your computer.
  * Transfer it to your mobile via USB, Bluetooth, IR, memory card or any other way
  * Execute it
 
