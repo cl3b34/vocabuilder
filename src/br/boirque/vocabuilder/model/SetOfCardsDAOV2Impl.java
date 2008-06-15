@@ -102,7 +102,7 @@ public class SetOfCardsDAOV2Impl extends SetOfCardsDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see br.boirque.vocabuilder.model.SetOfCardsDAOIF#loadSetMetadataV2(int)
+	 * @see br.boirque.vocabuilder.model.ISetOfCardsDAO#loadSetMetadataV2(int)
 	 */
 	public SetOfCards loadSetMetadata(int recordId) throws IOException,
 			RecordStoreNotOpenException, InvalidRecordIDException,

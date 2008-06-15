@@ -1,11 +1,8 @@
 package br.boirque.vocabuilder.model;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 
 import javax.microedition.rms.InvalidRecordIDException;
-import javax.microedition.rms.RecordStore;
 import javax.microedition.rms.RecordStoreException;
 import javax.microedition.rms.RecordStoreNotFoundException;
 import javax.microedition.rms.RecordStoreNotOpenException;
@@ -17,7 +14,7 @@ import javax.microedition.rms.RecordStoreNotOpenException;
  * @author cleber.goncalves
  *
  */
-public interface SetOfCardsDAOIF {
+public interface ISetOfCardsDAO{
 
 	/** The first file format was not publicly released
 	 *  The second does not have the format number in the record
