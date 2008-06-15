@@ -42,9 +42,10 @@ Here you can find a short list of what is planned, the progress and an account o
   		* User preferences VO
   		
   		
-  		
+  	* TODO	
   		* Show least viewed cards first
-  		* Implement Leitner system for reviewing already know cards
+  		* Make the file name and the SET name independent so nicer names can appear in the UI
+  		* Implement the [http://learnsuomea.blogspot.com/2007/05/leitner-system.html Leitner system] for reviewing already know cards
   		* Divide the long lists in smaller ones
   		* Recompile the demo applications with the lists divided in smaller ones (will break backward compatibility)
   	
