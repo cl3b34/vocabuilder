@@ -1,4 +1,4 @@
-# This is a comment. Comments are ignored
+# This is a comment. Comments are ignored.
 # spaces and empty lines are ignored
 # all property names and values are converted to lowercase
 
@@ -10,7 +10,7 @@ defaultset=longlist_fi_en.txt
 defaultset=longlist_en_fi.txt
 defaultset=frases_en_fi.txt
 defaultset=semanticprimitives.txt
-
-# Card display order: random or linear
-# only one entry is allowed
-carddisplayorder=random
+defaultset=words_fi_en_aj.txt
+defaultset=words_fi_en_kn.txt
+defaultset=words_fi_en_os.txt
+defaultset=words_fi_en_tz.txt
