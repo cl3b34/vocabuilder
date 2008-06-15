@@ -33,11 +33,18 @@ Here you can find a short list of what is planned, the progress and an account o
   	* week 23: 13h
   		* Change the UI to allow the selection and loading of any available list
   		* Reorganize the controller class
-  	* week 24: 10h
+  	* week 24: 20h
   		* Fix the RecordStoreFactory to support multiple store names
   		* Method for deleting a recordstore
   		* Fix the test cases
+  		* Allow loading a new list without quit the application
+  		* Screen for deleting lists
+  		* User preferences VO
   		
+  		
+  		
+  		* Show least viewed cards first
+  		* Implement Leitner system for reviewing already know cards
   		* Divide the long lists in smaller ones
   		* Recompile the demo applications with the lists divided in smaller ones (will break backward compatibility)
   	
