@@ -18,7 +18,6 @@ public class FlashCard {
 	private int markedDoneCounter;
 	private long lastTimeViewed;
 	private long lastTimeMarkedDone;
-	private int cardId;
 	
 		
 	/**
@@ -46,40 +45,6 @@ public class FlashCard {
 		this.sideTwoTitle = sideTwoTitle;
 		this.done = done;
 		this.tip = tip;
-	}
-	
-
-	/**
-	 * All fields constructor
-	 * 
-	 * @param sideOne
-	 * @param sideOneTitle
-	 * @param sideTwo
-	 * @param sideTwoTitle
-	 * @param done
-	 * @param tip
-	 * @param viewedCounter
-	 * @param markedDoneCounter
-	 * @param lastTimeViewed
-	 * @param lastTimeMarkedDone
-	 * @param cardId
-	 */
-	public FlashCard(String sideOne, String sideOneTitle, String sideTwo,
-			String sideTwoTitle, boolean done, String tip, int viewedCounter,
-			int markedDoneCounter, long lastTimeViewed,
-			long lastTimeMarkedDone, int cardId) {
-		super();
-		this.sideOne = sideOne;
-		this.sideOneTitle = sideOneTitle;
-		this.sideTwo = sideTwo;
-		this.sideTwoTitle = sideTwoTitle;
-		this.done = done;
-		this.tip = tip;
-		this.viewedCounter = viewedCounter;
-		this.markedDoneCounter = markedDoneCounter;
-		this.lastTimeViewed = lastTimeViewed;
-		this.lastTimeMarkedDone = lastTimeMarkedDone;
-		this.cardId = cardId;
 	}
 
 	/**
@@ -186,14 +151,5 @@ public class FlashCard {
 	public void setLastTimeViewed(long lastTimeViewed) {
 		this.lastTimeViewed = lastTimeViewed;
 	}
-
-	public int getCardId() {
-		return cardId;
-	}
-
-	public void setCardId(int cardId) {
-		this.cardId = cardId;
-	}
-
 	
 }

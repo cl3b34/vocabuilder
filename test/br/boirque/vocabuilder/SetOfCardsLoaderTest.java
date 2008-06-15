@@ -1,4 +1,4 @@
-package br.boirque.vocabuilder.model;
+package br.boirque.vocabuilder;
 
 import java.io.IOException;
 import java.util.Vector;
@@ -6,19 +6,15 @@ import java.util.Vector;
 import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.model.SetOfCardsLoader;
-import br.boirque.vocabuilder.util.VocaUtil;
 import j2meunit.framework.*;
 
 public class SetOfCardsLoaderTest extends TestCase {
 
-	private static final long MAXLOADINGTIME = 2000L;
-	private static final int TOTALOFCARDS = 1827;
-	private static final String SETTOLOAD = "longlist_fi_en.txt";
-	
 	/**
 	 * Default constructor
 	 */
 	public SetOfCardsLoaderTest() {
+		// TODO Auto-generated constructor stub
 	}
 	
 	/**
@@ -39,29 +35,20 @@ public class SetOfCardsLoaderTest extends TestCase {
 		super.tearDown();
 	}
 
-	public void testLoadSet() throws IOException{
-		long startTime = System.currentTimeMillis();
-		SetOfCardsLoader socl = new SetOfCardsLoader();
-		SetOfCards soc = socl.loadSet(SETTOLOAD);
-		long endTime = System.currentTimeMillis();
-		long loadingTime = endTime -startTime;
-		assertEquals("wrong card amount\n",TOTALOFCARDS, soc.getFlashCards().size());
-		assertNotNull("Null Set of cards", soc);
-		assertTrue("Text load:" + VocaUtil.milisecondsToSeconds(loadingTime), loadingTime < MAXLOADINGTIME);
-		System.out.println("TxtSetLoad: " + VocaUtil.milisecondsToSeconds(loadingTime));
+	public void testLoadSet(){
+		
 	}
-	
 	
 	public void testTextFileLoader() throws IOException{
 		SetOfCardsLoader socl = new SetOfCardsLoader();
-		SetOfCards soc = socl.loadSet(SETTOLOAD);
+		SetOfCards soc = socl.loadSet("/Finnish/longlist_fin_eng.txt");
 		assertNotNull(soc);
 		Vector cards = soc.getFlashCards();
 		System.out.println("Number of Cards: " + cards.size());
 		assertNotNull(cards);
 		// check the set name
-		String setName = soc.getSetName();
-		assertEquals("longlist_fi_en", setName);
+//		String setName = soc.getTitle();
+//		assertEquals("longlist fi_en", setName);
 		
 		//check the first card
 		FlashCard firstCard = (FlashCard) cards.elementAt(0);
@@ -108,19 +95,11 @@ public class SetOfCardsLoaderTest extends TestCase {
 	public Test suite() {
 		TestSuite testsuite = new TestSuite();
 
-		testsuite.addTest(new SetOfCardsLoaderTest("testLoadSet", new TestMethod(){ 
-			public void run(TestCase tc) throws IOException{
-				((SetOfCardsLoaderTest) tc).testLoadSet(); 
-			} 
-		}));
-		
 		testsuite.addTest(new SetOfCardsLoaderTest("testTextFileLoader", new TestMethod(){ 
 			public void run(TestCase tc) throws IOException{
 				((SetOfCardsLoaderTest) tc).testTextFileLoader(); 
 			} 
 		}));
-		
-		
 		
 		return testsuite;
 	}

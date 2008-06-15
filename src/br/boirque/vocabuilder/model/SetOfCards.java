@@ -7,8 +7,8 @@ import java.util.Vector;
  * A list of flash cards to be studied
  */
 public class SetOfCards {
-	//This set's setName
-	private String setName;
+	//This set's title
+	private String title;
 	//If all the cards in this set are marked as done
 	private boolean done;
 	//total amount of time spent studying this set
@@ -23,109 +23,43 @@ public class SetOfCards {
 	private long lastTimeMarkedDone;
 	//how many times it was marked done
 	private int markedDoneCounter;
-	//the recordId of the set
-	private int setId;
-	//the amount of cards in this set
-	private int totalNumberOfCards;
-	//amount of cards marked 'done' in the set
-	private int totalNumberOfCardsMarkedDone;
 	
 	
 	
-	
-	/**
-	 * @param setName
-	 * @param done
-	 * @param flashCards
-	 */
-	public SetOfCards(String title, boolean done, Vector flashCards) {
-		super();
-		this.setName = title;
-		this.done = done;
-		this.flashCards = flashCards;
-	}
-
-
-	/**
-	 * @param setName
-	 * @param done
-	 * @param totalStudiedTimeInMiliseconds
-	 * @param flashCards
-	 * @param totalNumberOfDisplayedCards
-	 * @param lastTimeViewed
-	 * @param lastTimeMarkedDone
-	 * @param markedDoneCounter
-	 * @param setId
-	 * @param totalNumberOfCards
-	 * @param totalNumberOfCardsMarkedDone
-	 */
-	public SetOfCards(String title, boolean done,
-			long totalStudiedTimeInMiliseconds, Vector flashCards,
-			int totalNumberOfDisplayedCards, long lastTimeViewed,
-			long lastTimeMarkedDone, int markedDoneCounter, int setId,
-			int totalNumberOfCards, int totalNumberOfCardsMarkedDone) {
-		super();
-		this.setName = title;
-		this.done = done;
-		this.totalStudiedTimeInMiliseconds = totalStudiedTimeInMiliseconds;
-		this.flashCards = flashCards;
-		this.totalNumberOfDisplayedCards = totalNumberOfDisplayedCards;
-		this.lastTimeViewed = lastTimeViewed;
-		this.lastTimeMarkedDone = lastTimeMarkedDone;
-		this.markedDoneCounter = markedDoneCounter;
-		this.setId = setId;
-		this.totalNumberOfCards = totalNumberOfCards;
-		this.totalNumberOfCardsMarkedDone = totalNumberOfCardsMarkedDone;
-	}
-
-
-	public int getTotalNumberOfCards() {
-		return totalNumberOfCards;
-	}
-
-
-	public void setTotalNumberOfCards(int totalNumberOfCards) {
-		this.totalNumberOfCards = totalNumberOfCards;
-	}
-
-
-	public int getTotalNumberOfCardsMarkedDone() {
-		return totalNumberOfCardsMarkedDone;
-	}
-
-
-	public void setTotalNumberOfCardsMarkedDone(int totalNumberOfCardsMarkedDone) {
-		this.totalNumberOfCardsMarkedDone = totalNumberOfCardsMarkedDone;
-	}
-
-
-	public int getSetId() {
-		return setId;
-	}
-
-
-	public void setSetId(int setId) {
-		this.setId = setId;
-	}
-
-
 	/**
 	 * Default constructor 
 	 */
 	public SetOfCards() {
 	}
 	
+	
 	/**
-	 * @return the setName
+	 * Convenience constructor
+	 * @param title - the set title
+	 * @param done - the set is done if all cards are marked as done
+	 * @param totalStudiedTimeInMiliseconds - how long has this set been studied
+	 * @param flashCards - the cards contained in this set
 	 */
-	public String getSetName() {
-		return setName;
+	public SetOfCards(String title, boolean done,
+			long totalStudiedTimeInMiliseconds, Vector flashCards) {
+		super();
+		this.title = title;
+		this.done = done;
+		this.totalStudiedTimeInMiliseconds = totalStudiedTimeInMiliseconds;
+		this.flashCards = flashCards;
+	}
+
+	/**
+	 * @return the title
+	 */
+	public String getTitle() {
+		return title;
 	}
 	/**
-	 * @param setName the setName to set
+	 * @param title the title to set
 	 */
-	public void setSetName(String setName) {
-		this.setName = setName;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	/**
 	 * @return the done

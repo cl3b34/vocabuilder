@@ -235,14 +235,14 @@ public class TestSuite implements Test
 	 *
 	 * @return A new TestCase instance
 	 */
-//	private Test warning(final String message)
-//	{
-//		return new TestCase("warning")
-//			{
-//				protected void runTest()
-//				{
-//					fail(message);
-//				}
-//			};
-//	}
+	private Test warning(final String message)
+	{
+		return new TestCase("warning")
+			{
+				protected void runTest()
+				{
+					fail(message);
+				}
+			};
+	}
 }

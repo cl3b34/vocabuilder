@@ -1,1 +1,0 @@
-^[\s] - looks for empty lines
