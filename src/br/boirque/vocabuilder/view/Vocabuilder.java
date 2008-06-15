@@ -3,8 +3,6 @@ package br.boirque.vocabuilder.view;
 import java.util.Random;
 import java.util.Vector;
 
-import javax.microedition.lcdui.Alert;
-import javax.microedition.lcdui.AlertType;
 import javax.microedition.lcdui.Choice;
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
@@ -22,8 +20,8 @@ import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.util.VocaUtil;
 
 public class Vocabuilder extends MIDlet implements CommandListener {
-	private static final String DELETE_SET = "delete set";
-	private static final String STUDY_SET = "study set";
+	private static final String DELETE_SET = "delete list";
+	private static final String STUDY_SET = "STUDY";
 	// Commands
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
 	private Command quitCommand = new Command("Stats", Command.EXIT, 1);
@@ -34,9 +32,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private Command reviewCommand = new Command("Review", Command.SCREEN, 1);
 	private Command nextSetCommand = new Command("Load another", Command.SCREEN,
 			2);
-	private Command loadTxtSetCommand = new Command("Load", Command.SCREEN, 1);
+	private Command loadSetCommand = new Command("Load", Command.SCREEN, 1);
 	private Command deleteCommand = new Command("Delete", Command.SCREEN, 1);
 	private Command selectCommand = new Command("Select", Command.SCREEN, 1);
+	private Command back = new Command("Back", Command.BACK,1);
 
 	// UI elements
 	private Form mainForm;
@@ -114,10 +113,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		Initializer init = new Initializer();
 		List listSelection = new List("Select a set", Choice.IMPLICIT, init
 				.loadUniqueSetNames(), null);
-		// Command[] c = {exitCommand, loadTxtSetCommand};
+		// Command[] c = {exitCommand, loadSetCommand};
 		// setCommands(c, listSelection);
-		listSelection.addCommand(exitCommand);
-		listSelection.setSelectCommand(loadTxtSetCommand);
+		listSelection.addCommand(back);
+		listSelection.setSelectCommand(loadSetCommand);
 		listSelection.setCommandListener(this);
 		Display.getDisplay(this).setCurrent(listSelection);
 	}
@@ -138,7 +137,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private void displayInitialOptionsMenu() {
 		String[] actions = {STUDY_SET, DELETE_SET};
 		List listSelection = new List("Select action", Choice.IMPLICIT, actions , null);
-		// Command[] c = {exitCommand, loadTxtSetCommand};
+		// Command[] c = {exitCommand, loadSetCommand};
 		// setCommands(c, listSelection);
 		listSelection.addCommand(exitCommand);
 		listSelection.setSelectCommand(selectCommand);
@@ -149,9 +148,9 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private void displayDeleteSetMenu() {
 		Initializer init = new Initializer();
 		List listSelection = new List("DELETE set", Choice.IMPLICIT, init.loadOnProgressSetNames() , null);
-		// Command[] c = {exitCommand, loadTxtSetCommand};
+		// Command[] c = {exitCommand, loadSetCommand};
 		// setCommands(c, listSelection);
-		listSelection.addCommand(exitCommand);
+		listSelection.addCommand(back);
 		listSelection.setSelectCommand(deleteCommand);
 		listSelection.setCommandListener(this);
 		Display.getDisplay(this).setCurrent(listSelection);
@@ -276,7 +275,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		mainForm.removeCommand(reviewCommand);
 		mainForm.removeCommand(nextSetCommand);
 		mainForm.removeCommand(quitCommand);
-		mainForm.removeCommand(loadTxtSetCommand);
+		mainForm.removeCommand(loadSetCommand);
 
 		if (commands != null) {
 			// add the desired commands
@@ -503,7 +502,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			displayNextNotDoneCard();
 		}
 
-		if (cmd == loadTxtSetCommand) {
+		if (cmd == loadSetCommand) {
 			// Load the set selected
 			List l = (List) disp;
 			int index = l.getSelectedIndex();
@@ -532,6 +531,11 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				displayDeleteSetMenu();				
 			}
 		}
+		
+		if (cmd == back) {
+			displayInitialOptionsMenu();
+		}
+		
 		
 	}
 }
