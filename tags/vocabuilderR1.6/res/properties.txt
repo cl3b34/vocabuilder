@@ -1,0 +1,16 @@
+# This is a comment. Comments are ignored.
+# spaces and empty lines are ignored
+# all property names and values are converted to lowercase
+
+# lists of words distributed with the application
+# the name must match exactly the name of a file in 
+# the 'res' folder in the application.
+# multiple entries are allowed
+defaultset=longlist_fi_en.txt
+defaultset=longlist_en_fi.txt
+defaultset=frases_en_fi.txt
+defaultset=semanticprimitives.txt
+defaultset=words_fi_en_aj.txt
+defaultset=words_fi_en_kn.txt
+defaultset=words_fi_en_os.txt
+defaultset=words_fi_en_tz.txt
