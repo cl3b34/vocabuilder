@@ -6,19 +6,19 @@ import java.util.Vector;
 import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.model.SetOfCardsLoader;
-import br.boirque.vocabuilder.util.VocaUtil;
 import j2meunit.framework.*;
 
 public class SetOfCardsLoaderTest extends TestCase {
 
-	private static final long MAXLOADINGTIME = 2000L;
+	private static final long MAXLOADINGTIME = 5000L;
 	private static final int TOTALOFCARDS = 1827;
-	private static final String SETTOLOAD = "longlist_fi_en.txt";
+	String setToLoad = "/Finnish/longlist_fin_eng.txt";
 	
 	/**
 	 * Default constructor
 	 */
 	public SetOfCardsLoaderTest() {
+		// TODO Auto-generated constructor stub
 	}
 	
 	/**
@@ -42,25 +42,24 @@ public class SetOfCardsLoaderTest extends TestCase {
 	public void testLoadSet() throws IOException{
 		long startTime = System.currentTimeMillis();
 		SetOfCardsLoader socl = new SetOfCardsLoader();
-		SetOfCards soc = socl.loadSet(SETTOLOAD);
+		SetOfCards soc = socl.loadSet(setToLoad);
 		long endTime = System.currentTimeMillis();
 		long loadingTime = endTime -startTime;
 		assertEquals("wrong card amount\n",TOTALOFCARDS, soc.getFlashCards().size());
 		assertNotNull("Null Set of cards", soc);
-		assertTrue("Text load:" + VocaUtil.milisecondsToSeconds(loadingTime), loadingTime < MAXLOADINGTIME);
-		System.out.println("TxtSetLoad: " + VocaUtil.milisecondsToSeconds(loadingTime));
+		// loading time must be under 5s
+		assertTrue("Text load:" + milisecondsToSeconds(loadingTime), loadingTime < MAXLOADINGTIME);
 	}
-	
 	
 	public void testTextFileLoader() throws IOException{
 		SetOfCardsLoader socl = new SetOfCardsLoader();
-		SetOfCards soc = socl.loadSet(SETTOLOAD);
+		SetOfCards soc = socl.loadSet(setToLoad);
 		assertNotNull(soc);
 		Vector cards = soc.getFlashCards();
 		System.out.println("Number of Cards: " + cards.size());
 		assertNotNull(cards);
 		// check the set name
-		String setName = soc.getSetName();
+		String setName = soc.getTitle();
 		assertEquals("longlist_fi_en", setName);
 		
 		//check the first card
@@ -103,6 +102,13 @@ public class SetOfCardsLoaderTest extends TestCase {
 		assertEquals("ENG", sideTwoTitleLastCard);
 		
 		assertTrue(false == soc.isDone());		
+	}
+	
+	private String milisecondsToSeconds(long timeToConvert) {
+		if (timeToConvert < 1000L){
+			return timeToConvert + "ms";
+		}
+		return timeToConvert/1000L + "s";		
 	}
 
 	public Test suite() {

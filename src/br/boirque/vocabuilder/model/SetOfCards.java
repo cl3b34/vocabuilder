@@ -7,8 +7,8 @@ import java.util.Vector;
  * A list of flash cards to be studied
  */
 public class SetOfCards {
-	//This set's setName
-	private String setName;
+	//This set's title
+	private String title;
 	//If all the cards in this set are marked as done
 	private boolean done;
 	//total amount of time spent studying this set
@@ -34,20 +34,20 @@ public class SetOfCards {
 	
 	
 	/**
-	 * @param setName
+	 * @param title
 	 * @param done
 	 * @param flashCards
 	 */
 	public SetOfCards(String title, boolean done, Vector flashCards) {
 		super();
-		this.setName = title;
+		this.title = title;
 		this.done = done;
 		this.flashCards = flashCards;
 	}
 
 
 	/**
-	 * @param setName
+	 * @param title
 	 * @param done
 	 * @param totalStudiedTimeInMiliseconds
 	 * @param flashCards
@@ -65,7 +65,7 @@ public class SetOfCards {
 			long lastTimeMarkedDone, int markedDoneCounter, int setId,
 			int totalNumberOfCards, int totalNumberOfCardsMarkedDone) {
 		super();
-		this.setName = title;
+		this.title = title;
 		this.done = done;
 		this.totalStudiedTimeInMiliseconds = totalStudiedTimeInMiliseconds;
 		this.flashCards = flashCards;
@@ -116,16 +116,16 @@ public class SetOfCards {
 	}
 	
 	/**
-	 * @return the setName
+	 * @return the title
 	 */
-	public String getSetName() {
-		return setName;
+	public String getTitle() {
+		return title;
 	}
 	/**
-	 * @param setName the setName to set
+	 * @param title the title to set
 	 */
-	public void setSetName(String setName) {
-		this.setName = setName;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	/**
 	 * @return the done

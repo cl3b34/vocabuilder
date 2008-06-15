@@ -4,12 +4,10 @@ package br.boirque.vocabuilder;
 import j2meunit.framework.Test;
 import j2meunit.framework.TestCase;
 import j2meunit.framework.TestSuite;
-import br.boirque.vocabuilder.controller.InitializerTest;
-import br.boirque.vocabuilder.model.PropertiesLoaderTest;
-import br.boirque.vocabuilder.model.RecordStoreFactoryTest;
-import br.boirque.vocabuilder.model.SetOfCardsDAOV4ImplTest;
-import br.boirque.vocabuilder.model.SetOfCardsLoaderTest;
-import br.boirque.vocabuilder.util.VocaUtilTest;
+import br.boirque.vocabuilder.util.*;
+import br.boirque.vocabuilder.model.*;
+import br.boirque.vocabuilder.controller.*;
+import br.boirque.vocabuilder.view.*;
 
 public class TestAll extends TestCase
 {
@@ -34,12 +32,10 @@ public class TestAll extends TestCase
 	public Test suite()
 	{
 		TestSuite suite = new TestSuite();
-		suite.addTest(new InitializerTest().suite());
-		suite.addTest(new SetOfCardsLoaderTest().suite());
-		suite.addTest(new PropertiesLoaderTest().suite());
-		suite.addTest(new RecordStoreFactoryTest().suite());
-		suite.addTest(new SetOfCardsDAOV4ImplTest().suite());
 		suite.addTest(new VocaUtilTest().suite());
+		suite.addTest(new SetOfCardsLoaderTest().suite());
+		suite.addTest(new SetOfCardsDAOTest().suite());
+		suite.addTest(new InitializerTest().suite());
 		return suite;
 	}
 }
