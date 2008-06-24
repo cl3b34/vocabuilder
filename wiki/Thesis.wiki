@@ -46,6 +46,8 @@ Here you can find a short list of what is planned, the progress and an account o
   		
   		
   	* TODO	
+                * Package the application using obfuscation, to diminish the JAR size
+                * Create the basic framework for localizing the application UI
                 * Allow the delete/restore of the default sets (they should be hidden)
                 * Support for UTF8
   		* Show least viewed cards first
