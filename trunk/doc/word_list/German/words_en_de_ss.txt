@@ -1,4 +1,4 @@
-#setName = words_en_de_Ss
+#setName = words_en_de_ss
 #sideOneTitle = ENG
 #sideTwoTitle = GER
 Sabbath = Sabbat

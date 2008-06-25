@@ -1,4 +1,4 @@
-#setName = words_en_fr_Ii
+#setName = words_en_fr_ii
 #sideOneTitle = ENG
 #sideTwoTitle = FRE
 Iberian = ibère, ibérien, ibérique

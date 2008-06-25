@@ -1,4 +1,4 @@
-#setName = words_en_fr_Bb
+#setName = words_en_fr_bb
 #sideOneTitle = ENG
 #sideTwoTitle = FRE
 Babel = Babel, Babylone

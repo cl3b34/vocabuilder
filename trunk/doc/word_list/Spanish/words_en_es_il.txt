@@ -1,4 +1,4 @@
-#setName = words_en_es_Il
+#setName = words_en_es_il
 #sideOneTitle = ENG
 #sideTwoTitle = SPA
 Iberian = ibérico
