@@ -1,0 +1,13 @@
+defaultset=words_en_sv_aa.txt
+defaultset=words_en_sv_bb.txt
+defaultset=words_en_sv_cc.txt
+defaultset=words_en_sv_dd.txt
+defaultset=words_en_sv_ef.txt
+defaultset=words_en_sv_gh.txt
+defaultset=words_en_sv_ik.txt
+defaultset=words_en_sv_lm.txt
+defaultset=words_en_sv_np.txt
+defaultset=words_en_sv_qr.txt
+defaultset=words_en_sv_ss.txt
+defaultset=words_en_sv_tu.txt
+defaultset=words_en_sv_v.txt

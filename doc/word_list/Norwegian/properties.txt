@@ -1,0 +1,6 @@
+defaultset=words_en_no_ab.txt
+defaultset=words_en_no_cd.txt
+defaultset=words_en_no_ei.txt
+defaultset=words_en_no_jo.txt
+defaultset=words_en_no_ps.txt
+defaultset=words_en_no_t.txt
