@@ -1,4 +1,4 @@
-#setName = words_en_pt_aa.txt
+#setName = words_en_pt_aA
 #sideOneTitle = ENG
 #sideTwoTitle = POR
 a = dentro de,em, alguém, algum, uma pessoa, a por, à razão de, um

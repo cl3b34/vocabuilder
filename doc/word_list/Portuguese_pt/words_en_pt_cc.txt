@@ -1,4 +1,4 @@
-#setName = words_en_pt_cc.txt
+#setName = words_en_pt_cc
 #sideOneTitle = ENG
 #sideTwoTitle = POR
 cabaret = boate

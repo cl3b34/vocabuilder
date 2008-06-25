@@ -1,4 +1,4 @@
-#setName = words_fi_en_rt.txt
+#setName = words_fi_en_rt
 #sideOneTitle = FIN
 #sideTwoTitle = ENG
 raaka = crude, raw, rough

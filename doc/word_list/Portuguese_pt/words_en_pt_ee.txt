@@ -1,4 +1,4 @@
-#setName = words_en_pt_ee.txt
+#setName = words_en_pt_ee
 #sideOneTitle = ENG
 #sideTwoTitle = POR
 each = a por, à razão de, cada, cada um, toda a pessoa, todo

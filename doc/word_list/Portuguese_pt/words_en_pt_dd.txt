@@ -1,4 +1,4 @@
-#setName = words_en_pt_dd.txt
+#setName = words_en_pt_dd
 #sideOneTitle = ENG
 #sideTwoTitle = POR
 dabbler = amador, diletanto, não profissional

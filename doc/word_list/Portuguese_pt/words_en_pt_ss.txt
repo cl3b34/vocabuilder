@@ -1,4 +1,4 @@
-#setName = words_en_pt_ss.txt
+#setName = words_en_pt_Ss
 #sideOneTitle = ENG
 #sideTwoTitle = POR
 Sabbath = sábado

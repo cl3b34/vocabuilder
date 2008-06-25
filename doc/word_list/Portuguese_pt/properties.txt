@@ -15,5 +15,4 @@ defaultset=words_en_pt_qr.txt
 defaultset=words_en_pt_ss.txt
 defaultset=words_en_pt_tt.txt
 defaultset=words_en_pt_uv.txt
-defaultset=words_en_pt_wy.txt
-defaultset=words_en_pt_z.txt
+defaultset=words_en_pt_w.txt

@@ -1,4 +1,4 @@
-#setName = words_en_fi_qs.txt
+#setName = words_en_fi_qs
 #sideOneTitle = ENG
 #sideTwoTitle = FIN
 quack = puoskari

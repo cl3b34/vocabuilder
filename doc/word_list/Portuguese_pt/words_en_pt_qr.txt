@@ -1,4 +1,4 @@
-#setName = words_en_pt_qr.txt
+#setName = words_en_pt_qr
 #sideOneTitle = ENG
 #sideTwoTitle = POR
 quack = capadócio, charlatão, curandeiro, impostor
