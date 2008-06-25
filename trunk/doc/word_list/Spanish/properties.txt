@@ -1,0 +1,13 @@
+defaultset=words_en_es_aa.txt
+defaultset=words_en_es_bb.txt
+defaultset=words_en_es_cc.txt
+defaultset=words_en_es_dd.txt
+defaultset=words_en_es_ef.txt
+defaultset=words_en_es_gh.txt
+defaultset=words_en_es_il.txt
+defaultset=words_en_es_mm.txt
+defaultset=words_en_es_np.txt
+defaultset=words_en_es_qr.txt
+defaultset=words_en_es_ss.txt
+defaultset=words_en_es_tu.txt
+defaultset=words_en_es_v.txt
