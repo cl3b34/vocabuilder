@@ -1,0 +1,11 @@
+#setName = testSet
+#sideOneTitle = FIN
+#sideTwoTitle = ENG
+aalto = fluid, liquid, wave
+aamiainen = breakfast
+ukkonen = thunder
+‰‰nest‰‰ = vote
+‰‰ni = voice
+‰‰nt‰‰ = pronounce
+‰‰rimm‰inen = extreme
+ˆljy = oil

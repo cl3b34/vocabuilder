@@ -19,6 +19,7 @@ import br.boirque.vocabuilder.model.RecordStoreFactory;
 import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.model.SetOfCardsDAOV4Impl;
 import br.boirque.vocabuilder.model.SetOfCardsLoader;
+import br.boirque.vocabuilder.util.TestConstants;
 
 import j2meunit.framework.*;
 
@@ -30,23 +31,8 @@ import j2meunit.framework.*;
  * @author cleber.goncalves
  *
  */
-public class SetOfCardsDAOV4ImplTest extends TestCase {
+public class SetOfCardsDAOV4ImplTest extends TestCase implements TestConstants {
 
-	private static final long LOADSETMAXTIME = 2000L;
-	private static final long SAVESETMAXTIME = 5000L;
-	
-	private static final long SAVECARDMAXTIME = 300L;
-	private static final long LOADCARDMAXTIME = SAVECARDMAXTIME;
-	private static final long ADDMAXTIME = SAVECARDMAXTIME;
-	private static final long UPDATEMAXTIME = SAVECARDMAXTIME;
-	private static final long COUNTMAXTIME = SAVECARDMAXTIME;
-	private static final long RESETMAXTIME = SAVECARDMAXTIME;
-	private static final int TOTALOFCARDS = 1827;
-	private static final int METADATARECORD = 2;
-	
-	private static final int FILEFORMATRECORD = 1;
-	private static final String SETTOLOAD = "longlist_fi_en.txt";
-	String setName = "longlist_fi_en";
 	SetOfCards setOfCards;
 	
 	/**
@@ -88,7 +74,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	}
 
 	public void testAddCardV4() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
-		SetOfCardsDAOV4Impl socdao = new SetOfCardsDAOV4Impl(setName);
+		SetOfCardsDAOV4Impl socdao = new SetOfCardsDAOV4Impl(SETNAME);
 		socdao.resetSetState();
 		socdao.addFileFormatVersionNumber(4);
 		socdao.addSetMetadata(setOfCards);
@@ -119,7 +105,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	}
 
 	public void testAddFileFormatVersionNumber() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
-		ISetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(setName);
+		ISetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(SETNAME);
 		socdao.resetSetState();
 		long startTime = System.currentTimeMillis();
 		socdao.addFileFormatVersionNumber(3);
@@ -131,7 +117,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 
 
 	public void testAddSetMetadata() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
-		SetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(setName);
+		SetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(SETNAME);
 		socdao.resetSetState();
 		socdao.addFileFormatVersionNumber(3);
 		SetOfCards soc;
@@ -149,7 +135,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	}
 
 	public void testGetCardCount() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
-		SetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(setName);
+		SetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(SETNAME);
 		socdao.resetSetState();
 		socdao.saveSetOfCards(setOfCards);		
 		long startTime = System.currentTimeMillis();
@@ -164,7 +150,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 
 
 	public void testLoadCard() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
-		SetOfCardsDAOV4Impl socd = new SetOfCardsDAOV4Impl(setName);
+		SetOfCardsDAOV4Impl socd = new SetOfCardsDAOV4Impl(SETNAME);
 		socd.resetSetState();
 		socd.saveSetOfCards(setOfCards);
 		RecordStoreFactory factory = RecordStoreFactory.getFactory();
@@ -186,7 +172,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	
 	
 	public void testLoadFileFormatVersionNumber() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
-		SetOfCardsDAO socd = new SetOfCardsDAOV4Impl(setName);
+		SetOfCardsDAO socd = new SetOfCardsDAOV4Impl(SETNAME);
 		socd.resetSetState();
 		socd.saveSetOfCards(setOfCards);
 		//measure performance
@@ -204,7 +190,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	 * Tests if the set metadata is correctly recovered 
 	 */
 	public void testLoadSetMetadata() throws RecordStoreNotOpenException, InvalidRecordIDException, IOException, RecordStoreException  {
-		SetOfCardsDAO socd = new SetOfCardsDAOV4Impl(setName);
+		SetOfCardsDAO socd = new SetOfCardsDAOV4Impl(SETNAME);
 		socd.resetSetState();	
 		SetOfCards setOrig = socd.saveSetOfCards(setOfCards);
 		//measure performance
@@ -226,7 +212,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	
 
 	public void testLoadSetOfCards() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException{
-		ISetOfCardsDAO socd = new SetOfCardsDAOV4Impl(setName);
+		ISetOfCardsDAO socd = new SetOfCardsDAOV4Impl(SETNAME);
 		socd.resetSetState();
 		socd.saveSetOfCards(setOfCards);
 		//measure the performance
@@ -243,7 +229,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	}
 
 	public void testResetState() throws RecordStoreNotFoundException, RecordStoreException{
-		ISetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(setName);
+		ISetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(SETNAME);
 		long startTime = System.currentTimeMillis();
 		socdao.resetSetState();
 		long endTime = System.currentTimeMillis();
@@ -256,7 +242,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	}
 
 	public void testSaveSetOfCardsV4() throws RecordStoreFullException, RecordStoreNotFoundException, RecordStoreException, IOException {
-		ISetOfCardsDAO socd = new SetOfCardsDAOV4Impl(setName);
+		ISetOfCardsDAO socd = new SetOfCardsDAOV4Impl(SETNAME);
 		socd.resetSetState();
 		long startTime = System.currentTimeMillis();		
 		socd.saveSetOfCards(setOfCards);		
@@ -281,7 +267,7 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	 * @throws RecordStoreNotOpenException 
 	 */
 	public void testUpdateSetMetadata() throws RecordStoreNotOpenException, InvalidRecordIDException, IOException, RecordStoreException {
-		SetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(setName);
+		SetOfCardsDAO socdao = new SetOfCardsDAOV4Impl(SETNAME);
 		socdao.resetSetState();
 		setOfCards = socdao.saveSetOfCards(setOfCards);
 		//convention for the set meta data = 2nd record
@@ -362,25 +348,25 @@ public class SetOfCardsDAOV4ImplTest extends TestCase {
 	
 	private void validateFirstCard(FlashCard card){
 		assertNotNull("Null card", card);
-		assertEquals("value is not equal","aalto", card.getSideOne());
-		assertEquals("value is not equal","FIN", card.getSideOneTitle());
-		assertEquals("value is not equal","fluid, liquid, wave", card.getSideTwo());
-		assertEquals("value is not equal","ENG", card.getSideTwoTitle());
+		assertEquals("value is not equal",FIRSTWORDONFIRSTCARD, card.getSideOne());
+		assertEquals("value is not equal",SIDEONETITLE, card.getSideOneTitle());
+		assertEquals("value is not equal",SECONDWORDONFIRSTCARD, card.getSideTwo());
+		assertEquals("value is not equal",SIDETWOTITLE, card.getSideTwoTitle());
 		assertTrue("should not be done", !card.isDone());
 	}
 	
 	private void validateLastCard(FlashCard card){
 		assertNotNull("Null card", card);
-		assertEquals("value is not equal","öljy", card.getSideOne());
-		assertEquals("value is not equal","FIN", card.getSideOneTitle());
-		assertEquals("value is not equal","oil", card.getSideTwo());
-		assertEquals("value is not equal","ENG", card.getSideTwoTitle());
+		assertEquals("value is not equal",FIRSTWORDONLASTCARD, card.getSideOne());
+		assertEquals("value is not equal",SIDEONETITLE, card.getSideOneTitle());
+		assertEquals("value is not equal",SECONDWORDONLASTCARD, card.getSideTwo());
+		assertEquals("value is not equal",SIDETWOTITLE, card.getSideTwoTitle());
 		assertTrue("should not be done", !card.isDone());
 	}
 	
 	private void validateSet(SetOfCards set) {
 		assertNotNull("Null card metadata", set);
-		assertEquals("wrong title","longlist_fi_en", set.getSetName());
+		assertEquals("wrong title",SETNAME, set.getSetName());
 		assertTrue("set should not be done", !set.isDone());		
 		assertEquals("value is not equal",10000L, set.getTotalStudiedTimeInMiliseconds());
 		assertEquals("value is not equal",20, set.getTotalNumberOfDisplayedCards());
