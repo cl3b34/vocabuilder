@@ -6,14 +6,11 @@ import java.util.Vector;
 import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.model.SetOfCardsLoader;
+import br.boirque.vocabuilder.util.TestConstants;
 import br.boirque.vocabuilder.util.VocaUtil;
 import j2meunit.framework.*;
 
-public class SetOfCardsLoaderTest extends TestCase {
-
-	private static final long MAXLOADINGTIME = 2000L;
-	private static final int TOTALOFCARDS = 1827;
-	private static final String SETTOLOAD = "longlist_fi_en.txt";
+public class SetOfCardsLoaderTest extends TestCase{
 	
 	/**
 	 * Default constructor
@@ -42,65 +39,65 @@ public class SetOfCardsLoaderTest extends TestCase {
 	public void testLoadSet() throws IOException{
 		long startTime = System.currentTimeMillis();
 		SetOfCardsLoader socl = new SetOfCardsLoader();
-		SetOfCards soc = socl.loadSet(SETTOLOAD);
+		SetOfCards soc = socl.loadSet(TestConstants.SETTOLOAD);
 		long endTime = System.currentTimeMillis();
 		long loadingTime = endTime -startTime;
-		assertEquals("wrong card amount\n",TOTALOFCARDS, soc.getFlashCards().size());
+		assertEquals("wrong card amount\n",TestConstants.TOTALOFCARDS, soc.getFlashCards().size());
 		assertNotNull("Null Set of cards", soc);
-		assertTrue("Text load:" + VocaUtil.milisecondsToSeconds(loadingTime), loadingTime < MAXLOADINGTIME);
+		assertTrue("Text load:" + VocaUtil.milisecondsToSeconds(loadingTime), loadingTime < TestConstants.MAXLOADINGTIME);
 		System.out.println("TxtSetLoad: " + VocaUtil.milisecondsToSeconds(loadingTime));
 	}
 	
 	
 	public void testTextFileLoader() throws IOException{
 		SetOfCardsLoader socl = new SetOfCardsLoader();
-		SetOfCards soc = socl.loadSet(SETTOLOAD);
+		SetOfCards soc = socl.loadSet(TestConstants.SETTOLOAD);
 		assertNotNull(soc);
 		Vector cards = soc.getFlashCards();
 		System.out.println("Number of Cards: " + cards.size());
 		assertNotNull(cards);
 		// check the set name
 		String setName = soc.getSetName();
-		assertEquals("longlist_fi_en", setName);
+		assertEquals(TestConstants.SETNAME, setName);
 		
 		//check the first card
 		FlashCard firstCard = (FlashCard) cards.elementAt(0);
 		assertNotNull(firstCard);
 		String firstWordFirstCard = firstCard.getSideOne();
-		assertEquals("aalto", firstWordFirstCard);
+		assertEquals(TestConstants.FIRSTWORDONFIRSTCARD, firstWordFirstCard);
 		String secondWordFirstCard = firstCard.getSideTwo();
-		assertEquals("fluid, liquid, wave", secondWordFirstCard);
+		assertEquals(TestConstants.SECONDWORDONFIRSTCARD, secondWordFirstCard);
 		assertTrue(false == firstCard.isDone());
 		String sideOneTitleFirstCard = firstCard.getSideOneTitle();
-		assertEquals("FIN", sideOneTitleFirstCard);
+		assertEquals(TestConstants.SIDEONETITLE, sideOneTitleFirstCard);
 		String sideTwoTitleFirstCard = firstCard.getSideTwoTitle();
-		assertEquals("ENG", sideTwoTitleFirstCard);
+		assertEquals(TestConstants.SIDETWOTITLE, sideTwoTitleFirstCard);
 		
 		//check the second card
 		FlashCard secondCard = (FlashCard) cards.elementAt(1);
 		assertNotNull(secondCard);
 		String firstWordsecondCard = secondCard.getSideOne();
-		assertEquals("aamiainen", firstWordsecondCard);
+		assertEquals(TestConstants.FIRSTWORDONSECONDCARD, firstWordsecondCard);
 		String secondWordsecondCard = secondCard.getSideTwo();
-		assertEquals("breakfast", secondWordsecondCard);
+		assertEquals(TestConstants.SECONDWORDONSECONDCARD, secondWordsecondCard);
 		assertTrue(false == secondCard.isDone());
 		String sideOneTitleSecondCard = secondCard.getSideOneTitle();
-		assertEquals("FIN", sideOneTitleSecondCard);
+		assertEquals(TestConstants.SIDEONETITLE, sideOneTitleSecondCard);
 		String sideTwoTitleSecondCard = secondCard.getSideTwoTitle();
-		assertEquals("ENG", sideTwoTitleSecondCard);
+		assertEquals(TestConstants.SIDETWOTITLE, sideTwoTitleSecondCard);
 		
 		// check the last card
 		FlashCard lastCard = (FlashCard) cards.lastElement();
 		assertNotNull(lastCard);
 		String firstWordLastCard = lastCard.getSideOne();
-		assertEquals("öljy", firstWordLastCard);
+		assertEquals(TestConstants.FIRSTWORDONLASTCARD, firstWordLastCard);
 		String secondWordLastCard = lastCard.getSideTwo();
-		assertEquals("oil", secondWordLastCard);
+		assertEquals(TestConstants.SECONDWORDONLASTCARD, secondWordLastCard);
 		assertTrue(false == lastCard.isDone());
 		String sideOneTitleLastCard = lastCard.getSideOneTitle();
-		assertEquals("FIN", sideOneTitleLastCard);
+		assertEquals(TestConstants.SIDEONETITLE, sideOneTitleLastCard);
 		String sideTwoTitleLastCard = lastCard.getSideTwoTitle();
-		assertEquals("ENG", sideTwoTitleLastCard);
+		assertEquals(TestConstants.SIDETWOTITLE, sideTwoTitleLastCard);
 		
 		assertTrue(false == soc.isDone());		
 	}

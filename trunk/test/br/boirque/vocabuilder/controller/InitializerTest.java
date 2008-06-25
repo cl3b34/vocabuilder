@@ -16,7 +16,9 @@ import br.boirque.vocabuilder.model.SetOfCardsLoader;
 
 public class InitializerTest extends TestCase {
 
-	private static final String SETTOLOAD = "longlist_fi_en.txt";
+	private static final int DEFAULTSETCOUNT = 19;
+	private static final String SETNAME = "testSet";
+	private static final String SETTOLOAD = "testSet.txt";
 
 	/**
 	 * Required by J2MEUnit
@@ -40,7 +42,7 @@ public class InitializerTest extends TestCase {
 
 	protected void tearDown() throws Exception {
 		Initializer init = new Initializer();
-		init.resetState("longlist_fi_en");
+		init.resetState(SETNAME);
 	}
 
 	public void testInitializeApp() {
@@ -88,7 +90,7 @@ public class InitializerTest extends TestCase {
 		Initializer init = new Initializer();
 		String[] setNames = init.loadDefaultSetNames();
 		assertNotNull(setNames);
-		assertEquals(4, setNames.length);
+		assertEquals(DEFAULTSETCOUNT, setNames.length);
 	}
 	
 	public void testLoadOnProgressSetNames() {
@@ -98,30 +100,30 @@ public class InitializerTest extends TestCase {
 		String[] setNames = init.loadOnProgressSetNames();
 		assertNotNull(setNames);
 		assertEquals(1, setNames.length);
-		assertTrue("longlist_fi_en".equals(setNames[0]));		
+		assertTrue(SETNAME.equals(setNames[0]));		
 	}
 	
 	public void testLoadUniqueSetNames() throws IOException {
 		Initializer init = new Initializer();
-		init.deleteSetOfCardsFromRMS("longlist_fi_en");
+		init.deleteSetOfCardsFromRMS(SETNAME);
 		String[] uniqueSets = init.loadUniqueSetNames();
 		//1st test: No sets in progress.
 		assertNotNull(uniqueSets);
-		assertEquals("wrong unique count", 4, uniqueSets.length);
+		assertEquals("wrong unique count", DEFAULTSETCOUNT, uniqueSets.length);
 		//2nd test: progressively save then to RMS
 		SetOfCardsLoader socl = new SetOfCardsLoader();
 		for(int i=0; i<uniqueSets.length; i++) {
 			SetOfCards soc = socl.loadSet(uniqueSets[i]);
 			init.saveState(soc);
-			//number of unique sets remain 4
+			//number of unique sets remain intact (same as default sets)
 			String[] newUniqueSets = init.loadUniqueSetNames();
 			assertNotNull(newUniqueSets);
-			assertEquals("wrong NewUnique count", 4, newUniqueSets.length);
-			//number of default sets remain 4
+			assertEquals("wrong NewUnique count", DEFAULTSETCOUNT, newUniqueSets.length);
+			//number of default sets remain intact
 			String[] newDefaultSets = init.loadDefaultSetNames();
 			assertNotNull(newDefaultSets);
-			assertEquals("wrong default count",4, newDefaultSets.length);
-			//number of RMS sets increases from 1 to 4
+			assertEquals("wrong default count",DEFAULTSETCOUNT, newDefaultSets.length);
+			//number of RMS sets increases from 1 to the amount of default sets
 			String[] newInProgress = init.loadOnProgressSetNames();
 			assertNotNull(newInProgress);
 			assertEquals("wrong OnProgress count",i+1, newInProgress.length);			
