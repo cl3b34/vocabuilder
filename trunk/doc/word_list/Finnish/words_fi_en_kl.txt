@@ -1,4 +1,4 @@
-#setName = words_fi_en_kl.txt
+#setName = words_fi_en_kl
 #sideOneTitle = FIN
 #sideTwoTitle = ENG
 kaali = cabbage

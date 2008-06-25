@@ -1,4 +1,4 @@
-#setName = words_en_fi_ab.txt
+#setName = words_en_fi_ab
 #sideOneTitle = ENG
 #sideTwoTitle = FIN
 a = -ssa, joku, kohti

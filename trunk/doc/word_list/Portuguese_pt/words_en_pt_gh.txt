@@ -1,4 +1,4 @@
-#setName = words_en_pt_gh.txt
+#setName = words_en_pt_gh
 #sideOneTitle = ENG
 #sideTwoTitle = POR
 gaberdine = gabardina

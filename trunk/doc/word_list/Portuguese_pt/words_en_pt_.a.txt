@@ -1,4 +1,4 @@
-#setName = words_en_pt_.a.txt
+#setName = words_en_pt_.a
 #sideOneTitle = ENG
 #sideTwoTitle = POR
 .. ago = há ...

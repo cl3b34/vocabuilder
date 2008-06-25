@@ -1,4 +1,4 @@
-#setName = words_en_pt_ii.txt
+#setName = words_en_pt_ii
 #sideOneTitle = ENG
 #sideTwoTitle = POR
 ice = sorvete, gelo

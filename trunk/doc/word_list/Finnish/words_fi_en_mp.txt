@@ -1,4 +1,4 @@
-#setName = words_fi_en_mp.txt
+#setName = words_fi_en_mp
 #sideOneTitle = FIN
 #sideTwoTitle = ENG
 maa = country, ground, grounds, terrain, earth, land, soil

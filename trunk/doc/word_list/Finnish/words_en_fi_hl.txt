@@ -1,4 +1,4 @@
-#setName = words_en_fi_hl.txt
+#setName = words_en_fi_hl
 #sideOneTitle = ENG
 #sideTwoTitle = FIN
 habit = tapa

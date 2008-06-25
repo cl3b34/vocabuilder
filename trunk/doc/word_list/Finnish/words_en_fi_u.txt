@@ -1,4 +1,4 @@
-#setName = words_en_fi_u.txt
+#setName = words_en_fi_u
 #sideOneTitle = ENG
 #sideTwoTitle = FIN
 ugly = huono
@@ -205,3 +205,4 @@ Yugoslavian = jugoslavialainen, jugoslaavi
 Yule = joulu
 zeal = into
 zero = nolla
+zone = vyöhyke

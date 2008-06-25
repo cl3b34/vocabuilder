@@ -1,4 +1,4 @@
-#setName = words_fi_en_u.txt
+#setName = words_fi_en_u
 #sideOneTitle = FIN
 #sideTwoTitle = ENG
 uhata = menace, threaten
@@ -207,3 +207,4 @@ yö = night
 ääni = voice
 ääntää = pronounce
 äärimmäinen = extreme
+öljy = oil
