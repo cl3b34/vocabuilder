@@ -1,4 +1,4 @@
-#setName = words_en_da_Ss
+#setName = words_en_da_ss
 #sideOneTitle = ENG
 #sideTwoTitle = DAN
 Sabbath = lørdag

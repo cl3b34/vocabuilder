@@ -1,4 +1,4 @@
-#setName = words_en_pt_jL
+#setName = words_en_pt_jl
 #sideOneTitle = ENG
 #sideTwoTitle = POR
 jack = galopim, gaiato, macaco

@@ -1,4 +1,4 @@
-#setName = words_en_pt_mM
+#setName = words_en_pt_mm
 #sideOneTitle = ENG
 #sideTwoTitle = POR
 macaw = arara

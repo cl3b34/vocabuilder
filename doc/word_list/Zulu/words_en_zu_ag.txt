@@ -1,4 +1,4 @@
-#setName = words_en_zu_aG
+#setName = words_en_zu_ag
 #sideOneTitle = ENG
 #sideTwoTitle = ZUL
 abatement = isephulelo

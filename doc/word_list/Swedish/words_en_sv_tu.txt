@@ -1,4 +1,4 @@
-#setName = words_en_sv_tU
+#setName = words_en_sv_tu
 #sideOneTitle = ENG
 #sideTwoTitle = SWE
 table = tabell, bord

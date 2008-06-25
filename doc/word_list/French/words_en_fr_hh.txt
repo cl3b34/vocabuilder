@@ -1,4 +1,4 @@
-#setName = words_en_fr_hH
+#setName = words_en_fr_hh
 #sideOneTitle = ENG
 #sideTwoTitle = FRE
 habit = coutume, habitude
