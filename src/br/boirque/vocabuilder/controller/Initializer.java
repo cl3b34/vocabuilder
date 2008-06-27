@@ -1,6 +1,7 @@
 package br.boirque.vocabuilder.controller;
 
 import java.io.IOException;
+import java.util.Random;
 import java.util.Vector;
 
 import javax.microedition.rms.InvalidRecordIDException;
@@ -9,6 +10,7 @@ import javax.microedition.rms.RecordStoreFullException;
 import javax.microedition.rms.RecordStoreNotFoundException;
 import javax.microedition.rms.RecordStoreNotOpenException;
 
+import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.PropertiesLoader;
 import br.boirque.vocabuilder.model.Property;
 import br.boirque.vocabuilder.model.SetOfCards;
@@ -26,6 +28,17 @@ import br.boirque.vocabuilder.model.SetOfCardsLoader;
 public class Initializer {
 
 	private static final String DEFAULTSET = "defaultset";
+	
+	// Random list management
+	private static Vector cardsIndexes;
+	private static Vector viewedIndexes;
+	
+	//Sequential list
+	private int lastViewedCardIndex = -1;
+
+	
+	// Shall we use a sequential or random list?
+	boolean useRandom = true;
 
 	public SetOfCards initializeApp(String setToLoad) {
 
@@ -44,6 +57,72 @@ public class Initializer {
 			}
 		}
 		return soc;
+	}
+	
+	/**
+	 * Returns the index of the next card to be displayed
+	 * @param cards
+	 * @return
+	 */
+	public int getNextCardIndex(Vector cards) {
+		if(useRandom) {
+			if(cardsIndexes == null|| viewedIndexes == null) {
+				initIndexes(cards);
+			}
+			lastViewedCardIndex = getNextRandomCardIndex(cardsIndexes);
+		}else {
+			// sequential list
+			lastViewedCardIndex = lastViewedCardIndex +1;
+		}
+		return lastViewedCardIndex;
+	}
+	
+	public void initIndexes(Vector cards) {
+
+		lastViewedCardIndex = -1;
+		viewedIndexes = new Vector();
+		cardsIndexes = initializeRandomCardIndex(cards);
+	}
+	
+	public int getDoneAmount(Vector cards) {
+		int doneAmount = 0;
+		FlashCard c ;
+		for (int i = 0; i < cards.size(); i++) {
+			c = (FlashCard) cards.elementAt(i);
+			if (c.isDone()) {
+				doneAmount++;
+			}
+		}
+		return doneAmount;
+	}
+
+	/*
+	 * Utility class to initialize the vector of indexes with the index of each
+	 * element in 'cards' vector
+	 */
+	public Vector initializeRandomCardIndex(Vector toBeIndexed) {
+		viewedIndexes = new Vector();
+		Vector indexes = new Vector();
+		for (int i = 0; i < toBeIndexed.size(); i++) {
+			Integer index = new Integer(i);
+			indexes.addElement(index);
+		}
+		return indexes;
+	}
+	
+	/*
+	 * Returns a random integer corresponding to the index of the next card to
+	 * be displayed
+	 */
+	private int getNextRandomCardIndex(Vector listOfIndexes) {
+		Random r = new Random();
+		int indexOfTheIndex = r.nextInt(listOfIndexes.size());
+		Integer index = (Integer) listOfIndexes.elementAt(indexOfTheIndex);
+		// remove this index from the list of indexes to be viewed
+		listOfIndexes.removeElementAt(indexOfTheIndex);
+		// add it to the list of already viewed indexes
+		viewedIndexes.addElement(index);
+		return index.intValue();
 	}
 
 	/**
