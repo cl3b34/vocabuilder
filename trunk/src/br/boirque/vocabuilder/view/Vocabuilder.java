@@ -55,15 +55,15 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	// the app
 	private final long maxIdleTime = 30000L; // thirty Seconds
 
-	// Sequential list index management
+
+
+
+
+	//TODO Remove this. should be only in initializer.java
+	boolean useRandom = true;
 	private int amountToReview = -1;
 	private int totalOfCards = -1;
 	private int totalReviewed = -1;
-	private int lastViewedCardIndex = -1;
-
-	// Random list management
-	private Vector cardsIndexes;
-	private Vector viewedIndexes;
 
 	// Which side is being displayed
 	boolean sideOne;
@@ -71,8 +71,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	// Is the app running?
 	boolean isRunning = false;
 
-	// Shall we use a sequential or random list?
-	boolean useRandom = true;
+
 
 	// Utility class
 	VocaUtil vocaUtil = new VocaUtil();
@@ -172,86 +171,48 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		mainForm.setTitle(soc.getSetName());
 		cards = soc.getFlashCards();
 		soc.setLastTimeViewed(System.currentTimeMillis());
-		amountToReview = cards.size() - getDoneAmount();
+		amountToReview = cards.size() - initializer.getDoneAmount(cards);
 		totalOfCards = cards.size();
 		totalReviewed = 0;
 		lastActivityTime = System.currentTimeMillis();
 		// totalDoneSession = 0;
-		if (useRandom) {
-			cardsIndexes = initializeRandomCardIndex(cards);
-			viewedIndexes = new Vector();
-		}
-		displayNextNotDoneCard();
+		initializer.initIndexes(cards);
+
+		displayNextCard();
 		Display.getDisplay(this).setCurrent(mainForm);
 
-		isRunning = true;
+//		isRunning = true;
 
 	}
 
-	/*
-	 * Utility class to initialize the vector of indexes with the index of each
-	 * element in 'cards' vector
-	 */
-	private Vector initializeRandomCardIndex(Vector toBeIndexed) {
-		Vector indexes = new Vector();
-		for (int i = 0; i < toBeIndexed.size(); i++) {
-			Integer index = new Integer(i);
-			indexes.addElement(index);
-		}
-		return indexes;
-	}
+	
 
-	/*
-	 * Returns a random integer corresponding to the index of the next card to
-	 * be displayed
-	 */
-	private int getNextRandomCardIndex(Vector listOfIndexes) {
-		Random r = new Random();
-		int indexOfTheIndex = r.nextInt(listOfIndexes.size());
-		Integer index = (Integer) listOfIndexes.elementAt(indexOfTheIndex);
-		// remove this index from the list of indexes to be viewed
-		listOfIndexes.removeElementAt(indexOfTheIndex);
-		// add it to the list of already viewed indexes
-		viewedIndexes.addElement(index);
-		return index.intValue();
-	}
+	
 
 	// TODO - Move all this 'use random' or
 	// and sequential list stuff to a method
 	// that simply returns the next index to be displayed
-	private void displayNextNotDoneCard() {
+	private void displayNextCard() {
+		Initializer init = new Initializer();
 		if (totalReviewed < amountToReview) {
 			// Look for a card that is not done yet and display it
-			int index;
-			if (useRandom) {
-				index = getNextRandomCardIndex(cardsIndexes);
-			} else {
-				// sequential list
-				index = lastViewedCardIndex + 1;
-			}
+			int index = init.getNextCardIndex(cards);
 			c = (FlashCard) cards.elementAt(index);
 			boolean notFound = true;
 			while (notFound) {
 				if (c.isDone()) {
-					// get the next card
-					if (useRandom) {
-						index = getNextRandomCardIndex(cardsIndexes);
-					} else {
-						index++;
-					}
+						index = init.getNextCardIndex(cards);
 					c = (FlashCard) cards.elementAt(index);
 				} else {
 					// display the card and leave the loop
 					displayCardSide(1);
 					notFound = false;
-					// update the index of the last viewed card
-					lastViewedCardIndex = index;
 				}
 			}
 		} else {
 			// Reached the end of the set.
 			// Mark the set as done if all cards are marked done
-			if (getDoneAmount() == totalOfCards) {
+			if (init.getDoneAmount(cards) == totalOfCards) {
 				soc.setDone(true);
 				soc.setLastTimeMarkedDone(System.currentTimeMillis());
 				soc.setMarkedDoneCounter(soc.getMarkedDoneCounter() + 1);
@@ -330,23 +291,14 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 	}
 
-	private int getDoneAmount() {
-		int doneAmount = 0;
-		for (int i = 0; i < cards.size(); i++) {
-			c = (FlashCard) cards.elementAt(i);
-			if (c.isDone()) {
-				doneAmount++;
-			}
-		}
-		return doneAmount;
-	}
 
 	/*
 	 * Display the statistics. If showCommands is set to true, also show
 	 * commands specific for this screen
 	 */
 	private void displayStatistics(boolean showCommands) {
-		int done = getDoneAmount();
+		Initializer init = new Initializer();
+		int done = init.getDoneAmount(cards);
 		int incorrectAmount = totalOfCards - done;
 		if (showCommands) {
 			// show the commands for statistics
@@ -388,22 +340,6 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				+ "Total Study time: "
 				+ vocaUtil.getStudyTimeAsString(soc
 						.getTotalStudiedTimeInMiliseconds()));
-		// alertStats.setString("STATISTICS" + "\n\n"
-		// + "Total of cards: " + totalOfCards + "\n"
-		// + "Correct: " + done + "\n"
-		// + "Incorrect: " + incorrectAmount + "\n"
-		// + "Viewed this session: " + totalReviewed + "\n"
-		// + "Correct this session: " + totalDoneSession + "\n"
-		// + "Total viewed: " + soc.getTotalNumberOfDisplayedCards() + "\n"
-		// + "Session duration: " +
-		// vocaUtil.getStudyTimeAsString(sessionStudyTime) + "\n"
-		// + "Total Study time: " +
-		// vocaUtil.getStudyTimeAsString(soc.getTotalStudiedTimeInMiliseconds())
-		// );
-		//		
-		// alertStats.setTimeout(30000);
-		// Display display = Display.getDisplay(this);
-		// display.setCurrent(alertStats);
 	}
 
 	public void commandAction(Command cmd, Displayable disp) {
@@ -429,18 +365,15 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 		if (cmd == reviewCommand) {
 			// show again the cards in the set not marked as 'done'
-			amountToReview = totalOfCards - getDoneAmount();
+			Initializer init = new Initializer();
+			amountToReview = totalOfCards - init.getDoneAmount(cards);
 			totalReviewed = 0;
-			lastViewedCardIndex = -1;
 			// TODO: this is not very efficient
 			// all the cards are going to be tested
 			// for 'done' mark. should return only
 			// the marked as wrong...
-			if (useRandom) {
-				cardsIndexes = initializeRandomCardIndex(cards);
-				viewedIndexes = new Vector();
-			}
-			displayNextNotDoneCard();
+			init.initIndexes(cards);
+			displayNextCard();
 		}
 
 		if (cmd == nextSetCommand) {
@@ -462,12 +395,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			amountToReview = totalOfCards;
 			totalReviewed = 0;
 			totalDoneSession = 0;
-			lastViewedCardIndex = -1;
-			if (useRandom) {
-				cardsIndexes = initializeRandomCardIndex(cards);
-				viewedIndexes = new Vector();
-			}
-			displayNextNotDoneCard();
+			
+			Initializer init = new Initializer();
+			init.initIndexes(cards);
+			displayNextCard();
 		}
 
 		if (cmd == turnCommand) {
@@ -493,13 +424,13 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			c.setLastTimeMarkedDone(System.currentTimeMillis());
 			totalReviewed++;
 			totalDoneSession++;
-			displayNextNotDoneCard();
+			displayNextCard();
 		}
 
 		if (cmd == wrongCommand) {
 			// Just show next card, side one
 			totalReviewed++;
-			displayNextNotDoneCard();
+			displayNextCard();
 		}
 
 		if (cmd == loadSetCommand) {
