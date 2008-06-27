@@ -42,7 +42,12 @@ Here you can find a short list of what is planned, the progress and an account o
   		* User preferences VO
         * week 25: 7h
   		* Divide the long lists in smaller ones (made using a groovy script)
-
+	
+	* week 25: 16h
+        * Fix the file splitter groovy script
+        * Fix the test cases to use a special test file
+        * Remove unused Unit Test library. The sources are used instead
+        * Add obfuscation using ProGuard in order to produce smaller jar files
   		
   		
   	* TODO	
