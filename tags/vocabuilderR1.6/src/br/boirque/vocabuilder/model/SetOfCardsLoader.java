@@ -83,7 +83,7 @@ public class SetOfCardsLoader {
 					isMetadata = true;
 					continue;
 				}
-				if (c == LINEFEED || c == CHARIAGERETURN && isMetadata) {
+				if ((c == LINEFEED || c == CHARIAGERETURN) && isMetadata) {
 					if (sb.length() > 0) {
 						// got the value of the metadata
 						if(metadata.equals("setName")) {
