@@ -1,3 +1,17 @@
+/**
+ * My very first Groovy script.
+ * It is meant to divide very long lists of words
+ * into smaller ones (around 400 words each).
+ * The amount of cards varies in each set in order
+ * to have all words starting with a particular letter
+ * in the same set.
+ * 
+ * As you can see bellow, this is not an example
+ * of good programming practices or 'groovyness' 
+ * but it got the job done. :)
+ * 
+ */
+
 class FileSplitter{
 	
 	static void main(args){
@@ -58,12 +72,12 @@ class FileSplitter{
 										//	println "trocou " +limitChar + " " + currentChar
 										println "ending list ${filenameBase} at index ${i}"
 										String setName = filenameBase+ "_"+ firstCharOfList + limitChar
+										setName = setName.toLowerCase()
 										
 										title = "#setName = " + setName
 										meta = title + "\n" + sideOne + "\n" + sideTwo + "\n"
 									
-										String filename =  setName + ".txt"
-										filename = filename.toLowerCase()
+										String filename =  setName + ".txt"										
 										String savingPath = file.getParent() + File.separator + filename
 										String contents = meta + splittedList
 										
