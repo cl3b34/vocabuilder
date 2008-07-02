@@ -1,4 +1,4 @@
-#summary Users reported Vocabuilder as working on this handsets
+#summary Users reported Vocabuilder as working on these handsets
 
 = Supported handsets =
 Vocabuilder should work in any modern phone (less than 2 years old). It was tested and found to work in the following phone models:
@@ -13,4 +13,3 @@ Vocabuilder should work in any modern phone (less than 2 years old). It was test
  * 6630
  * 9300i
  * N81 8GB
-
