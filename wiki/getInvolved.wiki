@@ -14,7 +14,7 @@ When you download Vocabuilder you get an Eclipse project.
 
 http://www.eclipse.org
 
-You will also need to install Sun’s Wireless tool Kit (WTK): 
+You will also need to install Sun's Wireless tool Kit (WTK): 
 
 http://java.sun.com/javame/downloads/index.jsp 
 
@@ -23,6 +23,5 @@ And I recommend you also install EclipseME to make the integration between WTK a
 http://sourceforge.net/project/showfiles.php?group_id=86829
 
 
-Unit testing is done using J2MEunit (http://j2meunit.sourceforge.net/), but you shouldn’t need to install anything to get that. 
+Unit testing is done using J2MEunit (http://j2meunit.sourceforge.net/), but you shouldn't need to install anything to get that. 
 The libraries are already included in the project.
-
