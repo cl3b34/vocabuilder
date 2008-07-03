@@ -25,7 +25,8 @@ public interface TestConstants {
 	public static final int METADATARECORD = 2;
 	public static final int FILEFORMATRECORD = 1;
 
-	
+	//V4 has only 3 records
+	public static final int RECORDCOUNT = 3;
 	
 	
 	
