@@ -29,16 +29,32 @@ public class Initializer {
 
 	private static final String DEFAULTSET = "defaultset";
 	
+	// Beans
+	private SetOfCards soc;
+	private Vector cards;
+	
+	// Statistics
+	private int totalDoneSession = 0;
+	private long sessionStudyTime = 0;
+	private long lastActivityTime = 0; // Last time the user interacted with
+	
+	// the app
+	private final long maxIdleTime = 30000L; // thirty Seconds. After that activity time is not computed
+
+	
 	// Random list management
 	private static Vector cardsIndexes;
 	private static Vector viewedIndexes;
 	
+	// Shall we use a sequential or random list?
+	boolean useRandom = true;
+	private int amountToReview = -1;
+	private int totalOfCards = -1;
+	private int totalReviewed = -1;
+	
 	//Sequential list
 	private int lastViewedCardIndex = -1;
 
-	
-	// Shall we use a sequential or random list?
-	boolean useRandom = true;
 
 	public SetOfCards initializeApp(String setToLoad) {
 
@@ -344,19 +360,9 @@ public class Initializer {
 		return allUniqueSetNames;
 	}
 
-	private Vector addEndingBack(Vector defaultSetsClean) {
-		Vector toReturn = new Vector();
-		for (int i = 0; i < defaultSetsClean.size(); i++) {
-			String setName = (String) defaultSetsClean.elementAt(i);
-			setName = setName + ".txt";
-			toReturn.addElement(setName);
-		}
-		return toReturn;
-	}
-
 	/**
 	 * check if there are repeated set names. Strip '.txt.' from the defaultSet
-	 * names and compare with onProgressSets. Sets on progress always have the
+	 * names and compare with onProgressSets. Sets in progress always have the
 	 * precedence and stay in the returned Vector
 	 * 
 	 * @param defaultSets -
@@ -391,5 +397,15 @@ public class Initializer {
 			}
 		}
 		return stripped;
+	}
+
+	private Vector addEndingBack(Vector defaultSetsClean) {
+		Vector toReturn = new Vector();
+		for (int i = 0; i < defaultSetsClean.size(); i++) {
+			String setName = (String) defaultSetsClean.elementAt(i);
+			setName = setName + ".txt";
+			toReturn.addElement(setName);
+		}
+		return toReturn;
 	}
 }
