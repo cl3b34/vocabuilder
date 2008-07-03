@@ -18,9 +18,24 @@ public class PropertiesLoader {
 
 	private static final String PROPERTIESFILENAME = "properties.txt";
 
+	/**
+	 * Load the properties from the default file named "properties.txt" 
+	 * @return a Vector with the properties found 
+	 * @throws IOException
+	 */
 	public Vector loadPropertie() throws IOException {
+		return loadPropertie(PROPERTIESFILENAME);
+	}
+	
+	/**
+	 * Load the properties from the file given as argument
+	 * @param propertiesFileName the file from where to load the properties
+	 * @return a Vector with the properties found 
+	 * @throws IOException
+	 */
+	public Vector loadPropertie(String propertiesFileName) throws IOException {
 		VocaUtil util = new VocaUtil();
-		String propertiesString = new String(util.readFile(PROPERTIESFILENAME));
+		String propertiesString = new String(util.readFile(propertiesFileName));
 		return extractProperties(propertiesString);
 	}
 
