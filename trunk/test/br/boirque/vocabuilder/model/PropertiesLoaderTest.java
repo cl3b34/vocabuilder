@@ -12,6 +12,7 @@ import br.boirque.vocabuilder.util.VocaUtil;
 
 public class PropertiesLoaderTest extends TestCase {
 
+	private static final String TEST_PROPERTIES_FILENAME = "testProperties.txt";
 	/**
 	 * Max loading time 0.5 second
 	 */
@@ -42,7 +43,7 @@ public class PropertiesLoaderTest extends TestCase {
 	public void testLoadPropertie() throws IOException {
 		PropertiesLoader ploader = new PropertiesLoader();
 		long startTime = System.currentTimeMillis();
-		Vector props = ploader.loadPropertie();
+		Vector props = ploader.loadPropertie(TEST_PROPERTIES_FILENAME);
 		long endTime = System.currentTimeMillis();
 		long loadingTime = endTime - startTime;
 		assertTrue("Props load:" + VocaUtil.milisecondsToSeconds(loadingTime),
