@@ -61,7 +61,7 @@ public class Initializer {
 		SetOfCards soc = null;
 		if (setToLoad.indexOf(".txt") == -1) {
 			// we are loading a set from RMS
-			soc = this.loadState(setToLoad);
+			soc = this.loadSet(setToLoad);
 		} else {
 			// Load the set from a TXT resource
 			SetOfCardsLoader socl = new SetOfCardsLoader();
@@ -75,6 +75,18 @@ public class Initializer {
 		return soc;
 	}
 	
+	public int getDoneAmount(Vector cards) {
+		int doneAmount = 0;
+		FlashCard c ;
+		for (int i = 0; i < cards.size(); i++) {
+			c = (FlashCard) cards.elementAt(i);
+			if (c.isDone()) {
+				doneAmount++;
+			}
+		}
+		return doneAmount;
+	}
+
 	/**
 	 * Returns the index of the next card to be displayed
 	 * @param cards
@@ -93,6 +105,32 @@ public class Initializer {
 		return lastViewedCardIndex;
 	}
 	
+	/**
+	 * return the record count or -1 if an error occurs
+	 */
+	public int getCardCount(String setName) {
+		try {
+			ISetOfCardsDAO socDao = new SetOfCardsDAOV4Impl(setName);
+			return socDao.getCardCount();
+		} catch (RecordStoreFullException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (RecordStoreNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (RecordStoreNotOpenException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (RecordStoreException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return -1;
+	}
+
 	public void initIndexes(Vector cards) {
 
 		lastViewedCardIndex = -1;
@@ -100,18 +138,6 @@ public class Initializer {
 		cardsIndexes = initializeRandomCardIndex(cards);
 	}
 	
-	public int getDoneAmount(Vector cards) {
-		int doneAmount = 0;
-		FlashCard c ;
-		for (int i = 0; i < cards.size(); i++) {
-			c = (FlashCard) cards.elementAt(i);
-			if (c.isDone()) {
-				doneAmount++;
-			}
-		}
-		return doneAmount;
-	}
-
 	/*
 	 * Utility class to initialize the vector of indexes with the index of each
 	 * element in 'cards' vector
@@ -126,21 +152,6 @@ public class Initializer {
 		return indexes;
 	}
 	
-	/*
-	 * Returns a random integer corresponding to the index of the next card to
-	 * be displayed
-	 */
-	private int getNextRandomCardIndex(Vector listOfIndexes) {
-		Random r = new Random();
-		int indexOfTheIndex = r.nextInt(listOfIndexes.size());
-		Integer index = (Integer) listOfIndexes.elementAt(indexOfTheIndex);
-		// remove this index from the list of indexes to be viewed
-		listOfIndexes.removeElementAt(indexOfTheIndex);
-		// add it to the list of already viewed indexes
-		viewedIndexes.addElement(index);
-		return index.intValue();
-	}
-
 	/**
 	 * Save the current state of the set being studied to persistent storage
 	 * 
@@ -175,42 +186,6 @@ public class Initializer {
 			e.printStackTrace();
 		}
 		return savedSuccesfully;
-	}
-
-	/**
-	 * Load the state of the set being currently studied from persistent
-	 * storage.
-	 * 
-	 * @return the currently studied set or null if a error occurred
-	 * @throws RecordStoreException
-	 * @throws RecordStoreNotFoundException
-	 * @throws RecordStoreFullException
-	 * @throws IOException
-	 */
-	protected SetOfCards loadState(String setName) {
-		SetOfCards soc = null;
-		try {
-			if (this.getCardCount(setName) > 0) {
-				SetOfCardsDAO socDao = new SetOfCardsDAOV4Impl(setName);
-				return socDao.loadSetOfCards();
-			}
-		} catch (RecordStoreFullException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (RecordStoreNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvalidRecordIDException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (RecordStoreException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return soc;
 	}
 
 	/**
@@ -251,32 +226,6 @@ public class Initializer {
 		}
 	}
 
-	/**
-	 * return the record count or -1 if an error occurs
-	 */
-	public int getCardCount(String setName) {
-		try {
-			ISetOfCardsDAO socDao = new SetOfCardsDAOV4Impl(setName);
-			return socDao.getCardCount();
-		} catch (RecordStoreFullException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (RecordStoreNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (RecordStoreNotOpenException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (RecordStoreException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return -1;
-	}
-
 	public static long updateSessionStudyTime(long sessionStudyTime,
 			long lastActivityTime, long maxIdleTime) {
 		// this is not rocket science! if the user is
@@ -289,6 +238,42 @@ public class Initializer {
 			sessionStudyTime = sessionStudyTime + aditionalStudyTime;
 		}
 		return sessionStudyTime;
+	}
+
+	/**
+	 * Load the set being currently studied from persistent
+	 * storage (RMS)
+	 * 
+	 * @return the currently studied set or null if a error occurred
+	 * @throws RecordStoreException
+	 * @throws RecordStoreNotFoundException
+	 * @throws RecordStoreFullException
+	 * @throws IOException
+	 */
+	protected SetOfCards loadSet(String setName) {
+		SetOfCards soc = null;
+		try {
+			if (this.getCardCount(setName) > 0) {
+				SetOfCardsDAO socDao = new SetOfCardsDAOV4Impl(setName);
+				return socDao.loadSetOfCards();
+			}
+		} catch (RecordStoreFullException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (RecordStoreNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvalidRecordIDException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (RecordStoreException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return soc;
 	}
 
 	/**
@@ -358,6 +343,21 @@ public class Initializer {
 				.size(), onProgressSets.length);
 
 		return allUniqueSetNames;
+	}
+
+	/*
+	 * Returns a random integer corresponding to the index of the next card to
+	 * be displayed
+	 */
+	private int getNextRandomCardIndex(Vector listOfIndexes) {
+		Random r = new Random();
+		int indexOfTheIndex = r.nextInt(listOfIndexes.size());
+		Integer index = (Integer) listOfIndexes.elementAt(indexOfTheIndex);
+		// remove this index from the list of indexes to be viewed
+		listOfIndexes.removeElementAt(indexOfTheIndex);
+		// add it to the list of already viewed indexes
+		viewedIndexes.addElement(index);
+		return index.intValue();
 	}
 
 	/**
