@@ -58,11 +58,11 @@ public class InitializerTest extends TestCase {
 		assertTrue(saved);
 	}
 
-	public void testLoadState() {
+	public void testLoadSet() {
 		Initializer init = new Initializer();
 		SetOfCards soc = init.initializeApp(SETTOLOAD);
 		init.saveState(soc);
-		SetOfCards socNew = init.loadState(soc.getSetName());
+		SetOfCards socNew = init.loadSet(soc.getSetName());
 		assertNotNull(socNew);
 	}
 
@@ -71,7 +71,7 @@ public class InitializerTest extends TestCase {
 		SetOfCards soc = init.initializeApp(SETTOLOAD);
 		init.saveState(soc);
 		String setName = soc.getSetName();
-		SetOfCards socNew = init.loadState(setName);
+		SetOfCards socNew = init.loadSet(setName);
 		assertNotNull("Null set", socNew);
 		init.resetState(setName);
 		int recordCount = init.getCardCount(setName);
@@ -137,13 +137,13 @@ public class InitializerTest extends TestCase {
 	public Test suite() {
 		TestSuite testsuite = new TestSuite();
 
-		testsuite.addTest(new InitializerTest("testInitializeApp",
+		testsuite.addTest(new InitializerTest("testLoadSet",
 				new TestMethod() {
 					public void run(TestCase tc)
 							throws RecordStoreNotOpenException,
 							RecordStoreFullException, IOException,
 							RecordStoreException {
-						((InitializerTest) tc).testInitializeApp();
+						((InitializerTest) tc).testLoadSet();
 					}
 				}));
 
