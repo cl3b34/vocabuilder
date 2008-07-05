@@ -10,10 +10,10 @@ public interface TestConstants {
 	public static final String FIRSTWORDONFIRSTCARD = "aalto";
 	public static final String SIDETWOTITLE = "ENG";
 	public static final String SIDEONETITLE = "FIN";
-	public static final String SETNAME = "testSet";
+	public static final String RMSSETNAME = "testSet";
 	public static final long MAXLOADINGTIME = 2000L;
 	public static final int TOTALOFCARDS = 8;
-	public static final String SETTOLOAD = "testSet.txt";
+	public static final String TXTSETTOLOAD = "testSet.txt";
 	public static final long LOADSETMAXTIME = 2000L;
 	public static final long SAVESETMAXTIME = 5000L;
 	public static final long SAVECARDMAXTIME = 300L;
@@ -24,6 +24,7 @@ public interface TestConstants {
 	public static final long RESETMAXTIME = SAVECARDMAXTIME;
 	public static final int METADATARECORD = 2;
 	public static final int FILEFORMATRECORD = 1;
+	public static final int DEFAULTSETCOUNT = 18;
 
 	//V4 has only 3 records
 	public static final int RECORDCOUNT = 3;
