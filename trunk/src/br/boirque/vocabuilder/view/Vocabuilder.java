@@ -1,6 +1,5 @@
 package br.boirque.vocabuilder.view;
 
-import java.util.Random;
 import java.util.Vector;
 
 import javax.microedition.lcdui.Choice;
@@ -30,8 +29,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private Command wrongCommand = new Command("Wrong", Command.SCREEN, 1);
 	private Command restartCommand = new Command("Restart", Command.SCREEN, 2);
 	private Command reviewCommand = new Command("Review", Command.SCREEN, 1);
-	private Command nextSetCommand = new Command("Load another", Command.SCREEN,
-			2);
+	private Command nextSetCommand = new Command("Load another", Command.SCREEN,2);
 	private Command loadSetCommand = new Command("Load", Command.SCREEN, 1);
 	private Command deleteCommand = new Command("Delete", Command.SCREEN, 1);
 	private Command selectCommand = new Command("Select", Command.SCREEN, 1);
@@ -41,7 +39,6 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private Form mainForm;
 	private StringItem cardText;
 	private StringItem cardStatistics;
-	// private Alert alertStats;
 
 	// Beans
 	private SetOfCards soc;
@@ -51,16 +48,11 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	// Statistics
 	private int totalDoneSession = 0;
 	private long sessionStudyTime = 0;
-	private long lastActivityTime = 0; // Last time the user interacted with
-	// the app
+	private long lastActivityTime = 0; // Time last user interaction happened
 	private final long maxIdleTime = 30000L; // thirty Seconds
 
 
-
-
-
 	//TODO Remove this. should be only in initializer.java
-	boolean useRandom = true;
 	private int amountToReview = -1;
 	private int totalOfCards = -1;
 	private int totalReviewed = -1;
@@ -68,13 +60,11 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	// Which side is being displayed
 	boolean sideOne;
 
-	// Is the app running?
-	boolean isRunning = false;
-
-
-
 	// Utility class
 	VocaUtil vocaUtil = new VocaUtil();
+	
+	// controller class
+	Initializer init = new Initializer();
 
 	public Vocabuilder() {// Constructor
 	}
@@ -84,7 +74,6 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	 */
 	protected void startApp() {
 		// if there is only one list, doesn't display the menu
-		Initializer init = new Initializer();
 		String[] setNames = (init.loadUniqueSetNames());
 		if (setNames.length == 1) {
 			displaySetOfCards(setNames[0]);
@@ -103,13 +92,11 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 	private void save(SetOfCards soc) {
 		if (soc != null) {
-			Initializer initializer = new Initializer();
-			initializer.saveState(soc);
+			init.saveState(soc);
 		}
 	}
 
 	private void displayLoadSetMenu() {
-		Initializer init = new Initializer();
 		List listSelection = new List("Select a set", Choice.IMPLICIT, init
 				.loadUniqueSetNames(), null);
 		// Command[] c = {exitCommand, loadSetCommand};
@@ -145,7 +132,6 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 	
 	private void displayDeleteSetMenu() {
-		Initializer init = new Initializer();
 		List listSelection = new List("DELETE set", Choice.IMPLICIT, init.loadOnProgressSetNames() , null);
 		// Command[] c = {exitCommand, loadSetCommand};
 		// setCommands(c, listSelection);
@@ -158,42 +144,26 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private void displaySetOfCards(String setToLoad) {
 		System.out.println(setToLoad);
 		// initialize the application. Load the list
-		Initializer initializer = new Initializer();
-		soc = initializer.initializeApp(setToLoad);
+		soc = init.loadSet(setToLoad);
 
-		// TODO - transfer this initialization of the set of cards
-		// code to a controller class
-		// Look for a set of cards that is not done yet
-		// while (soc.isDone()) {
-		// soc = initializer.initializeApp(listToLoad);
-		// }
 		displayMainForm();
 		mainForm.setTitle(soc.getSetName());
 		cards = soc.getFlashCards();
 		soc.setLastTimeViewed(System.currentTimeMillis());
-		amountToReview = cards.size() - initializer.getDoneAmount(cards);
+		amountToReview = cards.size() - init.getDoneAmount(cards);
 		totalOfCards = cards.size();
 		totalReviewed = 0;
 		lastActivityTime = System.currentTimeMillis();
 		// totalDoneSession = 0;
-		initializer.initIndexes(cards);
+		init.initIndexes(cards);
 
 		displayNextCard();
 		Display.getDisplay(this).setCurrent(mainForm);
 
-//		isRunning = true;
-
 	}
 
 	
-
-	
-
-	// TODO - Move all this 'use random' or
-	// and sequential list stuff to a method
-	// that simply returns the next index to be displayed
 	private void displayNextCard() {
-		Initializer init = new Initializer();
 		if (totalReviewed < amountToReview) {
 			// Look for a card that is not done yet and display it
 			int index = init.getNextCardIndex(cards);
@@ -222,7 +192,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 	}
 
-	/*
+	/**
 	 * Set the currently displayed commands. If the argument is null, no command
 	 * is show.
 	 */
@@ -246,7 +216,11 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			}
 		}
 	}
-
+	
+	/**
+	 * Display the desired side of the Flash Card
+	 * @param side to be displayed
+	 */
 	private void displayCardSide(int side) {
 		switch (side) {
 		case 1:
@@ -292,12 +266,11 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 
 
-	/*
+	/**
 	 * Display the statistics. If showCommands is set to true, also show
 	 * commands specific for this screen
 	 */
 	private void displayStatistics(boolean showCommands) {
-		Initializer init = new Initializer();
 		int done = init.getDoneAmount(cards);
 		int incorrectAmount = totalOfCards - done;
 		if (showCommands) {
@@ -365,7 +338,6 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 		if (cmd == reviewCommand) {
 			// show again the cards in the set not marked as 'done'
-			Initializer init = new Initializer();
 			amountToReview = totalOfCards - init.getDoneAmount(cards);
 			totalReviewed = 0;
 			// TODO: this is not very efficient
@@ -396,7 +368,6 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			totalReviewed = 0;
 			totalDoneSession = 0;
 			
-			Initializer init = new Initializer();
 			init.initIndexes(cards);
 			displayNextCard();
 		}
@@ -446,7 +417,6 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			List l = (List) disp;
 			int index = l.getSelectedIndex();
 			String selectedItem = l.getString(index);
-			Initializer init = new Initializer();
 			init.deleteSetOfCardsFromRMS(selectedItem);
 			displayDeleteSetMenu();
 		}
