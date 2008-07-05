@@ -6,19 +6,18 @@ import j2meunit.framework.TestMethod;
 import j2meunit.framework.TestSuite;
 
 import java.io.IOException;
+import java.util.Vector;
 
 import javax.microedition.rms.RecordStoreException;
 import javax.microedition.rms.RecordStoreFullException;
 import javax.microedition.rms.RecordStoreNotOpenException;
 
+import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.model.SetOfCardsLoader;
+import br.boirque.vocabuilder.util.TestConstants;
 
-public class InitializerTest extends TestCase {
-
-	private static final int DEFAULTSETCOUNT = 19;
-	private static final String SETNAME = "testSet";
-	private static final String SETTOLOAD = "testSet.txt";
+public class InitializerTest extends TestCase implements TestConstants {
 
 	/**
 	 * Required by J2MEUnit
@@ -42,25 +41,19 @@ public class InitializerTest extends TestCase {
 
 	protected void tearDown() throws Exception {
 		Initializer init = new Initializer();
-		init.resetState(SETNAME);
-	}
-
-	public void testInitializeApp() {
-		Initializer init = new Initializer();
-		SetOfCards soc = init.initializeApp(SETTOLOAD);
-		assertNotNull(soc);
+		init.resetState(RMSSETNAME);
 	}
 
 	public void testSaveState() {
 		Initializer init = new Initializer();
-		SetOfCards soc = init.initializeApp(SETTOLOAD);
+		SetOfCards soc = init.loadSet(TXTSETTOLOAD);
 		boolean saved = init.saveState(soc);
 		assertTrue(saved);
 	}
 
 	public void testLoadSet() {
 		Initializer init = new Initializer();
-		SetOfCards soc = init.initializeApp(SETTOLOAD);
+		SetOfCards soc = init.loadSet(TXTSETTOLOAD);
 		init.saveState(soc);
 		SetOfCards socNew = init.loadSet(soc.getSetName());
 		assertNotNull(socNew);
@@ -68,7 +61,7 @@ public class InitializerTest extends TestCase {
 
 	public void testResetState() {
 		Initializer init = new Initializer();
-		SetOfCards soc = init.initializeApp(SETTOLOAD);
+		SetOfCards soc = init.loadSet(TXTSETTOLOAD);
 		init.saveState(soc);
 		String setName = soc.getSetName();
 		SetOfCards socNew = init.loadSet(setName);
@@ -80,7 +73,7 @@ public class InitializerTest extends TestCase {
 
 	public void testGetRecordCount() {
 		Initializer init = new Initializer();
-		SetOfCards soc = init.initializeApp(SETTOLOAD);
+		SetOfCards soc = init.loadSet(TXTSETTOLOAD);
 		init.resetState(soc.getSetName());
 		int recordCount = init.getCardCount(soc.getSetName());
 		assertEquals("Wrong record count", 0, recordCount);
@@ -95,17 +88,17 @@ public class InitializerTest extends TestCase {
 	
 	public void testLoadOnProgressSetNames() {
 		Initializer init = new Initializer();
-		SetOfCards soc = init.initializeApp(SETTOLOAD);
+		SetOfCards soc = init.loadSet(TXTSETTOLOAD);
 		init.saveState(soc);
 		String[] setNames = init.loadOnProgressSetNames();
 		assertNotNull(setNames);
 		assertEquals(1, setNames.length);
-		assertTrue(SETNAME.equals(setNames[0]));		
+		assertTrue(RMSSETNAME.equals(setNames[0]));		
 	}
 	
 	public void testLoadUniqueSetNames() throws IOException {
 		Initializer init = new Initializer();
-		init.deleteSetOfCardsFromRMS(SETNAME);
+		init.deleteSetOfCardsFromRMS(RMSSETNAME);
 		String[] uniqueSets = init.loadUniqueSetNames();
 		//1st test: No sets in progress.
 		assertNotNull(uniqueSets);
@@ -130,10 +123,31 @@ public class InitializerTest extends TestCase {
 		}
 	}
 	
-	public void testDeleteSetOfCardsFromRMS() {
-		fail("not implemented");
+	public void testGetNextCard() {
+		Initializer init = new Initializer();
+		FlashCard c = init.getNextCard();
+		assertNotNull(c);
+		FlashCard c1 = init.getNextCard();
+		assertNotNull(c1);
+		assertTrue(!c.equals(c1));
 	}
-
+	
+	public void testInitializeRandomCardIndex() {
+		Initializer init = new Initializer();
+		SetOfCards soc = init.loadSet(RMSSETNAME);
+		Vector cards = soc.getFlashCards();
+		Vector indexes = init.initializeRandomCardIndex(cards,false);
+		assertNotNull(indexes);
+		// mark the first card as done
+		FlashCard c = (FlashCard)cards.elementAt(0);
+		c.setDone(true);
+		Vector indexesNotDone = init.initializeRandomCardIndex(cards,true);
+		assertNotNull(indexes);
+		assertTrue(indexes.size() > indexesNotDone.size());
+	}
+	
+	
+	
 	public Test suite() {
 		TestSuite testsuite = new TestSuite();
 
@@ -157,15 +171,6 @@ public class InitializerTest extends TestCase {
 					}
 				}));
 
-		testsuite.addTest(new InitializerTest("testInitializeApp",
-				new TestMethod() {
-					public void run(TestCase tc)
-							throws RecordStoreNotOpenException,
-							RecordStoreFullException, IOException,
-							RecordStoreException {
-						((InitializerTest) tc).testInitializeApp();
-					}
-				}));
 
 		testsuite.addTest(new InitializerTest("testResetState",
 				new TestMethod() {
@@ -208,12 +213,20 @@ public class InitializerTest extends TestCase {
 					}
 				}));
 		
-		testsuite.addTest(new InitializerTest("testDeleteSetOfCardsFromRMS",
+//		testsuite.addTest(new InitializerTest("testDeleteSetOfCardsFromRMS",
+//				new TestMethod() {
+//					public void run(TestCase tc) throws IOException{
+//						((InitializerTest) tc).testDeleteSetOfCardsFromRMS();
+//					}
+//				}));
+		
+		testsuite.addTest(new InitializerTest("testGetNextCard",
 				new TestMethod() {
 					public void run(TestCase tc) throws IOException{
-						((InitializerTest) tc).testDeleteSetOfCardsFromRMS();
+						((InitializerTest) tc).testGetNextCard();
 					}
 				}));
+		
 		
 		return testsuite;
 	}
