@@ -23,8 +23,8 @@ public class PropertiesLoader {
 	 * @return a Vector with the properties found 
 	 * @throws IOException
 	 */
-	public Vector loadPropertie() throws IOException {
-		return loadPropertie(PROPERTIESFILENAME);
+	public Vector loadProperties() throws IOException {
+		return loadProperties(PROPERTIESFILENAME);
 	}
 	
 	/**
@@ -33,7 +33,7 @@ public class PropertiesLoader {
 	 * @return a Vector with the properties found 
 	 * @throws IOException
 	 */
-	public Vector loadPropertie(String propertiesFileName) throws IOException {
+	public Vector loadProperties(String propertiesFileName) throws IOException {
 		VocaUtil util = new VocaUtil();
 		String propertiesString = new String(util.readFile(propertiesFileName));
 		return extractProperties(propertiesString);
