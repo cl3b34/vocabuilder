@@ -43,7 +43,7 @@ public class PropertiesLoaderTest extends TestCase {
 	public void testLoadPropertie() throws IOException {
 		PropertiesLoader ploader = new PropertiesLoader();
 		long startTime = System.currentTimeMillis();
-		Vector props = ploader.loadPropertie(TEST_PROPERTIES_FILENAME);
+		Vector props = ploader.loadProperties(TEST_PROPERTIES_FILENAME);
 		long endTime = System.currentTimeMillis();
 		long loadingTime = endTime - startTime;
 		assertTrue("Props load:" + VocaUtil.milisecondsToSeconds(loadingTime),
