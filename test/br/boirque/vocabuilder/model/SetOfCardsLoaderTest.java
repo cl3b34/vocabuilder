@@ -39,7 +39,7 @@ public class SetOfCardsLoaderTest extends TestCase{
 	public void testLoadSet() throws IOException{
 		long startTime = System.currentTimeMillis();
 		SetOfCardsLoader socl = new SetOfCardsLoader();
-		SetOfCards soc = socl.loadSet(TestConstants.SETTOLOAD);
+		SetOfCards soc = socl.loadSet(TestConstants.TXTSETTOLOAD);
 		long endTime = System.currentTimeMillis();
 		long loadingTime = endTime -startTime;
 		assertEquals("wrong card amount\n",TestConstants.TOTALOFCARDS, soc.getFlashCards().size());
@@ -51,14 +51,14 @@ public class SetOfCardsLoaderTest extends TestCase{
 	
 	public void testTextFileLoader() throws IOException{
 		SetOfCardsLoader socl = new SetOfCardsLoader();
-		SetOfCards soc = socl.loadSet(TestConstants.SETTOLOAD);
+		SetOfCards soc = socl.loadSet(TestConstants.TXTSETTOLOAD);
 		assertNotNull(soc);
 		Vector cards = soc.getFlashCards();
 		System.out.println("Number of Cards: " + cards.size());
 		assertNotNull(cards);
 		// check the set name
 		String setName = soc.getSetName();
-		assertEquals(TestConstants.SETNAME, setName);
+		assertEquals(TestConstants.RMSSETNAME, setName);
 		
 		//check the first card
 		FlashCard firstCard = (FlashCard) cards.elementAt(0);

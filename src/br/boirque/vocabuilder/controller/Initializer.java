@@ -55,13 +55,39 @@ public class Initializer {
 	//Sequential list
 	private int lastViewedCardIndex = -1;
 
-
-	public SetOfCards initializeApp(String setToLoad) {
+	/**
+	 * Load a set either from RMS or TXT resources
+	 * @param setToLoad the name of the set to be loaded
+	 * @return the set loaded
+	 * @throws RecordStoreException 
+	 * @throws IOException 
+	 * @throws InvalidRecordIDException 
+	 */
+	public SetOfCards loadSet(String setToLoad) {
 
 		SetOfCards soc = null;
 		if (setToLoad.indexOf(".txt") == -1) {
 			// we are loading a set from RMS
-			soc = this.loadSet(setToLoad);
+			// Do not return a empty set... return null instead
+			if (this.getCardCount(setToLoad) > 0) {
+				SetOfCardsDAO socDao;
+				try {
+					socDao = new SetOfCardsDAOV4Impl(setToLoad);
+					soc = socDao.loadSetOfCards();
+				} catch (RecordStoreFullException e) {
+					// TODO Notify the user somehow
+					e.printStackTrace();
+				} catch (RecordStoreNotFoundException e) {
+					// TODO Notify the user somehow
+					e.printStackTrace();
+				} catch (RecordStoreException e) {
+					// TODO Notify the user somehow
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Notify the user somehow
+					e.printStackTrace();
+				}				
+			}
 		} else {
 			// Load the set from a TXT resource
 			SetOfCardsLoader socl = new SetOfCardsLoader();
@@ -142,10 +168,10 @@ public class Initializer {
 	 * Utility class to initialize the vector of indexes with the index of each
 	 * element in 'cards' vector
 	 */
-	public Vector initializeRandomCardIndex(Vector toBeIndexed) {
+	public Vector initializeRandomCardIndex(Vector cards) {
 		viewedIndexes = new Vector();
 		Vector indexes = new Vector();
-		for (int i = 0; i < toBeIndexed.size(); i++) {
+		for (int i = 0; i < cards.size(); i++) {
 			Integer index = new Integer(i);
 			indexes.addElement(index);
 		}
@@ -240,41 +266,7 @@ public class Initializer {
 		return sessionStudyTime;
 	}
 
-	/**
-	 * Load the set being currently studied from persistent
-	 * storage (RMS)
-	 * 
-	 * @return the currently studied set or null if a error occurred
-	 * @throws RecordStoreException
-	 * @throws RecordStoreNotFoundException
-	 * @throws RecordStoreFullException
-	 * @throws IOException
-	 */
-	protected SetOfCards loadSet(String setName) {
-		SetOfCards soc = null;
-		try {
-			if (this.getCardCount(setName) > 0) {
-				SetOfCardsDAO socDao = new SetOfCardsDAOV4Impl(setName);
-				return socDao.loadSetOfCards();
-			}
-		} catch (RecordStoreFullException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (RecordStoreNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvalidRecordIDException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (RecordStoreException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return soc;
-	}
+	
 
 	/**
 	 * @return an array containing the names of all the default (loaded from txt
@@ -284,7 +276,7 @@ public class Initializer {
 		PropertiesLoader pldr = new PropertiesLoader();
 		Vector props;
 		try {
-			props = pldr.loadPropertie();
+			props = pldr.loadProperties();
 			Vector setNames = new Vector();
 			for (int i = 0; i < props.size(); i++) {
 				Property p = (Property) props.elementAt(i);
@@ -407,5 +399,10 @@ public class Initializer {
 			toReturn.addElement(setName);
 		}
 		return toReturn;
+	}
+
+	public FlashCard getNextCard() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
