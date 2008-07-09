@@ -51,12 +51,6 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private long lastActivityTime = 0; // Time last user interaction happened
 	private final long maxIdleTime = 30000L; // thirty Seconds
 
-
-	//TODO Remove this. should be only in initializer.java
-	private int amountToReview = -1;
-	private int totalOfCards = -1;
-	private int totalReviewed = -1;
-
 	// Which side is being displayed
 	boolean sideOne;
 
@@ -150,12 +144,9 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		mainForm.setTitle(soc.getSetName());
 		cards = soc.getFlashCards();
 		soc.setLastTimeViewed(System.currentTimeMillis());
-		amountToReview = cards.size() - init.getDoneAmount(cards);
-		totalOfCards = cards.size();
-		totalReviewed = 0;
 		lastActivityTime = System.currentTimeMillis();
 		// totalDoneSession = 0;
-		init.initIndexes(cards);
+		//init.initIndexes(cards);
 
 		displayNextCard();
 		Display.getDisplay(this).setCurrent(mainForm);
@@ -164,29 +155,16 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 	
 	private void displayNextCard() {
-		if (totalReviewed < amountToReview) {
-			// Look for a card that is not done yet and display it
-			int index = init.getNextCardIndex(cards);
+		int index = init.getNextCardIndex(cards);
+		if (index > 0) {
 			c = (FlashCard) cards.elementAt(index);
-			boolean notFound = true;
-			while (notFound) {
-				if (c.isDone()) {
-						index = init.getNextCardIndex(cards);
-					c = (FlashCard) cards.elementAt(index);
-				} else {
-					// display the card and leave the loop
-					displayCardSide(1);
-					notFound = false;
-				}
-			}
+			displayCardSide(1);
 		} else {
 			// Reached the end of the set.
 			// Mark the set as done if all cards are marked done
-			if (init.getDoneAmount(cards) == totalOfCards) {
-				soc.setDone(true);
-				soc.setLastTimeMarkedDone(System.currentTimeMillis());
-				soc.setMarkedDoneCounter(soc.getMarkedDoneCounter() + 1);
-			}
+			soc.setDone(true);
+			soc.setLastTimeMarkedDone(System.currentTimeMillis());
+			soc.setMarkedDoneCounter(soc.getMarkedDoneCounter() + 1);
 			// display the statistics
 			displayStatistics(true);
 		}
@@ -272,7 +250,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	 */
 	private void displayStatistics(boolean showCommands) {
 		int done = init.getDoneAmount(cards);
-		int incorrectAmount = totalOfCards - done;
+		int incorrectAmount = Initializer.getTotalOfCards() - done;
 		if (showCommands) {
 			// show the commands for statistics
 			if (incorrectAmount > 0) {
@@ -290,7 +268,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		cardText.setLabel("");
 		cardText.setText("");
 		cardStatistics.setLabel("STATISTICS" + "\n\n" + "Total of cards: "
-				+ totalOfCards
+				+ Initializer.getTotalOfCards()
 				+ "\n"
 				+ "Correct: "
 				+ done
@@ -299,7 +277,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				+ incorrectAmount
 				+ "\n"
 				+ "Viewed this session: "
-				+ totalReviewed
+				+ Initializer.getTotalReviewed()
 				+ "\n"
 				+ "Correct this session: "
 				+ totalDoneSession
@@ -338,12 +316,6 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 		if (cmd == reviewCommand) {
 			// show again the cards in the set not marked as 'done'
-			amountToReview = totalOfCards - init.getDoneAmount(cards);
-			totalReviewed = 0;
-			// TODO: this is not very efficient
-			// all the cards are going to be tested
-			// for 'done' mark. should return only
-			// the marked as wrong...
 			init.initIndexes(cards);
 			displayNextCard();
 		}
@@ -364,10 +336,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				c.setDone(false);
 			}
 			soc.setDone(false);
-			amountToReview = totalOfCards;
-			totalReviewed = 0;
-			totalDoneSession = 0;
-			
+			totalDoneSession = 0;	
 			init.initIndexes(cards);
 			displayNextCard();
 		}
@@ -393,14 +362,12 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			c.setDone(true);
 			c.setMarkedDoneCounter(c.getMarkedDoneCounter() + 1);
 			c.setLastTimeMarkedDone(System.currentTimeMillis());
-			totalReviewed++;
 			totalDoneSession++;
 			displayNextCard();
 		}
 
 		if (cmd == wrongCommand) {
 			// Just show next card, side one
-			totalReviewed++;
 			displayNextCard();
 		}
 

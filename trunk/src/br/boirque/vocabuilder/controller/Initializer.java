@@ -1,6 +1,8 @@
 package br.boirque.vocabuilder.controller;
 
 import java.io.IOException;
+import java.util.Enumeration;
+import java.util.Hashtable;
 import java.util.Random;
 import java.util.Vector;
 
@@ -28,40 +30,32 @@ import br.boirque.vocabuilder.model.SetOfCardsLoader;
 public class Initializer {
 
 	private static final String DEFAULTSET = "defaultset";
-	
-	// Beans
-	private SetOfCards soc;
-	private Vector cards;
-	
-	// Statistics
-	private int totalDoneSession = 0;
-	private long sessionStudyTime = 0;
-	private long lastActivityTime = 0; // Last time the user interacted with
-	
-	// the app
-	private final long maxIdleTime = 30000L; // thirty Seconds. After that activity time is not computed
+
+	// list management
+	private static Vector originalOrderCardsIndexes;
+	private static Vector randomOrderCardsIndexes;
+	private static int amountToReview = 0;
+	private static int totalOfCards = 0;
+	private static int totalReviewed = 0;
 
 	
-	// Random list management
-	private static Vector cardsIndexes;
-	private static Vector viewedIndexes;
-	
+	// TODO: Those should become user preferences
 	// Shall we use a sequential or random list?
 	boolean useRandom = true;
-	private int amountToReview = -1;
-	private int totalOfCards = -1;
-	private int totalReviewed = -1;
-	
-	//Sequential list
+
+
+	// Sequential list
 	private int lastViewedCardIndex = -1;
 
 	/**
 	 * Load a set either from RMS or TXT resources
-	 * @param setToLoad the name of the set to be loaded
+	 * 
+	 * @param setToLoad
+	 *            the name of the set to be loaded
 	 * @return the set loaded
-	 * @throws RecordStoreException 
-	 * @throws IOException 
-	 * @throws InvalidRecordIDException 
+	 * @throws RecordStoreException
+	 * @throws IOException
+	 * @throws InvalidRecordIDException
 	 */
 	public SetOfCards loadSet(String setToLoad) {
 
@@ -86,7 +80,7 @@ public class Initializer {
 				} catch (IOException e) {
 					// TODO Notify the user somehow
 					e.printStackTrace();
-				}				
+				}
 			}
 		} else {
 			// Load the set from a TXT resource
@@ -98,12 +92,14 @@ public class Initializer {
 				e.printStackTrace();
 			}
 		}
+		//all the indexes are initialized when the set is loaded
+		initIndexes(soc.getFlashCards());
 		return soc;
 	}
-	
+
 	public int getDoneAmount(Vector cards) {
 		int doneAmount = 0;
-		FlashCard c ;
+		FlashCard c;
 		for (int i = 0; i < cards.size(); i++) {
 			c = (FlashCard) cards.elementAt(i);
 			if (c.isDone()) {
@@ -115,26 +111,63 @@ public class Initializer {
 
 	/**
 	 * Returns the index of the next card to be displayed
+	 * 
 	 * @param cards
-	 * @return
+	 * @return the index of the next card to be displayed or -1 if all the cards
+	 *         were already displayed
 	 */
 	public int getNextCardIndex(Vector cards) {
-		if(useRandom) {
-			if(cardsIndexes == null|| viewedIndexes == null) {
-				initIndexes(cards);
-			}
-			lastViewedCardIndex = getNextRandomCardIndex(cardsIndexes);
-		}else {
-			// sequential list
-			lastViewedCardIndex = lastViewedCardIndex +1;
+		if(amountToReview == 0) {
+			//all cards done already
+			return -1;
 		}
-		return lastViewedCardIndex;
+		
+		lastViewedCardIndex = lastViewedCardIndex + 1;
+		Integer cardIndex;
+		if (useRandom) {
+			cardIndex = (Integer) randomOrderCardsIndexes.elementAt(lastViewedCardIndex);
+		} else {
+			cardIndex = (Integer) originalOrderCardsIndexes.elementAt(lastViewedCardIndex);
+		}
+		int indexToReturn = cardIndex.intValue();
+
+		//update total of cards viewed
+		totalReviewed++;
+		//update total to review
+		amountToReview--;
+		return indexToReturn;
 	}
-	
+
+
+	private Vector groupCardsByViewAmount(Vector cards, boolean ignoreCardsDone) {
+		Vector cardsGrouped = new Vector();
+		FlashCard c;
+		for (int i = 0; i < cards.size(); i++) {
+			c = (FlashCard) cards.elementAt(i);
+			if(c.isDone()) {
+				continue;
+			}
+			int viewedCount = c.getViewedCounter();
+			int groupedSize = cardsGrouped.size();
+			//the table should be in the position in the table 
+			//equivalent to the amount of times it's cards where viewed
+			Hashtable sortedCards = new Hashtable();
+			if (groupedSize <= viewedCount) {
+				for(int k=0; k< (viewedCount +1) - groupedSize; k++) {
+					cardsGrouped.addElement(new Hashtable());
+				}
+			}
+			sortedCards = (Hashtable) cardsGrouped.elementAt(viewedCount);
+			//the key for the table is the original card position
+			sortedCards.put(new Integer(i), c);
+		}
+		return cardsGrouped;
+	}
+
 	/**
 	 * return the record count or -1 if an error occurs
 	 */
-	public int getCardCount(String setName) {
+	protected int getCardCount(String setName) {
 		try {
 			ISetOfCardsDAO socDao = new SetOfCardsDAOV4Impl(setName);
 			return socDao.getCardCount();
@@ -158,30 +191,105 @@ public class Initializer {
 	}
 
 	public void initIndexes(Vector cards) {
-
+		totalOfCards = cards.size();
+		totalReviewed = 0;
+		amountToReview = totalOfCards - this.getDoneAmount(cards);
 		lastViewedCardIndex = -1;
-		viewedIndexes = new Vector();
-		cardsIndexes = initializeRandomCardIndex(cards);
+		originalOrderCardsIndexes = initializeCardIndexVector(cards, true);
+		randomOrderCardsIndexes = initializeRandomCardIndexVector(cards, true);
 	}
-	
-	/*
-	 * Utility class to initialize the vector of indexes with the index of each
-	 * element in 'cards' vector
+
+	private Vector initializeRandomCardIndexVector(Vector cards, boolean ignoreDoneCards) {
+		Vector cardsGroupedByViewAmount = groupCardsByViewAmount(cards,ignoreDoneCards);
+		//cards are grouped, get the keys for them, randomize 
+		// within each group (thus maintaining the grouping by viewing times)
+		// and return as a vector
+		Vector randomizedCardIndexes = ExtractRandomizedCardIndexes(cardsGroupedByViewAmount);
+		return randomizedCardIndexes;
+	}
+
+	private Vector ExtractRandomizedCardIndexes(Vector cardsGroupedByViewAmount) {
+		Vector groupedRandomizedIndexes = new Vector();
+		Enumeration tables = cardsGroupedByViewAmount.elements();
+		while(tables.hasMoreElements()) {
+			Hashtable cardGroup = (Hashtable) tables.nextElement();
+			Enumeration cardIndexes = cardGroup.keys();
+			Vector tempIndexes = new Vector();
+			while(cardIndexes.hasMoreElements()) {
+				Integer index = (Integer) cardIndexes.nextElement();
+				tempIndexes.addElement(index);
+			}
+			if(tempIndexes.size() > 0) {
+				tempIndexes = randomizeVector(tempIndexes);
+				groupedRandomizedIndexes.addElement(tempIndexes);
+			}
+		}
+		groupedRandomizedIndexes = flatten(groupedRandomizedIndexes);
+		return groupedRandomizedIndexes;
+	}
+
+	private Vector randomizeVector(Vector toBeRandomized) {
+		Random r = new Random();
+		Vector randomized = new Vector();
+		do {
+			int randomIndex = r.nextInt(toBeRandomized.size());
+			Integer index = (Integer) toBeRandomized.elementAt(randomIndex);
+			// remove this index as it is already randomized
+			toBeRandomized.removeElementAt(randomIndex);
+			randomized.addElement(index);
+		}while(toBeRandomized.size()>0);
+		return randomized;
+	}
+
+
+	private Vector flatten(Vector groupedRandomizedIndexes) {
+		Vector flattened = new Vector();
+		Enumeration vectors = groupedRandomizedIndexes.elements();
+		while(vectors.hasMoreElements()) {
+			Vector v = (Vector) vectors.nextElement();
+			Enumeration e = v.elements();
+			while(e.hasMoreElements()) {
+				flattened.addElement(e.nextElement());
+			}
+		}
+		return flattened;
+	}
+
+	/**
+	 * Return a vector of indexes with the index of each element in 'cards'
+	 * vector given as argument
+	 * 
+	 * @param cards
+	 *            vector of cards to extract the index of
+	 * @param ignoreCardDone
+	 *            if true, check if the card is already marked as done and
+	 *            ignore it if so
+	 * @return a Vector containing the indexes of the cards in the argument
+	 *         vector
 	 */
-	public Vector initializeRandomCardIndex(Vector cards) {
-		viewedIndexes = new Vector();
+	protected Vector initializeCardIndexVector(Vector cards,
+			boolean ignoreCardDone) {
 		Vector indexes = new Vector();
+		FlashCard c;
 		for (int i = 0; i < cards.size(); i++) {
+			if (ignoreCardDone) {
+				c = (FlashCard) cards.elementAt(i);
+				if (c.isDone()) {
+					continue;
+				}
+			}
 			Integer index = new Integer(i);
 			indexes.addElement(index);
 		}
+		c = null;
 		return indexes;
 	}
 	
+	
+
 	/**
-	 * Save the current state of the set being studied to persistent storage
-	 * 
-	 * Use the newest file format
+	 * Save the current state of the set being studied to persistent storage Use
+	 * the newest file format
 	 * 
 	 * @param soc
 	 * @return true if successfully saved the current state
@@ -217,7 +325,7 @@ public class Initializer {
 	/**
 	 * reset the state of the set being studied so we start fresh.
 	 */
-	public void resetState(String setName) {
+	protected void resetState(String setName) {
 		try {
 			ISetOfCardsDAO socDao = new SetOfCardsDAOV4Impl(setName);
 			socDao.resetSetState();
@@ -265,8 +373,6 @@ public class Initializer {
 		}
 		return sessionStudyTime;
 	}
-
-	
 
 	/**
 	 * @return an array containing the names of all the default (loaded from txt
@@ -337,7 +443,7 @@ public class Initializer {
 		return allUniqueSetNames;
 	}
 
-	/*
+	/**
 	 * Returns a random integer corresponding to the index of the next card to
 	 * be displayed
 	 */
@@ -347,8 +453,6 @@ public class Initializer {
 		Integer index = (Integer) listOfIndexes.elementAt(indexOfTheIndex);
 		// remove this index from the list of indexes to be viewed
 		listOfIndexes.removeElementAt(indexOfTheIndex);
-		// add it to the list of already viewed indexes
-		viewedIndexes.addElement(index);
 		return index.intValue();
 	}
 
@@ -401,8 +505,16 @@ public class Initializer {
 		return toReturn;
 	}
 
-	public FlashCard getNextCard() {
-		// TODO Auto-generated method stub
-		return null;
+	public static int getAmountToReview() {
+		return amountToReview;
 	}
+
+	public static int getTotalOfCards() {
+		return totalOfCards;
+	}
+
+	public static int getTotalReviewed() {
+		return totalReviewed;
+	}
+	
 }
