@@ -1,0 +1,15 @@
+#setName = months_en_fi
+#sideOneTitle = ENG
+#sideTwoTitle = FIN
+January = Tammikuu
+February=Helmikuu
+March=Maaliskuu
+April=huhtikuu
+May=Toukokuu
+June=Kesäkuu
+July=Heinäkuu
+August=elokuu
+September=Syyskuu
+October=Lokakuu
+November=Marraskuu
+December=Joulukuu
