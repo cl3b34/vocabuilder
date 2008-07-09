@@ -1,0 +1,3 @@
+defaultset=words_en_sw_ah.txt
+defaultset=words_en_sw_is.txt
+defaultset=words_en_sw_t.txt
