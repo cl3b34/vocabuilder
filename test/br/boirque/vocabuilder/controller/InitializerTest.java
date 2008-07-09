@@ -123,25 +123,63 @@ public class InitializerTest extends TestCase implements TestConstants {
 		}
 	}
 	
-	public void testGetNextCard() {
+	// for now this is testing only the RANDON case
+	public void testGetNextCardIndex() {
 		Initializer init = new Initializer();
-		FlashCard c = init.getNextCard();
-		assertNotNull(c);
-		FlashCard c1 = init.getNextCard();
-		assertNotNull(c1);
-		assertTrue(!c.equals(c1));
+		SetOfCards soc = init.loadSet(TXTSETTOLOAD);
+		Vector cards = soc.getFlashCards();
+		// simulate the viewing of some cards
+		// all cards loaded from TXT resource by default have 0 viewings
+		FlashCard c = (FlashCard) cards.elementAt(0);
+		c.setViewedCounter(1);
+		FlashCard c1 = (FlashCard) cards.elementAt(1);
+		c1.setViewedCounter(1);
+		FlashCard c2 = (FlashCard) cards.elementAt(2);
+		c2.setViewedCounter(30);
+		//since the indexes are initialized upon loading, save and load again
+		init.saveState(soc);
+		soc = init.loadSet(soc.getSetName());
+		
+		// the testSet has 8 cards
+		// we changed the amount for the first 3 of them.
+		// The last 5 cards should have 0 viewings
+		// card 0 and card 1 must have 1 viewing each
+		// and card 2 must have 30 viewings.
+		// additionally, the least viewed cards must appear first
+		for(int i=0; i<5; i++) {
+			int index = init.getNextCardIndex(cards);
+			FlashCard card = (FlashCard) cards.elementAt(index);
+			//first 5 cards have 0 viewings
+			assertTrue("viewedCounter must be 0 for card " + index+ " but is " + card.getViewedCounter(),card.getViewedCounter() == 0);
+			// correct indexes?
+			assertTrue(2<index && index <8);
+		}	
+	
+		for(int i=0; i<2; i++) {
+			int index = init.getNextCardIndex(cards);
+			FlashCard card = (FlashCard) cards.elementAt(index);
+			// next should be 2 cards with 1 viewing each
+			assertTrue("viewedCounter must be 1 for card " + index + " but is " + card.getViewedCounter(),card.getViewedCounter() == 1);
+			assertTrue(index==0 || index==1);
+		}
+
+		int index = init.getNextCardIndex(cards);
+		FlashCard card = (FlashCard) cards.elementAt(index);
+		assertTrue("viewedCounter must be 30 for card " + index+ " but is " + card.getViewedCounter(),card.getViewedCounter() == 30);
+		assertTrue(index==2);
 	}
 	
-	public void testInitializeRandomCardIndex() {
+	public void testinitializeCardIndexVector() {
 		Initializer init = new Initializer();
-		SetOfCards soc = init.loadSet(RMSSETNAME);
+		//load a set from a TXT resource
+		SetOfCards soc = init.loadSet(TXTSETTOLOAD);
 		Vector cards = soc.getFlashCards();
-		Vector indexes = init.initializeRandomCardIndex(cards,false);
+		Vector indexes = init.initializeCardIndexVector(cards,false);
 		assertNotNull(indexes);
 		// mark the first card as done
 		FlashCard c = (FlashCard)cards.elementAt(0);
 		c.setDone(true);
-		Vector indexesNotDone = init.initializeRandomCardIndex(cards,true);
+		Vector indexesNotDone = init.initializeCardIndexVector(cards,true);
 		assertNotNull(indexes);
 		assertTrue(indexes.size() > indexesNotDone.size());
 	}
@@ -213,17 +251,17 @@ public class InitializerTest extends TestCase implements TestConstants {
 					}
 				}));
 		
-//		testsuite.addTest(new InitializerTest("testDeleteSetOfCardsFromRMS",
-//				new TestMethod() {
-//					public void run(TestCase tc) throws IOException{
-//						((InitializerTest) tc).testDeleteSetOfCardsFromRMS();
-//					}
-//				}));
-		
-		testsuite.addTest(new InitializerTest("testGetNextCard",
+		testsuite.addTest(new InitializerTest("testGetNextCardIndex",
 				new TestMethod() {
 					public void run(TestCase tc) throws IOException{
-						((InitializerTest) tc).testGetNextCard();
+						((InitializerTest) tc).testGetNextCardIndex();
+					}
+				}));
+		
+		testsuite.addTest(new InitializerTest("testinitializeCardIndexVector",
+				new TestMethod() {
+					public void run(TestCase tc) throws IOException{
+						((InitializerTest) tc).testinitializeCardIndexVector();
 					}
 				}));
 		

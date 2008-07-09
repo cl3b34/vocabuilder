@@ -24,7 +24,7 @@ public interface TestConstants {
 	public static final long RESETMAXTIME = SAVECARDMAXTIME;
 	public static final int METADATARECORD = 2;
 	public static final int FILEFORMATRECORD = 1;
-	public static final int DEFAULTSETCOUNT = 18;
+	public static final int DEFAULTSETCOUNT = 16;
 
 	//V4 has only 3 records
 	public static final int RECORDCOUNT = 3;
