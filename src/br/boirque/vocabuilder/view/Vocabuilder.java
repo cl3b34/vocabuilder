@@ -23,7 +23,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private static final String STUDY_SET = "STUDY";
 	// Commands
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
-	private Command quitCommand = new Command("Stats", Command.EXIT, 1);
+	private Command statsCommand = new Command("Stats", Command.EXIT, 1);
 	private Command turnCommand = new Command("Turn", Command.SCREEN, 1);
 	private Command doneCommand = new Command("Done", Command.SCREEN, 2);
 	private Command wrongCommand = new Command("Wrong", Command.SCREEN, 1);
@@ -46,10 +46,15 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	FlashCard c;
 
 	// Statistics
-	private int totalDoneSession = 0;
+	private int statsTotalDoneSession = 0;
+	private int statsTotalReviewedSession=0;
 	private long sessionStudyTime = 0;
-	private long lastActivityTime = 0; // Time last user interaction happened
-	private final long maxIdleTime = 30000L; // thirty Seconds
+
+	// Time last user interaction happened
+	private long lastActivityTime = 0; 
+	
+	// thirty Seconds, after that we ignore as the user is inactive
+	private final long maxIdleTime = 30000L; 
 
 	// Which side is being displayed
 	boolean sideOne;
@@ -59,6 +64,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	
 	// controller class
 	Initializer init = new Initializer();
+	
 
 	public Vocabuilder() {// Constructor
 	}
@@ -143,9 +149,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		displayMainForm();
 		mainForm.setTitle(soc.getSetName());
 		cards = soc.getFlashCards();
+		resetStatsCounters();
 		soc.setLastTimeViewed(System.currentTimeMillis());
 		lastActivityTime = System.currentTimeMillis();
-		// totalDoneSession = 0;
+		// statsTotalDoneSession = 0;
 		//init.initIndexes(cards);
 
 		displayNextCard();
@@ -156,7 +163,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	
 	private void displayNextCard() {
 		int index = init.getNextCardIndex(cards);
-		if (index > 0) {
+		if (index >= 0) {
 			c = (FlashCard) cards.elementAt(index);
 			displayCardSide(1);
 		} else {
@@ -183,7 +190,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		mainForm.removeCommand(restartCommand);
 		mainForm.removeCommand(reviewCommand);
 		mainForm.removeCommand(nextSetCommand);
-		mainForm.removeCommand(quitCommand);
+		mainForm.removeCommand(statsCommand);
 		mainForm.removeCommand(loadSetCommand);
 
 		if (commands != null) {
@@ -202,7 +209,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private void displayCardSide(int side) {
 		switch (side) {
 		case 1:
-			Command[] commands = { turnCommand, quitCommand };
+			Command[] commands = { turnCommand, statsCommand };
 			setCommands(commands, mainForm);
 			cardText.setLabel(c.getSideOneTitle() + ": \n");
 			cardText.setText(c.getSideOne());
@@ -277,10 +284,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 				+ incorrectAmount
 				+ "\n"
 				+ "Viewed this session: "
-				+ Initializer.getTotalReviewed()
+				+ statsTotalReviewedSession
 				+ "\n"
 				+ "Correct this session: "
-				+ totalDoneSession
+				+ statsTotalDoneSession
 				+ "\n"
 				+ "Total viewed: "
 				+ soc.getTotalNumberOfDisplayedCards()
@@ -293,12 +300,21 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 						.getTotalStudiedTimeInMiliseconds()));
 	}
 
+	
+	public void resetStatsCounters() {
+		statsTotalDoneSession = 0;
+		statsTotalReviewedSession=0;
+		sessionStudyTime = 0;
+	}
+	
+	
+	
 	public void commandAction(Command cmd, Displayable disp) {
 		this.sessionStudyTime = Initializer.updateSessionStudyTime(
 				sessionStudyTime, lastActivityTime, maxIdleTime);
 		lastActivityTime = System.currentTimeMillis();
 
-		if (cmd == quitCommand) {
+		if (cmd == statsCommand) {
 			// Display statistics
 			// update the total study time for the set
 			long previousTotalStudiedTime = soc
@@ -328,15 +344,9 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 
 		if (cmd == restartCommand) {
-			// remove the 'done' mark from the set and all the cards
-			// and start over the set
-			// TODO: SHOULD ask for confirmation
-			for (int i = 0; i < cards.size(); i++) {
-				c = (FlashCard) cards.elementAt(i);
-				c.setDone(false);
-			}
-			soc.setDone(false);
-			totalDoneSession = 0;	
+			soc = init.restartSet(soc);
+			resetStatsCounters();
+			
 			init.initIndexes(cards);
 			displayNextCard();
 		}
@@ -349,6 +359,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			c.setViewedCounter(c.getViewedCounter() + 1);
 			// update the last time this card was viewed
 			c.setLastTimeViewed(System.currentTimeMillis());
+			//update the counters
+			statsTotalReviewedSession++;
+//			Initializer.setAmountToReview(Initializer.getAmountToReview()-1);
+//			Initializer.setTotalReviewed(Initializer.getTotalReviewed()+1);
 			// turn the card
 			if (!sideOne) {
 				displayCardSide(1);
@@ -362,12 +376,12 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			c.setDone(true);
 			c.setMarkedDoneCounter(c.getMarkedDoneCounter() + 1);
 			c.setLastTimeMarkedDone(System.currentTimeMillis());
-			totalDoneSession++;
+			statsTotalDoneSession++;
 			displayNextCard();
 		}
 
 		if (cmd == wrongCommand) {
-			// Just show next card, side one
+			// show next card, side one
 			displayNextCard();
 		}
 
