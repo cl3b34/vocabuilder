@@ -140,12 +140,28 @@ public class InitializerTest extends TestCase implements TestConstants {
 		init.saveState(soc);
 		soc = init.loadSet(soc.getSetName());
 		
-		// the testSet has 8 cards
-		// we changed the amount for the first 3 of them.
-		// The last 5 cards should have 0 viewings
-		// card 0 and card 1 must have 1 viewing each
-		// and card 2 must have 30 viewings.
-		// additionally, the least viewed cards must appear first
+		//check if the cards are being returned in the correct
+		// order and have the correct view count
+		assertCardViewCountAndOrder(init, cards);
+		
+		//after calling initIndexes we should get the same cards
+		init.initIndexes(cards);
+		assertCardViewCountAndOrder(init, cards);
+		
+	}
+
+	/**
+	 * the testSet has 8 cards
+	 * we changed the amount for the first 3 of them.
+	 * The last 5 cards should have 0 viewings
+	 * card 0 and card 1 must have 1 viewing each
+	 * and card 2 must have 30 viewings.
+	 * additionally, the least viewed cards must appear first
+	 * @param init
+	 * @param cards
+	 */
+	private void assertCardViewCountAndOrder(Initializer init, Vector cards) {
+		//test the last 5 cards
 		for(int i=0; i<5; i++) {
 			int index = init.getNextCardIndex(cards);
 			FlashCard card = (FlashCard) cards.elementAt(index);
@@ -154,7 +170,7 @@ public class InitializerTest extends TestCase implements TestConstants {
 			// correct indexes?
 			assertTrue(2<index && index <8);
 		}	
-	
+	    //test the last 3
 		for(int i=0; i<2; i++) {
 			int index = init.getNextCardIndex(cards);
 			FlashCard card = (FlashCard) cards.elementAt(index);
@@ -167,6 +183,10 @@ public class InitializerTest extends TestCase implements TestConstants {
 		FlashCard card = (FlashCard) cards.elementAt(index);
 		assertTrue("viewedCounter must be 30 for card " + index+ " but is " + card.getViewedCounter(),card.getViewedCounter() == 30);
 		assertTrue(index==2);
+		
+		//the next call must return -1 since this is the set's end
+		int setEnd = init.getNextCardIndex(cards);
+		assertTrue(setEnd==-1);
 	}
 	
 	public void testinitializeCardIndexVector() {

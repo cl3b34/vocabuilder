@@ -443,19 +443,7 @@ public class Initializer {
 		return allUniqueSetNames;
 	}
 
-	/**
-	 * Returns a random integer corresponding to the index of the next card to
-	 * be displayed
-	 */
-	private int getNextRandomCardIndex(Vector listOfIndexes) {
-		Random r = new Random();
-		int indexOfTheIndex = r.nextInt(listOfIndexes.size());
-		Integer index = (Integer) listOfIndexes.elementAt(indexOfTheIndex);
-		// remove this index from the list of indexes to be viewed
-		listOfIndexes.removeElementAt(indexOfTheIndex);
-		return index.intValue();
-	}
-
+	
 	/**
 	 * check if there are repeated set names. Strip '.txt.' from the defaultSet
 	 * names and compare with onProgressSets. Sets in progress always have the
@@ -505,10 +493,26 @@ public class Initializer {
 		return toReturn;
 	}
 
-	public static int getAmountToReview() {
-		return amountToReview;
+	/**
+	 * 	remove the 'done' mark from the set and all the cards
+	 *  so we can start over the set
+	 *  TODO: SHOULD ask for confirmation	
+	 * @param soc the set to be reset
+	 */
+	public SetOfCards restartSet(SetOfCards soc) {
+		Vector cards = soc.getFlashCards();
+		for (int i = 0; i < cards.size(); i++) {
+			FlashCard c = (FlashCard) cards.elementAt(i);
+			c.setDone(false);
+		}
+		soc.setDone(false);
+		return soc;
 	}
 
+//	public static int getAmountToReview() {
+//		return amountToReview;
+//	}
+//
 	public static int getTotalOfCards() {
 		return totalOfCards;
 	}
@@ -516,5 +520,13 @@ public class Initializer {
 	public static int getTotalReviewed() {
 		return totalReviewed;
 	}
+//
+//	public static void setAmountToReview(int amountToReview) {
+//		Initializer.amountToReview = amountToReview;
+//	}
+//
+//	public static void setTotalReviewed(int totalReviewed) {
+//		Initializer.totalReviewed = totalReviewed;
+//	}
 	
 }
