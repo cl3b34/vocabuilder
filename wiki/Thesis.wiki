@@ -43,23 +43,46 @@ Here you can find a short list of what is planned, the progress and an account o
         * week 25: 7h
   		* Divide the long lists in smaller ones (made using a groovy script)
 	
-	* week 25: 16h
+	* week 25: 20h
         * Fix the file splitter groovy script
         * Fix the test cases to use a special test file
         * Remove unused Unit Test library. The sources are used instead
         * Add obfuscation using ProGuard in order to produce smaller jar files
-  		
+        * Recompile the demo applications with the lists divided in smaller ones (will break backward compatibility)
+        
+    * week 26: 28h
+        * Package the application using obfuscation, to diminish the JAR size  		
+  		* Show least viewed cards first
+ 
+    * Week 38: 5h
+    	* Start to write the thesis document
+    	  * Find the template
+    	  * Create the cover
+    
+    * Week 39: 8h
+    	* Abstract
+    	* Introduction
+    	* Some references
+    	* Load Set Names sequence diagram
+    	
+    * Week 40: 15
+    	* Load Sets sequence diagram
+    	* Material from the site included in the thesis
+    	* Key terms
+    	* Scope
+    	* Workspace installation
+    
+    * Week 41:
+    	*
   		
   	* TODO	
-                * Package the application using obfuscation, to diminish the JAR size
                 * Include support for Antenna in the project so it can built with ANT
                 * Create the basic framework for localizing the application UI
                 * Allow the delete/restore of the default sets (they should be hidden)
                 * Support for UTF8
-  		* Show least viewed cards first
+
   		* Make the file name and the SET name independent so nicer names can appear in the UI
   		* Implement the [http://learnsuomea.blogspot.com/2007/05/leitner-system.html Leitner system] for reviewing already know cards
-  		* Recompile the demo applications with the lists divided in smaller ones (will break backward compatibility)
   	
   * Create 'preferences' for the application
   	# Show words in random or sequential order
