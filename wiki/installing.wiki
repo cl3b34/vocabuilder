@@ -15,6 +15,6 @@ There *are other languages available*, to install another language or version, j
 
 Another option for installing it is to copy the application's JAR file to your mobile and execute it. This will start the installation process. To install [http://vocabuilder.googlecode.com/files/Vocabuilder17_en_fi.jar Vocabuilder 1.7 en-fi] this way:
 
- * Download the [http://vocabuilder.googlecode.com/files/Vocabuilder17_fi_en.jar JAR file] to your computer.
+ * Download the [http://vocabuilder.googlecode.com/files/Vocabuilder17_en_fi.jar JAR file] to your computer.
  * Transfer it to your mobile via USB, Bluetooth, IR, memory card or any other way
  * Execute it
