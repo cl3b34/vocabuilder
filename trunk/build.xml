@@ -41,6 +41,7 @@
 	<!-- Generates a JAD file. this attribute of wtkjad tag forces version number: version="${jad.version}"  -->
 	<target name="jad_gen" depends="-eclipseme-initialize" description="Generates a JAD file">
 		<echo message="Generating a JAD file..." />
+		<antcall target="jad_clean" />
 		<wtkjad jadfile="${midlet.name}.jad" version="${jad.version}" name="${jad.midlet.long.name}" vendor="Cleber Goncalves - Boirque" autoversion="${flag.autoversion}" update="true" jarfile="${midlet.name}.jar">
 
 			<midlet name="${jad.midlet.short.name}" class="${jad.midlet.class}" />
@@ -71,18 +72,13 @@
 	</target>
 
 
+	<!-- remove the previously generated JAD -->
 	<target name="jad_clean" description="deletes the previously copied jad template">
 		<delete quiet="true">
 			<fileset dir="${basedir}" includes="${jad.midlet.base.name}${jad.short.version}*.jad"/>
 		</delete>
 	</target>
 
-	
-	<!-- copy the template jad to the version JAD to be used in packaging -->
-	<target name="jad_copy" depends="jad_clean" description="copies the template JAD file to a JAD for the compiled version">
-		<copy file="${jad.midlet.base.name}.jad.${jad.language.iso.orig}" tofile="${midlet.name}.jad" />
-	</target>
-	
 	<!-- Package up the compiled code without obfuscation -->
 	<target name="jar" depends="build,-eclipseme-jar" description="Packages the midlet jar without obfuscation">
 	</target>
