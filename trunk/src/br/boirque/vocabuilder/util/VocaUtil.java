@@ -1,5 +1,6 @@
 package br.boirque.vocabuilder.util;
 
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -114,8 +115,9 @@ public class VocaUtil {
 	 * http://discussion.forum.nokia.com/forum/showthread.php?t=28898&highlight=rms
 	 * 
 	 * @param buf
+	 * @param removeWhitSpace 
 	 */
-	public static void preProcess_TextFile(char buf[]) {
+	public static void preProcess_TextFile(char buf[], boolean removeWhitSpace) {
 		// preProcess_removeCarriageReturns(buf);
 		int i = 0, k = 0;
 		boolean inquote;
@@ -165,23 +167,9 @@ public class VocaUtil {
 				buf[i++] = ' ';
 		}
 
-		
-		// preProcess_removeWhiteSpace(buf);
-		i = 0;
-		k = 0;
-		inquote = false;
-		while (i < buf.length) {
-			buf[k] = buf[i];
-
-			if (buf[k] == '"')
-				inquote = !inquote;
-
-			if (inquote || (buf[i] != ' ' && buf[i] != '\t'))
-				k++;
-			i++;
+		if(removeWhitSpace) {
+			removeWhiteSpace(buf);
 		}
-		while (k < buf.length)
-			buf[k++] = '\0';
 
 		// preProcess_cutEmptyLines(buf);
 		i = 0;
@@ -196,6 +184,28 @@ public class VocaUtil {
 			if (inquote || buf[i] != '\n' || buf[i + 1] != '\n')
 				k++; // advance k (dest) if [i] and [i+1] are not both \n
 
+			i++;
+		}
+		while (k < buf.length)
+			buf[k++] = '\0';
+	}
+
+	/**
+	 * @param buf
+	 */
+	private static void removeWhiteSpace(char[] buf) {
+		int i =0;
+		int k=0;
+		boolean inquote= false;;
+		// preProcess_removeWhiteSpace(buf);
+		while (i < buf.length) {
+			buf[k] = buf[i];
+
+			if (buf[k] == '"')
+				inquote = !inquote;
+
+			if (inquote || (buf[i] != ' ' && buf[i] != '\t'))
+				k++;
 			i++;
 		}
 		while (k < buf.length)

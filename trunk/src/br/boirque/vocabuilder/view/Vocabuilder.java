@@ -19,8 +19,10 @@ import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.util.VocaUtil;
 
 public class Vocabuilder extends MIDlet implements CommandListener {
+	// initial list menu options
 	private static final String DELETE_SET = "delete list";
 	private static final String STUDY_SET = "STUDY";
+	private static final String DOWNLOAD_SET = "DOWNLOAD";
 	// Commands
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
 	private Command statsCommand = new Command("Stats", Command.EXIT, 1);
@@ -34,6 +36,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private Command deleteCommand = new Command("Delete", Command.SCREEN, 1);
 	private Command selectCommand = new Command("Select", Command.SCREEN, 1);
 	private Command back = new Command("Back", Command.BACK,1);
+	private Command downloadSetCommand = new Command("Download",Command.SCREEN, 1);
 
 	// UI elements
 	private Form mainForm;
@@ -74,13 +77,13 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	 */
 	protected void startApp() {
 		// if there is only one list, doesn't display the menu
-		String[] setNames = (init.loadUniqueSetNames());
-		if (setNames.length == 1) {
-			displaySetOfCards(setNames[0]);
-		} else {
+//		String[] setNames = (init.loadUniqueSetNames());
+//		if (setNames.length == 1) {
+//			displaySetOfCards(setNames[0]);
+//		} else {
 			//displayLoadSetMenu();
 			displayInitialOptionsMenu();
-		}
+//		}
 	}
 
 	protected void pauseApp() {
@@ -121,7 +124,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 
 	private void displayInitialOptionsMenu() {
-		String[] actions = {STUDY_SET, DELETE_SET};
+		String[] actions = {STUDY_SET, DOWNLOAD_SET ,DELETE_SET};
 		List listSelection = new List("Select action", Choice.IMPLICIT, actions , null);
 		// Command[] c = {exitCommand, loadSetCommand};
 		// setCommands(c, listSelection);
@@ -301,7 +304,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 
 	
-	public void resetStatsCounters() {
+	private void resetStatsCounters() {
 		statsTotalDoneSession = 0;
 		statsTotalReviewedSession=0;
 		sessionStudyTime = 0;
@@ -402,22 +405,46 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			displayDeleteSetMenu();
 		}
 		
+		if (cmd == downloadSetCommand) {
+			// Download the set selected
+			List l = (List) disp;
+			int index = l.getSelectedIndex();
+			String selectedItem = l.getString(index);
+			Thread t = new Thread(new Initializer(selectedItem));
+			System.out.println("starting download");
+			t.start();
+//			Thread.sleep(1000);
+			displayLoadSetMenu();			
+		}
+		
 		if (cmd == selectCommand) {
 			//which command was selected?
 			List l = (List) disp;
 			int index = l.getSelectedIndex();
 			String selectedItem = l.getString(index);
 			if(selectedItem.equalsIgnoreCase(STUDY_SET)) {
-			displayLoadSetMenu();
+				displayLoadSetMenu();
 			}else if(selectedItem.equalsIgnoreCase(DELETE_SET)) {
 				displayDeleteSetMenu();				
+			}else if(selectedItem.equalsIgnoreCase(DOWNLOAD_SET)) {
+				displayDownloadSetMenu();				
 			}
+			
 		}
 		
 		if (cmd == back) {
 			displayInitialOptionsMenu();
-		}
-		
-		
+		}		
+	}
+
+	
+	private void displayDownloadSetMenu() {
+		// TODO retrieve the categories first, them show the sets of this category
+		List listSelection = new List("Select a set", Choice.IMPLICIT, init
+				.loadDownloadableSets("dummy"), null);
+		listSelection.addCommand(back);
+		listSelection.setSelectCommand(downloadSetCommand);
+		listSelection.setCommandListener(this);
+		Display.getDisplay(this).setCurrent(listSelection);		
 	}
 }

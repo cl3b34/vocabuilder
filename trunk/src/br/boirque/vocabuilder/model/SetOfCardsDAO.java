@@ -23,9 +23,6 @@ public abstract class SetOfCardsDAO implements ISetOfCardsDAO {
 
 	protected RecordStore recordStore;
 
-	public SetOfCardsDAO() {
-		super();
-	}
 
 	public int addFileFormatVersionNumber(int fileVersionNumber)
 			throws IOException, RecordStoreNotOpenException,

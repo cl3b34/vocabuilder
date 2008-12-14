@@ -27,8 +27,7 @@ public class SetOfCardsDAOV4Impl extends SetOfCardsDAO{
 	 * @throws RecordStoreFullException
 	 */
 	public SetOfCardsDAOV4Impl(String storeName) throws RecordStoreFullException,
-			RecordStoreNotFoundException, RecordStoreException {
-		super();
+			RecordStoreException {
 		RecordStoreFactory factory = RecordStoreFactory.getFactory();
 		this.recordStore = factory.getStoreInstance(storeName);
 	}

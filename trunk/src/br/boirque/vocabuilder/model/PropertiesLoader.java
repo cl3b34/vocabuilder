@@ -16,7 +16,21 @@ import br.boirque.vocabuilder.util.VocaUtil;
  */
 public class PropertiesLoader {
 
-	private static final String PROPERTIESFILENAME = "properties.txt";
+	private String propertiesFileName = "properties.txt";
+
+	/**
+	 * default constructor 
+	 */
+	public PropertiesLoader() {
+	}
+
+	/**
+	 * @param propertiesFileName
+	 */
+	public PropertiesLoader(String propertiesFileName) {
+		super();
+		this.propertiesFileName = propertiesFileName;
+	}
 
 	/**
 	 * Load the properties from the default file named "properties.txt" 
@@ -24,7 +38,7 @@ public class PropertiesLoader {
 	 * @throws IOException
 	 */
 	public Vector loadProperties() throws IOException {
-		return loadProperties(PROPERTIESFILENAME);
+		return loadProperties(propertiesFileName);
 	}
 	
 	/**
@@ -47,7 +61,7 @@ public class PropertiesLoader {
 		int ends[] = { 0, 0 };
 
 		// remove white space, \r, empty lines, comments etc
-		VocaUtil.preProcess_TextFile(buf);
+		VocaUtil.preProcess_TextFile(buf, true);
 
 		while ((propertiesString = VocaUtil.getNextLine(buf, ends)) != null) {
 			char equalSign = '=';
