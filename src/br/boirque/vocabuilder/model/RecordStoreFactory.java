@@ -45,7 +45,7 @@ public class RecordStoreFactory {
 	 * TODO: it is probably a good idea to take care of the maximum size
 	 */
 	public RecordStore getStoreInstance(String storeName)
-			throws RecordStoreFullException, RecordStoreNotFoundException,
+			throws RecordStoreFullException, 
 			RecordStoreException {
 
 		if (RecordStoreFactory.recordStore == null || openCount == 0) {

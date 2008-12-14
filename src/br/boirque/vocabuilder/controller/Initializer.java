@@ -13,6 +13,7 @@ import javax.microedition.rms.RecordStoreNotFoundException;
 import javax.microedition.rms.RecordStoreNotOpenException;
 
 import br.boirque.vocabuilder.model.FlashCard;
+import br.boirque.vocabuilder.model.ISetDownloader;
 import br.boirque.vocabuilder.model.PropertiesLoader;
 import br.boirque.vocabuilder.model.Property;
 import br.boirque.vocabuilder.model.SetOfCards;
@@ -20,6 +21,7 @@ import br.boirque.vocabuilder.model.SetOfCardsDAO;
 import br.boirque.vocabuilder.model.ISetOfCardsDAO;
 import br.boirque.vocabuilder.model.SetOfCardsDAOV4Impl;
 import br.boirque.vocabuilder.model.SetOfCardsLoader;
+import br.boirque.vocabuilder.model.StudyStackDownloader;
 
 /**
  * Takes care of all the initialization tasks
@@ -27,7 +29,7 @@ import br.boirque.vocabuilder.model.SetOfCardsLoader;
  * @author cleber.goncalves
  * 
  */
-public class Initializer {
+public class Initializer implements Runnable {
 
 	private static final String DEFAULTSET = "defaultset";
 
@@ -46,6 +48,23 @@ public class Initializer {
 
 	// Sequential list
 	private int lastViewedCardIndex = -1;
+
+	// set to be downloaded
+	private String setToDownload;
+
+	/**
+	 * Constructor used by the download set thread
+	 * @param setToDownload name of the set to be downloaded
+	 */
+	public Initializer(String setToDownload) {
+		this.setToDownload = setToDownload;
+	}
+
+	/**
+	 * Default constructor
+	 */
+	public Initializer() {
+	}
 
 	/**
 	 * Load a set either from RMS or TXT resources
@@ -528,5 +547,57 @@ public class Initializer {
 //	public static void setTotalReviewed(int totalReviewed) {
 //		Initializer.totalReviewed = totalReviewed;
 //	}
+
+	/**
+	 * Load a list of the sets available for download.
+	 * 
+	 * @param category the category to load the available sets from
+	 * @return an array of available sets
+	 */
+	public String[] loadDownloadableSets(String category) {
+		ISetDownloader setDownloader = new StudyStackDownloader();
+		Vector downloadableSets = setDownloader.listDownloadableSets(category);
+		String[] toReturn = new String[downloadableSets.size()];
+		downloadableSets.copyInto(toReturn);
+		return toReturn;
+	}
+
+	/**
+	 * Download the set of cards from internet and save to RMS
+	 * 
+	 * @param setName the name of the set to be downloaded
+	 * 
+	 */
+	public SetOfCards downloadSetOfCards(String setName) {
+		System.out.println("Downloading set");
+		ISetDownloader setDownloader = new StudyStackDownloader();
+		SetOfCards downloadedSet = setDownloader.downloadSet(setName);
+		SetOfCardsDAO socDao = null;
+		try {
+			System.out.println("Set downloaded" + downloadedSet);
+			socDao = new SetOfCardsDAOV4Impl(downloadedSet.getSetName());
+			socDao.saveSetOfCards(downloadedSet);
+			System.out.println("returning set");
+			return downloadedSet;
+		} catch (RecordStoreFullException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (RecordStoreException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		return null;
+	}
+
+	/**
+	 * allows for the set download to be run in a different thread
+	 */
+	public void run() {
+		downloadSetOfCards(this.setToDownload);
+		
+	}
 	
 }

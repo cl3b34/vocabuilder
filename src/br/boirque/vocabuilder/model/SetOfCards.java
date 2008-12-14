@@ -204,4 +204,17 @@ public class SetOfCards {
 	public void setMarkedDoneCounter(int markedDoneCounter) {
 		this.markedDoneCounter = markedDoneCounter;
 	}
+
+
+	public String toString() {
+		StringBuffer setText = new StringBuffer();
+		setText.append("SetName: " + this.setName + "\n" +
+		"Done: " + this.done+ "\n\n");		
+		
+		for (int i = 0; i < this.flashCards.size(); i++) {
+			FlashCard card = (FlashCard) this.flashCards.elementAt(i);
+			setText.append(card.toString());
+		}
+		return setText.toString();
+	}
 }
