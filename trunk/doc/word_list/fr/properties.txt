@@ -15,3 +15,4 @@ defaultset=words_en_fr_qr.txt
 defaultset=words_en_fr_ss.txt
 defaultset=words_en_fr_tt.txt
 defaultset=words_en_fr_u.txt
+defaultset=semanticprimitives.txt
