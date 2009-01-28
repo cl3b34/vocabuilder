@@ -70,6 +70,7 @@
    </target>
    <target if="flag.should.obfuscate" name="-eclipseme-obfuscate">
       <wtkobfuscate jadfile="${path.build.output}/${midlet.name}.jad" jarfile="${path.build.output}/${midlet.name}.jar">
+      	 <preserve class="br.boirque.vocabuilder.TestAll" />
          <argument value="'-keep public class * extends javax.microedition.midlet.MIDlet'"/>
          <argument value="-dontusemixedcaseclassnames -dontnote -defaultpackage ''"/>
       </wtkobfuscate>
