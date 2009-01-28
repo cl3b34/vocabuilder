@@ -37,7 +37,7 @@ public class TestAll extends TestCase
 		TestSuite suite = new TestSuite();
 		suite.addTest(new InitializerTest().suite());
 		suite.addTest(new SetOfCardsLoaderTest().suite());
-		suite.addTest(new PropertiesLoaderTest().suite());
+//		suite.addTest(new PropertiesLoaderTest().suite());
 		suite.addTest(new RecordStoreFactoryTest().suite());
 		suite.addTest(new SetOfCardsDAOV4ImplTest().suite());
 		suite.addTest(new VocaUtilTest().suite());
