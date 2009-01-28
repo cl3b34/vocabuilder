@@ -6,6 +6,7 @@ package br.boirque.vocabuilder.model;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Vector;
 
@@ -24,13 +25,16 @@ public class StudyStackDownloader implements ISetDownloader {
 
 		String uri = "http://www.studystack.com/servlet/simpledelim/ss.txt?studyStackName=a&charset=UTF-8&delimiter=|&studyStackId="
 				+ setName;
-//		readUtfString(uri);
-//		readUtfStringV2(uri);
-		String downloadedSet = readUtfStringV3(uri);
+		// displays squares (missing font?)
+		String downloadedSet =readUtfString(uri);
+		// this one displays rabish
+//		String downloadedSet =readUtfStringV2(uri);
+		// displays squares (missing font?)
+//		String downloadedSet = readUtfStringV3(uri);
+//		System.out.println("DownloadeSet: " + downloadedSet);
 		Vector lines = splitInLines(downloadedSet);
-//		System.out.println("Vector Lines: " + lines.size());
 		SetOfCards setCreated = createSetFromVector(lines, setName);
-//		System.out.print(setCreated);
+//		System.out.print("set Created " + setCreated);
 		return setCreated;
 	}
 
@@ -39,6 +43,7 @@ public class StudyStackDownloader implements ISetDownloader {
 		set.setSetName(setName);
 		set.setDone(false);
 		set.setFlashCards(extractFlashCards(lines));
+		set.setTotalNumberOfCards(set.getFlashCards().size());
 		return set;
 	}
 
@@ -65,13 +70,17 @@ public class StudyStackDownloader implements ISetDownloader {
 			card.setSideTwo(line.substring(firstPipe+1));
 		}
 		
+		// Add dummy titles
+		card.setSideOneTitle("side one");
+		card.setSideTwoTitle("side two");		
+		
 		return card;
 	}
 
 	protected Vector splitInLines(String downloadedSet) {
 		char [] buf = downloadedSet.toCharArray();
 		VocaUtil.preProcess_TextFile(buf, false);
-		int [] ends = {0,0};
+		int [] ends = {0,0}; 
 		String line = null;
 		Vector lines = new Vector();
 		while((line = VocaUtil.getNextLine(buf, ends))!=null) {
@@ -99,11 +108,12 @@ public class StudyStackDownloader implements ISetDownloader {
 			while (in.read(bytes) != -1) {
 				String textUtf = new String(bytes, "UTF8");
 				text.append(textUtf);
+				bytes = new byte[1024];
 			}
 		} catch (IOException e) {
 			System.err.print("IOException caught" +e);
 		}
-		System.out.println(text.toString());
+//		System.out.println("String buffer " + text.toString());
 		return text.toString();
 	}
 
@@ -128,7 +138,7 @@ public class StudyStackDownloader implements ISetDownloader {
 		} catch (IOException e) {
 			System.err.print("IOException caught" +e);
 		}
-		System.out.println("V2" + text.toString());
+//		System.out.println("V2" + text.toString());
 		return text.toString();
 	}
 
@@ -171,6 +181,7 @@ public class StudyStackDownloader implements ISetDownloader {
 		Vector sets = new Vector();
 		sets.addElement("138055");
 		sets.addElement("71681");
+		sets.addElement("1");
 		return sets;
 	}
 

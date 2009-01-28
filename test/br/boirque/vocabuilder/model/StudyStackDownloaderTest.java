@@ -1,5 +1,7 @@
 package br.boirque.vocabuilder.model;
 
+import java.util.Vector;
+
 import br.boirque.vocabuilder.TestSkeleton;
 import j2meunit.framework.*;
 
@@ -22,17 +24,32 @@ public class StudyStackDownloaderTest extends TestCase {
 		super(sTestName, rTestMethod);
 	}
 
+	StudyStackDownloader ssd;
+	
 	protected void setUp() throws Exception {
+		ssd = new StudyStackDownloader();
 	}
 
 	protected void tearDown() throws Exception {
 	}
 
-	public void testDownloadSet() {
-		StudyStackDownloader ssd = new StudyStackDownloader();
-		ssd.downloadSet("1");
+	
+	public void testDownloadSet() {		
+		SetOfCards set = ssd.downloadSet("1");
+//		System.out.println(set.getFlashCards());
+		assertNotNull("Null set",set);
+		assertNotNull("Null cards",set.getFlashCards());
+		assertEquals("Wrong card count", 50, set.getTotalNumberOfCards());
 	}
 
+	public void testSplitInLines() {
+		String set = "word | otherWord | tip\nword1 | otherWord1 | tip1";
+		Vector lines = ssd.splitInLines(set);
+		System.out.println(lines.size());
+		assertEquals(2, lines.size());
+	}
+	
+	
 	public void testListCategories() {
 		fail("Not yet implemented");
 	}
@@ -50,6 +67,14 @@ public class StudyStackDownloaderTest extends TestCase {
 			} 
 		}));
 
+		testsuite.addTest(new StudyStackDownloaderTest("testSplitInLines", new TestMethod(){ 
+			public void run(TestCase tc){
+				((StudyStackDownloaderTest) tc).testSplitInLines(); 
+			} 
+		}));
+
+		
+		
 		return testsuite;
 	}
 	
