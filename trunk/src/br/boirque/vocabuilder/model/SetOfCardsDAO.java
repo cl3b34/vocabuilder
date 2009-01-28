@@ -73,6 +73,10 @@ public abstract class SetOfCardsDAO implements ISetOfCardsDAO {
 		return RecordStore.listRecordStores();
 	}
 
+	/**
+	 * Retrieves the card count from metadata (as saved there when writing the record)
+	 * At this point, the flashcard vector is null, so there is no other way of doing that.
+	 */
 	public int getCardCount() throws InvalidRecordIDException, IOException,
 			RecordStoreException {
 		if (this.getRecordCount() > 0) {

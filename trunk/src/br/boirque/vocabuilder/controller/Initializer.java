@@ -574,10 +574,10 @@ public class Initializer implements Runnable {
 		SetOfCards downloadedSet = setDownloader.downloadSet(setName);
 		SetOfCardsDAO socDao = null;
 		try {
-			System.out.println("Set downloaded" + downloadedSet);
+//			System.out.println("Set downloaded" + downloadedSet);
 			socDao = new SetOfCardsDAOV4Impl(downloadedSet.getSetName());
 			socDao.saveSetOfCards(downloadedSet);
-			System.out.println("returning set");
+//			System.out.println("returning set");
 			return downloadedSet;
 		} catch (RecordStoreFullException e) {
 			// TODO Auto-generated catch block
