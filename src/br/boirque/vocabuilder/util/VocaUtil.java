@@ -115,9 +115,9 @@ public class VocaUtil {
 	 * http://discussion.forum.nokia.com/forum/showthread.php?t=28898&highlight=rms
 	 * 
 	 * @param buf
-	 * @param removeWhitSpace 
+	 * @param removeSpace 
 	 */
-	public static void preProcess_TextFile(char buf[], boolean removeWhitSpace) {
+	public static void preProcess_TextFile(char buf[], boolean removeSpace) {
 		// preProcess_removeCarriageReturns(buf);
 		int i = 0, k = 0;
 		boolean inquote;
@@ -167,7 +167,7 @@ public class VocaUtil {
 				buf[i++] = ' ';
 		}
 
-		if(removeWhitSpace) {
+		if(removeSpace) {
 			removeWhiteSpace(buf);
 		}
 
