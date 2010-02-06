@@ -20,7 +20,7 @@ http://java.sun.com/javame/downloads/index.jsp
 
 And I recommend you also install EclipseME to make the integration between WTK and Eclipse easier:
 
-http://sourceforge.net/project/showfiles.php?group_id=86829
+http://eclipseme.org/docs/installation.html
 
 
 Unit testing is done using J2MEunit (http://j2meunit.sourceforge.net/), but you shouldn't need to install anything to get that. 
