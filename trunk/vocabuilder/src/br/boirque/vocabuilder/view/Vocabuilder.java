@@ -21,8 +21,8 @@ import br.boirque.vocabuilder.util.VocaUtil;
 public class Vocabuilder extends MIDlet implements CommandListener {
 	// initial list menu options
 	private static final String DELETE_SET = "delete list";
-	private static final String STUDY_SET = "STUDY";
-	private static final String DOWNLOAD_SET = "DOWNLOAD";
+	private static final String STUDY_SET = "study";
+	private static final String DOWNLOAD_SET = "download";
 	// Commands
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
 	private Command statsCommand = new Command("Stats", Command.EXIT, 1);
@@ -422,11 +422,11 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			List l = (List) disp;
 			int index = l.getSelectedIndex();
 			String selectedItem = l.getString(index);
-			if(selectedItem.equalsIgnoreCase(STUDY_SET)) {
+			if(selectedItem.toLowerCase().equals(STUDY_SET)) {
 				displayLoadSetMenu();
-			}else if(selectedItem.equalsIgnoreCase(DELETE_SET)) {
+			}else if(selectedItem.toLowerCase().equals(DELETE_SET)) {
 				displayDeleteSetMenu();				
-			}else if(selectedItem.equalsIgnoreCase(DOWNLOAD_SET)) {
+			}else if(selectedItem.toLowerCase().equals(DOWNLOAD_SET)) {
 				displayDownloadSetMenu();				
 			}
 			
