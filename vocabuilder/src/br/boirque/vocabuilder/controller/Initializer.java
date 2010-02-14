@@ -248,12 +248,18 @@ public class Initializer implements Runnable {
 	}
 
 	private Vector randomizeVector(Vector toBeRandomized) {
+		// FOR some reason CLDC 1.1 doesn't work and I dont have random.nextInt(int)
 		Random r = new Random();
 		Vector randomized = new Vector();
 		do {
-			int randomIndex = r.nextInt(toBeRandomized.size());
+			int randomIndex = r.nextInt();
+			if(randomIndex < 0){
+				randomIndex *= -1;
+			}
+			randomIndex = randomIndex % toBeRandomized.size();
+				
 			Integer index = (Integer) toBeRandomized.elementAt(randomIndex);
-			// remove this index as it is already randomized
+//			// remove this index as it is already randomized
 			toBeRandomized.removeElementAt(randomIndex);
 			randomized.addElement(index);
 		}while(toBeRandomized.size()>0);
@@ -405,7 +411,7 @@ public class Initializer implements Runnable {
 			Vector setNames = new Vector();
 			for (int i = 0; i < props.size(); i++) {
 				Property p = (Property) props.elementAt(i);
-				if (p.getName().equalsIgnoreCase(DEFAULTSET)) {
+				if (p.getName().toLowerCase().equals(DEFAULTSET)) {
 					setNames.addElement(p.getValue());
 				}
 			}
