@@ -1,0 +1,10 @@
+MIDlet-1: Vocab_en_fi,,br.boirque.vocabuilder.view.Vocabuilder
+MIDlet-Jar-URL: Vocabuilder17_en_fi.jar
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 1.7.5
+MIDlet-Info-URL: http://code.google.com/p/vocabuilder/
+MIDlet-Name: Vocabuilder ENGLISH - FINNISH
+MIDlet-Description: Portable Flash Cards to aid on vocabulary learning
+MIDlet-Data-Size: 51794
+MIDlet-Vendor: Cleber Goncalves - Boirque
+MicroEdition-Profile: MIDP-2.0
