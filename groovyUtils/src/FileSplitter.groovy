@@ -57,9 +57,9 @@ class FileSplitter{
 								if(i==3){firstCharOfList = line.getAt(0)} 
 								currentChar = line.getAt(0)
 								//we want around 400 words per file
-								if(i % 400 > 0){
+								if(i % 50 > 0){
 									//if we are close to the end of the list, just append it to the previous
-									if((lines.size() - i) < 150 && limitChar != "") {
+									if((lines.size() - i) < 20 && limitChar != "") {
 										println "lines size:" + lines.size() + "index: " + i
 										limitChar = ""
 									}
