@@ -5,6 +5,8 @@ Vocabuilder should work in any modern phone (less than 2 years old). It was test
 
 *Nokia
 
+ * E61i
+ * N97 (works great with the touch)
  * E52
  * E50
  * E70
