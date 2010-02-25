@@ -1,7 +1,7 @@
 /**
  * My very first Groovy script.
  * It is meant to divide very long lists of words
- * into smaller ones (around 400 words each).
+ * into smaller ones (around 50 words each).
  * The amount of cards varies in each set in order
  * to have all words starting with a particular letter
  * in the same set.
@@ -37,6 +37,7 @@ class FileSplitter{
 					def currentChar = ""
 					def splittedList = ""
 					def propertiesTxt = ""
+					def end = 0;
 					lines.eachWithIndex{line,i ->
 							if(line.startsWith("#")){
 								if(i==0){
@@ -56,14 +57,14 @@ class FileSplitter{
 								//the first letter for the filename ending
 								if(i==3){firstCharOfList = line.getAt(0)} 
 								currentChar = line.getAt(0)
-								//we want around 400 words per file
+								//we want around 50 words per file
 								if(i % 50 > 0){
 									//if we are close to the end of the list, just append it to the previous
 									if((lines.size() - i) < 20 && limitChar != "") {
 										println "lines size:" + lines.size() + "index: " + i
 										limitChar = ""
 									}
-									//save 
+									//save if first character changed or we are at EOF
 									if(limitChar.size() !=0 && !limitChar.equalsIgnoreCase(currentChar) ||i == lines.size()-1){
 										if(i == lines.size()-1){
 											//save the last line of the file...
@@ -102,7 +103,15 @@ class FileSplitter{
 									
 								}else{
 			//						400 cards, when the char the word starts changes, finish and save
-									limitChar = line.getAt(0)
+									//limitChar = line.getAt(0)
+									if(!line.getAt(0).equalsIgnoreCase(currentChar)){
+										limitChar = line.getAt(0) + end;
+										end = 0;
+									}
+									else{
+										limitChar = end + "";
+										end = end + 1;
+									}									
 									splittedList = splittedList + "\n" + line
 //									println "limit reached, look for next char after: " + limitChar
 								}
