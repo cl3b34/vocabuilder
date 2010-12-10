@@ -1,5 +1,6 @@
 package br.boirque.vocabuilder.view;
 
+import java.io.IOException;
 import java.util.Vector;
 
 import javax.microedition.lcdui.Choice;
@@ -8,7 +9,6 @@ import javax.microedition.lcdui.CommandListener;
 import javax.microedition.lcdui.Display;
 import javax.microedition.lcdui.Displayable;
 import javax.microedition.lcdui.Form;
-import javax.microedition.lcdui.Item;
 import javax.microedition.lcdui.List;
 import javax.microedition.lcdui.StringItem;
 import javax.microedition.midlet.MIDlet;
@@ -17,33 +17,46 @@ import br.boirque.vocabuilder.controller.Initializer;
 import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.util.VocaUtil;
+import javax.microedition.lcdui.Image;
+import javax.microedition.lcdui.Item;
+import javax.microedition.lcdui.Ticker;
 
 public class Vocabuilder extends MIDlet implements CommandListener {
 	// initial list menu options
 	private static final String DELETE_SET = "delete list";
 	private static final String STUDY_SET = "study";
 	private static final String DOWNLOAD_SET = "download";
+
+    // File Chooser API availability flag
+    private static boolean isJsr75Available = false;
+
 	// Commands
 	private Command exitCommand = new Command("Exit", Command.EXIT, 3);
 	private Command statsCommand = new Command("Stats", Command.EXIT, 1);
-	private Command turnCommand = new Command("Turn", Command.SCREEN, 1);
-	private Command doneCommand = new Command("Done", Command.SCREEN, 2);
-	private Command wrongCommand = new Command("Wrong", Command.SCREEN, 1);
+	private Command turnCommand = new Command("Turn", Command.OK, 1);
+	private Command doneCommand = new Command("Done", Command.OK, 1);
+	private Command wrongCommand = new Command("Wrong", Command.CANCEL, 1);
 	private Command restartCommand = new Command("Restart", Command.SCREEN, 2);
 	private Command reviewCommand = new Command("Review", Command.SCREEN, 1);
 	private Command nextSetCommand = new Command("Load another", Command.SCREEN,2);
-	private Command loadSetCommand = new Command("Load", Command.SCREEN, 1);
+	private Command loadSetCommand = new Command("Load", Command.OK, 1);
 	private Command deleteCommand = new Command("Delete", Command.SCREEN, 1);
 	private Command selectCommand = new Command("Select", Command.SCREEN, 1);
 	private Command back = new Command("Back", Command.BACK,1);
 	private Command downloadSetCommand = new Command("Download",Command.SCREEN, 1);
+    private Command openFileChooserCommand = new Command("Browse",Command.SCREEN, 2);
+    private Command closeFileChooserCommand = new Command("Close",Command.CANCEL, 1);
+    private Command reverseModeOffCommand = new Command("Turn reverse OFF",Command.SCREEN, 3);
+    private Command reverseModeOnCommand = new Command("Turn reverse ON",Command.SCREEN, 3);
 
 	// UI elements
 	private Form mainForm;
 	private StringItem cardText;
+    private StringItem cardTitle;
 	private StringItem cardStatistics;
+    private FileSelector fileSelector = null;
 
-	// Beans
+        // Beans
 	private SetOfCards soc;
 	private Vector cards;
 	FlashCard c;
@@ -62,6 +75,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	// Which side is being displayed
 	boolean sideOne;
 
+        // 0= Normal mode (Side One comes first)
+        // 1= Reverse mode
+        int reverseMode = 0;
+
 	// Utility class
 	VocaUtil vocaUtil = new VocaUtil();
 	
@@ -76,7 +93,10 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	 * Takes care of initializing the app
 	 */
 	protected void startApp() {
-		// if there is only one list, doesn't display the menu
+
+    //isJsr75Available = VocaUtil.checkJsr75(); //have to be moved out from startApp()
+    isJsr75Available = true;
+            // if there is only one list, doesn't display the menu
 //		String[] setNames = (init.loadUniqueSetNames());
 //		if (setNames.length == 1) {
 //			displaySetOfCards(setNames[0]);
@@ -99,26 +119,64 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 	}
 
-	private void displayLoadSetMenu() {
+	protected void displayLoadSetMenu() {
 		List listSelection = new List("Select a set", Choice.IMPLICIT, init
 				.loadUniqueSetNames(), null);
 		// Command[] c = {exitCommand, loadSetCommand};
 		// setCommands(c, listSelection);
 		listSelection.addCommand(back);
-		listSelection.setSelectCommand(loadSetCommand);
+                listSelection.addCommand(exitCommand);
+                listSelection.addCommand(loadSetCommand);
+                if (reverseMode == 0) {
+                    listSelection.addCommand(reverseModeOnCommand);
+                    listSelection.setTicker(null);
+                }
+                else {
+                    listSelection.addCommand(reverseModeOffCommand);
+                    listSelection.setTicker(new Ticker("Reverse mode"));
+                }
+                listSelection.setSelectCommand(loadSetCommand);
+
+                if (isJsr75Available) {
+                	
+                	listSelection.addCommand(openFileChooserCommand);
+
+                }
+
+		
 		listSelection.setCommandListener(this);
 		Display.getDisplay(this).setCurrent(listSelection);
 	}
 
 	private void displayMainForm() {
-		mainForm = new Form("Vocabuilder");
-		cardText = new StringItem("", "Card Text");
+		mainForm = new Form("");
+		
+        cardTitle = new StringItem(null, "");
+        cardText = new StringItem(null, "");
 		cardStatistics = new StringItem("", "");
-		// alertStats = new Alert("","",null,AlertType.INFO);
-		cardText.setLayout(Item.LAYOUT_CENTER);
-		cardText.setLayout(Item.LAYOUT_EXPAND);
+		
+                // alertStats = new Alert("","",null,AlertType.INFO);
+        cardTitle.setLayout(Item.LAYOUT_LEFT);
+        cardTitle.setLayout(Item.LAYOUT_EXPAND);
 
-		mainForm.append(cardText);
+		cardText.setLayout(Item.LAYOUT_NEWLINE_BEFORE);
+		//cardText.setLayout(Item.LAYOUT_EXPAND);
+
+
+        mainForm.append(cardTitle);
+
+//                Image cardMarker = null;
+//
+//                try {
+//                    cardMarker = Image.createImage("/Favourites.png");
+//                    
+//                } catch (IOException ex) {
+//                    ex.printStackTrace();
+//                }
+
+                
+                //mainForm.append(cardMarker);
+        mainForm.append(cardText);
 		mainForm.append(cardStatistics);
 		mainForm.setCommandListener(this);
 	}
@@ -129,6 +187,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		// Command[] c = {exitCommand, loadSetCommand};
 		// setCommands(c, listSelection);
 		listSelection.addCommand(exitCommand);
+                listSelection.addCommand(selectCommand);
 		listSelection.setSelectCommand(selectCommand);
 		listSelection.setCommandListener(this);
 		Display.getDisplay(this).setCurrent(listSelection);
@@ -139,13 +198,14 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		// Command[] c = {exitCommand, loadSetCommand};
 		// setCommands(c, listSelection);
 		listSelection.addCommand(back);
+                listSelection.addCommand(deleteCommand);
 		listSelection.setSelectCommand(deleteCommand);
 		listSelection.setCommandListener(this);
 		Display.getDisplay(this).setCurrent(listSelection);
 	}
 	
-	private void displaySetOfCards(String setToLoad) {
-		System.out.println(setToLoad);
+	protected void displaySetOfCards(String setToLoad) {
+		
 		// initialize the application. Load the list
 		soc = init.loadSet(setToLoad);
 
@@ -199,8 +259,8 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		if (commands != null) {
 			// add the desired commands
 			for (int i = 0; i < commands.length; i++) {
-				Command c = commands[i];
-				commandHost.addCommand(c);
+				Command cmd = commands[i];
+				commandHost.addCommand(cmd);
 			}
 		}
 	}
@@ -214,9 +274,17 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		case 1:
 			Command[] commands = { turnCommand, statsCommand };
 			setCommands(commands, mainForm);
-			cardText.setLabel(c.getSideOneTitle() + ": \n");
-			cardText.setText(c.getSideOne());
-			sideOne = true;
+
+			if (reverseMode == 0) {
+                            cardTitle.setText(c.getSideOneTitle() + ":");
+                            cardText.setText(c.getSideOne());
+                        }
+                        else {
+                            cardTitle.setText(c.getSideTwoTitle() + ":");
+                            cardText.setText(c.getSideTwo());
+                        }
+
+                        sideOne = true;
 			// show statistics for the card
 			String lastTimeViewed = "";
 			String tip = "";
@@ -242,10 +310,18 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			// remove statistics
 			cardStatistics.setLabel("");
 			// show the side
-			cardText.setLabel(c.getSideTwoTitle() + ": \n");
+                        if (reverseMode==0) {
+			cardTitle.setText(c.getSideTwoTitle() + ":");
 			cardText.setText(c.getSideTwo());
-			// Show side one again as a reminder to the user
-			cardStatistics.setLabel("\n\n\n" + c.getSideOne());
+                        // Show a reminder to the user
+                        cardStatistics.setLabel("\n\n\n" + c.getSideOne());
+                        }
+                        else {
+                            cardTitle.setText(c.getSideOneTitle() + ":");
+                            cardText.setText(c.getSideOne());
+                            // Show a reminder to the user
+                            cardStatistics.setLabel("\n\n\n" + c.getSideTwo());
+                        }
 			sideOne = false;
 			break;
 		default:
@@ -275,7 +351,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		} else {
 			setCommands(null, mainForm);
 		}
-		cardText.setLabel("");
+		cardTitle.setText("");
 		cardText.setText("");
 		cardStatistics.setLabel("STATISTICS" + "\n\n" + "Total of cards: "
 				+ Initializer.getTotalOfCards()
@@ -303,6 +379,11 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 						.getTotalStudiedTimeInMiliseconds()));
 	}
 
+        private void displayFileChooser () {
+
+		Display.getDisplay(this).setCurrent(fileSelector);
+        }
+
 	
 	private void resetStatsCounters() {
 		statsTotalDoneSession = 0;
@@ -327,7 +408,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			soc.setTotalStudiedTimeInMiliseconds(newTotalStudiedTime);
 			displayStatistics(true);
 		}
-
+                
 		if (cmd == exitCommand) {
 			destroyApp(false);
 			notifyDestroyed();
@@ -367,7 +448,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 //			Initializer.setAmountToReview(Initializer.getAmountToReview()-1);
 //			Initializer.setTotalReviewed(Initializer.getTotalReviewed()+1);
 			// turn the card
-			if (!sideOne) {
+                        if (!sideOne) {
 				displayCardSide(1);
 			} else {
 				displayCardSide(2);
@@ -395,7 +476,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			String selectedItem = l.getString(index);
 			displaySetOfCards(selectedItem);
 		}
-		
+
 		if (cmd == deleteCommand) {
 			//TODO: display a confirmation dialog
 			List l = (List) disp;
@@ -404,20 +485,20 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			init.deleteSetOfCardsFromRMS(selectedItem);
 			displayDeleteSetMenu();
 		}
-		
+
 		if (cmd == downloadSetCommand) {
 			// Download the set selected
 			List l = (List) disp;
 			int index = l.getSelectedIndex();
 			String selectedItem = l.getString(index);
 			Thread t = new Thread(new Initializer(selectedItem));
-			System.out.println("starting download");
+			//System.out.println("starting download");
 			t.start();
 //			Thread.sleep(1000);
 			displayLoadSetMenu();			
 		}
-		
-		if (cmd == selectCommand) {
+
+		if (cmd == selectCommand ) {
 			//which command was selected?
 			List l = (List) disp;
 			int index = l.getSelectedIndex();
@@ -429,12 +510,35 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			}else if(selectedItem.toLowerCase().equals(DOWNLOAD_SET)) {
 				displayDownloadSetMenu();				
 			}
-			
 		}
-		
+
+        if (cmd == openFileChooserCommand) {
+
+        	if (fileSelector == null) {
+        		
+    	       	fileSelector = new FileSelector(this);
+    	       	
+        	}
+            displayFileChooser();
+      	}
+
 		if (cmd == back) {
-			displayInitialOptionsMenu();
-		}		
+            displayInitialOptionsMenu();
+		}
+
+        if (cmd == reverseModeOffCommand) {
+            reverseMode = 0;
+            displayLoadSetMenu();
+        }
+        
+        if (cmd == reverseModeOnCommand) {
+            reverseMode = 1;
+            displayLoadSetMenu();
+        }
+        //System.out.println("cmd pri=" + String.valueOf(cmd.getPriority()) +" type="+ String.valueOf(cmd.getCommandType()) + " longlbl=" + cmd.getLongLabel() );
+
+
+
 	}
 
 	
@@ -443,6 +547,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		List listSelection = new List("Select a set", Choice.IMPLICIT, init
 				.loadDownloadableSets("dummy"), null);
 		listSelection.addCommand(back);
+                listSelection.addCommand(downloadSetCommand);
 		listSelection.setSelectCommand(downloadSetCommand);
 		listSelection.setCommandListener(this);
 		Display.getDisplay(this).setCurrent(listSelection);		
