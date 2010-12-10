@@ -243,4 +243,18 @@ public class VocaUtil {
 
 		return new String(buf, i, k - i);
 	}
+	/**
+	 * Checks an availability of JSR75 support in the platform 
+	 * required by FileSelector
+	 * 
+	 * @return 
+	 */
+    public static boolean checkJsr75() {
+
+        if (System.getProperty("microedition.io.file.FileConnection.version") != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
