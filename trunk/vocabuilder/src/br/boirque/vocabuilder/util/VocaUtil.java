@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Calendar;
 import java.util.Date;
+import javax.microedition.io.Connector;
+import javax.microedition.io.file.FileConnection;
+
 
 public class VocaUtil {
 
@@ -83,11 +86,26 @@ public class VocaUtil {
 	 */
 	public byte[] readFile(String filename) throws IOException {
 		// read and buffers the file for better performance
+        InputStream istream = null;
+        FileConnection fileConn = null;
 		ByteArrayOutputStream baos = new ByteArrayOutputStream(4096);
 		byte[] buffer = new byte[4096];
 
-		//Filename must start with '/' (slash)
-		InputStream istream = getClass().getResourceAsStream("/" + filename);
+        // Open file from a file system
+        if (filename.startsWith("file://")) {
+
+            fileConn = (FileConnection) Connector.open(filename, Connector.READ);
+            istream = fileConn.openInputStream();
+
+        }
+        else {
+            //Open as a RESOURCE
+            //Filename must start with '/' (slash)
+            istream = getClass().getResourceAsStream("/" + filename);
+        }
+
+        if (istream != null) {
+		
 		boolean done = false;
 
 		while (!done) {
@@ -99,6 +117,10 @@ public class VocaUtil {
 			}
 		}
 		istream.close();
+        }
+
+        if (fileConn != null && fileConn.isOpen()) fileConn.close();
+
 		return baos.toByteArray();
 	}
 	
