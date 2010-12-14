@@ -1,6 +1,5 @@
 package br.boirque.vocabuilder.view;
 
-import java.io.IOException;
 import java.util.Vector;
 
 import javax.microedition.lcdui.Choice;
@@ -17,7 +16,7 @@ import br.boirque.vocabuilder.controller.Initializer;
 import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
 import br.boirque.vocabuilder.util.VocaUtil;
-import javax.microedition.lcdui.Image;
+//import javax.microedition.lcdui.Image;
 import javax.microedition.lcdui.Item;
 import javax.microedition.lcdui.Ticker;
 
@@ -45,7 +44,6 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	private Command back = new Command("Back", Command.BACK,1);
 	private Command downloadSetCommand = new Command("Download",Command.SCREEN, 1);
     private Command openFileChooserCommand = new Command("Browse",Command.SCREEN, 2);
-    private Command closeFileChooserCommand = new Command("Close",Command.CANCEL, 1);
     private Command reverseModeOffCommand = new Command("Turn reverse OFF",Command.SCREEN, 3);
     private Command reverseModeOnCommand = new Command("Turn reverse ON",Command.SCREEN, 3);
 
@@ -149,19 +147,16 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 
 	private void displayMainForm() {
-		mainForm = new Form("");
+		mainForm = new Form("Vocabuilder");
 		
-        cardTitle = new StringItem(null, "");
+        cardTitle = new StringItem(null, "\n");
         cardText = new StringItem(null, "");
 		cardStatistics = new StringItem("", "");
 		
                 // alertStats = new Alert("","",null,AlertType.INFO);
         cardTitle.setLayout(Item.LAYOUT_LEFT);
         cardTitle.setLayout(Item.LAYOUT_EXPAND);
-
-		cardText.setLayout(Item.LAYOUT_NEWLINE_BEFORE);
-		//cardText.setLayout(Item.LAYOUT_EXPAND);
-
+        
 
         mainForm.append(cardTitle);
 
@@ -276,11 +271,11 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			setCommands(commands, mainForm);
 
 			if (reverseMode == 0) {
-                            cardTitle.setText(c.getSideOneTitle() + ":");
+                            cardTitle.setText(c.getSideOneTitle() + ":\n");
                             cardText.setText(c.getSideOne());
                         }
                         else {
-                            cardTitle.setText(c.getSideTwoTitle() + ":");
+                            cardTitle.setText(c.getSideTwoTitle() + ":\n");
                             cardText.setText(c.getSideTwo());
                         }
 
@@ -310,18 +305,19 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 			// remove statistics
 			cardStatistics.setLabel("");
 			// show the side
-                        if (reverseMode==0) {
-			cardTitle.setText(c.getSideTwoTitle() + ":");
-			cardText.setText(c.getSideTwo());
-                        // Show a reminder to the user
-                        cardStatistics.setLabel("\n\n\n" + c.getSideOne());
-                        }
-                        else {
-                            cardTitle.setText(c.getSideOneTitle() + ":");
-                            cardText.setText(c.getSideOne());
-                            // Show a reminder to the user
-                            cardStatistics.setLabel("\n\n\n" + c.getSideTwo());
-                        }
+            
+			if (reverseMode==0) {
+				cardTitle.setText(c.getSideTwoTitle() + ":\n");
+				cardText.setText(c.getSideTwo());
+                // Show a reminder to the user
+                cardStatistics.setLabel("\n\n\n" + c.getSideOne());
+             }
+             else {
+                cardTitle.setText(c.getSideOneTitle() + ":\n");
+                cardText.setText(c.getSideOne());
+                // Show a reminder to the user
+                cardStatistics.setLabel("\n\n\n" + c.getSideTwo());
+             }
 			sideOne = false;
 			break;
 		default:
