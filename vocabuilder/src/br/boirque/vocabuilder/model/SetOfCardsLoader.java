@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Vector;
 
 import br.boirque.vocabuilder.util.VocaUtil;
+import java.io.InputStreamReader;
 
 /**
  * Loads a SetOfCards from external medium (Http, Bluetooth, IR, flashmemory)
@@ -47,7 +48,7 @@ public class SetOfCardsLoader {
 	 * Extracts a SetOfCards from the given ByteArray.
 	 * It is highly dependent on the file format
 	 */
-	private SetOfCards extractSetOfCards(ByteArrayInputStream bais) {
+	private SetOfCards extractSetOfCards(ByteArrayInputStream bais) throws IOException {
 		boolean done = false;
 		boolean isMetadata = false;
 		
@@ -55,13 +56,15 @@ public class SetOfCardsLoader {
 		final char CHARIAGERETURN = '\r';
 		final char EQUALSIGN = '=';
 		final char NUMBERSIGN = '#';
+		final int BOM_BE = 0xFEFF;
+		final int BOM_LE = 0xFFFE;
 	//	final char SPACE = ' ';
 		
 		//the meta data. Default values
 		String setName = "default set";
 		String sideOneTitle = "ENG";
 		String sideTwoTitle = "FIN";
-		String metadata = "";
+		String metadata = null;
 
 		// process the file into a set of cards
 		SetOfCards soc = new SetOfCards(setName, false, null);
@@ -69,15 +72,22 @@ public class SetOfCardsLoader {
 		Vector cards = new Vector();
 		StringBuffer sb = new StringBuffer();
 		
+        InputStreamReader isreader = new InputStreamReader(bais, "UTF-8");
+        
 		while (!done) {
-			int readChar = bais.read();
+			int readChar = isreader.read();
 			if (readChar == -1) {
 				// Save the last Flashcard to the vector before exiting
 				readCard = fillCardSide(false, sb.toString(), sideTwoTitle, readCard);
 				cards.addElement(readCard);
 				sb = null;
 				done = true;
-			} else {
+			} 
+			else 
+				//Check for BOM sequence and skip it
+				if (readChar == BOM_BE || readChar == BOM_LE) 	continue;
+			
+			else {
 				char c = (char) readChar;
 				if (c == NUMBERSIGN) {
 					isMetadata = true;
