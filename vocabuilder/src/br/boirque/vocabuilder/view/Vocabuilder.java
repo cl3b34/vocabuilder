@@ -10,8 +10,10 @@ import javax.microedition.lcdui.Displayable;
 import javax.microedition.lcdui.Form;
 import javax.microedition.lcdui.List;
 import javax.microedition.lcdui.StringItem;
+import javax.microedition.lcdui.TextField;
 import javax.microedition.midlet.MIDlet;
 
+import br.boirque.vocabuilder.controller.DisplayManager;
 import br.boirque.vocabuilder.controller.Initializer;
 import br.boirque.vocabuilder.model.FlashCard;
 import br.boirque.vocabuilder.model.SetOfCards;
@@ -19,8 +21,12 @@ import br.boirque.vocabuilder.util.VocaUtil;
 //import javax.microedition.lcdui.Image;
 import javax.microedition.lcdui.Item;
 import javax.microedition.lcdui.Ticker;
+import java.lang.Thread;
 
 public class Vocabuilder extends MIDlet implements CommandListener {
+
+	public static Display display;
+	
 	// initial list menu options
 	private static final String DELETE_SET = "delete list";
 	private static final String STUDY_SET = "study";
@@ -46,6 +52,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
     private Command openFileChooserCommand = new Command("Browse",Command.SCREEN, 2);
     private Command reverseModeOffCommand = new Command("Turn reverse OFF",Command.SCREEN, 3);
     private Command reverseModeOnCommand = new Command("Turn reverse ON",Command.SCREEN, 3);
+    
 
 	// UI elements
 	private Form mainForm;
@@ -85,6 +92,12 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	
 
 	public Vocabuilder() {// Constructor
+
+		DisplayManager.initialize(Display.getDisplay(this));
+		
+		display = Display.getDisplay(this);
+	    //isJsr75Available = VocaUtil.checkJsr75();
+	    isJsr75Available = true;
 	}
 
 	/**
@@ -92,8 +105,7 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	 */
 	protected void startApp() {
 
-    //isJsr75Available = VocaUtil.checkJsr75(); //have to be moved out from startApp()
-    isJsr75Available = true;
+
             // if there is only one list, doesn't display the menu
 //		String[] setNames = (init.loadUniqueSetNames());
 //		if (setNames.length == 1) {
@@ -379,6 +391,32 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 
 		Display.getDisplay(this).setCurrent(fileSelector);
         }
+    
+    private void displayDownloadSetMenu() {
+			// TODO retrieve the categories first, them show the sets of this category
+		
+					
+			Form formDownloadSetMenu = new Form("Download");
+			StringItem strHeader = new StringItem(null, "studystack.com\n");
+			TextField txtId = new TextField("Enter Set Id", "", 8, TextField.NUMERIC); 
+			
+			/*
+			* IMPORTANT: 
+			* downloadSetCommand use hardcoded index reference on txtId.  
+			* Fix the reference if txtId index on the form has changed. 
+			*
+			*/
+			
+			formDownloadSetMenu.append(strHeader);
+			formDownloadSetMenu.append(txtId);
+		
+			formDownloadSetMenu.addCommand(back);
+			formDownloadSetMenu.addCommand(downloadSetCommand);
+			formDownloadSetMenu.setCommandListener(this);
+		
+			Display.getDisplay(this).setCurrent(formDownloadSetMenu);
+			
+		}
 
 	
 	private void resetStatsCounters() {
@@ -483,15 +521,14 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 		}
 
 		if (cmd == downloadSetCommand) {
-			// Download the set selected
-			List l = (List) disp;
-			int index = l.getSelectedIndex();
-			String selectedItem = l.getString(index);
-			Thread t = new Thread(new Initializer(selectedItem));
-			//System.out.println("starting download");
+			Form f = (Form) disp;
+			TextField txt = (TextField) f.get(1);
+			
+			Thread t = new Thread(new Initializer( txt.getString() ));
+			t.setPriority(Thread.MIN_PRIORITY);
 			t.start();
-//			Thread.sleep(1000);
-			displayLoadSetMenu();			
+			
+		
 		}
 
 		if (cmd == selectCommand ) {
@@ -534,18 +571,5 @@ public class Vocabuilder extends MIDlet implements CommandListener {
         //System.out.println("cmd pri=" + String.valueOf(cmd.getPriority()) +" type="+ String.valueOf(cmd.getCommandType()) + " longlbl=" + cmd.getLongLabel() );
 
 
-
-	}
-
-	
-	private void displayDownloadSetMenu() {
-		// TODO retrieve the categories first, them show the sets of this category
-		List listSelection = new List("Select a set", Choice.IMPLICIT, init
-				.loadDownloadableSets("dummy"), null);
-		listSelection.addCommand(back);
-                listSelection.addCommand(downloadSetCommand);
-		listSelection.setSelectCommand(downloadSetCommand);
-		listSelection.setCommandListener(this);
-		Display.getDisplay(this).setCurrent(listSelection);		
 	}
 }
