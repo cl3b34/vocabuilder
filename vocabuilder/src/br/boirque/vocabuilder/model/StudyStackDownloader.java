@@ -3,16 +3,20 @@
  */
 package br.boirque.vocabuilder.model;
 
-import java.io.IOException;
+import java.lang.Exception;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Vector;
 
 import javax.microedition.io.Connector;
 import javax.microedition.io.StreamConnection;
+import javax.microedition.lcdui.Alert;
+import javax.microedition.lcdui.AlertType;
+import javax.microedition.lcdui.Displayable;
+import javax.microedition.lcdui.Gauge;
 
+import br.boirque.vocabuilder.controller.DisplayManager;
 import br.boirque.vocabuilder.util.VocaUtil;
 
 /**
@@ -21,16 +25,20 @@ import br.boirque.vocabuilder.util.VocaUtil;
  */
 public class StudyStackDownloader implements ISetDownloader {
 
+	//private Command cancelCommand = new Command("Cancel",Command.CANCEL, 0);
+	//private boolean cancel = false;
+	
 	public SetOfCards downloadSet(String setName) {
 
+		
 		String uri = "http://www.studystack.com/servlet/simpledelim/ss.txt?studyStackName=a&charset=UTF-8&delimiter=|&studyStackId="
 				+ setName;
 		// displays squares (missing font?)
-		String downloadedSet =readUtfString(uri);
+		//String downloadedSet = readUtfString(uri);
 		// this one displays rabish
 //		String downloadedSet =readUtfStringV2(uri);
 		// displays squares (missing font?)
-//		String downloadedSet = readUtfStringV3(uri);
+		String downloadedSet = readUtfStringV3(uri);
 //		System.out.println("DownloadeSet: " + downloadedSet);
 		Vector lines = splitInLines(downloadedSet);
 		SetOfCards setCreated = createSetFromVector(lines, setName);
@@ -99,22 +107,69 @@ public class StudyStackDownloader implements ISetDownloader {
 	private String readUtfString(String uri) {
 		StreamConnection conn = null;
 		InputStream in = null;
-
-		StringBuffer text = new StringBuffer();
+		
+		String textUtf = null;
+		
+//		Displayable currentScreen;
+//		currentScreen = DisplayManager.getCurrent();
+//	
+		//StringBuffer text = new StringBuffer();
+		
 		try {
 			conn = (StreamConnection) Connector.open(uri);
 			in = conn.openInputStream();
-			byte[] bytes = new byte[1024];
-			while (in.read(bytes) != -1) {
-				String textUtf = new String(bytes, "UTF8");
-				text.append(textUtf);
-				bytes = new byte[1024];
+			
+
+			Gauge gauge = new Gauge(null,
+									false,
+									Gauge.INDEFINITE,
+									Gauge.INCREMENTAL_UPDATING);
+			Alert busyAlert = new Alert("Download",null,null,AlertType.INFO);
+			busyAlert.setIndicator(gauge);
+			busyAlert.setTimeout(60*1000);	// 1 min
+			
+			DisplayManager.setCurrent(busyAlert);
+			
+			
+			byte[] bytes = new byte[4096];
+			
+			byte[] collector = {};
+			byte[] tempCollector = {};
+			
+			int rxBytes;
+			int offset = 0;
+			
+			while ((rxBytes = in.read(bytes)) != -1) {
+				System.out.println(" Bytes read: " + rxBytes);
+				busyAlert.getIndicator().setValue(Gauge.INCREMENTAL_UPDATING);
+				
+				offset = collector.length;
+				tempCollector = collector;
+				
+				collector = new byte[ offset + rxBytes ];
+				System.arraycopy(tempCollector, 0, collector, 0, offset);
+				System.arraycopy(bytes, 0, collector, offset, rxBytes);
+				
+				bytes = new byte[4096];
 			}
-		} catch (IOException e) {
-			System.err.print("IOException caught" +e);
+			
+			textUtf = new String(collector, "UTF-8");
+			
+			conn.close();
+			System.out.println(" Bytes downloaded: " + collector.length);
+
+			busyAlert.setTimeout(Alert.FOREVER);
+			busyAlert.setTitle("Completed");
+			busyAlert.setString(textUtf.length() + " bytes downloaded");
+			busyAlert.setIndicator(null);
+			
+		} catch (Exception e) {
+			System.err.print("Exception caught");
+			e.printStackTrace();
 		}
 //		System.out.println("String buffer " + text.toString());
-		return text.toString();
+		
+		return textUtf;
 	}
 
 	/**
@@ -135,8 +190,8 @@ public class StudyStackDownloader implements ISetDownloader {
 			while ((ch = in.read()) != -1) {
 				text.append((char) ch);
 			}
-		} catch (IOException e) {
-			System.err.print("IOException caught" +e);
+		} catch (Exception e) {
+			System.err.print("Exception caught" +e);
 		}
 //		System.out.println("V2" + text.toString());
 		return text.toString();
@@ -150,21 +205,60 @@ public class StudyStackDownloader implements ISetDownloader {
 	 * @throws UnsupportedEncodingException
 	 */
 	private String readUtfStringV3(String uri){
+		
 		StreamConnection conn = null;
 		InputStream in = null;
 		StringBuffer text = new StringBuffer();
+		
+		
+		Displayable currentScreen;
+		currentScreen = DisplayManager.getCurrent();
+	
+		
 		try {
 			conn = (StreamConnection) Connector.open(uri);
 			in = conn.openInputStream();
-			InputStreamReader isr = new InputStreamReader(in, "UTF8");
+			InputStreamReader isr = new InputStreamReader(in, "UTF-8");
+			
+			//progress bar
+			Gauge gauge = new Gauge(null,
+									false,
+									Gauge.INDEFINITE,
+									Gauge.CONTINUOUS_RUNNING);
+			Alert busyAlert = new Alert("Download",null,null,AlertType.INFO);
+			busyAlert.setIndicator(gauge);
+			busyAlert.setTimeout(60*1000);	// 1 min
+			
+			DisplayManager.setCurrent(busyAlert);
+		
+						
+			
+			// read cycle
 			int ch;
 			while ((ch = isr.read()) != -1) {
 				text.append((char) ch);
+				//System.out.print(".");
+				//busyAlert.getIndicator().setValue(Gauge.INCREMENTAL_UPDATING);
 			}
-		} catch (IOException e) {
-			System.err.print("IOException caught" +e);
+			
+			//clean up
+			isr.close();
+			in.close();
+			conn.close();
+			
+			System.out.println("\n Chars downloaded: " + text.length());
+
+			busyAlert.setTimeout(Alert.FOREVER);
+			busyAlert.setTitle("Completed");
+			busyAlert.setString(text.length() + " chars downloaded");
+			busyAlert.setIndicator(null);
+			
+		} catch (Exception e) {
+			System.err.print("Exception caught");
+			e.printStackTrace();
 		}
 //		System.out.println("V3 " + text.toString());
+
 		return text.toString();
 	}
 
@@ -182,7 +276,9 @@ public class StudyStackDownloader implements ISetDownloader {
 		sets.addElement("138055");
 		sets.addElement("71681");
 		sets.addElement("1");
+		sets.addElement("521903");
 		return sets;
 	}
+
 
 }
