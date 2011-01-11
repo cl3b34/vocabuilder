@@ -120,7 +120,13 @@ public class Vocabuilder extends MIDlet implements CommandListener {
 	}
 
 	protected void destroyApp(boolean bool) {
-		save(soc);
+		
+		// Application-management software (AMS)
+		// could kill midlet forcefully if the last one does not
+		// return from unconditional destroyApp call back fast enough.
+		// Stats are not written to RMS to prevent its corruption in case of
+		// unconditional exit initiated by AMS.
+		if (!bool) save(soc);
 	}
 
 	private void save(SetOfCards soc) {
