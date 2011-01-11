@@ -127,7 +127,7 @@ public class FileSelector extends List implements CommandListener, FileSystemLis
 
     private void displayAllRoots() {
         setTitle("[Roots]");
-
+        removeCommand(cmdBack);
         while ( this.size() > 0) this.delete(0);
 
         Enumeration roots = rootsList.elements();
@@ -145,6 +145,7 @@ public class FileSelector extends List implements CommandListener, FileSystemLis
             if (selectedFile.endsWith(FILE_SEPARATOR)) {
                 try {
                     if (currentRoot == null) {
+                        addCommand(cmdBack);
                         currentRoot = (FileConnection) Connector.open("file://" + selectedFile, Connector.READ);
                     } else {
                         currentRoot.setFileConnection(selectedFile);
@@ -182,17 +183,20 @@ public class FileSelector extends List implements CommandListener, FileSystemLis
             fileSelection.displayLoadSetMenu();
         }
         if (c == cmdBack) {
+
             if (rootsList.contains(currentRoot.getPath() + currentRoot.getName())) {
+            	System.out.println(currentRoot.getPath() + currentRoot.getName());
                     displayAllRoots();
                 } else {
                     try {
-                        currentRoot = (FileConnection) Connector.open("file://" + currentRoot.getPath(), Connector.READ);
+                        currentRoot.setFileConnection("..");
                         displayCurrentRoot();
                     } catch (IOException e) {
                         System.out.println(e.getMessage());
                     }
-                }
+            }
         }
+        
     }
 
     public void rootChanged(int state, String rootNmae) {
