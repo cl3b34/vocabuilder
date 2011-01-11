@@ -16,3 +16,8 @@ Vocabuilder should work in any modern phone (less than 2 years old). It was test
  * 6630
  * 9300i
  * N81 8GB
+ * E63
+
+*SonyEricsson
+
+ * W890i
